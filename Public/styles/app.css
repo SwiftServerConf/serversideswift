@@ -1,0 +1,16 @@
+@font-face {
+	font-family: 'Monofur';
+	src: url('monof55.ttf')  format('truetype');
+}
+
+body, html {
+	height: 100%;
+}
+
+body {
+	font-family: 'Monofur', sans-serif !important;
+}
+
+.thank-you {
+  margin-top: 100px;
+}

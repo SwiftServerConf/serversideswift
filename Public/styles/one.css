@@ -1,0 +1,17 @@
+body {
+  background: linear-gradient(141deg, #477BA7 0%, #22456E 100%);
+  color: #ffffff;
+}
+
+.brand .logo img {
+  height: auto;
+  width: 100px;
+}
+
+.brand .logo {
+  text-align: center;
+}
+
+.brand {
+  margin-top: 100px;
+}

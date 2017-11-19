@@ -1,0 +1,27 @@
+.signup-form #fieldEmail {
+  padding: 15px;
+  height: 45px;
+  border: none;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.14);
+  border-radius: 8px;
+}
+
+.signup-form .submit {
+  background-color: #fff;
+  border: none;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.14);
+  padding: 9px;
+  border-radius: 9px;
+  width: 200px;
+  font-size: 18px;
+  color: #fd1f20;
+  transition: background-color .1s ease-in-out;
+}
+.signup-form .submit:hover {
+  background-color: #fd1f20;
+  color: #fff;
+}
+
+.signup-form {
+  margin-top: 50px;
+}
