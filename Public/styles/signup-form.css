@@ -16,6 +16,7 @@
   font-size: 18px;
   color: #fd1f20;
   transition: background-color .1s ease-in-out;
+  margin-top: 5px;
 }
 .signup-form .submit:hover {
   background-color: #fd1f20;

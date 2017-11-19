@@ -15,6 +15,10 @@ final class Routes: RouteCollection {
     builder.get("two") { req in
       return try self.view.make("two")
     }
+    
+    builder.get("three") { req in
+      return try self.view.make("three")
+    }
 
     builder.get("thank-you") { req in
       return try self.view.make("thank-you")
