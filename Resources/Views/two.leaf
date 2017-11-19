@@ -1,0 +1,20 @@
+#extend("base")
+
+#export("style") { <link rel="stylesheet" href="/styles/two.css"> }
+
+#export("content") {
+<div class="row">
+  <div class="col-xs-12">
+    <div class="brand">
+      <div class="logo">
+        <img src="images/two.png" alt="serverside.swift">
+      </div>
+      <h1 class="text-center">serverside.swift</h1>
+    </div>
+    <div class="form">
+      #embed("signup-form")
+    </div>
+  </div>
+</div>
+}
+

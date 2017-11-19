@@ -2,6 +2,7 @@
   <div class="row">
     <div class="col-xs-12 col-sm-8 col-sm-offset-2">
       <form action="https://martinlasek.createsend.com/t/j/s/vhrdud/" method="post" id="subForm">
+        <h4 class="text-center">signup for getting notified about the conference</h4>
         <p>
           <input id="fieldEmail" class="form-control" name="cm-vhrdud-vhrdud" type="email" required placeholder="Email" />
         </p>
