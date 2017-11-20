@@ -27,3 +27,22 @@ body {
 .brand {
   margin-top: 100px;
 }
+
+.star-sm {
+  background: url("/images/stars-sm.svg") center/1100px auto repeat;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0.33;
+  animation: 1000s rotate360 infinite linear;
+}
+
+@keyframes rotate360{to{transform:rotateZ(360deg)}}
+
+.star-lg {
+  background: url("/images/stars-lg.svg") center/1100px auto repeat;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0.66;
+}

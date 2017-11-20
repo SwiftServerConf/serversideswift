@@ -8,10 +8,10 @@
     #import("style")
   </head>
   <body>
-
-    <div class="container">
-      #import("content")
-    </div>
-
+  <div class="star-sm"></div>
+  <div class="star-lg"></div>
+  <div class="container">
+    #import("content")
+  </div>
   </body>
 </html>
