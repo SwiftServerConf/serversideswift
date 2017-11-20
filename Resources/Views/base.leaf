@@ -4,14 +4,21 @@
     <title>serverside.swift</title>
     <link rel="stylesheet" href="/styles/app.css">
     <link rel="stylesheet" href="/styles/signup-form.css">
+    <link rel="stylesheet" href="/styles/toggle.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     #import("style")
   </head>
   <body>
-  <div class="star-sm"></div>
-  <div class="star-lg"></div>
-  <div class="container">
-    #import("content")
-  </div>
+    <div id="star-sm" class="star-sm"></div>
+    <div id="star-lg" class="star-lg"></div>
+    <div class="container">
+      #import("content")
+    </div>
+    <div id="toggles">
+      <p>stars</p>
+      <input type="checkbox" name="checkbox1" id="checkbox1" class="ios-toggle" checked/>
+      <label for="checkbox1" class="checkbox-label"></label>
+    </div>
+    <script type="text/javascript" src="/scripts/toggle.js" ></script>
   </body>
 </html>
