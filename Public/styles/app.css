@@ -9,6 +9,7 @@ body, html {
 
 body {
 	font-family: 'Monofur', sans-serif !important;
+  overflow: hidden;
 }
 
 .thank-you {
