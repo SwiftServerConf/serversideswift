@@ -17,8 +17,8 @@ body {
 }
 
 .brand .logo img {
-  height: auto;
-  width: 100px;
+  height: 100px;
+  width: auto;
 }
 
 .brand .logo {
