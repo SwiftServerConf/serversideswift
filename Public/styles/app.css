@@ -8,6 +8,8 @@ body, html {
 }
 
 body {
+  background: radial-gradient(#2D4C63, #14212A);
+  color: #ffffff;
 	font-family: 'Monofur', sans-serif !important;
   overflow: hidden;
 }

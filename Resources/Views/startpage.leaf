@@ -1,13 +1,11 @@
 #extend("base")
 
-#export("style") { <link rel="stylesheet" href="/styles/one.css"> }
-
 #export("content") {
   <div class="row">
     <div class="col-xs-12">
       <div class="brand">
         <div class="logo">
-          <img src="images/one.png" alt="serverside.swift">
+          <img src="images/logo.png" alt="serverside.swift">
         </div>
         <h1 class="text-center">serverside.swift</h1>
       </div>
