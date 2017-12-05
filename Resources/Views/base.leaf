@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="/styles/app.css">
     <link rel="stylesheet" href="/styles/signup-form.css">
+    <link rel="stylesheet" href="/styles/helper.css">
   </head>
   <body>
     <div id="star-sm" class="star-sm"></div>

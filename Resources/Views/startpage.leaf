@@ -7,7 +7,7 @@
         <div class="logo">
           <img src="images/logo.png" alt="serverside.swift">
         </div>
-        <h1 class="text-center">serverside.swift</h1>
+        <h1 class="text-center ff-monofur">ServerSide.swift</h1>
       </div>
       <div class="form">
         #embed("signup-form")

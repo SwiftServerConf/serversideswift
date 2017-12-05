@@ -1,3 +1,7 @@
+.signup-form {
+  margin-top: 25px;
+}
+
 .signup-form #fieldEmail {
   padding: 15px;
   height: 45px;
@@ -21,8 +25,4 @@
 .signup-form .submit:hover {
   background-color: #fd1f20;
   color: #fff;
-}
-
-.signup-form {
-  margin-top: 50px;
 }

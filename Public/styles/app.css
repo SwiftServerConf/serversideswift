@@ -10,12 +10,15 @@ body, html {
 body {
   background: radial-gradient(#2D4C63, #14212A);
   color: #ffffff;
-	font-family: 'Monofur', sans-serif !important;
   overflow: hidden;
 }
 
 .thank-you {
   margin-top: 100px;
+}
+
+.brand {
+  margin-top: 150px;
 }
 
 .brand .logo img {
@@ -25,10 +28,6 @@ body {
 
 .brand .logo {
   text-align: center;
-}
-
-.brand {
-  margin-top: 100px;
 }
 
 .star-sm {
