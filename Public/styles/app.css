@@ -9,7 +9,8 @@ body, html {
 
 body {
   background: radial-gradient(#2D4C63, #14212A);
-  color: #ffffff;
+  color: #f5f5f5;
+  letter-spacing: 0.5px;
   overflow: hidden;
 }
 
@@ -18,16 +19,20 @@ body {
 }
 
 .brand {
-  margin-top: 150px;
+  margin: 150px 0 25px;
 }
 
-.brand .logo img {
-  height: 100px;
-  width: auto;
+.brand h2 {
+  font-size: 36px;
 }
 
 .brand .logo {
   text-align: center;
+}
+
+.brand .logo img {
+  height: 130px;
+  width: auto;
 }
 
 .star-sm {

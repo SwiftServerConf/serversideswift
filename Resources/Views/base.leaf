@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/styles/app.css">
     <link rel="stylesheet" href="/styles/signup-form.css">
     <link rel="stylesheet" href="/styles/helper.css">
+    <link rel="icon" type="image/png" href="/images/favicon.png">
   </head>
   <body>
     <div id="star-sm" class="star-sm"></div>
