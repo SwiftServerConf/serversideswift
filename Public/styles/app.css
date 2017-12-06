@@ -13,6 +13,10 @@ body {
   letter-spacing: 0.5px;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.42857143;
+}
+
 .thank-you {
   margin-top: 100px;
 }
