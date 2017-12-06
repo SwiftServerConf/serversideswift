@@ -1,7 +1,18 @@
 .more-info {
-  padding: 100px 0;
+  padding: 50px 0;
+}
+
+.more-info h3 {
+  color: #fa532a;
 }
 
 .more-info h4 {
   font-weight: 300;
+}
+
+.more-info a,
+.more-info a:hover,
+.more-info a:focus {
+  color: #f5f5f5;
+  font-weight: 400;
 }
