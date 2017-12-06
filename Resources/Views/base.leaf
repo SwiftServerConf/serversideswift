@@ -13,11 +13,5 @@
 
   #import("content")
 
-    <div class="more-info">
-      <div class="container">
-        #embed("more-info")
-      </div>
-    </div>
-
   </body>
 </html>

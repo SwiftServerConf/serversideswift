@@ -1,0 +1,9 @@
+<div class="more-info">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        #embed("startpage/section-02/the-conference")
+      </div>
+    </div>
+  </div>
+</div>

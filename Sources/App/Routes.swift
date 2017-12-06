@@ -9,7 +9,7 @@ final class Routes: RouteCollection {
   func build(_ builder: RouteBuilder) throws {
     
     builder.get { req in
-      return try self.view.make("startpage")
+      return try self.view.make("startpage/index")
     }
 
     builder.get("thank-you") { req in
