@@ -6,14 +6,18 @@
     <link rel="stylesheet" href="/styles/app.css">
     <link rel="stylesheet" href="/styles/signup-form.css">
     <link rel="stylesheet" href="/styles/helper.css">
+    <link rel="stylesheet" href="/styles/more-info.css">
     <link rel="icon" type="image/png" href="/images/favicon.png">
   </head>
   <body>
-    <div id="star-sm" class="star-sm"></div>
-    <div id="star-lg" class="star-lg"></div>
 
-    <div class="container">
-      #import("content")
+  #import("content")
+
+    <div class="more-info">
+      <div class="container">
+        #embed("more-info")
+      </div>
     </div>
+
   </body>
 </html>

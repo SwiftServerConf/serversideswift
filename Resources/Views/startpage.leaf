@@ -1,26 +1,18 @@
 #extend("base")
 
 #export("content") {
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="brand">
-        <div class="logo">
-          <img src="images/logo.png" alt="serverside.swift">
-        </div>
-        <h2 class="text-center ff-monofur">ServerSide.swift</h2>
-      </div>
-      <h1 class="text-center">Server-side Swift conference coming in 2018!</h1>
-      <div class="row">
-        <div class="col-xs-12 col-md-8 col-md-offset-2">
-          <h4 class="text-center f-weight-sm">
-            At the moment, we are trying to figure out how many people would like to join us in a conference like this. So if this would be something you might be interested in <b>sign up below</b>! We will keep you posted once we have more details to share. (We promise not to spam you)
-          </h4>
-        </div>
-      </div>
-      <div class="form">
-        #embed("signup-form")
+<div class="hero">
+  <div class="star-sm hidden"></div>
+  <div class="star-lg"></div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        #embed("startpage/brand")
+        #embed("startpage/introductory")
+        #embed("startpage/signup-form")
       </div>
     </div>
   </div>
+</div>
 }
-
