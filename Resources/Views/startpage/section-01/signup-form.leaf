@@ -1,12 +1,15 @@
 <div class="signup-form">
   <div class="row">
     <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-      <form action="https://martinlasek.createsend.com/t/j/s/vhrdud/" method="post" id="subForm">
+      <form action="https://serversideswift.us17.list-manage.com/subscribe/post?u=214a68ae1b6b77f2b00664b9c&amp;id=3eb6684609" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
         <p>
-          <input id="fieldEmail" class="form-control" name="cm-vhrdud-vhrdud" type="email" required placeholder="Email" />
+          <input type="email" value="" name="EMAIL" class="form-control" id="mce-EMAIL" placeholder="Email">
         </p>
+        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+          <input type="text" name="b_214a68ae1b6b77f2b00664b9c_3eb6684609" tabindex="-1" value="" />
+        </div>
         <p class="text-center">
-          <button type="submit" class="btn btn-default submit" >Notify Me</button>
+          <input type="submit" value="Notify Me" name="subscribe" id="mc-embedded-subscribe" class="btn btn-default submit" />
         </p>
       </form>
     </div>
