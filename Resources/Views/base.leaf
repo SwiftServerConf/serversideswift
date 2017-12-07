@@ -3,7 +3,9 @@
   <head>
     <title>serverside.swift</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <link rel="stylesheet" href="/styles/app.css">
+    <link rel="stylesheet" href="/styles/footer.css">
     <link rel="stylesheet" href="/styles/signup-form.css">
     <link rel="stylesheet" href="/styles/helper.css">
     <link rel="stylesheet" href="/styles/hero.css">
@@ -11,8 +13,18 @@
     <link rel="icon" type="image/png" href="/images/favicon.png">
   </head>
   <body>
+    #import("content")
 
-  #import("content")
-
+    <footer class="text-center">
+      <a href="https://twitter.com/SwiftServerConf" target="_blank">
+        <i class="devicon-twitter-plain"></i>
+      </a>
+      <a href="https://github.com/SwiftServerConf" target="_blank">
+        <i class="devicon-github-plain"></i>
+      </a>
+      <a href="https://www.facebook.com/SwiftServerConf" target="_blank">
+        <i class="devicon-facebook-plain"></i>
+      </a>
+    </footer>
   </body>
 </html>
