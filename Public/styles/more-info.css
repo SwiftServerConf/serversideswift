@@ -1,5 +1,5 @@
 .more-info {
-  padding: 25px 0;
+  padding-bottom: 25px;
 }
 
 .more-info h3 {
@@ -13,6 +13,5 @@
 .more-info a,
 .more-info a:hover,
 .more-info a:focus {
-  color: #f5f5f5;
-  font-weight: 400;
+  color: #fa532a;
 }
