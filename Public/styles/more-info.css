@@ -13,7 +13,5 @@
 .more-info a,
 .more-info a:hover,
 .more-info a:focus {
-  color: #f5f5f5;
-  font-weight: 400;
-  text-decoration: underline;
+  color: #fa532a;
 }
