@@ -6,13 +6,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <link rel="stylesheet" href="/styles/app.css">
-    <link rel="stylesheet" href="/styles/footer.css">
-    <link rel="stylesheet" href="/styles/signup-form.css">
-    <link rel="stylesheet" href="/styles/helper.css">
-    <link rel="stylesheet" href="/styles/hero.css">
-    <link rel="stylesheet" href="/styles/more-info.css">
     <link rel="icon" type="image/png" href="/images/favicon.png">
-
     <meta property="og:image" content="/images/logo.png">
     <meta property="og:image:height" content="216">
     <meta property="og:image:width" content="414">
@@ -39,5 +33,12 @@
         <i class="devicon-facebook-plain"></i>
       </a>
     </footer>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111252914-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-111252914-1');
+    </script>
   </body>
 </html>
