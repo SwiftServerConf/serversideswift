@@ -1,6 +1,8 @@
 <p align="center">
-    <img src="/images/banner.png" width="100%" alt="Web Template">
-    <br>
-    <br>
-    <b>Server-side Swift conference coming in 2018!</b>
+    <img src="Public/images/banner.png" width="100%" alt="ServerSide.swift">
+    <br />
+    <br /(>
+<b>Server-side Swift conference coming in 2018!</b>
+    <br />
+    <a href="https://www.serversideswift.info/" target="_blank">https://ServerSide.swift</a>
 </p>
