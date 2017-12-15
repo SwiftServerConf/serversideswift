@@ -145,3 +145,11 @@ footer .devicon-twitter-plain {
 footer .devicon-github-plain {
   font-size: 25px;
 }
+
+#footer-sponsor {
+	font-size: 15px;
+}
+
+#vapor-cloud-logo {
+	height: 35px;
+}

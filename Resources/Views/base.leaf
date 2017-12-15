@@ -33,6 +33,9 @@
         <i class="devicon-facebook-plain"></i>
       </a>
     </footer>
+    <footer class="text-center" id="footer-sponsor">
+        <p>Site Hosting sponsored by <a href="https//vapor.cloud/">Vapor Cloud <img src="/images/vapor-cloud.png" alt="Vapor Cloud Logo" id="vapor-cloud-logo"></a></p>
+    </footer>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111252914-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
