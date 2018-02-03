@@ -17,6 +17,10 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.42857143;
 }
 
+h2 {
+    font-size: 22px;
+}
+
 .star-sm {
   background: url("/images/stars-sm.svg") center/1100px auto repeat;
   position: absolute;
@@ -53,6 +57,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .f-weight-md {
   font-weight: 400;
+}
+
+.m-t-0 {
+    margin-top: 0;
+}
+
+.m-b-0 {
+    margin-bottom: 0;
 }
 
 .thank-you {
