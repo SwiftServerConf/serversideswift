@@ -1,0 +1,9 @@
+<nav class="navigation">
+    <div class="container">
+        <ul>
+            <li><a href="#">Program</a></li>
+            <li><a href="#">Speakers</a></li>
+            <li><a href="#">Sponsors</a></li>
+        </ul>
+    </div>
+</nav>

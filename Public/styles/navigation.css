@@ -1,0 +1,25 @@
+nav.navigation {
+    background-color: #0C1D28;
+}
+
+nav.navigation ul {
+    align-items: center;
+    display: flex;
+    float: right;
+    height: 50px;
+    list-style: none;
+    margin: 0;
+}
+
+nav.navigation ul li a {
+    color: #ffffff;
+    text-transform: uppercase;
+    margin: 0 5px;
+    padding: 5px 0;
+    text-decoration: none;
+}
+
+nav.navigation ul li a:hover {
+    border-bottom: 1px solid white;
+    color: #ffffff;
+}
