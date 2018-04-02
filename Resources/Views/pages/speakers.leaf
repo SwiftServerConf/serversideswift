@@ -1,5 +1,33 @@
 #extend("layout/base")
 
 #export("content") {
-    Hey! Listen!
+
+    <div class="container">
+        <div class="first-content">
+            <div class="row">
+
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="speaker">
+                        <div class="image">
+                            <img src="/images/speakers/tanner_nelson.png" alt="Tanner">
+                            <div class="social-media">
+                                <a href="https://www.twitter.com/tanner0101" target="_blank">
+                                    #embed("partials/icons/twitter")
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="title">
+                                Tanner Nelson
+                            </div>
+                            <div class="sub-title">
+                                Co-Founder @ Vapor
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
 }

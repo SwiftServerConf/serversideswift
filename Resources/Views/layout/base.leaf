@@ -24,13 +24,13 @@
 
     <footer class="text-center">
       <a href="https://twitter.com/SwiftServerConf" target="_blank">
-        <i class="devicon-twitter-plain"></i>
+        #embed("partials/icons/twitter")
       </a>
       <a href="https://github.com/SwiftServerConf" target="_blank">
-        <i class="devicon-github-plain"></i>
+        #embed("partials/icons/github")
       </a>
       <a href="https://www.facebook.com/SwiftServerConf" target="_blank">
-        <i class="devicon-facebook-plain"></i>
+        #embed("partials/icons/facebook")
       </a>
     </footer>
     #embed("layout/javascript.leaf")

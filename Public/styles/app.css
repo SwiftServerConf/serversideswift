@@ -71,6 +71,10 @@ h2 {
   margin-top: 100px;
 }
 
+.first-content {
+  margin-top: 100px;
+}
+
 .hero {
   overflow: hidden;
   position: relative;
@@ -142,6 +146,9 @@ h2 {
 }
 
 footer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
   padding-bottom: 15px;
   font-size: 24px;
 }
@@ -152,20 +159,6 @@ footer a:focus {
   color: #fa532a;
   padding: 0 5px;
   text-decoration: none;
-}
-
-footer .devicon-twitter-plain {
-  font-size: 21px;
-}
-
-footer .devicon-github-plain {
-  font-size: 25px;
-}
-
-#footer-sponsor {
-	font-size: 15px;
-}
-
-#vapor-cloud-logo {
-	height: 35px;
+  height: 30px;
+  width: 30px;
 }

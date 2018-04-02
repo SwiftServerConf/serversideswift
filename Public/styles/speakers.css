@@ -1,0 +1,35 @@
+.speaker .image {
+    position: relative;
+}
+.speaker .image .social-media {
+    align-items: center;
+    justify-content: space-around;
+    display: none;
+    position: absolute;
+    background-color: #0C1D28;
+    height: 100%;
+    width: 100%;
+    top: 0;
+}
+.speaker .image:hover .social-media {
+    display: flex;
+}
+.speaker .image:hover .social-media a {
+    padding: 5px;
+    height: 40px;
+    width: 40px;
+}
+
+.speaker .image img {
+    width: 100%;
+}
+.speaker .card {
+    margin-top: 15px;
+    background: #0C1D28;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+.speaker .card .title {
+    font-size: 22px;
+}
