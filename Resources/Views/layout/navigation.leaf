@@ -1,9 +1,14 @@
 <nav class="navigation">
     <div class="container">
+        <div class="logo">
+            <a href="/">
+                <img src="images/logo.png" alt="serverside.swift">
+            </a>
+        </div>
         <ul>
-            <li><a href="#">Program</a></li>
+            <!-- <li><a href="#">Program</a></li> -->
             <li><a href="#">Speakers</a></li>
-            <li><a href="#">Sponsors</a></li>
+            <!-- <li><a href="#">Sponsors</a></li> -->
         </ul>
     </div>
 </nav>

@@ -1,7 +1,27 @@
 nav.navigation {
     background-color: #0C1D28;
+    height: 50px;
 }
 
+nav.navigation .container {
+    height: 100%;
+}
+
+/* LOGO */
+nav.navigation .logo {
+    float: left;
+    height: 100%;
+}
+nav.navigation .logo a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+nav.navigation .logo a img {
+    height: calc(100% - 12px);
+}
+
+/* LINKS */
 nav.navigation ul {
     align-items: center;
     display: flex;
@@ -10,7 +30,6 @@ nav.navigation ul {
     list-style: none;
     margin: 0;
 }
-
 nav.navigation ul li a {
     color: #ffffff;
     text-transform: uppercase;
@@ -18,7 +37,6 @@ nav.navigation ul li a {
     padding: 5px 0;
     text-decoration: none;
 }
-
 nav.navigation ul li a:hover {
     border-bottom: 1px solid white;
     color: #ffffff;
