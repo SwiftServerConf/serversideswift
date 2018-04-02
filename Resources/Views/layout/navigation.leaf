@@ -6,9 +6,9 @@
             </a>
         </div>
         <ul>
-            <!-- <li><a href="#">Program</a></li> -->
-            <li><a href="#">Speakers</a></li>
-            <!-- <li><a href="#">Sponsors</a></li> -->
+            <!-- <li><a href="/program">Program</a></li> -->
+            <li><a href="/speakers">Speakers</a></li>
+            <!-- <li><a href="/sponsors">Sponsors</a></li> -->
         </ul>
     </div>
 </nav>

@@ -1,6 +1,9 @@
 nav.navigation {
     background-color: #0C1D28;
     height: 50px;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
 }
 
 nav.navigation .container {
