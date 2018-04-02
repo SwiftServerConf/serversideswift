@@ -1,6 +1,0 @@
-#extend("base")
-
-#export("content") {
-  #embed("startpage/section-01/index")
-  #embed("startpage/section-02/index")
-}
