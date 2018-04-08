@@ -7,7 +7,10 @@
         </div>
         <ul>
             <!-- <li><a href="/program">Program</a></li> -->
-            <li><a href="/speakers">Speakers</a></li>
+            <li>
+                <a href="/speakers">Speakers</a>
+                <span class="underline"></span>
+            </li>
             <!-- <li><a href="/sponsors">Sponsors</a></li> -->
         </ul>
     </div>
