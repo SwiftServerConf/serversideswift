@@ -16,6 +16,10 @@ final class Routes: RouteCollection {
         return try self.view.make("pages/speakers")
     }
 
+    builder.get("/sponsors") { req in
+        return try self.view.make("pages/sponsors")
+    }
+
     builder.get("thank-you") { req in
       return try self.view.make("pages/thank-you")
     }
