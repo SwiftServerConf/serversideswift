@@ -23,6 +23,12 @@
 .speaker .image img {
     width: 100%;
 }
+
+.speaker .image {
+    border-radius: 3px;
+    overflow: hidden;
+}
+
 .speaker .card {
     margin-top: 15px;
     background: #0C1D28;
