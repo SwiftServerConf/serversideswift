@@ -55,6 +55,7 @@ a, a:hover, a:focus {
   src: url('monof55.ttf')  format('truetype');
 }
 
+/* HELPER  */
 .ff-monofur {
   font-family: 'Monofur', sans-serif, Arial !important;
 }
@@ -67,12 +68,24 @@ a, a:hover, a:focus {
   font-weight: 400;
 }
 
+.fc-orange {
+  color: #fa532a;
+}
+
+.fc-white {
+  color: #ffffff;
+}
+
 .m-t-0 {
     margin-top: 0;
 }
 
 .m-b-0 {
     margin-bottom: 0;
+}
+
+.m-b-30 {
+  margin-bottom: 30px;
 }
 
 .thank-you {

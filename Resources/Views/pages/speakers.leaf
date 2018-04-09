@@ -3,13 +3,21 @@
 #export("content") {
 
     <div class="container">
-        <div class="first-content">
+        <div class="first-content m-b-30">
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1 class="text-center fc-orange">Speaker</h1>
+                    <h3 class="text-center fc-white m-b-30">We host a diverse selection of inspiring speakers.</h3>
+                </div>
+            </div>
+
             <div class="row">
 
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="speaker">
                         <div class="image">
-                            <img src="/images/speakers/tanner_nelson.png" alt="Tanner">
+                            <img src="/images/speakers/tanner_nelson.jpeg" alt="Tanner">
                             <div class="social-media">
                                 <a href="https://www.twitter.com/tanner0101" target="_blank">
                                     #embed("partials/icons/twitter")
@@ -22,6 +30,27 @@
                             </div>
                             <div class="sub-title">
                                 Co-Founder @ Vapor
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="speaker">
+                        <div class="image">
+                            <img src="/images/speakers/james_thomas.png" alt="James">
+                            <div class="social-media">
+                                <a href="https://twitter.com/thomasj" target="_blank">
+                                    #embed("partials/icons/twitter")
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="title">
+                                James Thomas
+                            </div>
+                            <div class="sub-title">
+                                Developer advocate @ IBM
                             </div>
                         </div>
                     </div>
