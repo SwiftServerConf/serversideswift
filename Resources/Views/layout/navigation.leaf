@@ -6,7 +6,7 @@
             </a>
         </div>
         <ul>
-            <!-- <li><a href="/program">Program</a></li> -->
+            <!-- <li><a href="/program">Schedules</a></li> -->
             <li>
                 <a href="/speakers">Speakers</a>
                 <span class="underline"></span>

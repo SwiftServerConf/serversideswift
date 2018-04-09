@@ -1,38 +1,45 @@
-.sponsor .image {
-    position: relative;
+.sponsors .box {
+    background-color: #ffffff;
+    margin-bottom: 15px;
+    padding: 15px;
 }
-.sponsor .card {
-    margin-top: 15px;
-    background: #0C1D28;
-    border-radius: 5px;
-    padding: 10px;
-    text-align: center;
 
-    border-left: 2px solid #3EC8AC;
-    border-right: 2px solid #4E90A4;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background-position: 0 0, 0 100%;
-    background-repeat: no-repeat;
-    -webkit-background-size: 100% 2px;
-    -moz-background-size: 100% 2px;
-    background-size: 100% 2px;
-    background-image: -webkit-linear-gradient(left, #3EC8AC 0%, #4E90A4 100%), -webkit-linear-gradient(left, #3EC8AC 0%, #4E90A4 100%);
-    background-image: -moz-linear-gradient(left, #3EC8AC 0%, #4E90A4 100%), -moz-linear-gradient(left, #3EC8AC 0%, #4E90A4 100%);
-    background-image: -o-linear-gradient(left, #3EC8AC 0%, #4E90A4 100%), -o-linear-gradient(left, #3EC8AC 0%, #4E90A4 100%);
-    background-image: linear-gradient(to right, #3EC8AC 0%, #4E90A4 100%), linear-gradient(to right, #3EC8AC 0%, #4E90A4 100%);
+/* GOLD */
+.sponsors .gold h3 {
+    color: #ffc33c;
 }
-.sponsor .card .title {
-    font-size: 22px;
+.sponsors .gold .box {
+    border: 5px solid #ffc33c;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+/* SILVER */
+.sponsors .silver h3 {
+    color: rgba(181,181,181,1);
+}
+.sponsors .silver .box {
+    border: 5px solid rgba(181,181,181,1);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+/* BRONZE */
+.sponsors .bronze h3 {
+    color: #D17D21;
+}
+.sponsors .bronze .box {
+    border: 5px solid #D17D21;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .sponsors .gold img {
-    width: 250px;
+    height: 150px;
 }
 
-.sponsors .silver img, .sponsors .bronze img {
-    width: 100px;
+.sponsors .silver img {
+    height: 100px;
+}
+.sponsors .bronze img {
+    height: 60px;
 }
 
 .sponsors .row {
