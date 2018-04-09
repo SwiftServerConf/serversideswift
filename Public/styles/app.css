@@ -21,6 +21,14 @@ h2 {
     font-size: 22px;
 }
 
+h3 {
+  color: #fa532a;
+}
+
+a, a:hover, a:focus {
+  color: #fa532a;
+}
+
 .star-sm {
   background: url("/images/stars-sm.svg") center/1100px auto repeat;
   position: absolute;
@@ -131,18 +139,17 @@ h2 {
   padding-bottom: 25px;
 }
 
-.more-info h3 {
-  color: #fa532a;
-}
-
 .more-info h4 {
   font-weight: 300;
 }
+.thanks {
+  text-align:center;
+  padding-bottom: 50px;
+}
 
-.more-info a,
-.more-info a:hover,
-.more-info a:focus {
-  color: #fa532a;
+.thanks .sponsors img {
+  width: 100px;
+  margin-right: 20px;
 }
 
 footer {

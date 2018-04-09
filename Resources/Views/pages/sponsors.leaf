@@ -1,0 +1,65 @@
+#extend("layout/base")
+
+#export("content") {
+
+    <div class="container">
+        <div class="first-content">
+
+            <div class"thanks">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3> A big thanks to our sponsors</h3>
+                        <p>
+                            ServerSide.swift is a non-profit conference, and it wouldn't be possible without the help from our sponsors. Thanks a lot to all of our sponsors for helping us to run this conference.
+                        </p>
+                        <p>
+                            If you're interested in sponsoring, please reach out to us at <a href="mailto:info@serversideswift.info">info@serversideswift.info</a> for more information.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sponsors">
+                <div class="row">
+
+                    <div class="col-xs-12 col-sm-4 col-md-3">
+                        <h3> Gold </h3>
+                        <div class="sponsor gold">
+                            <div class="image">
+                                <a href="https://nodesagency.com" target="_blank">
+                                    <img src="/images/sponsors/nodes.png" alt="Nodes">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-xs-12 col-sm-4 col-md-3">
+                        <h3> Silver </h3>
+                        <div class="sponsor silver">
+                            <div class="image">
+                                <a href="https://raywenderlich.com" target="_blank">
+                                    <img src="/images/sponsors/raywenderlich.png" alt="Ray Wenderlich">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-xs-12 col-sm-4 col-md-3">
+                        <h3> Bronze </h3>
+                        To be announced.
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+}

@@ -1,0 +1,40 @@
+.sponsor .image {
+    position: relative;
+}
+.sponsor .card {
+    margin-top: 15px;
+    background: #0C1D28;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+
+    border-left: 2px solid #3EC8AC;
+    border-right: 2px solid #4E90A4;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-position: 0 0, 0 100%;
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% 2px;
+    -moz-background-size: 100% 2px;
+    background-size: 100% 2px;
+    background-image: -webkit-linear-gradient(left, #3EC8AC 0%, #4E90A4 100%), -webkit-linear-gradient(left, #3EC8AC 0%, #4E90A4 100%);
+    background-image: -moz-linear-gradient(left, #3EC8AC 0%, #4E90A4 100%), -moz-linear-gradient(left, #3EC8AC 0%, #4E90A4 100%);
+    background-image: -o-linear-gradient(left, #3EC8AC 0%, #4E90A4 100%), -o-linear-gradient(left, #3EC8AC 0%, #4E90A4 100%);
+    background-image: linear-gradient(to right, #3EC8AC 0%, #4E90A4 100%), linear-gradient(to right, #3EC8AC 0%, #4E90A4 100%);
+}
+.sponsor .card .title {
+    font-size: 22px;
+}
+
+.sponsors .gold img {
+    width: 250px;
+}
+
+.sponsors .silver img, .sponsors .bronze img {
+    width: 100px;
+}
+
+.sponsors .row {
+    margin-bottom: 50px;
+}
