@@ -29,6 +29,10 @@
     overflow: hidden;
 }
 
+.speaker .image.avatar {
+    background-color: #0b1e28;
+}
+
 .speaker .card {
     margin-top: 15px;
     background: #0C1D28;

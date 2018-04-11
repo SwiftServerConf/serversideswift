@@ -56,6 +56,22 @@
                     </div>
                 </div>
 
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="speaker">
+                        <div class="image avatar">
+                            <img src="/images/speakers/avatar.png" alt="You">
+                        </div>
+                        <div class="card">
+                            <div class="title">
+                                You?
+                            </div>
+                            <div class="sub-title">
+                                Apply for a talk <a href="https://goo.gl/forms/Jb37ZKROJNm5HIGl2">here!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
