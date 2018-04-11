@@ -42,6 +42,8 @@ nav.navigation ul li:hover span {
     width: 100%;
     background: linear-gradient(to right, #F88A36 , #FD2020);
     position: absolute;
+    left: 0;
+    bottom: 0;
 }
 nav.navigation ul li a {
     color: #ffffff;
