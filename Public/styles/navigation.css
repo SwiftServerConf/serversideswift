@@ -37,13 +37,14 @@ nav.navigation ul li {
     margin: 0 5px;
     position: relative;
 }
-nav.navigation ul li:hover span {
+nav.navigation ul li.active span,
+    nav.navigation ul li:hover span {
     height: 2px;
     width: 100%;
     background: linear-gradient(to right, #F88A36 , #FD2020);
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -2px;
 }
 nav.navigation ul li a {
     color: #ffffff;

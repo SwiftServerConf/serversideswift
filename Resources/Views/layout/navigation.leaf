@@ -7,11 +7,15 @@
         </div>
         <ul>
             <!-- <li><a href="/program">Schedules</a></li> -->
-            <li>
+            <li class="#if(home){active}">
+                <a href="/">Home</a>
+                <span class="underline"></span>
+            </li>
+            <li class="#if(speakers){active}">
                 <a href="/speakers">Speakers</a>
                 <span class="underline"></span>
             </li>
-            <li>
+            <li class="#if(sponsors){active}">
                 <a href="/sponsors">Sponsors</a>
                 <span class="underline"></span>
             </li>

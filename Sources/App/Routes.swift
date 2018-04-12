@@ -9,15 +9,15 @@ final class Routes: RouteCollection {
   func build(_ builder: RouteBuilder) throws {
     
     builder.get("/") { req in
-      return try self.view.make("pages/home")
+        return try self.view.make("pages/home", ["home": true])
     }
 
     builder.get("/speakers") { req in
-        return try self.view.make("pages/speakers")
+        return try self.view.make("pages/speakers", ["speakers": true])
     }
 
     builder.get("/sponsors") { req in
-        return try self.view.make("pages/sponsors")
+        return try self.view.make("pages/sponsors", ["sponsors": true])
     }
 
     builder.get("thank-you") { req in
