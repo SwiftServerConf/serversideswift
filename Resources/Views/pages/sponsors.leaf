@@ -50,8 +50,8 @@
                             <div class="box text-center">
                                 <div class="sponsor">
                                     <div class="image">
-                                        <a href="https://raywenderlich.com" target="_blank">
-                                            <img src="/images/sponsors/ray_wenderlich_black.png" alt="Ray Wenderlich">
+                                        <a href="https://www.skelpo.com" target="_blank">
+                                            <img src="/images/sponsors/skelpo.png" alt="Skelpo">
                                         </a>
                                     </div>
                                 </div>
@@ -68,7 +68,9 @@
                             <h3 class="text-center"> BRONZE </h3>
                             <div class="box text-center">
                                 <div class="sponsor">
-                                    <h3>to be announced</h3>
+                                    <a href="https://raywenderlich.com" target="_blank">
+                                        <img src="/images/sponsors/ray_wenderlich_black.png" alt="Ray Wenderlich">
+                                    </a>
                                 </div>
                             </div>
                         </div>
