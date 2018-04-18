@@ -33,7 +33,8 @@
 
 .sponsors .gold img,
 .sponsors .silver img {
-    height: 120px;
+    max-height: 120px;
+    max-width: 100%;
 }
 
 .sponsors .bronze img {
