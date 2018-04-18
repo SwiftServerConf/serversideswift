@@ -182,3 +182,7 @@ footer a:focus {
   height: 30px;
   width: 30px;
 }
+
+footer a.twitter {
+  padding-top: 2px;
+}

@@ -58,6 +58,27 @@
 
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="speaker">
+                        <div class="image">
+                            <img src="/images/speakers/kyle_jessup.jpg" alt="James">
+                            <div class="social-media">
+                                <a href="https://github.com/kjessup" target="_blank">
+                                    #embed("partials/icons/github")
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="title">
+                                Kyle Jessup
+                            </div>
+                            <div class="sub-title">
+                                CTO @ Perfect
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="speaker">
                         <div class="image avatar">
                             <img src="/images/speakers/avatar.png" alt="You">
                         </div>

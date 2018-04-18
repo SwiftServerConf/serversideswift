@@ -23,13 +23,13 @@
     #import("content")
 
     <footer class="text-center">
-      <a href="https://twitter.com/SwiftServerConf" target="_blank">
+      <a href="https://twitter.com/SwiftServerConf" target="_blank" class="twitter">
         #embed("partials/icons/twitter")
       </a>
-      <a href="https://github.com/SwiftServerConf" target="_blank">
+      <a href="https://github.com/SwiftServerConf" target="_blank" class="github">
         #embed("partials/icons/github")
       </a>
-      <a href="https://www.facebook.com/SwiftServerConf" target="_blank">
+      <a href="https://www.facebook.com/SwiftServerConf" target="_blank" class="facebook">
         #embed("partials/icons/facebook")
       </a>
     </footer>
