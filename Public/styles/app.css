@@ -84,6 +84,10 @@ a, a:hover, a:focus {
     margin-bottom: 0;
 }
 
+.m-b-15 {
+  margin-bottom: 15px;
+}
+
 .m-b-30 {
   margin-bottom: 30px;
 }
