@@ -8,16 +8,10 @@
             <div class="thanks">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="text-center fc-orange"> A big thanks to our sponsors</h1>
-                        <h4>
-                            ServerSide.swift is a non-profit conference, and it wouldn't be possible without the help from our sponsors.
-                        </h4>
-                        <h4>
+                        <h1 class="text-center fc-orange">Sponsors</h1>
+                        <h3 class="fc-white">
                             Thanks a lot to all of our sponsors for helping us to run this conference.
-                        </h4>
-                        <h5>
-                            If you're interested in sponsoring, please reach out to us at <a href="mailto:sponsors@serversideswift.info">sponsors@serversideswift.info</a> for more information.
-                        </h5>
+                        </h3>
                     </div>
                 </div>
             </div>
@@ -75,6 +69,14 @@
                             </div>
                         </div>
 
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h4 class="text-center f-weight-sm">
+                            If you're interested in sponsoring, please reach out to us at <a href="mailto:sponsors@serversideswift.info">sponsors@serversideswift.info</a> for more information.
+                        </h4>
                     </div>
                 </div>
             </div>
