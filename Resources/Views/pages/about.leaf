@@ -1,0 +1,97 @@
+#extend("layout/base")
+
+#export("content") {
+
+    <div class="container">
+        <div class="first-content m-b-30">
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1 class="text-center fc-orange">About</h1>
+                    
+                    <h3>The Conference</h3>
+                    <h4 class="f-weight-sm">
+                        ServerSide.swift is a framework-independent conference, where we will learn and share on a number of different related topics.
+                        The conference is aimed at being a non-profit conference and solely run for the love of server-side Swift. This space is still new and we hope to be able to contribute to the growth of ServerSide.swift by facilitating a conference where people can meet and collaborate. We have all been following and taking part in the server-side Swift movement and after running meetups in Berlin and London, we believe that the community is ready for a conference dedicated to server-side Swift.
+                    </h4>
+                    <h4 class="f-weight-sm">
+                        We want people to feel safe and welcome at the conference and we expect all attendees to respect our <a href="/code-of-conduct">Code of Conduct</a>.
+                    </h4>
+
+                    <h3>The Team</h3>
+                    <h4 class="f-weight-sm">
+
+                    </h4>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="organizer">
+                        <div class="image">
+                            <img src="/images/team/timcondon.jpg" alt="Tim">
+                            <div class="social-media">
+                                <a href="https://www.twitter.com/0xtim" target="_blank">
+                                    #embed("partials/icons/twitter")
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="title">
+                                Tim Condon
+                            </div>
+                            <div class="sub-title">
+                                Author, Lead Developer & Vapor Tutorial Caster
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="organizer">
+                        <div class="image">
+                            <img src="/images/team/martinlasek.jpeg" alt="Martin">
+                            <div class="social-media">
+                                <a href="https://twitter.com/martinlasek" target="_blank">
+                                    #embed("partials/icons/twitter")
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="title">
+                                Martin Lasek
+                            </div>
+                            <div class="sub-title">
+                                Indie game developer & Swift Developer
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="organizer">
+                        <div class="image">
+                            <img src="/images/team/steffendsommer.jpg" alt="Steffen">
+                            <div class="social-media">
+                                <a href="https://twitter.com/steffendsommer" target="_blank">
+                                    #embed("partials/icons/twitter")
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="title">
+                                Steffen D. Sommer
+                            </div>
+                            <div class="sub-title">
+                                Lead Developer, Author & Conference speaker
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+}
