@@ -80,6 +80,27 @@
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="speaker">
                         <div class="image">
+                            <img src="/images/speakers/stanislav_dombrovsky.jpg" alt="Stanislav Dombrovsky">
+                            <div class="social-media">
+                                <a href="https://twitter.com/s_dombrovsky" target="_blank">
+                                    #embed("partials/icons/twitter")
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="title">
+                                Stanislav Dombrovsky
+                            </div>
+                            <div class="sub-title">
+                                Project Manager @ JetBrains
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="speaker">
+                        <div class="image">
                             <img src="/images/speakers/ian-partridge.jpg" alt="Ian Partridge">
                             <div class="social-media">
                                 <a href="https://twitter.com/alfa" target="_blank">

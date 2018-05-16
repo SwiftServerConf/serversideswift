@@ -45,3 +45,7 @@
 .sponsors .row {
     margin-bottom: 50px;
 }
+
+.bronze .sponsor a {
+    margin: 0 10px;
+}
