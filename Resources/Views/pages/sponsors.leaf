@@ -62,6 +62,10 @@
                             <h3 class="text-center"> BRONZE </h3>
                             <div class="box text-center">
                                 <div class="sponsor">
+                                    <a href="https://www.jetbrains.com/" target="_blank">
+                                        <img src="/images/sponsors/jetbrains_logo.png" alt="JetBrains">
+                                    </a>
+
                                     <a href="https://raywenderlich.com" target="_blank">
                                         <img src="/images/sponsors/ray_wenderlich_black.png" alt="Ray Wenderlich">
                                     </a>
