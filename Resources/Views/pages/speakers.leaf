@@ -17,7 +17,7 @@
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="speaker">
                         <div class="image">
-                            <img src="/images/speakers/tanner_nelson.jpeg" alt="Tanner">
+                            <img src="/images/speakers/tanner_nelson.jpeg" alt="Tanner Nelson">
                             <div class="social-media">
                                 <a href="https://www.twitter.com/tanner0101" target="_blank">
                                     #embed("partials/icons/twitter")
@@ -38,7 +38,7 @@
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="speaker">
                         <div class="image">
-                            <img src="/images/speakers/james_thomas.png" alt="James">
+                            <img src="/images/speakers/james_thomas.png" alt="James Thomas">
                             <div class="social-media">
                                 <a href="https://twitter.com/thomasj" target="_blank">
                                     #embed("partials/icons/twitter")
@@ -59,7 +59,7 @@
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="speaker">
                         <div class="image">
-                            <img src="/images/speakers/kyle_jessup.jpg" alt="James">
+                            <img src="/images/speakers/kyle_jessup.jpg" alt="Kyle Jessup">
                             <div class="social-media">
                                 <a href="https://github.com/kjessup" target="_blank">
                                     #embed("partials/icons/github")
@@ -72,6 +72,48 @@
                             </div>
                             <div class="sub-title">
                                 CTO @ Perfect
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="speaker">
+                        <div class="image">
+                            <img src="/images/speakers/ian-partridge.jpg" alt="Ian Partridge">
+                            <div class="social-media">
+                                <a href="https://twitter.com/alfa" target="_blank">
+                                    #embed("partials/icons/twitter")
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="title">
+                                Ian Partridge
+                            </div>
+                            <div class="sub-title">
+                                Kitura Team Lead Swift @ IBM
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="speaker">
+                        <div class="image">
+                            <img src="/images/speakers/pim-stolk.jpg" alt="Pim Stolk">
+                            <div class="social-media">
+                                <a href="https://twitter.com/stolkcc" target="_blank">
+                                    #embed("partials/icons/twitter")
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="title">
+                                Pim Stolk
+                            </div>
+                            <div class="sub-title">
+                                iOS Chapter Lead @ ING
                             </div>
                         </div>
                     </div>
