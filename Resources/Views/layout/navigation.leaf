@@ -19,6 +19,10 @@
                 <a href="/sponsors">Sponsors</a>
                 <span class="underline"></span>
             </li>
+            <li class="#if(about){active}">
+                <a href="/about">About</a>
+                <span class="underline"></span>
+            </li>
         </ul>
     </div>
 </nav>
