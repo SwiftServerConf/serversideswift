@@ -26,7 +26,6 @@
             </div>
 
             <div class="row">
-
                 <div class="col-xs-12 col-sm-4 col-md-4">
                     <div class="organizer">
                         <div class="image">
@@ -89,7 +88,17 @@
                         </div>
                     </div>
                 </div>
+            </div>
 
+            <div class="row">
+                <div class="col-xs-12">
+        
+                    <h3>Getting in touch</h3>
+                    <h4 class="f-weight-sm">
+                        For general questions and requests, please use <a href="mailto:info@serversideswift.info">info@serversideswift.info</a>. For anything related to sponsoring the conference, please reach out to us at <a href="mailto:sponsors@serversideswift.info">sponsors@serversideswift.info</a>. If you're interested in speaking, please submit a talk through out CFP form <a href="https://goo.gl/forms/Jb37ZKROJNm5HIGl2" target="_blank">here</a>. You are also welcome to reach out to us through the social media channels at the bottom or using our individual Twitter handles.
+                    </h4>
+
+                </div>
             </div>
 
         </div>
