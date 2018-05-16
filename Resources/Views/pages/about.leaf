@@ -17,16 +17,15 @@
                     <h4 class="f-weight-sm">
                         We want people to feel safe and welcome at the conference and we expect all attendees to respect our <a href="/code-of-conduct">Code of Conduct</a>.
                     </h4>
-
-                    <h3>The Team</h3>
-                    <h4 class="f-weight-sm">
-
-                    </h4>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="col-xs-12">
+                    <h3>The Team</h3>
+                </div>
+
+                <div class="col-xs-12 col-sm-4">
                     <div class="organizer">
                         <div class="image">
                             <img src="/images/team/timcondon.jpg" alt="Tim">
@@ -62,7 +61,7 @@
                                 Martin Lasek
                             </div>
                             <div class="sub-title">
-                                Indie game developer & Swift Developer
+                                Indie Game Developer, Vapor Tutorial Writer & Swift Developer
                             </div>
                         </div>
                     </div>
@@ -95,7 +94,7 @@
         
                     <h3>Getting in touch</h3>
                     <h4 class="f-weight-sm">
-                        For general questions and requests, please use <a href="mailto:info@serversideswift.info">info@serversideswift.info</a>. For anything related to sponsoring the conference, please reach out to us at <a href="mailto:sponsors@serversideswift.info">sponsors@serversideswift.info</a>. If you're interested in speaking, please submit a talk through out CFP form <a href="https://goo.gl/forms/Jb37ZKROJNm5HIGl2" target="_blank">here</a>. You are also welcome to reach out to us through the social media channels at the bottom or using our individual Twitter handles.
+                        For general questions and requests, please use <a href="mailto:info@serversideswift.info">info@serversideswift.info</a>. For anything related to sponsoring the conference, please reach out to us at <a href="mailto:sponsors@serversideswift.info">sponsors@serversideswift.info</a>. If you're interested in speaking, please submit a talk through our CFP form <a href="https://goo.gl/forms/Jb37ZKROJNm5HIGl2" target="_blank">here</a>. You are also welcome to reach out to us through the social media channels at the bottom or using our individual Twitter handles.
                     </h4>
 
                 </div>
