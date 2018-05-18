@@ -5,7 +5,14 @@
                 <img src="images/logo.png" alt="serverside.swift">
             </a>
         </div>
-        <ul>
+
+        <button class="hamburger hamburger--squeeze" type="button" onClick="toggleHamburger()">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+
+        <ul class="hidden-xs">
             <!-- <li><a href="/program">Schedules</a></li> -->
             <li class="#if(home){active}">
                 <a href="/">Home</a>
@@ -25,4 +32,23 @@
             </li>
         </ul>
     </div>
+    <ul class="hidden-sm hidden-md hidden-lg">
+        <!-- <li><a href="/program">Schedules</a></li> -->
+        <li class="#if(home){active}">
+            <a href="/">Home</a>
+            <span class="underline"></span>
+        </li>
+        <li class="#if(speakers){active}">
+            <a href="/speakers">Speakers</a>
+            <span class="underline"></span>
+        </li>
+        <li class="#if(sponsors){active}">
+            <a href="/sponsors">Sponsors</a>
+            <span class="underline"></span>
+        </li>
+        <li class="#if(about){active}">
+            <a href="/about">About</a>
+            <span class="underline"></span>
+        </li>
+    </ul>
 </nav>

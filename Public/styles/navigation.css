@@ -27,19 +27,29 @@ nav.navigation .logo a img {
 /* LINKS */
 nav.navigation ul {
     align-items: center;
-    display: flex;
-    float: right;
-    height: 50px;
     list-style: none;
     margin: 0;
-    padding: 0;
+    width: 100%;
+    background: #0b1e28;
+    display: flex;
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s cubic-bezier(0, 1, 0, 1);
+}
+nav.navigation.is-active ul {
+    max-height: 99em;
+    transition: max-height .5s ease-in-out;
 }
 nav.navigation ul li {
-    margin: 0 5px;
+    margin: 10px 5px;
     position: relative;
 }
+nav.navigation ul li:last-child {
+    margin-bottom: 20px;
+}
 nav.navigation ul li.active span,
-    nav.navigation ul li:hover span {
+nav.navigation ul li:hover span {
     height: 2px;
     width: 100%;
     background: linear-gradient(to right, #F88A36 , #FD2020);
@@ -54,6 +64,25 @@ nav.navigation ul li a {
     padding: 5px 0;
     text-decoration: none;
 }
-nav.navigation ul li a:hover {
-    color: #ffffff;
+
+@media screen and (min-width: 768px) {
+    nav.navigation ul {
+        width: auto;
+        float: right;
+        height: 50px;
+        max-height: 50px;
+        margin: 0;
+        padding: 0;
+        flex-direction: row;
+    }
+    nav.navigation ul li {
+        margin: 0 5px;
+    }
+    nav.navigation ul li:last-child {
+        margin-bottom: 0;
+    }
+
+    nav.navigation ul li a:hover {
+        color: #ffffff;
+    }
 }
