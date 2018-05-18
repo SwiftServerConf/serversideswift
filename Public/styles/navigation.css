@@ -34,6 +34,7 @@ nav.navigation ul {
     display: flex;
     flex-direction: column;
     max-height: 0;
+    padding: 0;
     overflow: hidden;
     transition: max-height .5s cubic-bezier(0, 1, 0, 1);
 }
@@ -72,7 +73,6 @@ nav.navigation ul li a {
         height: 50px;
         max-height: 50px;
         margin: 0;
-        padding: 0;
         flex-direction: row;
     }
     nav.navigation ul li {
