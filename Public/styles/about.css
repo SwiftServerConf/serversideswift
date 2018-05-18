@@ -59,6 +59,8 @@
     font-size: 22px;
 }
 
-.organizer {
-    padding: 0 50px;
+@media screen and (min-width: 1200px) {
+    .organizer {
+        padding: 0 50px;
+    }
 }
