@@ -1,0 +1,68 @@
+#extend("layout/base")
+
+#export("content") {
+
+    <div class="container">
+        <div class="first-content m-b-30">
+
+            <div class="faq">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="text-center fc-orange">FAQ</h1>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h3>Will all the content be in English?</h1>
+                        <h4 class="f-weight-sm">Yes. All workshops, talks and material will be in English.</h4>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h3>What is the difference between an Early Bird ticket and a non Early Bird ticket?</h1>
+                        <h4 class="f-weight-sm">Nothing besides the price. We offer a small discount for early birds who buys a ticket first. Please be aware that the amount of Early Bird tickets are very limited.</h4>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h3>What is included in the price?</h1>
+                        <h4 class="f-weight-sm">All tickets includes: talks from experts in the field, daily lunch, snacks, coffee breaks and goodie bags with some conference/tech swag. Those who buys a full ticket will be able to participate in a workshop on September 12. Please note that accommodation is not included in the price.</h4>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h3>What workshops do you offer and how do I pick one?</h1>
+                        <h4 class="f-weight-sm">Workshops are still being planned out and as soon as they are ready, workshop ticket holders will be able to sign up for a workshop.</h4>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h3>Can you recommend a hotel?</h1>
+                        <h4 class="f-weight-sm">We're still negotiating with hotels to offer a discount to our conference attendees. As soon as we get that settled we'll let you know.</h4>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h3>Do you have a Code of Conduct?</h1>
+                        <h4 class="f-weight-sm">Yes we do! Our Code of Conduct can be found <a href="/code-of-conduct">here</a>.</h4>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h3>My question didn't get answered, what do I do?</h1>
+                        <h4 class="f-weight-sm">Feel free to <a href="https://twitter.com/SwiftServerConf" target="_blank">tweet us</a> or send us an <a href="mailto:info@serversideswift.info">email</a>.</h4>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+}

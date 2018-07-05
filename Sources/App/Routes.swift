@@ -31,5 +31,9 @@ final class Routes: RouteCollection {
     builder.get("/code-of-conduct") { req in
       return try self.view.make("pages/code-of-conduct", ["code-of-conduct": true])
     }
+
+    builder.get("/faq") { req in
+      return try self.view.make("pages/faq", ["faq": true])
+    }
   }
 }
