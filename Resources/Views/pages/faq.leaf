@@ -11,7 +11,7 @@
                         <h1 class="text-center fc-orange">FAQ</h1>
                     </div>
                 </div>
-                
+
                 <div class="row">
                     <div class="col-xs-12">
                         <h3>Will all the content be in English?</h1>
@@ -44,6 +44,13 @@
                     <div class="col-xs-12">
                         <h3>Can you recommend a hotel?</h1>
                         <h4 class="f-weight-sm">We're still negotiating with hotels to offer a discount to our conference attendees. As soon as we get that settled we'll let you know.</h4>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h3>Can I refund my ticket or sell it to somebody else?</h1>
+                        <h4 class="f-weight-sm">Tickets are non-refundable. You are able to sell it to somebody else, but please let us know by sending us an email at <a href="mailto:info@serversideswift.info">info@serversideswift.info</a> with the details of the buyer. This will allow us to update the attendee information.</h4>
                     </div>
                 </div>
 
