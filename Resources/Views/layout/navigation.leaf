@@ -34,6 +34,10 @@
                 <a href="/about">About</a>
                 <span class="underline"></span>
             </li>
+            <li class="buy-ticket">
+                <a href="/about">Buy Tickets</a>
+                <span class="underline"></span>
+            </li>
         </ul>
     </div>
     <ul class="hidden-sm hidden-md hidden-lg">
@@ -52,6 +56,10 @@
         </li>
         <li class="#if(about){active}">
             <a href="/about">About</a>
+            <span class="underline"></span>
+        </li>
+        <li class="buy-ticket">
+            <a href="/about">Buy Tickets</a>
             <span class="underline"></span>
         </li>
     </ul>

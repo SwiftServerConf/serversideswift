@@ -65,6 +65,12 @@ nav.navigation ul li a {
     padding: 5px 0;
     text-decoration: none;
 }
+nav.navigation ul li.buy-ticket {
+    border: 2px solid #fc4327;
+    border-radius: 4px;
+    padding: 2px;
+    font-weight: 300;
+}
 
 @media screen and (min-width: 768px) {
     nav.navigation ul {
