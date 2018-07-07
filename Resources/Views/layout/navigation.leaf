@@ -59,7 +59,7 @@
             <span class="underline"></span>
         </li>
         <li class="buy-ticket">
-            <a href="https://ti.to/serverside-swift/serverside-swift-2018">Buy Tickets</a>
+            <a href="https://ti.to/serverside-swift/serverside-swift-2018" target="_blank">Buy Tickets</a>
             <span class="underline"></span>
         </li>
     </ul>
