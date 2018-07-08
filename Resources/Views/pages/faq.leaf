@@ -1,0 +1,82 @@
+#extend("layout/base")
+
+#export("content") {
+
+    <div class="container">
+        <div class="first-content m-b-30">
+
+            <div class="faq">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="text-center fc-orange">FAQ</h1>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h3>Will all the content be in English?</h1>
+                        <h4 class="f-weight-sm">Yes. All workshops, talks and material will be in English.</h4>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h3>What is the difference between an Early Bird ticket and a non Early Bird ticket?</h1>
+                        <h4 class="f-weight-sm">Nothing besides the price. We offer a small discount for early birds who buy a ticket first. Please be aware that the number of Early Bird tickets is very limited.</h4>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h3>What is included in the price?</h1>
+                        <h4 class="f-weight-sm">A conference ticket includes: talks from experts in the field, daily lunch, snacks, coffee breaks and goodie bags with some conference/tech swag. Please note that accommodation is not included in the price.</h4>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h3>What are the workshop tickets?</h1>
+                        <h4 class="f-weight-sm">As well as the main conference tickets for the two days of talks we are offering a number of workshops on the 12th September. Tickets for the workshops can be purchased separately to make it easy for you. Please note, workshop tickets do not include access to the main conference and a regular ticket is required in order to participate in a workshop.</h4>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h3>What workshops do you offer and how do I pick one?</h1>
+                        <h4 class="f-weight-sm">Workshops are still being planned out and as soon as they are ready, workshop ticket holders will be able to sign up for a workshop.</h4>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h3>Can you recommend a hotel?</h1>
+                        <h4 class="f-weight-sm">We're still negotiating with hotels to offer a discount to our conference attendees. As soon as we get that settled we'll let you know.</h4>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h3>Can I refund my ticket or sell it to somebody else?</h1>
+                        <h4 class="f-weight-sm">Tickets are non-refundable, but you are able to re-assign your ticket to somebody else using the link you received when buying your ticket.</h4>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h3>Do you have a Code of Conduct?</h1>
+                        <h4 class="f-weight-sm">Yes we do! Our Code of Conduct can be found <a href="/code-of-conduct">here</a>.</h4>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h3>My question didn't get answered, what do I do?</h1>
+                        <h4 class="f-weight-sm">Feel free to <a href="https://twitter.com/SwiftServerConf" target="_blank">tweet us</a> or send us an <a href="mailto:info@serversideswift.info">email</a>.</h4>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+}
