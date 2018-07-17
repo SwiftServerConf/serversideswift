@@ -28,6 +28,10 @@ final class Routes: RouteCollection {
       return try self.view.make("pages/thank-you")
     }
 
+    builder.get("tickets") { req in
+      return try self.view.make("pages/tickets")
+    }
+
     builder.get("/code-of-conduct") { req in
       return try self.view.make("pages/code-of-conduct", ["code-of-conduct": true])
     }

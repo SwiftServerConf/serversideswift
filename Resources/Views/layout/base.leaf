@@ -16,6 +16,8 @@
     <meta property="og:type" content="website">
     <meta property="og:image:alt" content="The Server-Side Swift conference">
     <meta property="twitter:image:alt" content="The Server-Side Swift conference">
+    <link rel="stylesheet" type="text/css" href='https://css.tito.io/v1.1' />
+    <script src='https://js.tito.io/v1' async></script>
   </head>
   <body>
     #embed("layout/navigation.leaf")
