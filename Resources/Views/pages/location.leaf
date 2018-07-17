@@ -1,0 +1,107 @@
+#extend("layout/base")
+
+#export("content") {
+
+    <div class="container">
+        <div class="first-content">
+
+            <div class="more-info">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="text-center fc-orange">Location</h1>
+                        <h3 class="text-center fc-white">
+                            In one of the most successful high-technology locations in Germany
+                        </h3>
+                        <div class="container text-left m-t-30">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6">
+                                    <h3> Location </h3>
+                                    <h4>
+                                        The conference will take place at <a href="https://conventions.wista.de/en/rooms-locations/" target="_blank"> WISTA conventions </a> in the heart of the Technology Park of Adlershof, Berlin. Close to Schönefeld airport and with easy access to restaurants and accommodations, we found this venue to be perfect for this conference.<br /><br />
+                                        The address for the venue is:<br />
+                                        <span class="f-weight-md">Rudower Chaussee 17, 12489 Berlin</span>
+                                    </h4>
+                                </div>
+                                <div class="col-xs-12 col-sm-6">
+                                    <h3> &nbsp; </h3>
+                                    <h4>
+                                        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+                                        <div style='overflow:hidden;height:220px;width:500px;'>
+                                            <div id='gmap_location' style='height:220px;width:500px;'></div>
+                                            <style>#()gmap_location img{max-width:none!important;background:none!important}</style>
+                                        </div>
+                                        <script type='text/javascript'>function init_map(){var myOptions = {zoom:16,center:new google.maps.LatLng(52.432524280286664,13.538247942358339),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_location'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(52.432524280286664,13.538247942358339)});infowindow = new google.maps.InfoWindow({content:'<strong>WISTA Conventions</strong><br> Rudower Chaussee 17<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
+                                        </script>
+                                    </h4>
+                                </div>
+                            </div>
+
+                            <br />
+
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6">
+                                    <h3> Transportation </h3>
+                                    <h4>
+                                        <span class="f-weight-md">S-Bahn</span> <br />
+                                        S-Bahnhof Adlershof <br /> <br />
+                                        <span class="f-weight-md">Bus</span> <br />
+                                        S-Bahnhof Adlershof <br /> <br />
+                                        The conference venue is accessible by S-Bahn and bus. The closest airport is Schönefeld and from their you can take the S-Bahn S9 or S45 to S-Bahnhof Adlershof. <br /><br />
+                                        Arriving by car, there's multiple parking areas near the venue as well.
+                                    </h4>
+                                </div>
+                                <div class="col-xs-12 col-sm-6">
+                                    <h3> &nbsp; </h3>
+                                    <h4>
+                                        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+                                        <div style="overflow:hidden;height:220px;width:500px;">
+                                            <div id='gmap_transportation' style='height:220px;width:500px;'></div>
+                                            <style>#()gmap_transportation img{max-width:none!important;background:none!important}</style>
+                                        </div>
+                                        <script type='text/javascript'>function init_map(){var myOptions = {zoom:15,center:new google.maps.LatLng(52.4350944,13.541023699999982),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_transportation'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(52.4350944,13.541023699999982)});infowindow = new google.maps.InfoWindow({content:'<strong>S-Bahnhof Adlershof</strong><br>S-Bahnhof Adlershof<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+                                    </h4>
+                                </div>
+                            </div>
+
+                            <br />
+
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6">
+                                    <h3> Accommodation </h3>
+                                    <h4>
+                                        We've talked with <a href="https://hotel-berlin-adlershof.dorint.com/en/" target="_blank">Dorint Adlershof</a> Berlin hotel and they are offering special rates for attendees of the conference.
+                                        <br /> <br />
+                                        <span class="f-weight-md">Book via email or phone and refer to "WISTA-Rate" to get a discount!</span>
+                                        <br /><br />In the event of Dorint Adlershof being fully booked, <a href="http://www.airporthotel-berlin-adlershof.de/?lang=en" target="_blank">Airporthotel Berlin Adlershof</a> is a good alternative.
+                                    </h4>
+                                </div>
+                                <div class="col-xs-12 col-sm-6">
+                                    <h3> &nbsp; </h3>
+                                    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+                                    <div style='overflow:hidden;height:220px;width:500px;'>
+                                        <div id='gmap_accommodation' style='height:220px;width:500px;'></div>
+                                        <style>#()gmap_accommodation img{max-width:none!important;background:none!important}</style>
+                                    </div>
+                                    <script type="text/javascript">function init_map(){var myOptions = {zoom:15,center:new google.maps.LatLng(52.4316106,13.534685299999978),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_accommodation'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(52.4316106,13.534685299999978)});infowindow = new google.maps.InfoWindow({content:'<strong>Title</strong><br> Rudower Chaussee 15<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
+                                        </script>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sponsors">
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h4 class="text-center f-weight-sm m-t-100">
+                            If you're interested in sponsoring, please reach out to us at <a href="mailto:sponsors@serversideswift.info">sponsors@serversideswift.info</a> for more information.
+                        </h4>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+}
