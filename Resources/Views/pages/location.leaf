@@ -21,7 +21,7 @@
                                     </h4>
                                 </div>
                                 <div class="col-xs-12 col-sm-6">
-                                    <h3> Map </h3>
+                                    <h3> &nbsp; </h3>
                                     <h4>
                                         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
                                         <div style='overflow:hidden;height:220px;width:500px;'>
@@ -47,7 +47,7 @@
                                     </h4>
                                 </div>
                                 <div class="col-xs-12 col-sm-6">
-                                    <h3> Map </h3>
+                                    <h3> &nbsp; </h3>
                                     <h4>
                                         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
                                         <div style="overflow:hidden;height:220px;width:500px;">
@@ -71,7 +71,7 @@
                                     </h4>
                                 </div>
                                 <div class="col-xs-12 col-sm-6">
-                                    <h3> Map </h3>
+                                    <h3> &nbsp; </h3>
                                     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
                                     <div style='overflow:hidden;height:220px;width:500px;'>
                                         <div id='gmap_accommodation' style='height:220px;width:500px;'></div>
