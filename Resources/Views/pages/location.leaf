@@ -25,28 +25,7 @@
                                 <div class="col-xs-12 col-sm-6">
                                     <h3> &nbsp; </h3>
                                     <h4>
-                                        <div id="hotel-map" class="map"></div>
-                                        <script>
-                                        mapkit.init({
-                                            authorizationCallback: function(done) {
-                                                done('eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjlKODk1RkNDVDkifQ.eyJpc3MiOiJZV0xXMjNMVDZHIiwiaWF0IjoxNTMxODU5NDY0LCJleHAiOjQwNzM1NjIwMzN9.n5nR7D9GDZAYiTrVCjYNtv61IlLI2x9zm66zPNVxhVgGjY8vmLMKjpcAzWJhkdC6_l3tDvw-GwM7JlO4TkoGGA');
-                                            }
-                                        });
-                                        var MarkerAnnotation = mapkit.MarkerAnnotation;
-
-                                        var Hotel = new mapkit.CoordinateRegion(
-                                        new mapkit.Coordinate(52.432524280286664,13.538247942358339),
-                                        new mapkit.CoordinateSpan(0.167647972, 0.354985255)
-                                        );
-
-                                        var hotelPoint = new mapkit.Coordinate(52.432524280286664,13.538247942358339);
-                                        var hotelAnnotation = new MarkerAnnotation(hotelPoint);
-
-                                        var map = new mapkit.Map("hotel-map");
-                                        map.region = Hotel;
-                                        map.showItems([hotelAnnotation]);
-                                        map.showsZoomControl = true;
-                                        </script>
+                                        <div id="venue-map" class="map"></div>
                                     </h4>
                                 </div>
                             </div>
@@ -69,27 +48,6 @@
                                     <h3> &nbsp; </h3>
                                     <h4>
                                       <div id="transportation-map" class="map"></div>
-                                      <script>
-                                      mapkit.init({
-                                          authorizationCallback: function(done) {
-                                              done('eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjlKODk1RkNDVDkifQ.eyJpc3MiOiJZV0xXMjNMVDZHIiwiaWF0IjoxNTMxODU5NDY0LCJleHAiOjQwNzM1NjIwMzN9.n5nR7D9GDZAYiTrVCjYNtv61IlLI2x9zm66zPNVxhVgGjY8vmLMKjpcAzWJhkdC6_l3tDvw-GwM7JlO4TkoGGA');
-                                          }
-                                      });
-                                      var MarkerAnnotation = mapkit.MarkerAnnotation;
-
-                                      var Transportation = new mapkit.CoordinateRegion(
-                                      new mapkit.Coordinate(52.4350944,13.541023699999982),
-                                      new mapkit.CoordinateSpan(0.167647972, 0.354985255)
-                                      );
-
-                                      var transportPoint = new mapkit.Coordinate(52.4350944,13.541023699999982);
-                                      var transportAnnotaiton = new MarkerAnnotation(transportPoint);
-
-                                      var map = new mapkit.Map("transportation-map");
-                                      map.region = Transportation;
-                                      map.showItems([transportAnnotaiton]);
-                                      map.showsZoomControl = true;
-                                      </script>
                                     </h4>
                                 </div>
                             </div>
@@ -109,27 +67,6 @@
                                 <div class="col-xs-12 col-sm-6">
                                     <h3> &nbsp; </h3>
                                     <div id="accommodation-map" class="map"></div>
-                                    <script>
-                                    mapkit.init({
-                                        authorizationCallback: function(done) {
-                                            done('eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjlKODk1RkNDVDkifQ.eyJpc3MiOiJZV0xXMjNMVDZHIiwiaWF0IjoxNTMxODU5NDY0LCJleHAiOjQwNzM1NjIwMzN9.n5nR7D9GDZAYiTrVCjYNtv61IlLI2x9zm66zPNVxhVgGjY8vmLMKjpcAzWJhkdC6_l3tDvw-GwM7JlO4TkoGGA');
-                                        }
-                                    });
-                                    var MarkerAnnotation = mapkit.MarkerAnnotation;
-
-                                    var Accommodation = new mapkit.CoordinateRegion(
-                                    new mapkit.Coordinate(52.4350944,13.541023699999982),
-                                    new mapkit.CoordinateSpan(0.167647972, 0.354985255)
-                                    );
-
-                                    var accommodationPoint = new mapkit.Coordinate(52.4316106,13.534685299999978);
-                                    var accommodationAnnotaiton = new MarkerAnnotation(accommodationPoint);
-
-                                    var map = new mapkit.Map("accommodation-map");
-                                    map.region = Accommodation;
-                                    map.showItems([accommodationAnnotaiton]);
-                                    map.showsZoomControl = true;
-                                    </script>
                                 </div>
                             </div>
                     </div>
@@ -150,4 +87,60 @@
 
         </div>
     </div>
+
+    <script>
+      mapkit.init({
+        authorizationCallback: function(done) {
+          done('eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjlKODk1RkNDVDkifQ.eyJpc3MiOiJZV0xXMjNMVDZHIiwiaWF0IjoxNTMxODU5NDY0LCJleHAiOjQwNzM1NjIwMzN9.n5nR7D9GDZAYiTrVCjYNtv61IlLI2x9zm66zPNVxhVgGjY8vmLMKjpcAzWJhkdC6_l3tDvw-GwM7JlO4TkoGGA');
+        }
+      });
+
+      // Venue
+      let VenueMarkerAnnotation = mapkit.MarkerAnnotation;
+
+      let Venue = new mapkit.CoordinateRegion(
+        new mapkit.Coordinate(52.432524280286664, 13.538247942358339),
+        new mapkit.CoordinateSpan(0.167647972, 0.354985255)
+      );
+
+      let venuePoint = new mapkit.Coordinate(52.432524280286664,13.538247942358339);
+      let venueAnnotation = new VenueMarkerAnnotation(venuePoint);
+
+      let venueMap = new mapkit.Map("venue-map");
+      venueMap.region = Venue;
+      venueMap.showItems([venueAnnotation]);
+      venueMap.showsZoomControl = true;
+
+      // Transportation
+      let TransportationMarkerAnnotation = mapkit.MarkerAnnotation;
+
+      let Transportation = new mapkit.CoordinateRegion(
+        new mapkit.Coordinate(52.4350944,13.541023699999982),
+        new mapkit.CoordinateSpan(0.167647972, 0.354985255)
+      );
+
+      let transportPoint = new mapkit.Coordinate(52.4350944,13.541023699999982);
+      let transportAnnotaiton = new TransportationMarkerAnnotation(transportPoint);
+
+      let transportationMap = new mapkit.Map("transportation-map");
+      transportationMap.region = Transportation;
+      transportationMap.showItems([transportAnnotaiton]);
+      transportationMap.showsZoomControl = true;
+
+      // Accommodation
+      let AccommodationMarkerAnnotation = mapkit.MarkerAnnotation;
+
+      let Accommodation = new mapkit.CoordinateRegion(
+        new mapkit.Coordinate(52.4350944,13.541023699999982),
+        new mapkit.CoordinateSpan(0.167647972, 0.354985255)
+      );
+
+      let accommodationPoint = new mapkit.Coordinate(52.4316106,13.534685299999978);
+      let accommodationAnnotaiton = new AccommodationMarkerAnnotation(accommodationPoint);
+
+      let accommodationMap = new mapkit.Map("accommodation-map");
+      accommodationMap.region = Accommodation;
+      accommodationMap.showItems([accommodationAnnotaiton]);
+      accommodationMap.showsZoomControl = true;
+    </script>
 }
