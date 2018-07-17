@@ -22,6 +22,10 @@
                 <a href="/speakers">Speakers</a>
                 <span class="underline"></span>
             </li>
+            <li class="#if(location){active}">
+                <a href="/location">Location</a>
+                <span class="underline"></span>
+            </li>
             <li class="#if(sponsors){active}">
                 <a href="/sponsors">Sponsors</a>
                 <span class="underline"></span>
@@ -48,6 +52,10 @@
         </li>
         <li class="#if(speakers){active}">
             <a href="/speakers">Speakers</a>
+            <span class="underline"></span>
+        </li>
+        <li class="#if(venue){active}">
+            <a href="/venue">Venue</a>
             <span class="underline"></span>
         </li>
         <li class="#if(sponsors){active}">
