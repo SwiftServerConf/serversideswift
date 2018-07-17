@@ -25,12 +25,27 @@
                                 <div class="col-xs-12 col-sm-6">
                                     <h3> &nbsp; </h3>
                                     <h4>
-                                        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-                                        <div style='overflow:hidden;height:220px;width:500px;'>
-                                            <div id='gmap_location' style='height:220px;width:500px;'></div>
-                                            <style>#()gmap_location img{max-width:none!important;background:none!important}</style>
-                                        </div>
-                                        <script type='text/javascript'>function init_map(){var myOptions = {zoom:16,center:new google.maps.LatLng(52.432524280286664,13.538247942358339),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_location'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(52.432524280286664,13.538247942358339)});infowindow = new google.maps.InfoWindow({content:'<strong>WISTA Conventions</strong><br> Rudower Chaussee 17<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
+                                        <div id="hotel-map" class="map"></div>
+                                        <script>
+                                        mapkit.init({
+                                            authorizationCallback: function(done) {
+                                                done('eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjlKODk1RkNDVDkifQ.eyJpc3MiOiJZV0xXMjNMVDZHIiwiaWF0IjoxNTMxODU5NDY0LCJleHAiOjQwNzM1NjIwMzN9.n5nR7D9GDZAYiTrVCjYNtv61IlLI2x9zm66zPNVxhVgGjY8vmLMKjpcAzWJhkdC6_l3tDvw-GwM7JlO4TkoGGA');
+                                            }
+                                        });
+                                        var MarkerAnnotation = mapkit.MarkerAnnotation;
+
+                                        var Hotel = new mapkit.CoordinateRegion(
+                                        new mapkit.Coordinate(52.432524280286664,13.538247942358339),
+                                        new mapkit.CoordinateSpan(0.167647972, 0.354985255)
+                                        );
+
+                                        var hotelPoint = new mapkit.Coordinate(52.432524280286664,13.538247942358339);
+                                        var hotelAnnotation = new MarkerAnnotation(hotelPoint);
+
+                                        var map = new mapkit.Map("hotel-map");
+                                        map.region = Hotel;
+                                        map.showItems([hotelAnnotation]);
+                                        map.showsZoomControl = true;
                                         </script>
                                     </h4>
                                 </div>
@@ -53,12 +68,28 @@
                                 <div class="col-xs-12 col-sm-6">
                                     <h3> &nbsp; </h3>
                                     <h4>
-                                        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-                                        <div style="overflow:hidden;height:220px;width:500px;">
-                                            <div id='gmap_transportation' style='height:220px;width:500px;'></div>
-                                            <style>#()gmap_transportation img{max-width:none!important;background:none!important}</style>
-                                        </div>
-                                        <script type='text/javascript'>function init_map(){var myOptions = {zoom:15,center:new google.maps.LatLng(52.4350944,13.541023699999982),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_transportation'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(52.4350944,13.541023699999982)});infowindow = new google.maps.InfoWindow({content:'<strong>S-Bahnhof Adlershof</strong><br>S-Bahnhof Adlershof<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+                                      <div id="transportation-map" class="map"></div>
+                                      <script>
+                                      mapkit.init({
+                                          authorizationCallback: function(done) {
+                                              done('eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjlKODk1RkNDVDkifQ.eyJpc3MiOiJZV0xXMjNMVDZHIiwiaWF0IjoxNTMxODU5NDY0LCJleHAiOjQwNzM1NjIwMzN9.n5nR7D9GDZAYiTrVCjYNtv61IlLI2x9zm66zPNVxhVgGjY8vmLMKjpcAzWJhkdC6_l3tDvw-GwM7JlO4TkoGGA');
+                                          }
+                                      });
+                                      var MarkerAnnotation = mapkit.MarkerAnnotation;
+
+                                      var Transportation = new mapkit.CoordinateRegion(
+                                      new mapkit.Coordinate(52.4350944,13.541023699999982),
+                                      new mapkit.CoordinateSpan(0.167647972, 0.354985255)
+                                      );
+
+                                      var transportPoint = new mapkit.Coordinate(52.4350944,13.541023699999982);
+                                      var transportAnnotaiton = new MarkerAnnotation(transportPoint);
+
+                                      var map = new mapkit.Map("transportation-map");
+                                      map.region = Transportation;
+                                      map.showItems([transportAnnotaiton]);
+                                      map.showsZoomControl = true;
+                                      </script>
                                     </h4>
                                 </div>
                             </div>
@@ -77,13 +108,28 @@
                                 </div>
                                 <div class="col-xs-12 col-sm-6">
                                     <h3> &nbsp; </h3>
-                                    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-                                    <div style='overflow:hidden;height:220px;width:500px;'>
-                                        <div id='gmap_accommodation' style='height:220px;width:500px;'></div>
-                                        <style>#()gmap_accommodation img{max-width:none!important;background:none!important}</style>
-                                    </div>
-                                    <script type="text/javascript">function init_map(){var myOptions = {zoom:15,center:new google.maps.LatLng(52.4316106,13.534685299999978),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_accommodation'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(52.4316106,13.534685299999978)});infowindow = new google.maps.InfoWindow({content:'<strong>Title</strong><br> Rudower Chaussee 15<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
-                                        </script>
+                                    <div id="accommodation-map" class="map"></div>
+                                    <script>
+                                    mapkit.init({
+                                        authorizationCallback: function(done) {
+                                            done('eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjlKODk1RkNDVDkifQ.eyJpc3MiOiJZV0xXMjNMVDZHIiwiaWF0IjoxNTMxODU5NDY0LCJleHAiOjQwNzM1NjIwMzN9.n5nR7D9GDZAYiTrVCjYNtv61IlLI2x9zm66zPNVxhVgGjY8vmLMKjpcAzWJhkdC6_l3tDvw-GwM7JlO4TkoGGA');
+                                        }
+                                    });
+                                    var MarkerAnnotation = mapkit.MarkerAnnotation;
+
+                                    var Accommodation = new mapkit.CoordinateRegion(
+                                    new mapkit.Coordinate(52.4350944,13.541023699999982),
+                                    new mapkit.CoordinateSpan(0.167647972, 0.354985255)
+                                    );
+
+                                    var accommodationPoint = new mapkit.Coordinate(52.4316106,13.534685299999978);
+                                    var accommodationAnnotaiton = new MarkerAnnotation(accommodationPoint);
+
+                                    var map = new mapkit.Map("accommodation-map");
+                                    map.region = Accommodation;
+                                    map.showItems([accommodationAnnotaiton]);
+                                    map.showsZoomControl = true;
+                                    </script>
                                 </div>
                             </div>
                     </div>
