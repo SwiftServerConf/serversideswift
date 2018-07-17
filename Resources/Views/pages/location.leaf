@@ -67,7 +67,7 @@
                                     <h4>
                                         We've talked with <a href="https://hotel-berlin-adlershof.dorint.com/en/" target="_blank">Dorint Adlershof</a> Berlin hotel and they are offering special rates for attendees of the conference.
                                         <br /> <br />
-                                        <span class="f-weight-md">Book over email or phone and refer to "WISTA-Rate" to get a discount!</span>
+                                        <span class="f-weight-md">Book via email or phone and refer to "WISTA-Rate" to get a discount!</span>
                                     </h4>
                                 </div>
                                 <div class="col-xs-12 col-sm-6">
@@ -75,16 +75,6 @@
                                     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
                                     <div style='overflow:hidden;height:220px;width:500px;'>
                                         <div id='gmap_accommodation' style='height:220px;width:500px;'></div>
-                                        <div>
-                                            <small>
-                                                <a href="embedgooglemaps.com/">https://embedgooglemaps.com/</a>
-                                            </small>
-                                        </div>
-                                        <div>
-                                            <small>
-                                                <a href="http://www.kumo-racing.nl/">nypass.nl</a>
-                                            </small>
-                                        </div>
                                         <style>#()gmap_accommodation img{max-width:none!important;background:none!important}</style>
                                     </div>
                                     <script type="text/javascript">function init_map(){var myOptions = {zoom:15,center:new google.maps.LatLng(52.4316106,13.534685299999978),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_accommodation'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(52.4316106,13.534685299999978)});infowindow = new google.maps.InfoWindow({content:'<strong>Title</strong><br> Rudower Chaussee 15<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
