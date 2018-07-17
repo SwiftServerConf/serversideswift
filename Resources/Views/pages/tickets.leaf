@@ -1,0 +1,22 @@
+#extend("layout/base")
+
+#export("content") {
+
+    <div class="container">
+        <div class="first-content">
+
+            <div class="tickets">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="text-center fc-orange">Tickets</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tito-embed">
+                <tito-widget event="serverside-swift/serverside-swift-2018"></tito-widget>
+            </div>
+
+        </div>
+    </div>
+}
