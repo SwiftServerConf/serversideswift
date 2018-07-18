@@ -103,6 +103,8 @@
 
       let venuePoint = new mapkit.Coordinate(52.432524280286664,13.538247942358339);
       let venueAnnotation = new VenueMarkerAnnotation(venuePoint);
+      venueAnnotation.title = 'WISTA conventions';
+      venueAnnotation.subtitle = 'Rudower Straße 17';
 
       let venueMap = new mapkit.Map("venue-map");
       venueMap.region = Venue;
@@ -118,11 +120,13 @@
       );
 
       let transportPoint = new mapkit.Coordinate(52.4350944,13.541023699999982);
-      let transportAnnotaiton = new TransportationMarkerAnnotation(transportPoint);
+      let transportAnnotation = new TransportationMarkerAnnotation(transportPoint);
+      transportAnnotation.title = 'S-Bahnhof Adlershof';
+
 
       let transportationMap = new mapkit.Map("transportation-map");
       transportationMap.region = Transportation;
-      transportationMap.showItems([transportAnnotaiton]);
+      transportationMap.showItems([transportAnnotation]);
       transportationMap.showsZoomControl = true;
 
       // Accommodation
@@ -134,11 +138,13 @@
       );
 
       let accommodationPoint = new mapkit.Coordinate(52.4316106,13.534685299999978);
-      let accommodationAnnotaiton = new AccommodationMarkerAnnotation(accommodationPoint);
+      let accommodationAnnotation = new AccommodationMarkerAnnotation(accommodationPoint);
+      accommodationAnnotation.title = 'Dorint Adlershof Berlin';
+      accommodationAnnotation.subtitle = 'Rudower Straße 15';
 
       let accommodationMap = new mapkit.Map("accommodation-map");
       accommodationMap.region = Accommodation;
-      accommodationMap.showItems([accommodationAnnotaiton]);
+      accommodationMap.showItems([accommodationAnnotation]);
       accommodationMap.showsZoomControl = true;
     </script>
 }
