@@ -56,10 +56,15 @@
                                 <div class="col-xs-12 col-sm-6">
                                     <h3> Accommodation </h3>
                                     <h4>
-                                        We've talked with <a href="https://hotel-berlin-adlershof.dorint.com/en/" target="_blank">Dorint Adlershof</a> Berlin hotel and they are offering special rates for attendees of the conference.
+                                        We've worked out a discount for all attendees of our conference for both hotels <a href="https://www.adaptberlin.de/en/locations/berlin/adlershof.html" target="_blank">Adapt Apartments Berlin</a> and <a href="http://www.airporthotel-berlin-adlershof.de/hotel-route.html" target="_blank">Airporthotel Berlin-Adlershof</a>.
                                         <br /> <br />
-                                        <span class="f-weight-md">Book via email or phone and refer to "WISTA-Rate" to get a discount!</span>
-                                        <br /><br />In the event of Dorint Adlershof being fully booked, <a href="http://www.airporthotel-berlin-adlershof.de/?lang=en" target="_blank">Airporthotel Berlin Adlershof</a> is a good alternative.
+                                        <span class="f-weight-md">Book via email or phone and refer to a code to get a discount!
+                                            <br />
+                                            <ul>
+                                                <li>Adapt Apartments Berlin: "WISTA17"</li>
+                                                <li>Airporthotel Berlin-Adlershof: "WIS17"</li>
+                                            </ul>
+                                        </span>
                                     </h4>
                                 </div>
                                 <div class="col-xs-12 col-sm-6">
@@ -120,17 +125,16 @@
       // Accommodation
       let AccommodationMarkerAnnotation = mapkit.MarkerAnnotation;
 
-      let Accommodation = new mapkit.CoordinateRegion(
-        new mapkit.Coordinate(52.4350944,13.541023699999982),
-        new mapkit.CoordinateSpan(0.167647972, 0.354985255)
-      );
-
-      let accommodationPoint = new mapkit.Coordinate(52.4316106,13.534685299999978);
+      let accommodationPoint = new mapkit.Coordinate(52.432395, 13.532417);
       let accommodationAnnotation = new AccommodationMarkerAnnotation(accommodationPoint);
-      accommodationAnnotation.title = 'Dorint Adlershof Berlin';
-      accommodationAnnotation.subtitle = 'Rudower Straße 15';
+      accommodationAnnotation.title = 'Adapt Apartments Berlin';
+      accommodationAnnotation.subtitle = 'Erich-Thilo-Straße 3';
 
       let accommodationMap = new mapkit.Map("accommodation-map");
+      let Accommodation = new mapkit.CoordinateRegion(
+          accommodationPoint,
+          new mapkit.CoordinateSpan(0.167647972, 0.354985255)
+      );
       accommodationMap.region = Accommodation;
       accommodationMap.showItems([accommodationAnnotation]);
       accommodationMap.showsZoomControl = true;
