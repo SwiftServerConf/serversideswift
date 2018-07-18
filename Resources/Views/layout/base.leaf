@@ -18,6 +18,17 @@
     <meta property="twitter:image:alt" content="The Server-Side Swift conference">
     <link rel="stylesheet" type="text/css" href='https://css.tito.io/v1.1' />
     <script src='https://js.tito.io/v1' async></script>
+
+    #if(location){
+    <script src="https://cdn.apple-mapkit.com/mk/5.x.x/mapkit.js"></script>
+
+    <style>
+    .map {
+        width: 100%;
+        height: 300px;
+    }
+    </style>
+    }
   </head>
   <body>
     #embed("layout/navigation.leaf")
