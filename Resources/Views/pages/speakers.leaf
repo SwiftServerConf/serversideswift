@@ -142,6 +142,48 @@
 
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="speaker">
+                        <div class="image">
+                            <img src="/images/speakers/kenichi_ueno.jpg" alt="Kenichi Ueno">
+                            <div class="social-media">
+                                <a href="https://twitter.com/keno42" target="_blank">
+                                    #embed("partials/icons/twitter")
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="title">
+                                Kenichi Ueno
+                            </div>
+                            <div class="sub-title">
+                                iOS Developer @ LINE Corporation
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="speaker">
+                        <div class="image">
+                            <img src="/images/speakers/markus_weyerhaeuser.jpg" alt="Markus Weyerhäuser">
+                            <div class="social-media">
+                                <a href="https://twitter.com/mweyerhaeuser" target="_blank">
+                                    #embed("partials/icons/twitter")
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="title">
+                                Markus Weyerhäuser
+                            </div>
+                            <div class="sub-title">
+                                CTO @ SEEDFUNNEL
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="speaker">
                         <div class="image avatar">
                             <img src="/images/speakers/avatar.png" alt="You">
                         </div>
