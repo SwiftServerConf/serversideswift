@@ -184,6 +184,27 @@
 
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="speaker">
+                        <div class="image">
+                            <img src="/images/speakers/ralph_kuepper.jpeg" alt="Ralph Küpper">
+                            <div class="social-media">
+                                <a href="https://twitter.com/amlug" target="_blank">
+                                    #embed("partials/icons/twitter")
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="title">
+                                Ralph Küpper
+                            </div>
+                            <div class="sub-title">
+                                CEO @ Skelpo
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="speaker">
                         <div class="image avatar">
                             <img src="/images/speakers/avatar.png" alt="You">
                         </div>
