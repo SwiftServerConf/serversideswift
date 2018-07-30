@@ -80,19 +80,19 @@
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="speaker">
                         <div class="image">
-                            <img src="/images/speakers/stanislav_dombrovsky.jpg" alt="Stanislav Dombrovsky">
+                            <img src="/images/speakers/johannes-weiss.png" alt="Johannes Weiss">
                             <div class="social-media">
-                                <a href="https://twitter.com/s_dombrovsky" target="_blank">
+                                <a href="https://twitter.com/johannesweiss" target="_blank">
                                     #embed("partials/icons/twitter")
                                 </a>
                             </div>
                         </div>
                         <div class="card">
                             <div class="title">
-                                Stanislav Dombrovsky
+                                Johannes Weiss
                             </div>
                             <div class="sub-title">
-                                AppCode PMM @ JetBrains
+                                Software Engineer, SwiftNIO @ Apple
                             </div>
                         </div>
                     </div>
@@ -122,19 +122,19 @@
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="speaker">
                         <div class="image">
-                            <img src="/images/speakers/pim-stolk.jpg" alt="Pim Stolk">
+                            <img src="/images/speakers/stanislav_dombrovsky.jpg" alt="Stanislav Dombrovsky">
                             <div class="social-media">
-                                <a href="https://twitter.com/stolkcc" target="_blank">
+                                <a href="https://twitter.com/s_dombrovsky" target="_blank">
                                     #embed("partials/icons/twitter")
                                 </a>
                             </div>
                         </div>
                         <div class="card">
                             <div class="title">
-                                Pim Stolk
+                                Stanislav Dombrovsky
                             </div>
                             <div class="sub-title">
-                                iOS Chapter Lead @ ING
+                                AppCode PMM @ JetBrains
                             </div>
                         </div>
                     </div>
@@ -143,19 +143,19 @@
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="speaker">
                         <div class="image">
-                            <img src="/images/speakers/markus_weyerhaeuser.jpg" alt="Markus Weyerhäuser">
+                            <img src="/images/speakers/kaitlin-mahar.jpg" alt="Kaitlin Mahar">
                             <div class="social-media">
-                                <a href="https://twitter.com/mweyerhaeuser" target="_blank">
+                                <a href="https://twitter.com/k__mahar" target="_blank">
                                     #embed("partials/icons/twitter")
                                 </a>
                             </div>
                         </div>
                         <div class="card">
                             <div class="title">
-                                Markus Weyerhäuser
+                                Kaitlin Mahar
                             </div>
                             <div class="sub-title">
-                                CTO @ SEEDFUNNEL
+                                Software Engineer @ MongoDB
                             </div>
                         </div>
                     </div>
@@ -185,6 +185,27 @@
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="speaker">
                         <div class="image">
+                            <img src="/images/speakers/markus_weyerhaeuser.jpg" alt="Markus Weyerhäuser">
+                            <div class="social-media">
+                                <a href="https://twitter.com/mweyerhaeuser" target="_blank">
+                                    #embed("partials/icons/twitter")
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="title">
+                                Markus Weyerhäuser
+                            </div>
+                            <div class="sub-title">
+                                CTO @ SEEDFUNNEL
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="speaker">
+                        <div class="image">
                             <img src="/images/speakers/ralph_kuepper.jpeg" alt="Ralph Küpper">
                             <div class="social-media">
                                 <a href="https://twitter.com/amlug" target="_blank">
@@ -198,6 +219,27 @@
                             </div>
                             <div class="sub-title">
                                 CEO @ Skelpo
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="speaker">
+                        <div class="image">
+                            <img src="/images/speakers/pim-stolk.jpg" alt="Pim Stolk">
+                            <div class="social-media">
+                                <a href="https://twitter.com/stolkcc" target="_blank">
+                                    #embed("partials/icons/twitter")
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="title">
+                                Pim Stolk
+                            </div>
+                            <div class="sub-title">
+                                iOS Chapter Lead @ ING
                             </div>
                         </div>
                     </div>
@@ -226,15 +268,20 @@
 
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="speaker">
-                        <div class="image avatar">
-                            <img src="/images/speakers/avatar.png" alt="You">
+                        <div class="image">
+                            <img src="/images/speakers/konrad-feiler.jpg" alt="Konrad Feiler">
+                            <div class="social-media">
+                                <a href="https://twitter.com/bersaelor" target="_blank">
+                                    #embed("partials/icons/twitter")
+                                </a>
+                            </div>
                         </div>
                         <div class="card">
                             <div class="title">
-                                You?
+                                Konrad Feiler
                             </div>
                             <div class="sub-title">
-                                Apply for a talk <a href="https://goo.gl/forms/Jb37ZKROJNm5HIGl2">here!</a>
+                                Co-Founder @ looc.io
                             </div>
                         </div>
                     </div>
