@@ -13,8 +13,8 @@ extension Speaker: Parameterizable {
 
 // Convenience access to single speaker from speaker list by speaker key
 extension Speaker {
-    static func speaker(by name: Speaker.Keys) throws -> Speaker {
-        guard let speaker = allSpeaker()[name.rawValue] else {
+    static func speaker(by key: Speaker.Keys) throws -> Speaker {
+        guard let speaker = allSpeaker().first(where: { speaker in speaker.key == key }) else {
             throw SpeakerError.noSpeakerForGivenSpeakerKey
         }
         return speaker

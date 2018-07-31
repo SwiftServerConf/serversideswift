@@ -3,6 +3,7 @@ import Vapor
 extension Speaker: NodeConvertible {
     init(node: Node) throws {
         try self.init(
+            key: node.get("key"),
             imageUrl: node.get("imageUrl"),
             name: node.get("name"),
             title: node.get("title"),
@@ -15,6 +16,7 @@ extension Speaker: NodeConvertible {
 
     func makeNode(in context: Context?) throws -> Node {
         return try Node(node: [
+            "key": .string(key.rawValue),
             "imageUrl": .string(imageUrl),
             "name": .string(name),
             "title": .string(title),

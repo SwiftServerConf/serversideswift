@@ -58,3 +58,21 @@
 .speaker .card .title {
     font-size: 22px;
 }
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}
+
+.flex-item {
+    width: 280px;
+    padding: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .flex-item {
+        width: 100%;
+        padding: 0 30px;
+    }
+}

@@ -17,7 +17,10 @@ final class Routes: RouteCollection {
     }
 
     builder.get("/speakers") { req in
-        return try self.view.make("pages/speakers", ["speakers": true])
+        return try self.view.make(
+            "pages/speakers",
+            ["speakers": Speaker.allSpeaker()]
+        )
     }
 
     builder.get("/speakers", Speaker.parameter) { req in
