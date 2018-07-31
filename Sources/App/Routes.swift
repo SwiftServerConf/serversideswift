@@ -7,7 +7,7 @@ final class Routes: RouteCollection {
   }
 
   func build(_ builder: RouteBuilder) throws {
-    
+
     builder.get("/") { req in
         return try self.view.make("pages/home", ["home": true])
     }
@@ -18,6 +18,15 @@ final class Routes: RouteCollection {
 
     builder.get("/speakers") { req in
         return try self.view.make("pages/speakers", ["speakers": true])
+    }
+
+    builder.get("/speakers", Speaker.parameter) { req in
+        let speaker = try req.parameters.next(Speaker.self)
+
+        return try self.view.make(
+            "pages/speakers/profile",
+            ["speakers": true, "speaker": speaker]
+        )
     }
 
     builder.get("/location") { req in
