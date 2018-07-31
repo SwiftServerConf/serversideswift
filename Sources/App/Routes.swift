@@ -24,7 +24,7 @@ final class Routes: RouteCollection {
         let speaker = try req.parameters.next(Speaker.self)
 
         return try self.view.make(
-            "pages/speakers/profile",
+            "pages/speaker-profile",
             ["speakers": true, "speaker": speaker]
         )
     }

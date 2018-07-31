@@ -1,11 +1,13 @@
 import Vapor
 
 struct Speaker {
+    let imageUrl: String
     let name: String
     let title: String
     let company: String
-    let twitter: String?
-    let github: String?
+    let topic: String
+    let twitter: SocialMedia?
+    let github: SocialMedia?
 }
 
 /// For a new speaker profile ///
@@ -63,11 +65,13 @@ extension Speaker {
         return [
             Keys.tannerNelson.rawValue:
             Speaker(
+                imageUrl: "/images/speakers/tanner_nelson.jpeg",
                 name: "Tanner Nelson",
                 title: "Co-Founder",
                 company: "Vapor",
-                twitter: "https://www.twitter.com/tanner0101",
-                github: nil
+                topic: "All about Vapor and its future",
+                twitter: Twitter(url: "https://www.twitter.com/tanner0101", name: "tanner0101"),
+                github: Github(url: "https://github.com/tanner0101", name: "tanner0101")
             )
         ]
     }
