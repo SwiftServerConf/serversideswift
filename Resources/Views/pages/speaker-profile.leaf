@@ -1,0 +1,60 @@
+#extend("layout/base")
+
+#export("content") {
+    <div class="container">
+        <div class="first-content">
+            <div class="tickets">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="text-center fc-orange">Speaker</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="speaker-profile">
+                <div class="image col-xs-12 col-sm-5">
+                    <img src="#(speaker.imageUrl)" alt="Tanner Nelson">
+                        <div class="social-media">
+                            <a href="https://www.twitter.com/tanner0101" target="_blank">
+                            </a>
+                        </div>
+                        </div>
+                <div class="card col-xs-12 col-sm-7">
+                    <div class="hidden-sm hidden-md hidden-lg"><br /></div>
+                    <!-- NAME -->
+                    <div>
+                        NAME
+                    </div>
+                    <h2 class="m-t-0 m-b-30 title"> #(speaker.name) </h2>
+
+                    <!-- TITLE -->
+                    <div> TITLE </div>
+                    <h2 class="m-t-0 m-b-30 title"> #(speaker.title) @ #(speaker.company) </h2>
+
+                    <!-- TOPIC -->
+                    <div class="title"> TOPIC </div>
+                    <h2 class="m-t-0 m-b-30 title">#(speaker.topic)</h2>
+
+
+                    <!-- SOCIAL MEDIA -->
+                    <!-- if twitter OR github exists -->
+                    #if(speaker.twitter) {
+                        <div> SOCIAL MEDIA </div>
+                    } ##else() {
+                        #if(speaker.github) {
+                        <div> Social Media </div>
+                        }
+                    }
+
+                    #if(speaker.twitter) {
+                        <h2 class="m-t-0 m-b-0 title">Twitter: <a href="#(speaker.twitter.url)" target="_blank">@#(speaker.twitter.name)</a></h2>
+                    }
+
+                    #if(speaker.github) {
+                        <h2 class="m-t-0 title">Github: <a href="#(speaker.github.url)" target="_blank">@#(speaker.github.name)</a></h2>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+}

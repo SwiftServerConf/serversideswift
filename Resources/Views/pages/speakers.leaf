@@ -13,280 +13,30 @@
             </div>
 
             <div class="row">
-
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="speaker">
-                        <div class="image">
-                            <img src="/images/speakers/tanner_nelson.jpeg" alt="Tanner Nelson">
-                            <div class="social-media">
-                                <a href="https://www.twitter.com/tanner0101" target="_blank">
-                                    #embed("partials/icons/twitter")
-                                </a>
+                <div class="flex-container">
+                    #loop(speakers, "speaker") {
+                        <div class="flex-item">
+                            <div class="speaker">
+                                <div class="image">
+                                    <img src="#(speaker.imageUrl)" alt="Tanner Nelson">
+                                    <div class="social-media">
+                                        <a href="/speakers/#(speaker.key)">
+                                            #(speaker.key)
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="title">
+                                        #(speaker.name)
+                                    </div>
+                                    <div class="sub-title">
+                                        #(speaker.title) @ #(speaker.company)
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="title">
-                                Tanner Nelson
-                            </div>
-                            <div class="sub-title">
-                                Co-Founder @ Vapor
-                            </div>
-                        </div>
-                    </div>
+                    }
                 </div>
-
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="speaker">
-                        <div class="image">
-                            <img src="/images/speakers/james_thomas.png" alt="James Thomas">
-                            <div class="social-media">
-                                <a href="https://twitter.com/thomasj" target="_blank">
-                                    #embed("partials/icons/twitter")
-                                </a>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="title">
-                                James Thomas
-                            </div>
-                            <div class="sub-title">
-                                Developer advocate @ IBM
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="speaker">
-                        <div class="image">
-                            <img src="/images/speakers/kyle_jessup.jpg" alt="Kyle Jessup">
-                            <div class="social-media">
-                                <a href="https://github.com/kjessup" target="_blank">
-                                    #embed("partials/icons/github")
-                                </a>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="title">
-                                Kyle Jessup
-                            </div>
-                            <div class="sub-title">
-                                CTO @ Perfect
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="speaker">
-                        <div class="image">
-                            <img src="/images/speakers/johannes-weiss.png" alt="Johannes Weiss">
-                            <div class="social-media">
-                                <a href="https://twitter.com/johannesweiss" target="_blank">
-                                    #embed("partials/icons/twitter")
-                                </a>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="title">
-                                Johannes Weiss
-                            </div>
-                            <div class="sub-title">
-                                Software Engineer, SwiftNIO @ Apple
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="speaker">
-                        <div class="image">
-                            <img src="/images/speakers/ian-partridge.jpg" alt="Ian Partridge">
-                            <div class="social-media">
-                                <a href="https://twitter.com/alfa" target="_blank">
-                                    #embed("partials/icons/twitter")
-                                </a>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="title">
-                                Ian Partridge
-                            </div>
-                            <div class="sub-title">
-                                Kitura Team Lead Swift @ IBM
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="speaker">
-                        <div class="image">
-                            <img src="/images/speakers/stanislav_dombrovsky.jpg" alt="Stanislav Dombrovsky">
-                            <div class="social-media">
-                                <a href="https://twitter.com/s_dombrovsky" target="_blank">
-                                    #embed("partials/icons/twitter")
-                                </a>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="title">
-                                Stanislav Dombrovsky
-                            </div>
-                            <div class="sub-title">
-                                AppCode PMM @ JetBrains
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="speaker">
-                        <div class="image">
-                            <img src="/images/speakers/kaitlin-mahar.jpg" alt="Kaitlin Mahar">
-                            <div class="social-media">
-                                <a href="https://twitter.com/k__mahar" target="_blank">
-                                    #embed("partials/icons/twitter")
-                                </a>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="title">
-                                Kaitlin Mahar
-                            </div>
-                            <div class="sub-title">
-                                Software Engineer @ MongoDB
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="speaker">
-                        <div class="image">
-                            <img src="/images/speakers/kenichi_ueno.jpg" alt="Kenichi Ueno">
-                            <div class="social-media">
-                                <a href="https://twitter.com/keno42" target="_blank">
-                                    #embed("partials/icons/twitter")
-                                </a>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="title">
-                                Kenichi Ueno
-                            </div>
-                            <div class="sub-title">
-                                iOS Developer @ LINE Corporation
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="speaker">
-                        <div class="image">
-                            <img src="/images/speakers/markus_weyerhaeuser.jpg" alt="Markus Weyerhäuser">
-                            <div class="social-media">
-                                <a href="https://twitter.com/mweyerhaeuser" target="_blank">
-                                    #embed("partials/icons/twitter")
-                                </a>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="title">
-                                Markus Weyerhäuser
-                            </div>
-                            <div class="sub-title">
-                                CTO @ SEEDFUNNEL
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="speaker">
-                        <div class="image">
-                            <img src="/images/speakers/ralph_kuepper.jpeg" alt="Ralph Küpper">
-                            <div class="social-media">
-                                <a href="https://twitter.com/amlug" target="_blank">
-                                    #embed("partials/icons/twitter")
-                                </a>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="title">
-                                Ralph Küpper
-                            </div>
-                            <div class="sub-title">
-                                CEO @ Skelpo
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="speaker">
-                        <div class="image">
-                            <img src="/images/speakers/pim-stolk.jpg" alt="Pim Stolk">
-                            <div class="social-media">
-                                <a href="https://twitter.com/stolkcc" target="_blank">
-                                    #embed("partials/icons/twitter")
-                                </a>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="title">
-                                Pim Stolk
-                            </div>
-                            <div class="sub-title">
-                                iOS Chapter Lead @ ING
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="speaker">
-                        <div class="image">
-                            <img src="/images/speakers/marcin_kliks.jpg" alt="Marcin Kliks">
-                            <div class="social-media">
-                                <a href="https://twitter.com/vi4m" target="_blank">
-                                    #embed("partials/icons/twitter")
-                                </a>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="title">
-                                Marcin Kliks
-                            </div>
-                            <div class="sub-title">
-                                Devops Team Leader @ Allegro
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-4 col-md-3">
-                    <div class="speaker">
-                        <div class="image">
-                            <img src="/images/speakers/konrad-feiler.jpg" alt="Konrad Feiler">
-                            <div class="social-media">
-                                <a href="https://twitter.com/bersaelor" target="_blank">
-                                    #embed("partials/icons/twitter")
-                                </a>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="title">
-                                Konrad Feiler
-                            </div>
-                            <div class="sub-title">
-                                Co-Founder @ looc.io
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </div>
