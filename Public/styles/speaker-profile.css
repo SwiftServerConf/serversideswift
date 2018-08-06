@@ -40,3 +40,7 @@
 .speaker-profile .card .title {
     color: #fff;
 }
+
+.speaker-profile h2 {
+    font-size: 18px;
+}

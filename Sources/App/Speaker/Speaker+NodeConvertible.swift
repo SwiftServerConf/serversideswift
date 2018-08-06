@@ -9,6 +9,7 @@ extension Speaker: NodeConvertible {
             title: node.get("title"),
             company: node.get("company"),
             topic: node.get("topic"),
+            bio: node.get("bio"),
             twitter: node.get("twitter"),
             github: node.get("github")
         )
@@ -22,6 +23,7 @@ extension Speaker: NodeConvertible {
             "title": .string(title),
             "company": .string(company),
             "topic": .string(topic),
+            "bio": .string(bio),
             "twitter": twitter?.makeNode(in: nil) ?? "",
             "github": github?.makeNode(in: nil) ?? "",
             ])

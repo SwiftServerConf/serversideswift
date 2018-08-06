@@ -7,6 +7,7 @@ struct Speaker {
     let title: String
     let company: String
     let topic: String
+    let bio: String
     let twitter: SocialMedia?
     let github: SocialMedia?
 
@@ -17,6 +18,7 @@ struct Speaker {
         title: String,
         company: String,
         topic: String,
+        bio: String,
         twitter: SocialMedia? = nil,
         github: SocialMedia? = nil
     ) {
@@ -26,6 +28,7 @@ struct Speaker {
         self.title = title
         self.company = company
         self.topic = topic
+        self.bio = bio
         self.twitter = twitter
         self.github = github
     }
@@ -94,7 +97,8 @@ extension Speaker {
                 name: "Tanner Nelson",
                 title: "Co-Founder",
                 company: "Vapor",
-                topic: "All about Vapor and its future",
+                topic: "TBD", // ⚠️ TBD
+                bio: "TBD", // ⚠️ TBD
                 twitter: Twitter(url: "https://www.twitter.com/tanner0101", name: "tanner0101"),
                 github: Github(url: "https://github.com/tanner0101", name: "tanner0101")
             ),
@@ -104,7 +108,13 @@ extension Speaker {
                 name: "james Thomas",
                 title: "Developer advocate",
                 company: "IBM",
-                topic: "All about Kitura and its future",
+                topic: "Serverless Swift with Apache OpenWhisk.",
+                bio:    """
+                        James Thomas is a Developer Advocate for IBM’s Cloud division.
+                        James is a huge fan of all thing serverless! He spends his time
+                        speaking at conferences, blogging or writing open-source code to share
+                        the awesomeness of serverless cloud platforms.
+                        """,
                 twitter: Twitter(url: "https://twitter.com/thomasj", name: "thomasj"),
                 github: Github(url: "https://github.com/jthomas", name: "jthomas")
             ),
@@ -114,7 +124,12 @@ extension Speaker {
                 name: "Kyle Jessup",
                 title: "CTO",
                 company: "Perfect",
-                topic: "All about Perfect and its future",
+                topic: "Diving into Perfect and Internet of Things.",
+                bio:    """
+                        Kyle Jessup invented the Perfect framework. A self-taught programmer,
+                        he has extensive knowledge of other programming languages including Swift,
+                        Java, and C++.
+                        """,
                 github: Github(url: "https://github.com/kjessup", name: "kjessup")
             ),
             Speaker(
@@ -123,7 +138,8 @@ extension Speaker {
                 name: "Johannes Weiss",
                 title: "Software Engineer, SwiftNIO",
                 company: "Apple",
-                topic: "All about SwiftNIO and its future",
+                topic: "TBD", // ⚠️ TBD
+                bio: "TBD", // ⚠️ TBD
                 twitter: Twitter(url: "https://twitter.com/johannesweiss", name: "johannesweiss"),
                 github: Github(url: "https://github.com/weissi", name: "weissi")
             ),
@@ -133,7 +149,8 @@ extension Speaker {
                 name: "Ian Partridge",
                 title: "Kitura Team Lead Swift",
                 company: "IBM",
-                topic: "All about Kitura and its future",
+                topic: "TBD", // ⚠️ TBD
+                bio: "TBD", // ⚠️ TBD
                 twitter: Twitter(url: "https://twitter.com/alfa", name: "alfa"),
                 github: Github(url: "https://github.com/ianpartridge", name: "ianpartridge")
             ),
@@ -143,7 +160,12 @@ extension Speaker {
                 name: "Stanislav Dombrovsky",
                 title: "AppCode PMM",
                 company: "JetBrains",
-                topic: "All about AppCode and its future",
+                topic: "Let’s try thinking like an IDE and take a look on all the challenges that server-side Swift brings to IDE and tool creators.",
+                bio:    """
+                        A mobile developer with 7 years of experience who joined
+                        the AppCode team at JetBrains to combine my experience in mobile
+                        development with the new world of making developer tools.
+                        """,
                 twitter: Twitter(url: "https://twitter.com/s_dombrovsky", name: "s_dombrovsky"),
                 github: Github(url: "https://github.com/yeswolf", name: "yeswolf")
             ),
@@ -153,7 +175,8 @@ extension Speaker {
                 name: "Kaitlin Mahar",
                 title: "Software Engineer",
                 company: "MongoDB",
-                topic: "UnsafePointer Pointers: How to Work With C Libraries in Swift",
+                topic: "Ever wonder what’s actually going on inside JSONEncoder and JSONDecoder? A deep dive into Swift’s Encoder and Decoder protocols and writing one your own.",
+                bio: "A software engineer in NYC at MongoDB, where I'm the primary engineer working on the new official MongoDB Driver for Swift.",
                 twitter: Twitter(url: "https://twitter.com/k__mahar", name: "k__mahar"),
                 github: Github(url: "https://github.com/kmahar", name: "kmahar")
             ),
@@ -164,6 +187,7 @@ extension Speaker {
                 title: "iOS Developer",
                 company: "LINE Corporation",
                 topic: "Experiences on how the server-side development looks like, pitfalls an iOS developer might meet and how to deploy.",
+                bio: "Has 8 years of iOS development experience at LINE Corporation and uses Kitura for server-side swift development.",
                 twitter: Twitter(url: "https://twitter.com/keno42", name: "keno42"),
                 github: Github(url: "https://github.com/Keno42", name: "keno42")
             ),
@@ -174,6 +198,12 @@ extension Speaker {
                 title: "CTO",
                 company: "SEEDFUNNEL",
                 topic: "From idea to market — an extremely challenging journey.",
+                bio:    """
+                        Markus has more then 20 years of experience in software product development
+                        covering the full range of the overall life-cycle from spotting hot
+                        technology trends, designing and implementing actual shippable code and
+                        analysing the market for a successful product launch.
+                        """,
                 twitter: Twitter(url: "https://twitter.com/mweyerhaeuser", name: "mweyerhaeuser")
             ),
             Speaker(
@@ -182,7 +212,8 @@ extension Speaker {
                 name: "Ralph Küpper",
                 title: "CEO",
                 company: "Skelpo",
-                topic: "Using vapor for micro services in production systems.",
+                topic: "Running small microservices in Swift on production environment.",
+                bio: "Entrepreneur and developer in upcoming tech markets.",
                 twitter: Twitter(url: "https://twitter.com/amlug", name: "amlug"),
                 github: Github(url: "https://github.com/proggeramlug", name: "proggeramlug")
             ),
@@ -192,7 +223,8 @@ extension Speaker {
                 name: "Pim Stolk",
                 title: "iOS Chapter Lead",
                 company: "ING",
-                topic: "Using Kitura in production.",
+                topic: "TBD.", // ⚠️ TBD
+                bio: "TBD", // ⚠️ TBD
                 twitter: Twitter(url: "https://twitter.com/stolkcc", name: "stolkcc"),
                 github: Github(url: "https://github.com/pimstolk", name: "pimstolk")
             ),
@@ -203,6 +235,10 @@ extension Speaker {
                 title: "Devops Team Leader",
                 company: "Allegro",
                 topic: "Swifty microservices in production - experimenting with Swift on the server @ allegro.tech.",
+                bio:    """
+                        A Devops Team Leader at Allegro and creator of a data center management
+                        software who recently fell in love with server-side swift.
+                        """,
                 twitter: Twitter(url: "https://twitter.com/vi4m", name: "vi4m"),
                 github: Github(url: "https://github.com/vi4m", name: "vi4m")
             ),
@@ -213,6 +249,11 @@ extension Speaker {
                 title: "Co-Founder",
                 company: "looc.io",
                 topic: "How server-side and mobile Swift can benefit from each other.",
+                bio:    """
+                        A mathematician turned software engineer, Konrad Feiler has been
+                        creating mobile apps for the past seven years, and after work as iOS
+                        architect for Viacom currently focusses on his own companies.
+                        """,
                 twitter: Twitter(url: "https://twitter.com/bersaelor", name: "bersaelor"),
                 github: Github(url: "https://github.com/bersaelor", name: "bersaelor")
             )

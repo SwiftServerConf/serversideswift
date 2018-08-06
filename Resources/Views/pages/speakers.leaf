@@ -21,7 +21,7 @@
                                     <img src="#(speaker.imageUrl)" alt="Tanner Nelson">
                                     <div class="social-media">
                                         <a href="/speakers/#(speaker.key)">
-                                            #(speaker.key)
+                                            visit profile
                                         </a>
                                     </div>
                                 </div>
