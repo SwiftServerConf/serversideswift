@@ -27,12 +27,12 @@
                     </div>
                     <h2 class="m-t-0 m-b-30 title"> #(speaker.name) </h2>
 
-                    <!-- TITLE -->
-                    <div> TITLE </div>
+                    <!-- POSITION -->
+                    <div> POSITION </div>
                     <h2 class="m-t-0 m-b-30 title"> #(speaker.title) @ #(speaker.company) </h2>
 
-                    <!-- TOPIC -->
-                    <div class="title"> TOPIC </div>
+                    <!-- TITLE -->
+                    <div class="title"> TITLE </div>
                     <h2 class="m-t-0 m-b-30 title">#(speaker.topic)</h2>
 
 
