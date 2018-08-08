@@ -16,8 +16,11 @@
 }
 .speaker .image:hover .social-media a {
     padding: 5px;
-    height: 40px;
-    width: 40px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .speaker .image img {
