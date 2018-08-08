@@ -97,8 +97,8 @@ extension Speaker {
                 name: "Tanner Nelson",
                 title: "Co-Founder",
                 company: "Vapor",
-                topic: "TBD", // ⚠️ TBD
-                bio: "TBD", // ⚠️ TBD
+                topic: "To Be Announced", // ⚠️ TBA
+                bio: "To Be Announced", // ⚠️ TBA
                 twitter: Twitter(url: "https://www.twitter.com/tanner0101", name: "tanner0101"),
                 github: Github(url: "https://github.com/tanner0101", name: "tanner0101")
             ),
@@ -138,8 +138,8 @@ extension Speaker {
                 name: "Johannes Weiss",
                 title: "Software Engineer, SwiftNIO",
                 company: "Apple",
-                topic: "TBD", // ⚠️ TBD
-                bio: "TBD", // ⚠️ TBD
+                topic: "To Be Announced", // ⚠️ TBA
+                bio: "To Be Announced", // ⚠️ TBA
                 twitter: Twitter(url: "https://twitter.com/johannesweiss", name: "johannesweiss"),
                 github: Github(url: "https://github.com/weissi", name: "weissi")
             ),
@@ -149,8 +149,13 @@ extension Speaker {
                 name: "Ian Partridge",
                 title: "Kitura Team Lead Swift",
                 company: "IBM",
-                topic: "TBD", // ⚠️ TBD
-                bio: "TBD", // ⚠️ TBD
+                topic: "To Be Announced", // ⚠️ TBA
+                bio:    """
+                        The technical lead of the Swift@IBM development team, working in open
+                        source to bring Swift to the cloud. A committer to the core Swift libraries
+                        and a developer of Kitura, one of the leading Swift web frameworks,
+                        he comes from a background in virtual machine performance and debugging.
+                        """,
                 twitter: Twitter(url: "https://twitter.com/alfa", name: "alfa"),
                 github: Github(url: "https://github.com/ianpartridge", name: "ianpartridge")
             ),
@@ -223,8 +228,8 @@ extension Speaker {
                 name: "Pim Stolk",
                 title: "iOS Chapter Lead",
                 company: "ING",
-                topic: "TBD.", // ⚠️ TBD
-                bio: "TBD", // ⚠️ TBD
+                topic: "To Be Announced", // ⚠️ TBA
+                bio: "To Be Announced", // ⚠️ TBA
                 twitter: Twitter(url: "https://twitter.com/stolkcc", name: "stolkcc"),
                 github: Github(url: "https://github.com/pimstolk", name: "pimstolk")
             ),
