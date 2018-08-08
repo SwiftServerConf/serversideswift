@@ -35,6 +35,9 @@
                     <div class="title"> TITLE </div>
                     <h2 class="m-t-0 m-b-30 title">#(speaker.topic)</h2>
 
+                    <!-- BIO -->
+                    <div class="title"> BIO </div>
+                    <h2 class="m-t-0 m-b-30 title">#(speaker.bio)</h2>
 
                     <!-- SOCIAL MEDIA -->
                     <!-- if twitter OR github exists -->
@@ -42,19 +45,24 @@
                         <div> SOCIAL MEDIA </div>
                     } ##else() {
                         #if(speaker.github) {
-                        <div> Social Media </div>
+                        <div> SOCIAL MEDIA </div>
                         }
                     }
 
                     #if(speaker.twitter) {
-                        <h2 class="m-t-0 m-b-0 title">Twitter: <a href="#(speaker.twitter.url)" target="_blank">@#(speaker.twitter.name)</a></h2>
+                        <h2 class="m-t-0 m-b-0 title">
+                            Twitter: <a href="#(speaker.twitter.url)" target="_blank">@#(speaker.twitter.name)</a>
+                        </h2>
                     }
 
                     #if(speaker.github) {
-                        <h2 class="m-t-0 title">Github: <a href="#(speaker.github.url)" target="_blank">@#(speaker.github.name)</a></h2>
+                        <h2 class="m-t-0 title">
+                            Github: <a href="#(speaker.github.url)" target="_blank">@#(speaker.github.name)</a>
+                        </h2>
                     }
                 </div>
             </div>
         </div>
+        <br />
     </div>
 }
