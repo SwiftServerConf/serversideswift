@@ -97,8 +97,14 @@ extension Speaker {
                 name: "Tanner Nelson",
                 title: "Co-Founder",
                 company: "Vapor",
-                topic: "To Be Announced", // ⚠️ TBA
-                bio: "To Be Announced", // ⚠️ TBA
+                topic: "Vapor State of the Union.",
+                bio:    """
+                        Tanner Wayne Nelson is an American software engineer based in
+                        New York City. He started programming in elementary school and went
+                        on to study Computer Science at New York University. Tanner created Vapor
+                        in 2016 and now works full time maintaining the core framework
+                        and the dozens of packages around it.
+                        """,
                 twitter: Twitter(url: "https://www.twitter.com/tanner0101", name: "tanner0101"),
                 github: Github(url: "https://github.com/tanner0101", name: "tanner0101")
             ),
@@ -138,8 +144,16 @@ extension Speaker {
                 name: "Johannes Weiss",
                 title: "Software Engineer, SwiftNIO",
                 company: "Apple",
-                topic: "To Be Announced", // ⚠️ TBA
-                bio: "To Be Announced", // ⚠️ TBA
+                topic: "High performance systems in Swift.",
+                bio:    """
+                        Johannes likes low-level problems and high-level languages.
+                        He strives to reduce complexity and increase performance to
+                        enable beautiful, fast and correct programs. Currently he's working
+                            Johannes likes low-level problems and high-level languages.
+                        He strives to reduce complexity and increase performance to
+                        enable beautiful, fast and correct programs. Currently he's working
+                        on the high-performance networking library SwiftNIO at Apple.
+                        """,
                 twitter: Twitter(url: "https://twitter.com/johannesweiss", name: "johannesweiss"),
                 github: Github(url: "https://github.com/weissi", name: "weissi")
             ),
