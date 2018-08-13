@@ -13,7 +13,7 @@
 
             <div class="speaker-profile">
                 <div class="image col-xs-12 col-sm-5">
-                    <img src="#(speaker.imageUrl)" alt="#(speaker.name)" />
+                    <img src="#(speaker.imageUrl)" alt="#(speaker.name)">
                 </div>
                 <div class="card col-xs-12 col-sm-7">
                     <div class="hidden-sm hidden-md hidden-lg"><br /></div>
