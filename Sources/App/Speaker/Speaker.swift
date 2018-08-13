@@ -111,7 +111,7 @@ extension Speaker {
             Speaker(
                 key: Speaker.Keys.jamesThomas,
                 imageUrl: "/images/speakers/james_thomas.png",
-                name: "james Thomas",
+                name: "James Thomas",
                 title: "Developer advocate",
                 company: "IBM",
                 topic: "Serverless Swift with Apache OpenWhisk.",
