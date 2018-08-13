@@ -18,7 +18,7 @@
                         <div class="flex-item">
                             <div class="speaker">
                                 <div class="image">
-                                    <img src="#(speaker.imageUrl)" alt="Tanner Nelson">
+                                    <img src="#(speaker.imageUrl)" alt="#(speaker.name)">
                                     <div class="social-media">
                                         <a href="/speakers/#(speaker.key)">
                                             visit profile
