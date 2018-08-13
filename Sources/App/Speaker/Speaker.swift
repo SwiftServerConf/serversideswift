@@ -87,6 +87,7 @@ extension Speaker {
         case pimStolk = "pim-stolk"
         case marcinKliks = "marcin-kliks"
         case konradFeiler = "konrad-feiler"
+        case spartakBuniatyan = "spartak-buniatyan"
     }
 
     static func allSpeaker() -> [Speaker] {
@@ -275,6 +276,20 @@ extension Speaker {
                         """,
                 twitter: Twitter(url: "https://twitter.com/bersaelor", name: "bersaelor"),
                 github: Github(url: "https://github.com/bersaelor", name: "bersaelor")
+            ),
+            Speaker(
+                key: Speaker.Keys.spartakBuniatyan,
+                imageUrl: "/images/speakers/spartak-buniatyan.jpg",
+                name: "Spartak Buniatyan",
+                title: "Founder",
+                company: "SwiftEngine.io",
+                topic: "A complete no-ops backend solution using Serverless Swift on any Cloud",
+                bio:    """
+                        Spartak Buniatyan, has been in the technology development field for over 20 years with heavy experience in developing technologies for large scale enterprise applications in the mobile apps field. Managing large multidisciplinary teams, and understanding the challenges of sustaining high scale customer facing applications. Spartak is the founder of SwiftEngine.io, he oversees and is responsible for SwiftEngine.io’s design and development operations.
+                        SwiftEngine.io, is the first turnkey serverless-swift platform for app development.  The server-side Swift framework for SwiftEnigne.io is also open-source and available on Github.
+                        Prior to founding SwiftEngine.io, he applied his considerable expertise in software engineering to a number of large enterprises, including DIRECTV/AT&T, nation's largest Satellite TV provider, and Medtronic, a global leader in medical technology, services, and solutions, leading both organizations’ mobile-app development teams.
+                        Mr. Buniatyan received his MBA from the University of Southern California. He also holds two utility patents in the technology space.
+                        """
             )
         ]
     }
