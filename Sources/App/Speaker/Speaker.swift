@@ -245,7 +245,7 @@ extension Speaker {
                 title: "iOS Chapter Lead",
                 company: "ING",
                 topic: "To Be Announced", // ⚠️ TBA
-                bio: "To Be Announced", // ⚠️ TBA
+                bio: "iOS developer since 2008 and is working at the ING for the past seven years. Pim is a true mobile and technology enthusiast and is currently working on a new IoT platform mainly written in Swift.",
                 twitter: Twitter(url: "https://twitter.com/stolkcc", name: "stolkcc"),
                 github: Github(url: "https://github.com/pimstolk", name: "pimstolk")
             ),
