@@ -88,6 +88,7 @@ extension Speaker {
         case marcinKliks = "marcin-kliks"
         case konradFeiler = "konrad-feiler"
         case spartakBuniatyan = "spartak-buniatyan"
+        case stevenVanImpe = "steven-van-impe"
     }
 
     static func allSpeaker() -> [Speaker] {
@@ -244,7 +245,7 @@ extension Speaker {
                 title: "iOS Chapter Lead",
                 company: "ING",
                 topic: "To Be Announced", // ⚠️ TBA
-                bio: "To Be Announced", // ⚠️ TBA
+                bio: "iOS developer since 2008 and is working at the ING for the past seven years. Pim is a true mobile and technology enthusiast and is currently working on a new IoT platform mainly written in Swift.",
                 twitter: Twitter(url: "https://twitter.com/stolkcc", name: "stolkcc"),
                 github: Github(url: "https://github.com/pimstolk", name: "pimstolk")
             ),
@@ -290,6 +291,19 @@ extension Speaker {
                         Prior to founding SwiftEngine.io, he applied his considerable expertise in software engineering to a number of large enterprises, including DIRECTV/AT&T, nation's largest Satellite TV provider, and Medtronic, a global leader in medical technology, services, and solutions, leading both organizations’ mobile-app development teams.
                         Mr. Buniatyan received his MBA from the University of Southern California. He also holds two utility patents in the technology space.
                         """
+            ),
+            Speaker(
+                key: Speaker.Keys.stevenVanImpe,
+                imageUrl: "/images/speakers/steven-van-impe.png",
+                name: "Steven Van Impe",
+                title: "Lecturer",
+                company: "University College Ghent. Technical Editor @ raywenderlich.com",
+                topic: "Server-side web apps with Kitura and Stencil",
+                bio:    """
+                        Steven is a lecturer at University College Ghent and a technical editor for <a href=\"https://www.raywenderlich.com\">raywenderlich.com</a>. You can find out more information at <a href=\"http://svanimpe.be/about\">http://svanimpe.be/about</a>.
+                        """,
+                twitter: Twitter(url: "https://twitter.com/svanimpe", name: "svanimpe"),
+                github: Github(url: "https://github.com/svanimpe", name: "svanimpe")
             )
         ]
     }

@@ -33,7 +33,7 @@
 
                     <!-- BIO -->
                     <div class="title"> BIO </div>
-                    <h2 class="m-t-0 m-b-30 title">#(speaker.bio)</h2>
+                    <h2 class="m-t-0 m-b-30 title">#raw(speaker.bio)</h2>
 
                     <!-- SOCIAL MEDIA -->
                     <!-- if twitter OR github exists -->
