@@ -53,7 +53,7 @@
 
                     #if(speaker.github) {
                         <h2 class="m-t-0 title">
-                            Github: <a href="#(speaker.github.url)" target="_blank">@#(speaker.github.name)</a>
+                            GitHub: <a href="#(speaker.github.url)" target="_blank">@#(speaker.github.name)</a>
                         </h2>
                     }
                 </div>
