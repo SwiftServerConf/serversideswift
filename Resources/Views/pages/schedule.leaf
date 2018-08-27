@@ -15,6 +15,7 @@
           <div class="row">
             <div class="col-xs-12">
               <h3>Thursday 13th September</h3>
+              <div class="table-responsive">
               <table class="table table-bordered table-condensed">
                 <thead><tr>
                   <th>Time</th>
@@ -33,7 +34,7 @@
                   <td>10:00 - 10:45</td>
                   <td><a href="/speakers/kaitlin-mahar">Kaitlin Mahar - Swift's Encoder and Decoder Protocols</a></td>
                 </tr>
-                <tr class="schedule-break info">
+                <tr class="schedule-break">
                   <td>10:45 - 11:00</td>
                   <td>Coffee Break</td>
                 </tr>
@@ -45,7 +46,7 @@
                   <td>11:45 - 12:30</td>
                   <td><a href="/speakers/spartak-buniatyan">Spartak Buniatyan - Serverless Swift</a></td>
                 </tr>
-                <tr class="schedule-break info">
+                <tr class="schedule-break">
                   <td>12:30 - 13:30</td>
                   <td>Lunch</td>
                 </tr>
@@ -61,7 +62,7 @@
                   <td>15:00 - 15:45</td>
                   <td><a href="/speakers/stanislav-dombrovsky">Stanislav Dombrovsky - Thining like an IDE, the challenges of server-side Swift</a></td>
                 </tr>
-                <tr class="schedule-break info">
+                <tr class="schedule-break">
                   <td>15:45 - 16:00</td>
                   <td>Coffee Break</td>
                 </tr>
@@ -76,16 +77,19 @@
               </tbody>
               </table>
             </div>
+            </div>
           </div>
 
           <div class="row">
             <div class="col-xs-12">
               <h3>Friday 14th September</h3>
-              <table>
-                <tr>
+              <div class="table-responsive">
+              <table class="table table-bordered table-condensed">
+                <thead><tr>
                   <th>Time</th>
                   <th>Talk</th>
-                </tr>
+                </tr></thead>
+                <tbody>
                 <tr>
                   <td>9:00 - 9:45</td>
                   <td><a href="/speakers/ralph-kuepper">Ralph Küpper - Running small microservices in Swift on production environment</a></td>
@@ -98,7 +102,7 @@
                   <td>10:30 - 11:15</td>
                   <td><a href="/speakers/markus-wyehaeuser">Markus Weyerhäuser - From idea to market — an extremely challenging journey</a></td>
                 </tr>
-                <tr class="schedule-break info">
+                <tr class="schedule-break">
                   <td>11:15 - 11:30</td>
                   <td>Coffee Break</td>
                 </tr>
@@ -110,7 +114,7 @@
                   <td>12:15 - 13:00</td>
                   <td><a href="/speakers/spartak-buniatyan">Steven Van Impe - Server-side web apps with Kitura and Stencil</a></td>
                 </tr>
-                <tr class="schedule-break info">
+                <tr class="schedule-break">
                   <td>13:00 - 14:00</td>
                   <td>Lunch</td>
                 </tr>
@@ -122,7 +126,7 @@
                   <td>14:45 - 15:30</td>
                   <td>TBC</td>
                 </tr>
-                <tr class="schedule-break info">
+                <tr class="schedule-break">
                   <td>15:30 - 15:45</td>
                   <td>Coffee Break</td>
                 </tr>
@@ -134,7 +138,9 @@
                   <td>16:30 - 16:45</td>
                   <td>Closing Remarks</td>
                 </tr>
+              </tbody>
               </table>
+            </div>
             </div>
           </div>
 
