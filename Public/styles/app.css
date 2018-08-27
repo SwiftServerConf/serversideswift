@@ -56,6 +56,14 @@ a, a:hover, a:focus {
 }
 
 /* HELPER  */
+.text-white {
+    color: #ffffff;
+}
+
+.bg-lightgray {
+    background-color: #f9f9f9;
+}
+
 .ff-monofur {
   font-family: 'Monofur', sans-serif, Arial !important;
 }
@@ -68,12 +76,28 @@ a, a:hover, a:focus {
   font-weight: 400;
 }
 
+.font-weight-lg {
+    font-weight: 600;
+}
+
 .fc-orange {
   color: #fa532a;
 }
 
 .fc-white {
   color: #ffffff;
+}
+
+.fs-md {
+  font-size: 16px;
+}
+
+.width-md {
+    width: 150px;
+}
+
+.border-none {
+    border: none;
 }
 
 .m-t-0 {

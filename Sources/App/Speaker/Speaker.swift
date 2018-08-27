@@ -79,7 +79,7 @@ extension Speaker {
         case jamesThomas = "james-thomas"
         case kyleJessup = "kyle-jessup"
         case johannesWeiss = "johannes-weiss"
-        case ianPatridge = "ian-patridge"
+        case ianPartridge = "ian-partridge"
         case stanislavDombrovsky = "stanislav-dombrovsky"
         case kaitlinMahar = "kaitlin-mahar"
         case kenichiUeno = "kenichi-ueno"
@@ -163,7 +163,7 @@ extension Speaker {
                 github: Github(url: "https://github.com/weissi", name: "weissi")
             ),
             Speaker(
-                key: Speaker.Keys.ianPatridge,
+                key: Speaker.Keys.ianPartridge,
                 imageUrl: "/images/speakers/ian-partridge.jpg",
                 name: "Ian Partridge",
                 title: "Kitura Team Lead Swift",
