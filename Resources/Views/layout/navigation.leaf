@@ -30,6 +30,10 @@
                 <a href="/sponsors">Sponsors</a>
                 <span class="underline"></span>
             </li>
+            <li class="#if(schedule){active}">
+                <a href="/schedule">Schedule</a>
+                <span class="underline"></span>
+            </li>
             <li class="#if(faq){active}">
                 <a href="/faq">FAQ</a>
                 <span class="underline"></span>
@@ -64,6 +68,10 @@
         </li>
         <li class="#if(sponsors){active}">
             <a href="/sponsors">Sponsors</a>
+            <span class="underline"></span>
+        </li>
+        <li class="#if(schedule){active}">
+            <a href="/schedule">Schedule</a>
             <span class="underline"></span>
         </li>
         <li class="#if(faq){active}">

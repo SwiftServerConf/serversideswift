@@ -1,0 +1,142 @@
+#extend("layout/base")
+
+#export("content") {
+
+    <div class="container">
+        <div class="first-content m-b-30">
+          <h1 class="text-center fc-orange">Schedule</h1>
+          <div class="row">
+            <div class="col-xs-12">
+                <h3>Wednesday 12th September - Workshops</h3>
+                <h4>To Be Confirmed</h4>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12">
+              <h3>Thursday 13th September</h3>
+              <table>
+                <tr>
+                  <th>Time</th>
+                  <th>Talk</th>
+                </tr>
+                <tr>
+                  <td>9:00 - 9:15</td>
+                  <td>Opening Remarks</td>
+                </tr>
+                <tr>
+                  <td>9:15 - 10:00 </td>
+                  <td>TBC</td>
+                </tr>
+                <tr>
+                  <td>10:00 - 10:45</td>
+                  <td><a href="/speakers/kaitlin-mahar">Kaitlin Mahar - Swift's Encoder and Decoder Protocols</a></td>
+                </tr>
+                <tr class="schedule-break">
+                  <td>10:45 - 11:00</td>
+                  <td>Coffee Break</td>
+                </tr>
+                <tr>
+                  <td>11:00 - 11:45</td>
+                  <td><a href="/speakers/tanner-nelson">Tanner Nelson - Vapor State Of The Union</a></td>
+                </tr>
+                <tr>
+                  <td>11:45 - 12:30</td>
+                  <td><a href="/speakers/spartak-buniatyan">Spartak Buniatyan - Serverless Swift</a></td>
+                </tr>
+                <tr class="schedule-break">
+                  <td>12:30 - 13:30</td>
+                  <td>Lunch</td>
+                </tr>
+                <tr>
+                  <td>13:30 - 14:15</td>
+                  <td><a href="/speakers/marcin-kliks">Marcin Kliks - Swifty microservices in production</a></td>
+                </tr>
+                <tr>
+                  <td>14:15 - 15:00</td>
+                  <td><a href="/speakers/kyle-jessup">Kyle Jessup - Diving into Perfect and Internet of Things</a></td>
+                </tr>
+                <tr>
+                  <td>15:00 - 15:45</td>
+                  <td><a href="/speakers/stanislav-dombrovsky">Stanislav Dombrovsky - Thining like an IDE, the challenges of server-side Swift</a></td>
+                </tr>
+                <tr class="schedule-break">
+                  <td>15:45 - 16:00</td>
+                  <td>Coffee Break</td>
+                </tr>
+                <tr>
+                  <td>16:00 - 16:45</td>
+                  <td><a href="/speakers/james-thomas">James Thomas - Serverless Swift with Apache OpenWhisk</a></td>
+                </tr>
+                <tr>
+                  <td>16:45 - 17:30</td>
+                  <td>Fireside Panel Discussion</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12">
+              <h3>Friday 14th September</h3>
+              <table>
+                <tr>
+                  <th>Time</th>
+                  <th>Talk</th>
+                </tr>
+                <tr>
+                  <td>9:00 - 9:45</td>
+                  <td><a href="/speakers/ralph-kuepper">Ralph Küpper - Running small microservices in Swift on production environment</a></td>
+                </tr>
+                <tr>
+                  <td>9:45 - 10:30 </td>
+                  <td><a href="/speakers/ian-patridge">Ian Partridge</a> and <a href="/speakers/pim-stolk">Pim Stolk</a> - TBC</td>
+                </tr>
+                <tr>
+                  <td>10:30 - 11:15</td>
+                  <td><a href="/speakers/markus-wyehaeuser">Markus Weyerhäuser - From idea to market — an extremely challenging journey</a></td>
+                </tr>
+                <tr class="schedule-break">
+                  <td>11:15 - 11:30</td>
+                  <td>Coffee Break</td>
+                </tr>
+                <tr>
+                  <td>11:30 - 12:15</td>
+                  <td><a href="/speakers/konrad-feiler">Konrad Feiler - How server-side and mobile Swift can benefit from each other</a></td>
+                </tr>
+                <tr>
+                  <td>12:15 - 13:00</td>
+                  <td><a href="/speakers/spartak-buniatyan">Steven Van Impe - Server-side web apps with Kitura and Stencil</a></td>
+                </tr>
+                <tr class="schedule-break">
+                  <td>13:00 - 14:00</td>
+                  <td>Lunch</td>
+                </tr>
+                <tr>
+                  <td>14:00 - 14:45</td>
+                  <td><a href="/speakers/marcin-kliks">Kenichi Ueno - Experiences on how the server-side development looks like, pitfalls an iOS developer might meet and how to deploy</a></td>
+                </tr>
+                <tr>
+                  <td>14:45 - 15:30</td>
+                  <td>TBC</td>
+                </tr>
+                <tr class="schedule-break">
+                  <td>15:30 - 15:45</td>
+                  <td>Coffee Break</td>
+                </tr>
+                <tr>
+                  <td>15:45 - 16:30</td>
+                  <td>TBC</td>
+                </tr>
+                <tr>
+                  <td>16:30 - 16:45</td>
+                  <td>Closing Remarks</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+
+        </div>
+    </div>
+}
