@@ -104,6 +104,10 @@ a, a:hover, a:focus {
   margin-bottom: 30px;
 }
 
+.height-md {
+    height: 100px;
+}
+
 .thank-you {
   margin-top: 100px;
 }
