@@ -108,6 +108,14 @@ a, a:hover, a:focus {
     height: 100px;
 }
 
+.height-80 {
+    height: 80px !important;
+}
+
+.width-auto {
+    width: auto !important;
+}
+
 .thank-you {
   margin-top: 100px;
 }
