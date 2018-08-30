@@ -314,7 +314,7 @@ extension Speaker {
                 name: "Casper Rasmussen",
                 title: "CTO",
                 company: "Nodes",
-                topic: "To Be Announced", // ⚠️ TBA
+                topic: "Vapor in production - How to convince the client",
                 bio:    """
                         To Be Announced
                         """,
@@ -326,7 +326,7 @@ extension Speaker {
                 name: "Christian Weinberger",
                 title: "Technical Director",
                 company: "Nodes",
-                topic: "To Be Announced", // ⚠️ TBA
+                topic: "Vapor in production - How to convince the client",
                 bio:    """
                         To Be Announced
                         """,
