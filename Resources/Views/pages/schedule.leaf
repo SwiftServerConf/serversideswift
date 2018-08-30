@@ -30,6 +30,10 @@
                       <table class="table table-bordered table-condensed" style="color: black">
                         <tbody>
                             <tr class="bg-lightgray">
+                              <td class="text-center font-weight-lg width-md">8:00 - 9:00</td>
+                              <td class="fs-md">Registration</td>
+                            </tr>
+                            <tr class="bg-lightgray">
                               <td class="text-center font-weight-lg width-md">9:00 - 9:15</td>
                               <td class="fs-md">Opening Remarks</td>
                             </tr>
