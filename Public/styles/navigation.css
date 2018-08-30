@@ -80,6 +80,7 @@ nav.navigation ul li.buy-ticket {
         max-height: 50px;
         margin: 0;
         flex-direction: row;
+        overflow: initial;
     }
     nav.navigation ul li {
         margin: 0 5px;
@@ -91,4 +92,53 @@ nav.navigation ul li.buy-ticket {
     nav.navigation ul li a:hover {
         color: #ffffff;
     }
+}
+
+/* Flash Sale Animation */
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-20px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+.flash-sale-pointer {
+    transform: translatey(0px);
+    animation: float 3s ease-in-out infinite;
+    position: absolute;
+    top: 60px;
+    background: linear-gradient(to right, #F88A36 , #FD2020);
+    padding: 2px;
+    border-radius: 4px;
+    border: 1px solid #ffffff;
+}
+
+.flash-sale-pointer:after, .flash-sale-pointer:before {
+    bottom: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.flash-sale-pointer:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #fa582c;
+    border-width: 10px;
+    margin-left: -10px;
+}
+
+.flash-sale-pointer:before {
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #ffffff;
+    border-width: 12px;
+    margin-left: -12px;
 }

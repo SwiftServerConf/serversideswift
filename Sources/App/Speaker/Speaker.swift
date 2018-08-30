@@ -63,6 +63,7 @@ struct Speaker {
 ///       title: "Co-Founder",
 ///       company: "Vapor",
 ///       topic: "All about Vapor and its future",
+///       bio: "He is the inventor of Vapor and rockz it ever since",
 ///       twitter: Twitter(url: "https://www.twitter.com/tanner0101", name: "tanner0101"),
 ///       github: Github(url: "https://github.com/tanner0101", name: "tanner0101")
 ///     )

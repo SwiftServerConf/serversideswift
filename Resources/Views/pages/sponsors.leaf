@@ -44,9 +44,18 @@
                             <div class="box text-center">
                                 <div class="sponsor">
                                     <div class="image">
+                                        <br />
                                         <a href="https://www.skelpo.com" target="_blank">
                                             <img src="/images/sponsors/skelpo_large.png" alt="Skelpo">
                                         </a>
+                                        <br />
+                                        <br />
+                                        <br />
+                                        <a href="https://www.gastrofix.com" target="_blank">
+                                            <img src="/images/sponsors/gastrofix_large.png" alt="Gastrofix" class="height-md">
+                                        </a>
+                                        <br />
+                                        <br />
                                     </div>
                                 </div>
                             </div>
