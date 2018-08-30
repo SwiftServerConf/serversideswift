@@ -90,6 +90,8 @@ extension Speaker {
         case konradFeiler = "konrad-feiler"
         case spartakBuniatyan = "spartak-buniatyan"
         case stevenVanImpe = "steven-van-impe"
+        case casperRasmussen = "casper-rasmussen"
+        case christianWeinberger = "christian-weinberger"
     }
 
     static func allSpeaker() -> [Speaker] {
@@ -305,6 +307,31 @@ extension Speaker {
                         """,
                 twitter: Twitter(url: "https://twitter.com/svanimpe", name: "svanimpe"),
                 github: Github(url: "https://github.com/svanimpe", name: "svanimpe")
+            ),
+            Speaker(
+                key: Speaker.Keys.casperRasmussen,
+                imageUrl: "/images/speakers/casper-rasmussen.jpeg",
+                name: "Casper Rasmussen",
+                title: "CTO",
+                company: "Nodes",
+                topic: "Vapor in production - How to convince the client",
+                bio:    """
+                        To Be Announced
+                        """,
+                github: Github(url: "https://github.com/Casperhr", name: "Casperhr")
+            ),
+            Speaker(
+                key: Speaker.Keys.christianWeinberger,
+                imageUrl: "/images/speakers/christian-weinberger.jpg",
+                name: "Christian Weinberger",
+                title: "Technical Director",
+                company: "Nodes",
+                topic: "Vapor in production - How to convince the client",
+                bio:    """
+                        To Be Announced
+                        """,
+                twitter: Twitter(url: "https://twitter.com/_cweinberger", name: "_cweinberger"),
+                github: Github(url: "https://github.com/cweinberger", name: "cweinberger")
             )
         ]
     }
