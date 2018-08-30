@@ -12,8 +12,7 @@
           </span>
         </button>
 
-        <ul class="hidden-xs">
-            <!-- <li><a href="/program">Schedules</a></li> -->
+        <ul class="hidden-xs hidden-sm">
             <li class="#if(home){active}">
                 <a href="/">Home</a>
                 <span class="underline"></span>
@@ -28,6 +27,10 @@
             </li>
             <li class="#if(sponsors){active}">
                 <a href="/sponsors">Sponsors</a>
+                <span class="underline"></span>
+            </li>
+            <li class="#if(schedule){active}">
+                <a href="/schedule">Schedule</a>
                 <span class="underline"></span>
             </li>
             <li class="#if(faq){active}">
@@ -48,8 +51,7 @@
             </li>
         </ul>
     </div>
-    <ul class="hidden-sm hidden-md hidden-lg">
-        <!-- <li><a href="/program">Schedules</a></li> -->
+    <ul class="hidden-md hidden-lg">
         <li class="#if(home){active}">
             <a href="/">Home</a>
             <span class="underline"></span>
@@ -64,6 +66,10 @@
         </li>
         <li class="#if(sponsors){active}">
             <a href="/sponsors">Sponsors</a>
+            <span class="underline"></span>
+        </li>
+        <li class="#if(schedule){active}">
+            <a href="/schedule">Schedule</a>
             <span class="underline"></span>
         </li>
         <li class="#if(faq){active}">

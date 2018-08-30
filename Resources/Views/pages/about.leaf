@@ -49,7 +49,7 @@
                 <div class="col-xs-12 col-sm-4 col-md-4">
                     <div class="organizer">
                         <div class="image">
-                            <img src="/images/team/martinlasek.jpeg" alt="Martin">
+                            <img src="/images/team/martinlasek.jpg" alt="Martin">
                             <div class="social-media">
                                 <a href="https://twitter.com/martinlasek" target="_blank">
                                     #embed("partials/icons/twitter")

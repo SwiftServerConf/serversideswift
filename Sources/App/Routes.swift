@@ -55,5 +55,9 @@ final class Routes: RouteCollection {
     builder.get("/faq") { req in
       return try self.view.make("pages/faq", ["faq": true])
     }
+
+    builder.get("/schedule") { req in
+      return try self.view.make("pages/schedule", ["schedule": true])
+    }
   }
 }

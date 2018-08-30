@@ -78,8 +78,7 @@ extension Speaker {
         case tannerNelson = "tanner-nelson"
         case jamesThomas = "james-thomas"
         case kyleJessup = "kyle-jessup"
-        case johannesWeiss = "johannes-weiss"
-        case ianPatridge = "ian-patridge"
+        case ianPartridge = "ian-partridge"
         case stanislavDombrovsky = "stanislav-dombrovsky"
         case kaitlinMahar = "kaitlin-mahar"
         case kenichiUeno = "kenichi-ueno"
@@ -144,26 +143,7 @@ extension Speaker {
                 github: Github(url: "https://github.com/kjessup", name: "kjessup")
             ),
             Speaker(
-                key: Speaker.Keys.johannesWeiss,
-                imageUrl: "/images/speakers/johannes-weiss.png",
-                name: "Johannes Weiss",
-                title: "Software Engineer, SwiftNIO",
-                company: "Apple",
-                topic: "High performance systems in Swift.",
-                bio:    """
-                        Johannes likes low-level problems and high-level languages.
-                        He strives to reduce complexity and increase performance to
-                        enable beautiful, fast and correct programs. Currently he's working
-                            Johannes likes low-level problems and high-level languages.
-                        He strives to reduce complexity and increase performance to
-                        enable beautiful, fast and correct programs. Currently he's working
-                        on the high-performance networking library SwiftNIO at Apple.
-                        """,
-                twitter: Twitter(url: "https://twitter.com/johannesweiss", name: "johannesweiss"),
-                github: Github(url: "https://github.com/weissi", name: "weissi")
-            ),
-            Speaker(
-                key: Speaker.Keys.ianPatridge,
+                key: Speaker.Keys.ianPartridge,
                 imageUrl: "/images/speakers/ian-partridge.jpg",
                 name: "Ian Partridge",
                 title: "Kitura Team Lead Swift",
