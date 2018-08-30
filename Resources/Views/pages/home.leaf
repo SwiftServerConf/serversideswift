@@ -143,6 +143,12 @@
             <a href="https://jetbrains.com" target="_blank">
               <img src="/images/sponsors/jetbrains_logo.png" alt="JetBrains">
             </a>
+            <a href="https://www.brokenhands.io" target="_blank">
+              <img src="/images/sponsors/brokenhands_square.svg" alt="Broken Hands">
+            </a>
+            <a href="https://www.swiftengine.io" target="_blank">
+              <img src="/images/sponsors/swiftengine_square.png" alt="Swift Engine" id="swift-engine-logo-square">
+            </a>
           </div>
 
         </div>
