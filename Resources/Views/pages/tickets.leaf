@@ -9,6 +9,12 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h1 class="text-center fc-orange">Tickets</h1>
+
+<h3 class="flash-sale alert alert-danger text-center" style="max-width: 900px; margin: 0 auto; background: linear-gradient(to right, #()F88A36 , #()FD2020); color: #()ffffff;">
+                            <strong>FLASH SALE!</strong>
+                            <br/> Get the last 5 Tickets for only 250€!
+                            <br /> <small style="color: #()ffffff;">Use the discount code: "FLASHSALE".</small>
+                        </h3>
                     </div>
                 </div>
             </div>
