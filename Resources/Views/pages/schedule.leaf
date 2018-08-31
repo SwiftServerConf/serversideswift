@@ -98,6 +98,10 @@
                     <div class="panel panel-default">
                         <table class="table table-bordered table-condensed" style="color: black">
                             <tbody>
+                              <tr class="bg-lightgray">
+                                  <td class="text-center font-weight-lg">8:00 - 9:00</td>
+                                  <td class="fs-md">Registration</td>
+                              </tr>
                                 <tr>
                                     <td class="text-center font-weight-lg width-md">9:00 - 9:45</td>
                                     <td class="fs-md">
