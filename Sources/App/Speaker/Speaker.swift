@@ -148,7 +148,7 @@ extension Speaker {
                 name: "Ian Partridge",
                 title: "Kitura Team Lead Swift",
                 company: "IBM",
-                topic: "From idea to production at ING", // ⚠️ TBA
+                topic: "From idea to production at ING",
                 bio:    """
                         The technical lead of the Swift@IBM development team, working in open
                         source to bring Swift to the cloud. A committer to the core Swift libraries
