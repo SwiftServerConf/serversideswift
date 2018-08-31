@@ -296,7 +296,7 @@ extension Speaker {
                 company: "Nodes",
                 topic: "Vapor in production - How to convince the client",
                 bio:    """
-                        To Be Announced
+                        CTO and partner at Nodes and board member at Vapor.
                         """,
                 github: Github(url: "https://github.com/Casperhr", name: "Casperhr")
             ),
@@ -308,7 +308,8 @@ extension Speaker {
                 company: "Nodes",
                 topic: "Vapor in production - How to convince the client",
                 bio:    """
-                        To Be Announced
+                        Christian is a tech enthusiast and Technical Director at Nodes Germany where he fell in love with Vapor.
+                        He is working with his team from a co-working space in Berlin, near Hausvogteiplatz. Feel free to pass by if you want to <a href=\"https://www.nodesagency.com/vapor\">chat about Vapor</a> anytime.
                         """,
                 twitter: Twitter(url: "https://twitter.com/_cweinberger", name: "_cweinberger"),
                 github: Github(url: "https://github.com/cweinberger", name: "cweinberger")
