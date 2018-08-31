@@ -92,6 +92,7 @@ extension Speaker {
         case casperRasmussen = "casper-rasmussen"
         case christianWeinberger = "christian-weinberger"
         case helgeHess = "helge-hess"
+        case jariKoopman = "jari-koopman"
     }
 
     static func allSpeaker() -> [Speaker] {
@@ -322,10 +323,23 @@ extension Speaker {
                 company: "ZeeZide GmbH",
                 topic: "SwiftNIO on the Raspberry Pi",
                 bio:    """
-                        Helge started coding on NeXT machines >20 years ago. Some (including himself) claim that he is almost always sometimes right. Currently doing software projects at ZeeZide & fun stuff at the AlwaysRightInstitute. Previously worked at Apple, ZideOne, Brainstorm, Skyrix/OpenGroupware.org. 
+                        Helge started coding on NeXT machines >20 years ago. Some (including himself) claim that he is almost always sometimes right. Currently doing software projects at ZeeZide & fun stuff at the AlwaysRightInstitute. Previously worked at Apple, ZideOne, Brainstorm, Skyrix/OpenGroupware.org.
                         """,
                 twitter: Twitter(url: "https://twitter.com/helje5", name: "helje5"),
                 github: Github(url: "https://github.com/helje5", name: "helje5")
+            ),
+            Speaker(
+                key: Speaker.Keys.jariKoopman,
+                imageUrl: "/images/speakers/jari-koopman.jpg",
+                name: "Jari Koopman",
+                title: "iOS Developer",
+                company: "Wehkamp",
+                topic: "Streamlining our CD flow using ServerSide Swift, Fastlane and Travis CI",
+                bio:    """
+                        My name is Jari, I'm 16 years old and I'm a WWDC 2017 Scholarship winner and iOS Developer at Wehkamp, one of the biggest online fashion retailers in the Netherlands.
+                        """,
+                twitter: Twitter(url: "https://twitter.com/LotUDev", name: "LotUDev"),
+                github: Github(url: "https://github.com/MrLotU", name: "MrLotU")
             )
         ]
     }
