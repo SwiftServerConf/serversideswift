@@ -148,7 +148,7 @@ extension Speaker {
                 name: "Ian Partridge",
                 title: "Kitura Team Lead Swift",
                 company: "IBM",
-                topic: "To Be Announced", // ⚠️ TBA
+                topic: "From idea to production at ING", // ⚠️ TBA
                 bio:    """
                         The technical lead of the Swift@IBM development team, working in open
                         source to bring Swift to the cloud. A committer to the core Swift libraries
@@ -227,7 +227,7 @@ extension Speaker {
                 name: "Pim Stolk",
                 title: "iOS Chapter Lead",
                 company: "ING",
-                topic: "To Be Announced", // ⚠️ TBA
+                topic: "From idea to production at ING", // ⚠️ TBA
                 bio: "iOS developer since 2008 and is working at the ING for the past seven years. Pim is a true mobile and technology enthusiast and is currently working on a new IoT platform mainly written in Swift.",
                 twitter: Twitter(url: "https://twitter.com/stolkcc", name: "stolkcc"),
                 github: Github(url: "https://github.com/pimstolk", name: "pimstolk")
