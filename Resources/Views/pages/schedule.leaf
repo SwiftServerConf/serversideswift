@@ -35,7 +35,9 @@
                             </tr>
                             <tr>
                               <td class="text-center font-weight-lg">9:15 - 10:00 </td>
-                              <td class="fs-md">To Be Announced</td>
+                              <td class="fs-md">
+                                  <a href="/speakers/ralph-kuepper">Running small microservices in Swift on production environment (Ralph Küpper)</a>
+                              </td>
                             </tr>
                             <tr>
                               <td class="text-center font-weight-lg">10:00 - 10:45</td>
@@ -65,13 +67,13 @@
                               <td class="text-center font-weight-lg">14:15 - 15:00</td>
                               <td class="fs-md"><a href="/speakers/kyle-jessup">Diving into Perfect and Internet of Things (Kyle Jessup)</a></td>
                             </tr>
-                            <tr>
-                              <td class="text-center font-weight-lg">15:00 - 15:45</td>
-                              <td class="fs-md"><a href="/speakers/stanislav-dombrovsky">Thinking like an IDE, the challenges of server-side Swift (Stanislav Dombrovsky)</a></td>
-                            </tr>
                             <tr class="bg-lightgray">
-                              <td class="text-center font-weight-lg">15:45 - 16:00</td>
+                              <td class="text-center font-weight-lg">15:00 - 15:15</td>
                               <td class="fs-md">Coffee Break</td>
+                            </tr>
+                            <tr>
+                              <td class="text-center font-weight-lg">15:15 - 16:00</td>
+                              <td class="fs-md"><a href="/speakers/stanislav-dombrovsky">Thinking like an IDE, the challenges of server-side Swift (Stanislav Dombrovsky)</a></td>
                             </tr>
                             <tr>
                               <td class="text-center font-weight-lg">16:00 - 16:45</td>
@@ -99,13 +101,13 @@
                                 <tr>
                                     <td class="text-center font-weight-lg width-md">9:00 - 9:45</td>
                                     <td class="fs-md">
-                                        <a href="/speakers/ralph-kuepper">Running small microservices in Swift on production environment (Ralph Küpper)</a>
+                                        From idea to production at ING (<a href="/speakers/ian-partridge">Ian Partridge</a> and <a href="/speakers/pim-stolk">Pim Stolk</a>)
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="text-center font-weight-lg">9:45 - 10:30 </td>
                                     <td class="fs-md">
-                                        From idea to production at ING (<a href="/speakers/ian-partridge">Ian Partridge</a> and <a href="/speakers/pim-stolk">Pim Stolk</a>)
+                                        <a href="/speakers/jari-koopman">Streamlining our CD flow using ServerSide Swift, Fastlane and Travis CI (Jari Koopman)</a>
                                     </td>
                                 </tr>
                                 <tr class="bg-lightgray">
@@ -138,7 +140,7 @@
                                 <tr>
                                     <td class="text-center font-weight-lg">14:00 - 14:45</td>
                                     <td class="fs-md">
-                                        <a href="/speakers/kenichi-ueno">Experiences on how the server-side development looks like, pitfalls an iOS developer might meet and how to deploy (Kenichi Ueno)</a>
+                                         <a href="/speakers/kenichi-ueno">Experiences on how the server-side development looks like, pitfalls an iOS developer might meet and how to deploy (Kenichi Ueno)</a>
                                     </td>
                                 </tr>
                                 <tr class="bg-lightgray">
@@ -148,7 +150,7 @@
                                 <tr>
                                     <td class="text-center font-weight-lg">15:00 - 15:45</td>
                                     <td class="fs-md">
-                                        To Be Announced
+                                        <a href="/speakers/helge-hess"> SwiftNIO on the Raspberry Pi (Helge Heß)</a>
                                     </td>
                                 </tr>
                                 <tr>
