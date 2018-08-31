@@ -138,7 +138,7 @@
                                 <tr>
                                     <td class="text-center font-weight-lg">14:00 - 14:45</td>
                                     <td class="fs-md">
-                                        <a href="/speakers/kenichi-ueno">Experiences on how the server-side development looks like, pitfalls an iOS developer might meet and how to deploy (Kenichi Ueno)</a>
+                                         <a href="/speakers/kenichi-ueno">Experiences on how the server-side development looks like, pitfalls an iOS developer might meet and how to deploy (Kenichi Ueno)</a>
                                     </td>
                                 </tr>
                                 <tr class="bg-lightgray">
@@ -148,7 +148,7 @@
                                 <tr>
                                     <td class="text-center font-weight-lg">15:00 - 15:45</td>
                                     <td class="fs-md">
-                                        To Be Announced
+                                        <a href="/speakers/helge-hess"> SwiftNIO on the Raspberry Pi (Helge Heß)</a>
                                     </td>
                                 </tr>
                                 <tr>

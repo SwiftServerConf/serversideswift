@@ -91,6 +91,7 @@ extension Speaker {
         case stevenVanImpe = "steven-van-impe"
         case casperRasmussen = "casper-rasmussen"
         case christianWeinberger = "christian-weinberger"
+        case helgeHess = "helge-hess"
     }
 
     static func allSpeaker() -> [Speaker] {
@@ -312,6 +313,19 @@ extension Speaker {
                         """,
                 twitter: Twitter(url: "https://twitter.com/_cweinberger", name: "_cweinberger"),
                 github: Github(url: "https://github.com/cweinberger", name: "cweinberger")
+            ),
+            Speaker(
+                key: Speaker.Keys.helgeHess,
+                imageUrl: "/images/speakers/helge-hess.jpeg",
+                name: "Helge Heß",
+                title: "ZEO",
+                company: "ZeeZide GmbH",
+                topic: "SwiftNIO on the Raspberry Pi",
+                bio:    """
+                        Helge started coding on NeXT machines >20 years ago. Some (including himself) claim that he is almost always sometimes right. Currently doing software projects at ZeeZide & fun stuff at the AlwaysRightInstitute. Previously worked at Apple, ZideOne, Brainstorm, Skyrix/OpenGroupware.org. 
+                        """,
+                twitter: Twitter(url: "https://twitter.com/helje5", name: "helje5"),
+                github: Github(url: "https://github.com/helje5", name: "helje5")
             )
         ]
     }
