@@ -136,6 +136,10 @@ a, a:hover, a:focus {
     height: 80px !important;
 }
 
+.height-90 {
+    height: 90px !important;
+}
+
 .width-auto {
     width: auto !important;
 }
