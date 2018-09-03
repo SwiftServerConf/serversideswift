@@ -44,10 +44,6 @@
             <li class="buy-ticket">
                 <a href="/tickets">Buy Tickets</a>
                 <span class="underline"></span>
-                <div class="flash-sale-pointer text-center">
-                    <strong>FLASH SALE</strong>
-                    <br /> 25% OFF
-                </div>
             </li>
         </ul>
     </div>
