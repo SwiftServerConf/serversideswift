@@ -42,12 +42,8 @@
                 <span class="underline"></span>
             </li>
             <li class="buy-ticket">
-                <a href="/tickets">Buy Tickets</a>
+                <a href="/tickets"><strike>Buy Tickets</strike></a>
                 <span class="underline"></span>
-                <div class="flash-sale-pointer text-center">
-                    <strong>FLASH SALE</strong>
-                    <br /> 25% OFF
-                </div>
             </li>
         </ul>
     </div>
@@ -81,7 +77,7 @@
             <span class="underline"></span>
         </li>
         <li class="buy-ticket">
-            <a href="/tickets" target="_blank">Buy Tickets</a>
+            <a href="/tickets" target="_blank"><strike>Buy Tickets</strike></a>
             <span class="underline"></span>
         </li>
     </ul>

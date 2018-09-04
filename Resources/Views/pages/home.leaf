@@ -16,16 +16,6 @@
           <h1 class="text-center m-b-0">Server-Side Swift Conference</h1>
           <h2 class="text-center m-t-0">12th-14th September 2018. Berlin, Germany</h2>
 
-          <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-              <div class="buy-tickets">
-                <p class="text-center">
-                  <a href="/tickets" class="btn btn-default btn-sss">BUY TICKETS</a>
-                </p>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
     </div>
