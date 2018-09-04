@@ -103,7 +103,7 @@ extension Speaker {
                 name: "Tanner Nelson",
                 title: "Co-Founder",
                 company: "Vapor",
-                topic: "Vapor State of the Union.",
+                topic: "Vapor State Of The Union",
                 bio:    """
                         Tanner Wayne Nelson is an American software engineer based in
                         New York City. He started programming in elementary school and went
@@ -120,7 +120,7 @@ extension Speaker {
                 name: "James Thomas",
                 title: "Developer advocate",
                 company: "IBM",
-                topic: "Serverless Swift with Apache OpenWhisk.",
+                topic: "Serverless Swift with Apache OpenWhisk",
                 bio:    """
                         James Thomas is a Developer Advocate for IBM’s Cloud division.
                         James is a huge fan of all thing serverless! He spends his time
@@ -136,7 +136,7 @@ extension Speaker {
                 name: "Kyle Jessup",
                 title: "CTO",
                 company: "Perfect",
-                topic: "Diving into Perfect and Internet of Things.",
+                topic: "Diving into Perfect and Internet of Things",
                 bio:    """
                         Kyle Jessup invented the Perfect framework. A self-taught programmer,
                         he has extensive knowledge of other programming languages including Swift,
@@ -150,7 +150,7 @@ extension Speaker {
                 name: "Ian Partridge",
                 title: "Kitura Team Lead Swift",
                 company: "IBM",
-                topic: "From idea to production at ING",
+                topic: "From Idea to Production at ING",
                 bio:    """
                         The technical lead of the Swift@IBM development team, working in open
                         source to bring Swift to the cloud. A committer to the core Swift libraries
@@ -166,7 +166,7 @@ extension Speaker {
                 name: "Stanislav Dombrovsky",
                 title: "AppCode PMM",
                 company: "JetBrains",
-                topic: "Let’s try thinking like an IDE and take a look on all the challenges that server-side Swift brings to IDE and tool creators.",
+                topic: "Thinking like an IDE, the Challenges of Server-Side Swift",
                 bio:    """
                         A mobile developer with 7 years of experience who joined
                         the AppCode team at JetBrains to combine my experience in mobile
@@ -181,7 +181,7 @@ extension Speaker {
                 name: "Kaitlin Mahar",
                 title: "Software Engineer",
                 company: "MongoDB",
-                topic: "Ever wonder what’s actually going on inside JSONEncoder and JSONDecoder? A deep dive into Swift’s Encoder and Decoder protocols and writing one your own.",
+                topic: "Writing Your Own Encoder and Decoder",
                 bio: "A software engineer in NYC at MongoDB, where I'm the primary engineer working on the new official MongoDB Driver for Swift.",
                 twitter: Twitter(url: "https://twitter.com/k__mahar", name: "k__mahar"),
                 github: Github(url: "https://github.com/kmahar", name: "kmahar")
@@ -192,7 +192,7 @@ extension Speaker {
                 name: "Kenichi Ueno",
                 title: "iOS Developer",
                 company: "LINE Corporation",
-                topic: "Experiences on how the server-side development looks like, pitfalls an iOS developer might meet and how to deploy.",
+                topic: "Server-Side Swift Experiences and Pitfalls Coming from iOS",
                 bio: "Has 8 years of iOS development experience at LINE Corporation and uses Kitura for server-side swift development.",
                 twitter: Twitter(url: "https://twitter.com/keno42", name: "keno42"),
                 github: Github(url: "https://github.com/Keno42", name: "keno42")
@@ -203,7 +203,7 @@ extension Speaker {
                 name: "Markus Weyerhäuser",
                 title: "CTO",
                 company: "SEEDFUNNEL",
-                topic: "From idea to market — an extremely challenging journey.",
+                topic: "From Idea to Market — an Extremely Challenging Journey",
                 bio:    """
                         Markus has more then 20 years of experience in software product development
                         covering the full range of the overall life-cycle from spotting hot
@@ -218,7 +218,7 @@ extension Speaker {
                 name: "Ralph Küpper",
                 title: "CEO",
                 company: "Skelpo",
-                topic: "Running small microservices in Swift on production environment.",
+                topic: "Running Small Microservices in Swift on Production Environment",
                 bio: "Entrepreneur and developer in upcoming tech markets.",
                 twitter: Twitter(url: "https://twitter.com/amlug", name: "amlug"),
                 github: Github(url: "https://github.com/proggeramlug", name: "proggeramlug")
@@ -229,7 +229,7 @@ extension Speaker {
                 name: "Pim Stolk",
                 title: "iOS Chapter Lead",
                 company: "ING",
-                topic: "From idea to production at ING", // ⚠️ TBA
+                topic: "From Idea to Production at ING",
                 bio: "iOS developer since 2008 and is working at the ING for the past seven years. Pim is a true mobile and technology enthusiast and is currently working on a new IoT platform mainly written in Swift.",
                 twitter: Twitter(url: "https://twitter.com/stolkcc", name: "stolkcc"),
                 github: Github(url: "https://github.com/pimstolk", name: "pimstolk")
@@ -240,7 +240,7 @@ extension Speaker {
                 name: "Marcin Kliks",
                 title: "Devops Team Leader",
                 company: "Allegro",
-                topic: "Swifty microservices in production - experimenting with Swift on the server @ allegro.tech.",
+                topic: "Swifty Microservices in Production",
                 bio:    """
                         A Devops Team Leader at Allegro and creator of a data center management
                         software who recently fell in love with server-side swift.
@@ -254,7 +254,7 @@ extension Speaker {
                 name: "Konrad Feiler",
                 title: "Co-Founder",
                 company: "looc.io",
-                topic: "How server-side and mobile Swift can benefit from each other.",
+                topic: "How Server-Side and Mobile Swift Can Benefit from Each Other",
                 bio:    """
                         A mathematician turned software engineer, Konrad Feiler has been
                         creating mobile apps for the past seven years, and after work as iOS
@@ -269,7 +269,7 @@ extension Speaker {
                 name: "Spartak Buniatyan",
                 title: "Founder",
                 company: "SwiftEngine.io",
-                topic: "Managing Server-Side Swift at scale with CoreOS, Docker and Terraform on any cloud provider",
+                topic: "Managing Server-Side Swift at Scale with CoreOS, Docker and Terraform on Any Cloud Provider",
                 bio:    """
                         Spartak Buniatyan, has been in the technology development field for over 20 years with heavy experience in developing technologies for large scale enterprise applications in the mobile apps field. Managing large multidisciplinary teams, and understanding the challenges of sustaining high scale customer facing applications. Spartak is the founder of SwiftEngine.io, he oversees and is responsible for SwiftEngine.io’s design and development operations.
                         SwiftEngine.io, is the first turnkey serverless-swift platform for app development.  The server-side Swift framework for SwiftEnigne.io is also open-source and available on Github.
@@ -283,7 +283,7 @@ extension Speaker {
                 name: "Steven Van Impe",
                 title: "Lecturer",
                 company: "University College Ghent. Technical Editor @ raywenderlich.com",
-                topic: "Server-side web apps with Kitura and Stencil",
+                topic: "Server-Side Web Apps with Kitura and Stencil",
                 bio:    """
                         Steven is a lecturer at University College Ghent and a technical editor for <a href=\"https://www.raywenderlich.com\">raywenderlich.com</a>. You can find out more information at <a href=\"http://svanimpe.be/about\">http://svanimpe.be/about</a>.
                         """,
@@ -296,7 +296,7 @@ extension Speaker {
                 name: "Casper Rasmussen",
                 title: "CTO",
                 company: "Nodes",
-                topic: "Vapor in production - How to convince the client",
+                topic: "Vapor in Production - How to Convince the Client",
                 bio:    """
                         CTO and partner at Nodes and board member at Vapor.
                         """,
@@ -308,7 +308,7 @@ extension Speaker {
                 name: "Christian Weinberger",
                 title: "Technical Director",
                 company: "Nodes",
-                topic: "Vapor in production - How to convince the client",
+                topic: "Vapor in Production - How to Convince the Client",
                 bio:    """
                         Christian is a tech enthusiast and Technical Director at Nodes Germany where he fell in love with Vapor.
                         He is working with his team from a co-working space in Berlin, near Hausvogteiplatz. Feel free to pass by if you want to <a href=\"https://www.nodesagency.com/vapor\">chat about Vapor</a> anytime.
@@ -335,7 +335,7 @@ extension Speaker {
                 name: "Jari Koopman",
                 title: "iOS Developer",
                 company: "Wehkamp",
-                topic: "Streamlining our CD flow using ServerSide Swift, Fastlane and Travis CI",
+                topic: "Streamlining Our CD Flow Using Server-Side Swift, Fastlane and Travis CI",
                 bio:    """
                         My name is Jari, I'm 16 years old and I'm a WWDC 2017 Scholarship winner and iOS Developer at Wehkamp, one of the biggest online fashion retailers in the Netherlands.
                         """,
