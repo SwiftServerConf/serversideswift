@@ -269,7 +269,7 @@ extension Speaker {
                 name: "Spartak Buniatyan",
                 title: "Founder",
                 company: "SwiftEngine.io",
-                topic: "Managing Server-Side Swift at Scale with Coreos, Docker and Terraform on Any Cloud Provider",
+                topic: "Managing Server-Side Swift at Scale with CoreOS, Docker and Terraform on Any Cloud Provider",
                 bio:    """
                         Spartak Buniatyan, has been in the technology development field for over 20 years with heavy experience in developing technologies for large scale enterprise applications in the mobile apps field. Managing large multidisciplinary teams, and understanding the challenges of sustaining high scale customer facing applications. Spartak is the founder of SwiftEngine.io, he oversees and is responsible for SwiftEngine.io’s design and development operations.
                         SwiftEngine.io, is the first turnkey serverless-swift platform for app development.  The server-side Swift framework for SwiftEnigne.io is also open-source and available on Github.
