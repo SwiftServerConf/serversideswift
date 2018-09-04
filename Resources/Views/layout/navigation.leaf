@@ -42,7 +42,7 @@
                 <span class="underline"></span>
             </li>
             <li class="buy-ticket">
-                <a href="/tickets">Buy Tickets</a>
+                <a href="/tickets"><strike>Buy Tickets</strike></a>
                 <span class="underline"></span>
             </li>
         </ul>
@@ -77,7 +77,7 @@
             <span class="underline"></span>
         </li>
         <li class="buy-ticket">
-            <a href="/tickets" target="_blank">Buy Tickets</a>
+            <a href="/tickets" target="_blank"><strike>Buy Tickets</strike></a>
             <span class="underline"></span>
         </li>
     </ul>
