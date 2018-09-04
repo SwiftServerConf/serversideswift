@@ -40,12 +40,12 @@
                             <tr>
                               <td class="text-center font-weight-lg">9:15 - 10:00 </td>
                               <td class="fs-md">
-                                  <a href="/speakers/ralph-kuepper">Running small microservices in Swift on production environment (Ralph Küpper)</a>
+                                  <a href="/speakers/ralph-kuepper">Running Small Microservices in Swift on Production Environment (Ralph Küpper)</a>
                               </td>
                             </tr>
                             <tr>
                               <td class="text-center font-weight-lg">10:00 - 10:45</td>
-                              <td class="fs-md"><a href="/speakers/kaitlin-mahar">Swift's Encoder and Decoder Protocols (Kaitlin Mahar)</a></td>
+                              <td class="fs-md"><a href="/speakers/kaitlin-mahar">Writing Your Own Encoder and Decoder (Kaitlin Mahar)</a></td>
                             </tr>
                             <tr class="bg-lightgray">
                               <td class="text-center font-weight-lg">10:45 - 11:00</td>
@@ -57,7 +57,7 @@
                             </tr>
                             <tr>
                               <td class="text-center font-weight-lg">11:45 - 12:30</td>
-                              <td class="fs-md"><a href="/speakers/spartak-buniatyan">Managing Server-Side Swift at scale with CoreOS, Docker and Terraform on any cloud provider (Spartak Buniatyan)</a></td>
+                              <td class="fs-md"><a href="/speakers/spartak-buniatyan">Managing Server-Side Swift at Scale with Coreos, Docker and Terraform on Any Cloud Provider (Spartak Buniatyan)</a></td>
                             </tr>
                             <tr class="bg-lightgray">
                               <td class="text-center font-weight-lg">12:30 - 13:30</td>
@@ -65,7 +65,7 @@
                             </tr>
                             <tr>
                               <td class="text-center font-weight-lg">13:30 - 14:15</td>
-                              <td class="fs-md"><a href="/speakers/marcin-kliks">Swifty microservices in production (Marcin Kliks)</a></td>
+                              <td class="fs-md"><a href="/speakers/marcin-kliks">Swifty Microservices in Production (Marcin Kliks)</a></td>
                             </tr>
                             <tr>
                               <td class="text-center font-weight-lg">14:15 - 15:00</td>
@@ -77,7 +77,7 @@
                             </tr>
                             <tr>
                               <td class="text-center font-weight-lg">15:15 - 16:00</td>
-                              <td class="fs-md"><a href="/speakers/stanislav-dombrovsky">Thinking like an IDE, the challenges of server-side Swift (Stanislav Dombrovsky)</a></td>
+                              <td class="fs-md"><a href="/speakers/stanislav-dombrovsky">Thinking like an IDE, the Challenges of Server-Side Swift (Stanislav Dombrovsky)</a></td>
                             </tr>
                             <tr>
                               <td class="text-center font-weight-lg">16:00 - 16:45</td>
@@ -109,13 +109,13 @@
                                 <tr>
                                     <td class="text-center font-weight-lg width-md">9:00 - 9:45</td>
                                     <td class="fs-md">
-                                        From idea to production at ING (<a href="/speakers/ian-partridge">Ian Partridge</a> and <a href="/speakers/pim-stolk">Pim Stolk</a>)
+                                        From Idea to Production at ING (<a href="/speakers/ian-partridge">Ian Partridge</a> and <a href="/speakers/pim-stolk">Pim Stolk</a>)
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="text-center font-weight-lg">9:45 - 10:30 </td>
                                     <td class="fs-md">
-                                        <a href="/speakers/jari-koopman">Streamlining our CD flow using ServerSide Swift, Fastlane and Travis CI (Jari Koopman)</a>
+                                        <a href="/speakers/jari-koopman">Streamlining Our CD Flow Using Server-Side Swift, Fastlane and Travis CI (Jari Koopman)</a>
                                     </td>
                                 </tr>
                                 <tr class="bg-lightgray">
@@ -125,13 +125,13 @@
                                 <tr>
                                     <td class="text-center font-weight-lg">10:45 - 11:30</td>
                                     <td class="fs-md">
-                                        <a href="/speakers/markus-wyehaeuser">From idea to market — an extremely challenging journey (Markus Weyerhäuser)</a>
+                                        <a href="/speakers/markus-wyehaeuser">From Idea to Market — an Extremely Challenging Journey (Markus Weyerhäuser)</a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="text-center font-weight-lg">11:30 - 12:15</td>
                                     <td class="fs-md">
-                                        <a href="/speakers/konrad-feiler">How server-side and mobile Swift can benefit from each other (Konrad Feiler)</a>
+                                        <a href="/speakers/konrad-feiler">How Server-Side and Mobile Swift Can Benefit from Each Other (Konrad Feiler)</a>
                                     </td>
                                 </tr>
                                 <tr class="bg-lightgray">
@@ -141,14 +141,14 @@
                                 <tr>
                                     <td class="text-center font-weight-lg">13:15 - 14:00</td>
                                     <td class="fs-md">
-                                        <a href="/speakers/spartak-buniatyan">Server-side web apps with Kitura and Stencil (Steven Van Impe)</a>
+                                        <a href="/speakers/spartak-buniatyan">Server-Side Web Apps with Kitura and Stencil (Steven Van Impe)</a>
                                     </td>
                                 </tr>
 
                                 <tr>
                                     <td class="text-center font-weight-lg">14:00 - 14:45</td>
                                     <td class="fs-md">
-                                         <a href="/speakers/kenichi-ueno">Experiences on how the server-side development looks like, pitfalls an iOS developer might meet and how to deploy (Kenichi Ueno)</a>
+                                         <a href="/speakers/kenichi-ueno">Server-Side Swift Experiences and Pitfalls Coming from iOS (Kenichi Ueno)</a>
                                     </td>
                                 </tr>
                                 <tr class="bg-lightgray">
@@ -158,13 +158,13 @@
                                 <tr>
                                     <td class="text-center font-weight-lg">15:00 - 15:45</td>
                                     <td class="fs-md">
-                                        <a href="/speakers/helge-hess"> SwiftNIO on the Raspberry Pi (Helge Heß)</a>
+                                        <a href="/speakers/helge-hess">SwiftNIO on the Raspberry Pi (Helge Heß)</a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="text-center font-weight-lg">15:45 - 16:30</td>
                                     <td class="fs-md">
-                                        Vapor in Production - how to convince the client (<a href="/speakers/casper-rasmussen">Casper Rasmussen</a> and <a href="/speakers/christian-weinberger">Christian Weinberger</a>)
+                                        Vapor in Production - How to Convince the Client (<a href="/speakers/casper-rasmussen">Casper Rasmussen</a> and <a href="/speakers/christian-weinberger">Christian Weinberger</a>)
                                     </td>
                                 </tr>
                                 <tr class="bg-lightgray">
