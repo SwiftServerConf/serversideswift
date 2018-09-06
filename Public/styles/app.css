@@ -64,6 +64,10 @@ a, a:hover, a:focus {
     background-color: #f9f9f9;
 }
 
+.bg-darkgray {
+    background-color: rgb(221, 221, 221);
+}
+
 .ff-monofur {
   font-family: 'Monofur', sans-serif, Arial !important;
 }
@@ -78,6 +82,10 @@ a, a:hover, a:focus {
 
 .font-weight-lg {
     font-weight: 600;
+}
+
+.font-size-lg {
+    font-size: 20px;
 }
 
 .fc-orange {

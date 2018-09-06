@@ -11,38 +11,48 @@
                 <div class="table-responsive border-none">
                     <div class="panel panel-default">
                         <table class="table table-bordered table-condensed" style="color: black">
+                            <thead>
+                              <tr class="bg-darkgray">
+                                <th></th>
+                                <th class="text-center font-size-lg">Workshop 1</th>
+                                <th class="text-center font-size-lg">Workshop 2</th>
+                            </thead>
                             <tbody>
                             <tr class="bg-lightgray">
                                 <td class="text-center font-weight-lg">8:00 - 8:30</td>
-                                <td class="fs-md">Registration</td>
+                                <td class="fs-md" colspan="2">Registration</td>
                             </tr>
                             <tr>
                               <td class="text-center font-weight-lg width-md">8:30 - 10:15</td>
                               <td class="fs-md">Workshop 1: Server-side web apps with Kitura and Stencil (Steven Van Impe)</td>
+                              <td class="fs-md">Workshop 2: Hacking 101 - how to protect your websites (Tim Condon)</td>
                             </tr>
                             <tr class="bg-lightgray">
                               <td class="text-center font-weight-lg">10:15 - 10:30 </td>
-                              <td class="fs-md">Coffee Break</td>
+                              <td class="fs-md" colspan="2">Coffee Break</td>
                             </tr>
                             <tr>
                               <td class="text-center font-weight-lg width-md">10:30 - 12:15</td>
                               <td class="fs-md">Workshop 1: Server-side web apps with Kitura and Stencil (Steven Van Impe)</td>
+                              <td class="fs-md">Workshop 2: Hacking 101 - how to protect your websites (Tim Condon)</td>
                             </tr>
                             <tr class="bg-lightgray">
                               <td class="text-center font-weight-lg">12:15 - 13:15</td>
-                              <td class="fs-md">Lunch</td>
+                              <td class="fs-md" colspan="2">Lunch</td>
                             </tr>
                             <tr>
                               <td class="text-center font-weight-lg width-md">13:15 - 15:00</td>
-                              <td class="fs-md">Workshop 2: Deploying Your First Vapor API (Logan Wright and Tanner Nelson)</td>
+                              <td class="fs-md">Workshop 3: Deploying Your First Vapor API (Logan Wright and Tanner Nelson)</td>
+                              <td class="fs-md">TBC</td>
                             </tr>
                             <tr class="bg-lightgray">
                               <td class="text-center font-weight-lg">15:00 - 15:15 </td>
-                              <td class="fs-md">Coffee Break</td>
+                              <td class="fs-md" colspan="2">Coffee Break</td>
                             </tr>
                             <tr>
                               <td class="text-center font-weight-lg width-md">15:15 - 17:00</td>
                               <td class="fs-md">Workshop 2: Deploying Your First Vapor API (Logan Wright and Tanner Nelson)</td>
+                              <td class="fs-md">TBC</td>
                             </tr>
                             </tbody>
                         </table>
