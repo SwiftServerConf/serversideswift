@@ -80,6 +80,10 @@ a, a:hover, a:focus {
     font-weight: 600;
 }
 
+.font-size-lg {
+    font-size: 20px;
+}
+
 .fc-orange {
   color: #fa532a;
 }
