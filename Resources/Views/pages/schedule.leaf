@@ -11,10 +11,49 @@
                 <div class="table-responsive border-none">
                     <div class="panel panel-default">
                         <table class="table table-bordered table-condensed" style="color: black">
+                            <thead>
+                              <tr class="bg-lightgray">
+                                <th class="col-xs-2"></th>
+                                <th class="text-center font-size-lg col-xs-5">Workshop 1</th>
+                                <th class="text-center font-size-lg col-xs-5">Workshop 2</th>
+                            </thead>
                             <tbody>
-                                <tr>
-                                    <td class="text-center font-weight-lg">To Be Announced</td>
-                                </tr>
+                            <tr class="bg-lightgray">
+                                <td class="text-center font-weight-lg">8:00 - 8:30</td>
+                                <td class="fs-md" colspan="2">Registration</td>
+                            </tr>
+                            <tr>
+                              <td class="text-center font-weight-lg width-md">8:30 - 10:15</td>
+                              <td class="fs-md">Server-side web apps with Kitura and Stencil (Steven Van Impe)</td>
+                              <td class="fs-md">Hacking 101 - how to protect your websites (Tim Condon)</td>
+                            </tr>
+                            <tr class="bg-lightgray">
+                              <td class="text-center font-weight-lg">10:15 - 10:30 </td>
+                              <td class="fs-md" colspan="2">Coffee Break</td>
+                            </tr>
+                            <tr>
+                              <td class="text-center font-weight-lg width-md">10:30 - 12:15</td>
+                              <td class="fs-md">Server-side web apps with Kitura and Stencil (Steven Van Impe)</td>
+                              <td class="fs-md">Hacking 101 - how to protect your websites (Tim Condon)</td>
+                            </tr>
+                            <tr class="bg-lightgray">
+                              <td class="text-center font-weight-lg">12:15 - 13:15</td>
+                              <td class="fs-md" colspan="2">Lunch</td>
+                            </tr>
+                            <tr>
+                              <td class="text-center font-weight-lg width-md">13:15 - 15:00</td>
+                              <td class="fs-md">Deploying Your First Vapor API (Logan Wright and Tanner Nelson)</td>
+                              <td class="fs-md">TBC</td>
+                            </tr>
+                            <tr class="bg-lightgray">
+                              <td class="text-center font-weight-lg">15:00 - 15:15 </td>
+                              <td class="fs-md" colspan="2">Coffee Break</td>
+                            </tr>
+                            <tr>
+                              <td class="text-center font-weight-lg width-md">15:15 - 17:00</td>
+                              <td class="fs-md">Deploying Your First Vapor API (Logan Wright and Tanner Nelson)</td>
+                              <td class="fs-md">TBC</td>
+                            </tr>
                             </tbody>
                         </table>
                     </div>
@@ -30,7 +69,7 @@
                       <table class="table table-bordered table-condensed" style="color: black">
                         <tbody>
                             <tr class="bg-lightgray">
-                                <td class="text-center font-weight-lg">8:00 - 9:00</td>
+                                <td class="text-center font-weight-lg col-xs-2">8:00 - 9:00</td>
                                 <td class="fs-md">Registration</td>
                             </tr>
                             <tr class="bg-lightgray">
@@ -103,7 +142,7 @@
                         <table class="table table-bordered table-condensed" style="color: black">
                             <tbody>
                               <tr class="bg-lightgray">
-                                  <td class="text-center font-weight-lg">8:00 - 9:00</td>
+                                  <td class="text-center font-weight-lg col-xs-2">8:00 - 9:00</td>
                                   <td class="fs-md">Registration</td>
                               </tr>
                                 <tr>
