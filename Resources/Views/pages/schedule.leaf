@@ -24,8 +24,8 @@
                             </tr>
                             <tr>
                               <td class="text-center font-weight-lg width-md">8:30 - 10:15</td>
-                              <td class="fs-md">Workshop 1: Server-side web apps with Kitura and Stencil (Steven Van Impe)</td>
-                              <td class="fs-md">Workshop 2: Hacking 101 - how to protect your websites (Tim Condon)</td>
+                              <td class="fs-md">Server-side web apps with Kitura and Stencil (Steven Van Impe)</td>
+                              <td class="fs-md">Hacking 101 - how to protect your websites (Tim Condon)</td>
                             </tr>
                             <tr class="bg-lightgray">
                               <td class="text-center font-weight-lg">10:15 - 10:30 </td>
@@ -33,8 +33,8 @@
                             </tr>
                             <tr>
                               <td class="text-center font-weight-lg width-md">10:30 - 12:15</td>
-                              <td class="fs-md">Workshop 1: Server-side web apps with Kitura and Stencil (Steven Van Impe)</td>
-                              <td class="fs-md">Workshop 2: Hacking 101 - how to protect your websites (Tim Condon)</td>
+                              <td class="fs-md">Server-side web apps with Kitura and Stencil (Steven Van Impe)</td>
+                              <td class="fs-md">Hacking 101 - how to protect your websites (Tim Condon)</td>
                             </tr>
                             <tr class="bg-lightgray">
                               <td class="text-center font-weight-lg">12:15 - 13:15</td>
@@ -42,7 +42,7 @@
                             </tr>
                             <tr>
                               <td class="text-center font-weight-lg width-md">13:15 - 15:00</td>
-                              <td class="fs-md">Workshop 3: Deploying Your First Vapor API (Logan Wright and Tanner Nelson)</td>
+                              <td class="fs-md">Deploying Your First Vapor API (Logan Wright and Tanner Nelson)</td>
                               <td class="fs-md">TBC</td>
                             </tr>
                             <tr class="bg-lightgray">
@@ -51,7 +51,7 @@
                             </tr>
                             <tr>
                               <td class="text-center font-weight-lg width-md">15:15 - 17:00</td>
-                              <td class="fs-md">Workshop 2: Deploying Your First Vapor API (Logan Wright and Tanner Nelson)</td>
+                              <td class="fs-md">Deploying Your First Vapor API (Logan Wright and Tanner Nelson)</td>
                               <td class="fs-md">TBC</td>
                             </tr>
                             </tbody>
