@@ -13,9 +13,9 @@
                         <table class="table table-bordered table-condensed" style="color: black">
                             <thead>
                               <tr class="bg-darkgray">
-                                <th></th>
-                                <th class="text-center font-size-lg">Workshop 1</th>
-                                <th class="text-center font-size-lg">Workshop 2</th>
+                                <th class="col-xs-1"></th>
+                                <th class="text-center font-size-lg col-xs-3">Workshop 1</th>
+                                <th class="text-center font-size-lg col-xs-3">Workshop 2</th>
                             </thead>
                             <tbody>
                             <tr class="bg-lightgray">
