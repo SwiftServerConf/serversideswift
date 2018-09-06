@@ -13,9 +13,9 @@
                         <table class="table table-bordered table-condensed" style="color: black">
                             <thead>
                               <tr class="bg-lightgray">
-                                <th class="col-xs-1"></th>
-                                <th class="text-center font-size-lg col-xs-3">Workshop 1</th>
-                                <th class="text-center font-size-lg col-xs-3">Workshop 2</th>
+                                <th class="col-xs-2"></th>
+                                <th class="text-center font-size-lg col-xs-5">Workshop 1</th>
+                                <th class="text-center font-size-lg col-xs-5">Workshop 2</th>
                             </thead>
                             <tbody>
                             <tr class="bg-lightgray">
@@ -69,7 +69,7 @@
                       <table class="table table-bordered table-condensed" style="color: black">
                         <tbody>
                             <tr class="bg-lightgray">
-                                <td class="text-center font-weight-lg">8:00 - 9:00</td>
+                                <td class="text-center font-weight-lg col-xs-2">8:00 - 9:00</td>
                                 <td class="fs-md">Registration</td>
                             </tr>
                             <tr class="bg-lightgray">
@@ -142,7 +142,7 @@
                         <table class="table table-bordered table-condensed" style="color: black">
                             <tbody>
                               <tr class="bg-lightgray">
-                                  <td class="text-center font-weight-lg">8:00 - 9:00</td>
+                                  <td class="text-center font-weight-lg col-xs-2">8:00 - 9:00</td>
                                   <td class="fs-md">Registration</td>
                               </tr>
                                 <tr>
