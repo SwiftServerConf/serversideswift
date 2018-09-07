@@ -25,7 +25,7 @@
                             <tr>
                               <td class="text-center font-weight-lg width-md">8:30 - 10:15</td>
                               <td class="fs-md">Server-side web apps with Kitura and Stencil (Steven Van Impe)</td>
-                              <td class="fs-md">Hacking 101 - how to protect your websites (Tim Condon) - Session 1</td>
+                              <td class="fs-md">Hacking 101 - How To Protect Your Websites (Tim Condon) - Session 1</td>
                             </tr>
                             <tr class="bg-lightgray">
                               <td class="text-center font-weight-lg">10:15 - 10:30 </td>
@@ -34,7 +34,7 @@
                             <tr>
                               <td class="text-center font-weight-lg width-md">10:30 - 12:15</td>
                               <td class="fs-md">Server-side web apps with Kitura and Stencil (Steven Van Impe)</td>
-                              <td class="fs-md">Hacking 101 - how to protect your websites (Tim Condon) - Session 1</td>
+                              <td class="fs-md">Hacking 101 - How To Protect Your Websites (Tim Condon) - Session 1</td>
                             </tr>
                             <tr class="bg-lightgray">
                               <td class="text-center font-weight-lg">12:15 - 13:15</td>
@@ -43,7 +43,7 @@
                             <tr>
                               <td class="text-center font-weight-lg width-md">13:15 - 15:00</td>
                               <td class="fs-md">Deploying Your First Vapor API (Logan Wright and Tanner Nelson)</td>
-                              <td class="fs-md">Hacking 101 - how to protect your websites (Tim Condon) - Session 2</td>
+                              <td class="fs-md">Hacking 101 - How To Protect Your Websites (Tim Condon) - Session 2</td>
                             </tr>
                             <tr class="bg-lightgray">
                               <td class="text-center font-weight-lg">15:00 - 15:15 </td>
@@ -52,7 +52,7 @@
                             <tr>
                               <td class="text-center font-weight-lg width-md">15:15 - 17:00</td>
                               <td class="fs-md">Deploying Your First Vapor API (Logan Wright and Tanner Nelson)</td>
-                              <td class="fs-md">Hacking 101 - how to protect your websites (Tim Condon) - Session 2</td>
+                              <td class="fs-md">Hacking 101 - How To Protect Your Websites (Tim Condon) - Session 2</td>
                             </tr>
                             </tbody>
                         </table>
