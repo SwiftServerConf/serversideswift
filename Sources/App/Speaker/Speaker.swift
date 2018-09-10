@@ -181,7 +181,7 @@ extension Speaker {
                 name: "Kaitlin Mahar",
                 title: "Software Engineer",
                 company: "MongoDB",
-                topic: "Writing Your Own Encoder and Decoder",
+                topic: "Swift's Encoder and Decoder Protocols",
                 bio: "A software engineer in NYC at MongoDB, where I'm the primary engineer working on the new official MongoDB Driver for Swift.",
                 twitter: Twitter(url: "https://twitter.com/k__mahar", name: "k__mahar"),
                 github: Github(url: "https://github.com/kmahar", name: "kmahar")

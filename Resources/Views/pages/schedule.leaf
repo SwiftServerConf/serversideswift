@@ -88,7 +88,7 @@
                             </tr>
                             <tr>
                               <td class="text-center font-weight-lg">10:00 - 10:45</td>
-                              <td class="fs-md"><a href="/speakers/kaitlin-mahar">Writing Your Own Encoder and Decoder (Kaitlin Mahar)</a></td>
+                              <td class="fs-md"><a href="/speakers/kaitlin-mahar">Swift's Encoder and Decoder Protocols (Kaitlin Mahar)</a></td>
                             </tr>
                             <tr class="bg-lightgray">
                               <td class="text-center font-weight-lg">10:45 - 11:00</td>
