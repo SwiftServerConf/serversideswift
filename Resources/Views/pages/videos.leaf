@@ -1,0 +1,31 @@
+#extend("layout/base")
+
+#export("content") {
+
+    <div class="container">
+        <div class="first-content m-b-30">
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1 class="text-center fc-orange">Videos</h1>
+                </div>
+            </div>
+
+            <div class="row videos">
+                <div class="flex-container">
+                    #loop(videos, "speaker") {
+                        <div class="flex-item">
+                            <div class="speaker">
+                                <h2 class="m-t-0 m-b-30 title"><a href="/speakers/#(speaker.key)">#(speaker.topic) (#(speaker.name))</a></h2>
+                                <div class='embed-container'>
+                                    <iframe src="https://www.youtube.com/embed/#(speaker.youtubeTalkId)" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+
+        </div>
+    </div>
+}
