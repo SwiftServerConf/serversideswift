@@ -44,3 +44,7 @@
 .speaker-profile h2 {
     font-size: 18px;
 }
+
+.speaker-profile .video {
+    margin-top: 20px;
+}

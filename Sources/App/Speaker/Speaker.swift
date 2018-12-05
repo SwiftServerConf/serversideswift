@@ -10,6 +10,7 @@ struct Speaker {
     let bio: String
     let twitter: SocialMedia?
     let github: SocialMedia?
+    let youtubeTalkId: String?
 
     init(
         key: Speaker.Keys,
@@ -20,7 +21,8 @@ struct Speaker {
         topic: String,
         bio: String,
         twitter: SocialMedia? = nil,
-        github: SocialMedia? = nil
+        github: SocialMedia? = nil,
+        youtubeTalkId: String? = nil
     ) {
         self.key = key
         self.imageUrl = imageUrl
@@ -31,6 +33,7 @@ struct Speaker {
         self.bio = bio
         self.twitter = twitter
         self.github = github
+        self.youtubeTalkId = youtubeTalkId
     }
 }
 
@@ -184,7 +187,8 @@ extension Speaker {
                 topic: "Swift's Encoder and Decoder Protocols",
                 bio: "A software engineer in NYC at MongoDB, where I'm the primary engineer working on the new official MongoDB Driver for Swift.",
                 twitter: Twitter(url: "https://twitter.com/k__mahar", name: "k__mahar"),
-                github: Github(url: "https://github.com/kmahar", name: "kmahar")
+                github: Github(url: "https://github.com/kmahar", name: "kmahar"),
+                youtubeTalkId: "yL5Ff5p1hyc"
             ),
             Speaker(
                 key: Speaker.Keys.kenichiUeno,
@@ -221,7 +225,8 @@ extension Speaker {
                 topic: "Running Small Microservices in Swift on Production Environment",
                 bio: "Entrepreneur and developer in upcoming tech markets.",
                 twitter: Twitter(url: "https://twitter.com/amlug", name: "amlug"),
-                github: Github(url: "https://github.com/proggeramlug", name: "proggeramlug")
+                github: Github(url: "https://github.com/proggeramlug", name: "proggeramlug"),
+                youtubeTalkId: "il7W28Ekor4"
             ),
             Speaker(
                 key: Speaker.Keys.pimStolk,
