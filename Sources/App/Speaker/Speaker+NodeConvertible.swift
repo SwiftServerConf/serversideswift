@@ -11,21 +11,23 @@ extension Speaker: NodeConvertible {
             topic: node.get("topic"),
             bio: node.get("bio"),
             twitter: node.get("twitter"),
-            github: node.get("github")
+            github: node.get("github"),
+            youtubeTalkId: node.get("youtubeTalkId")
         )
     }
 
     func makeNode(in context: Context?) throws -> Node {
-        return try Node(node: [
-            "key": .string(key.rawValue),
-            "imageUrl": .string(imageUrl),
-            "name": .string(name),
-            "title": .string(title),
-            "company": .string(company),
-            "topic": .string(topic),
-            "bio": .string(bio),
-            "twitter": twitter?.makeNode(in: nil) ?? "",
-            "github": github?.makeNode(in: nil) ?? "",
-            ])
+        var node = Node([:])
+        try node.set("key", key.rawValue)
+        try node.set("imageUrl", imageUrl)
+        try node.set("name", name)
+        try node.set("title", title)
+        try node.set("company", company)
+        try node.set("topic", topic)
+        try node.set("bio", bio)
+        try node.set("twitter", twitter)
+        try node.set("github", github)
+        try node.set("youtubeTalkId", youtubeTalkId)
+        return node
     }
 }

@@ -16,6 +16,13 @@ final class Routes: RouteCollection {
         return try self.view.make("pages/about", ["about": true])
     }
 
+    builder.get("/videos") { req in
+        return try self.view.make(
+            "pages/videos",
+            ["videos": Speaker.allSpeaker().filter { $0.youtubeTalkId != nil }]
+        )
+    }
+
     builder.get("/speakers") { req in
         return try self.view.make(
             "pages/speakers",

@@ -12,50 +12,60 @@
             </div>
 
             <div class="speaker-profile">
-                <div class="image col-xs-12 col-sm-5">
-                    <img src="#(speaker.imageUrl)" alt="#(speaker.name)">
-                </div>
-                <div class="card col-xs-12 col-sm-7">
-                    <div class="hidden-sm hidden-md hidden-lg"><br /></div>
-                    <!-- NAME -->
-                    <div>
-                        NAME
+                    <div class="image col-xs-12 col-sm-5">
+                        <img src="#(speaker.imageUrl)" alt="#(speaker.name)">
                     </div>
-                    <h2 class="m-t-0 m-b-30 title"> #(speaker.name) </h2>
+                    <div class="card col-xs-12 col-sm-7">
+                        <div class="hidden-sm hidden-md hidden-lg"><br /></div>
+                        <!-- NAME -->
+                        <div>
+                            NAME
+                        </div>
+                        <h2 class="m-t-0 m-b-30 title"> #(speaker.name) </h2>
 
-                    <!-- POSITION -->
-                    <div> POSITION </div>
-                    <h2 class="m-t-0 m-b-30 title"> #(speaker.title) @ #(speaker.company) </h2>
+                        <!-- POSITION -->
+                        <div> POSITION </div>
+                        <h2 class="m-t-0 m-b-30 title"> #(speaker.title) @ #(speaker.company) </h2>
 
-                    <!-- TITLE -->
-                    <div class="title"> TITLE </div>
-                    <h2 class="m-t-0 m-b-30 title">#(speaker.topic)</h2>
+                        <!-- TITLE -->
+                        <div class="title"> TITLE </div>
+                        <h2 class="m-t-0 m-b-30 title">#(speaker.topic)</h2>
 
-                    <!-- BIO -->
-                    <div class="title"> BIO </div>
-                    <h2 class="m-t-0 m-b-30 title">#raw(speaker.bio)</h2>
+                        <!-- BIO -->
+                        <div class="title"> BIO </div>
+                        <h2 class="m-t-0 m-b-30 title">#raw(speaker.bio)</h2>
 
-                    <!-- SOCIAL MEDIA -->
-                    <!-- if twitter OR github exists -->
-                    #if(speaker.twitter) {
-                        <div> SOCIAL MEDIA </div>
-                    } ##else() {
-                        #if(speaker.github) {
-                        <div> SOCIAL MEDIA </div>
+                        <!-- SOCIAL MEDIA -->
+                        <!-- if twitter OR github exists -->
+                        #if(speaker.twitter) {
+                            <div> SOCIAL MEDIA </div>
+                        } ##else() {
+                            #if(speaker.github) {
+                            <div> SOCIAL MEDIA </div>
+                            }
                         }
-                    }
 
-                    #if(speaker.twitter) {
-                        <h2 class="m-t-0 m-b-0 title">
-                            Twitter: <a href="#(speaker.twitter.url)" target="_blank">@#(speaker.twitter.name)</a>
-                        </h2>
-                    }
+                        #if(speaker.twitter) {
+                            <h2 class="m-t-0 m-b-0 title">
+                                Twitter: <a href="#(speaker.twitter.url)" target="_blank">@#(speaker.twitter.name)</a>
+                            </h2>
+                        }
 
-                    #if(speaker.github) {
-                        <h2 class="m-t-0 title">
-                            GitHub: <a href="#(speaker.github.url)" target="_blank">@#(speaker.github.name)</a>
-                        </h2>
+                        #if(speaker.github) {
+                            <h2 class="m-t-0 title">
+                                GitHub: <a href="#(speaker.github.url)" target="_blank">@#(speaker.github.name)</a>
+                            </h2>
+                        }
+                    </div>
+                <div class="row">
+                    <div class="video col-xs-12 col-sm-12">
+                    <!-- TALK VIDEO -->
+                    #if(speaker.youtubeTalkId) {
+                        <div class='embed-container'>
+                            <iframe src="https://www.youtube.com/embed/#(speaker.youtubeTalkId)" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
                     }
+                    </div>
                 </div>
             </div>
         </div>
