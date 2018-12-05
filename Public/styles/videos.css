@@ -1,17 +1,32 @@
+.videos {
+    margin-top: 20px;
+}
+
 .videos .flex-container {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     flex-flow: row wrap;
+    margin-bottom: 15px;
 }
 
 .videos .flex-item {
-    width: 400px;
-    padding: 5px;
+    width: 100%;
+    padding: 0 30px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
     .videos .flex-item {
-        width: 100%;
-        padding: 0 30px;
+        width: 550px;
+        padding: 5px;
+
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .videos .flex-item {
+        width: 400px;
+        padding: 5px;
+
     }
 }

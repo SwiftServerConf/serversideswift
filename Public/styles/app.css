@@ -342,7 +342,10 @@ footer a.twitter {
     padding-bottom: 56.25%; 
     height: 0; 
     overflow: hidden; 
-    max-width: 100%; 
+    max-width: 100%;
+    border: 1px solid #fa5329;
+    border-radius: 10px;
+    overflow: hidden;
 } 
 
 .embed-container iframe, .embed-container object, .embed-container embed { 
