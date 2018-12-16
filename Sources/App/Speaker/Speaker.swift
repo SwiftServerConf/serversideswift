@@ -281,7 +281,8 @@ extension Speaker {
                         SwiftEngine.io, is the first turnkey serverless-swift platform for app development.  The server-side Swift framework for SwiftEnigne.io is also open-source and available on Github.
                         Prior to founding SwiftEngine.io, he applied his considerable expertise in software engineering to a number of large enterprises, including DIRECTV/AT&T, nation's largest Satellite TV provider, and Medtronic, a global leader in medical technology, services, and solutions, leading both organizations’ mobile-app development teams.
                         Mr. Buniatyan received his MBA from the University of Southern California. He also holds two utility patents in the technology space.
-                        """
+                        """,
+                youtubeTalkId: "ti4UhT7EPAA"
             ),
             Speaker(
                 key: Speaker.Keys.stevenVanImpe,
