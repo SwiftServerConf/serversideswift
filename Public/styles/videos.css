@@ -8,6 +8,7 @@
     align-items: center;
     flex-flow: row wrap;
     margin-bottom: 15px;
+    flex-wrap: wrap-reverse;
 }
 
 .videos .flex-item {
