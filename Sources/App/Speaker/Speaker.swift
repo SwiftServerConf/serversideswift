@@ -115,7 +115,8 @@ extension Speaker {
                         and the dozens of packages around it.
                         """,
                 twitter: Twitter(url: "https://www.twitter.com/tanner0101", name: "tanner0101"),
-                github: Github(url: "https://github.com/tanner0101", name: "tanner0101")
+                github: Github(url: "https://github.com/tanner0101", name: "tanner0101"),
+                youtubeTalkId: "_615REC32Ts"
             ),
             Speaker(
                 key: Speaker.Keys.jamesThomas,
