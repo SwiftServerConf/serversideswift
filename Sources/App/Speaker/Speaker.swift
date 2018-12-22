@@ -146,7 +146,8 @@ extension Speaker {
                         he has extensive knowledge of other programming languages including Swift,
                         Java, and C++.
                         """,
-                github: Github(url: "https://github.com/kjessup", name: "kjessup")
+                github: Github(url: "https://github.com/kjessup", name: "kjessup"),
+                youtubeTalkId: "GuhMpvNle64"
             ),
             Speaker(
                 key: Speaker.Keys.ianPartridge,
@@ -252,7 +253,8 @@ extension Speaker {
                         software who recently fell in love with server-side swift.
                         """,
                 twitter: Twitter(url: "https://twitter.com/vi4m", name: "vi4m"),
-                github: Github(url: "https://github.com/vi4m", name: "vi4m")
+                github: Github(url: "https://github.com/vi4m", name: "vi4m"),
+                youtubeTalkId: "vyW-a3N0odk"
             ),
             Speaker(
                 key: Speaker.Keys.konradFeiler,
