@@ -23,6 +23,13 @@ final class Routes: RouteCollection {
         )
     }
 
+    builder.get("/photos") { req in
+        return try self.view.make(
+            "pages/photos",
+            ["photos": photos]
+        )
+    }
+
     builder.get("/speakers") { req in
         return try self.view.make(
             "pages/speakers",
