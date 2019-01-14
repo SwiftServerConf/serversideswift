@@ -21,6 +21,10 @@
                 <a href="/videos">Videos</a>
                 <span class="underline"></span>
             </li>
+            <li class="#if(photos){active}">
+                <a href="/photos">Photos</a>
+                <span class="underline"></span>
+            </li>
             <li class="#if(schedule){active}">
                 <a href="/schedule">Schedule</a>
                 <span class="underline"></span>
@@ -58,6 +62,10 @@
         </li>
         <li class="#if(videos){active}">
             <a href="/videos">Videos</a>
+            <span class="underline"></span>
+        </li>
+        <li class="#if(photos){active}">
+            <a href="/photos">Photos</a>
             <span class="underline"></span>
         </li>
         <li class="#if(schedule){active}">
