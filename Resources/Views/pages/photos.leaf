@@ -1,0 +1,31 @@
+#extend("layout/base")
+
+#export("content") {
+
+    <div class="container">
+        <div class="first-content m-b-30">
+
+            <div class="photos">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="text-center fc-orange">Photos</h1>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="flex-container">
+                        #loop(photos, "photo") {
+                            <div class="flex-item">
+                                <a href="#(photo)" data-toggle="lightbox" data-gallery="photos">
+                                    <img src="#(photo)" class="img-thumbnail" />
+                                </a>
+                            </div>
+                        }
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+}
