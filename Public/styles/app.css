@@ -271,6 +271,17 @@ footer a.twitter {
   padding-top: 2px;
 }
 
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
+
+.flex-item {
+  width: 280px;
+  padding: 5px;
+}
+
 /* Pulse Effect */
 
 .buy-tickets .btn-default {

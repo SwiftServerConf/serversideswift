@@ -132,7 +132,8 @@ extension Speaker {
                         the awesomeness of serverless cloud platforms.
                         """,
                 twitter: Twitter(url: "https://twitter.com/thomasj", name: "thomasj"),
-                github: Github(url: "https://github.com/jthomas", name: "jthomas")
+                github: Github(url: "https://github.com/jthomas", name: "jthomas"),
+                youtubeTalkId: "Z6vVWGZ6sTs"
             ),
             Speaker(
                 key: Speaker.Keys.kyleJessup,
@@ -178,7 +179,8 @@ extension Speaker {
                         development with the new world of making developer tools.
                         """,
                 twitter: Twitter(url: "https://twitter.com/s_dombrovsky", name: "s_dombrovsky"),
-                github: Github(url: "https://github.com/yeswolf", name: "yeswolf")
+                github: Github(url: "https://github.com/yeswolf", name: "yeswolf"),
+                youtubeTalkId: "Bp8ekbxRRO8"
             ),
             Speaker(
                 key: Speaker.Keys.kaitlinMahar,
