@@ -58,7 +58,6 @@ struct Speaker {
 /// ```
 /// static func allSpeaker() -> [String: Speaker] {
 ///   return [
-///     Keys.tannerNelson.rawValue:
 ///     Speaker(
 ///       key: Speaker.Keys.tannerNelson,
 ///       imageUrl: "/images/speakers/tanner_nelson.jpeg",
@@ -68,7 +67,8 @@ struct Speaker {
 ///       topic: "All about Vapor and its future",
 ///       bio: "He is the inventor of Vapor and rockz it ever since",
 ///       twitter: Twitter(url: "https://www.twitter.com/tanner0101", name: "tanner0101"),
-///       github: Github(url: "https://github.com/tanner0101", name: "tanner0101")
+///       github: Github(url: "https://github.com/tanner0101", name: "tanner0101"),
+///       youtubeTalkId: "_615REC32Ts"
 ///     )
 ///   ]
 /// }
