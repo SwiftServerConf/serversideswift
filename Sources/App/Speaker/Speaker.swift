@@ -164,7 +164,8 @@ extension Speaker {
                         he comes from a background in virtual machine performance and debugging.
                         """,
                 twitter: Twitter(url: "https://twitter.com/alfa", name: "alfa"),
-                github: Github(url: "https://github.com/ianpartridge", name: "ianpartridge")
+                github: Github(url: "https://github.com/ianpartridge", name: "ianpartridge"),
+                youtubeTalkId: "NZwTz8j5GXc"
             ),
             Speaker(
                 key: Speaker.Keys.stanislavDombrovsky,
@@ -241,7 +242,8 @@ extension Speaker {
                 topic: "From Idea to Production at ING",
                 bio: "iOS developer since 2008 and is working at the ING for the past seven years. Pim is a true mobile and technology enthusiast and is currently working on a new IoT platform mainly written in Swift.",
                 twitter: Twitter(url: "https://twitter.com/stolkcc", name: "stolkcc"),
-                github: Github(url: "https://github.com/pimstolk", name: "pimstolk")
+                github: Github(url: "https://github.com/pimstolk", name: "pimstolk"),
+                youtubeTalkId: "NZwTz8j5GXc"
             ),
             Speaker(
                 key: Speaker.Keys.marcinKliks,
@@ -311,7 +313,8 @@ extension Speaker {
                 bio:    """
                         CTO and partner at Nodes and board member at Vapor.
                         """,
-                github: Github(url: "https://github.com/Casperhr", name: "Casperhr")
+                github: Github(url: "https://github.com/Casperhr", name: "Casperhr"),
+                youtubeTalkId: "KNT5a16w_30"
             ),
             Speaker(
                 key: Speaker.Keys.christianWeinberger,
@@ -325,7 +328,8 @@ extension Speaker {
                         He is working with his team from a co-working space in Berlin, near Hausvogteiplatz. Feel free to pass by if you want to <a href=\"https://www.nodesagency.com/vapor\">chat about Vapor</a> anytime.
                         """,
                 twitter: Twitter(url: "https://twitter.com/_cweinberger", name: "_cweinberger"),
-                github: Github(url: "https://github.com/cweinberger", name: "cweinberger")
+                github: Github(url: "https://github.com/cweinberger", name: "cweinberger"),
+                youtubeTalkId: "KNT5a16w_30"
             ),
             Speaker(
                 key: Speaker.Keys.helgeHess,
@@ -338,7 +342,8 @@ extension Speaker {
                         Helge started coding on NeXT machines >20 years ago. Some (including himself) claim that he is almost always sometimes right. Currently doing software projects at ZeeZide & fun stuff at the AlwaysRightInstitute. Previously worked at Apple, ZideOne, Brainstorm, Skyrix/OpenGroupware.org.
                         """,
                 twitter: Twitter(url: "https://twitter.com/helje5", name: "helje5"),
-                github: Github(url: "https://github.com/helje5", name: "helje5")
+                github: Github(url: "https://github.com/helje5", name: "helje5"),
+                youtubeTalkId: "FPGf652O90Y"
             ),
             Speaker(
                 key: Speaker.Keys.jariKoopman,
