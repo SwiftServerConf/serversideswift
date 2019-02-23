@@ -204,7 +204,8 @@ extension Speaker {
                 topic: "Server-Side Swift Experiences and Pitfalls Coming from iOS",
                 bio: "Has 8 years of iOS development experience at LINE Corporation and uses Kitura for server-side swift development.",
                 twitter: Twitter(url: "https://twitter.com/keno42", name: "keno42"),
-                github: Github(url: "https://github.com/Keno42", name: "keno42")
+                github: Github(url: "https://github.com/Keno42", name: "keno42"),
+                youtubeTalkId: "dDGdZuQV0kw"
             ),
             Speaker(
                 key: Speaker.Keys.markusWyehaeuser,
@@ -219,7 +220,8 @@ extension Speaker {
                         technology trends, designing and implementing actual shippable code and
                         analysing the market for a successful product launch.
                         """,
-                twitter: Twitter(url: "https://twitter.com/mweyerhaeuser", name: "mweyerhaeuser")
+                twitter: Twitter(url: "https://twitter.com/mweyerhaeuser", name: "mweyerhaeuser"),
+                youtubeTalkId: "x7CZAhP9KyA"
             ),
             Speaker(
                 key: Speaker.Keys.ralphKuepper,
@@ -273,7 +275,8 @@ extension Speaker {
                         architect for Viacom currently focusses on his own companies.
                         """,
                 twitter: Twitter(url: "https://twitter.com/bersaelor", name: "bersaelor"),
-                github: Github(url: "https://github.com/bersaelor", name: "bersaelor")
+                github: Github(url: "https://github.com/bersaelor", name: "bersaelor"),
+                youtubeTalkId: "xA3ZYt5S6iA"
             ),
             Speaker(
                 key: Speaker.Keys.spartakBuniatyan,
@@ -301,7 +304,8 @@ extension Speaker {
                         Steven is a lecturer at University College Ghent and a technical editor for <a href=\"https://www.raywenderlich.com\">raywenderlich.com</a>. You can find out more information at <a href=\"http://svanimpe.be/about\">http://svanimpe.be/about</a>.
                         """,
                 twitter: Twitter(url: "https://twitter.com/svanimpe", name: "svanimpe"),
-                github: Github(url: "https://github.com/svanimpe", name: "svanimpe")
+                github: Github(url: "https://github.com/svanimpe", name: "svanimpe"),
+                youtubeTalkId: "w3jlii__XBE"
             ),
             Speaker(
                 key: Speaker.Keys.casperRasmussen,
@@ -356,7 +360,8 @@ extension Speaker {
                         My name is Jari, I'm 16 years old and I'm a WWDC 2017 Scholarship winner and iOS Developer at Wehkamp, one of the biggest online fashion retailers in the Netherlands.
                         """,
                 twitter: Twitter(url: "https://twitter.com/LotUDev", name: "LotUDev"),
-                github: Github(url: "https://github.com/MrLotU", name: "MrLotU")
+                github: Github(url: "https://github.com/MrLotU", name: "MrLotU"),
+                youtubeTalkId: "HYS8f4ep1Ng"
             )
         ]
     }
