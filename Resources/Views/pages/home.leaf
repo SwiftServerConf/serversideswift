@@ -5,7 +5,15 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
-
+<!-- TEMPORARY -->
+          <div class="conference-2019-banner">
+            <h2>
+              SAVE THE DATE! <br />
+              30th October - 1st November 2019. Copenhagen, Denmark. <br />
+              <span> Stay tuned for updates. </span>
+            </h2>
+          </div>
+<!-- TEMPORARY -->
           <div class="brand">
             <div class="logo">
               <img src="images/logo.png" alt="serverside.swift">

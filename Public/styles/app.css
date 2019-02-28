@@ -1,3 +1,20 @@
+/* TEMPORARY */
+.conference-2019-banner {
+  background: white;
+  color: #fa532a;
+  padding: 15px;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 150px;
+}
+.conference-2019-banner h2 {
+  margin: 0;
+}
+.conference-2019-banner span {
+  font-size: 14px;
+}
+/* TEMPORARY */
+
 @font-face {
 	font-family: 'Monofur';
 	src: url('monof55.ttf')  format('truetype');
