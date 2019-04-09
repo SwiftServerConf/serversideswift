@@ -35,6 +35,8 @@ extension TalkSpeaker: Migration {
     static func prepare(on connection: MySQLConnection) -> Future<Void> {
         return MySQLDatabase.create(self, on: connection) { builder in
             try addProperties(to: builder)
+            builder.reference(from: leftIDKey, to: \Left.id)
+            builder.reference(from: rightIDKey, to: \Right.id)
         }
     }
 }

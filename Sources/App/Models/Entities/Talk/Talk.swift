@@ -2,10 +2,21 @@ import FluentMySQL
 import Vapor
 
 final class Talk: Codable {
+     enum VideoType: String, Codable, ReflectionDecodable {
+        case youtube
+        case vimeo
+        case custom
+
+        static func reflectDecoded() throws -> (Talk.VideoType, Talk.VideoType) {
+            return (.youtube, .vimeo)
+        }
+    }
+
     var id: Int?
 
     var title: String
-    var youTubeID: String?
+    var videoType: VideoType?
+    var videoReference: String?
     var enabled: Bool
 
     var createdAt: Date?
@@ -15,12 +26,14 @@ final class Talk: Codable {
     init(
         id: Int? = nil,
         title: String,
-        youTubeID: String? = nil,
+        videoType: VideoType? = nil,
+        videoReference: String? = nil,
         enabled: Bool
     ) {
         self.id = id
         self.title = title
-        self.youTubeID = youTubeID
+        self.videoType = videoType
+        self.videoReference = videoReference
         self.enabled = enabled
     }
 }
@@ -35,7 +48,18 @@ extension Talk: Content {}
 extension Talk: Migration {
     static func prepare(on connection: MySQLConnection) -> Future<Void> {
         return MySQLDatabase.create(self, on: connection) { builder in
-            try addProperties(to: builder)
+            try addProperties(to: builder, excluding: [
+                Talk.reflectProperty(forKey: \.videoType)
+            ])
+
+            builder.field(
+                for: \.videoType,
+                type: MySQLDataType.enum([
+                    VideoType.youtube.rawValue,
+                    VideoType.vimeo.rawValue,
+                    VideoType.custom.rawValue
+                ])
+            )
         }
     }
 }

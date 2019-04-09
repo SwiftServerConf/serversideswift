@@ -1,16 +1,11 @@
 import FluentMySQL
 import Vapor
 
-final class Speaker: Codable {
+final class Room: Codable {
     var id: Int?
+    var eventID: Int
 
-    var name: String
     var title: String
-    var company: String?
-    var bio: String
-    var twitterURL: String?
-    var gitHubURL: String?
-
     var order: Int
     var enabled: Bool
 
@@ -20,42 +15,32 @@ final class Speaker: Codable {
 
     init(
         id: Int? = nil,
-        name: String,
+        eventID: Int,
         title: String,
-        company: String? = nil,
-        bio: String,
-        twitterURL: String? = nil,
-        gitHubURL: String? = nil,
         order: Int,
         enabled: Bool
     ) {
         self.id = id
-        self.name = name
+        self.eventID = eventID
         self.title = title
-        self.company = company
-        self.bio = bio
-        self.twitterURL = twitterURL
-        self.gitHubURL = gitHubURL
         self.order = order
         self.enabled = enabled
     }
 }
 
-extension Speaker: MySQLModel {
+extension Room: MySQLModel {
     static let createdAtKey: TimestampKey? = \.createdAt
     static let updatedAtKey: TimestampKey? = \.updatedAt
     static let deletedAtKey: TimestampKey? = \.deletedAt
 }
 
-extension Speaker: Content {}
-extension Speaker: Migration {
+extension Room: Content {}
+extension Room: Migration {
     static func prepare(on connection: MySQLConnection) -> Future<Void> {
         return MySQLDatabase.create(self, on: connection) { builder in
-            try addProperties(to: builder, excluding: [
-                Speaker.reflectProperty(forKey: \.bio)
-            ])
-            builder.field(for: \.bio, type: .text)
+            try addProperties(to: builder)
+            builder.reference(from: \.eventID, to: \Event.id)
         }
     }
 }
-extension Speaker: Parameter {}
+extension Room: Parameter {}
