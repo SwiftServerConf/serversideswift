@@ -2,6 +2,15 @@ import FluentMySQL
 import Vapor
 
 final class Talk: Codable {
+     enum TalkType: String, Codable, ReflectionDecodable {
+        case talk
+        case workshop
+
+        static func reflectDecoded() throws -> (Talk.TalkType, Talk.TalkType) {
+            return (.talk, .workshop)
+        }
+    }
+
      enum VideoType: String, Codable, ReflectionDecodable {
         case youtube
         case vimeo
@@ -14,7 +23,9 @@ final class Talk: Codable {
 
     var id: Int?
 
+    var talkType: TalkType
     var title: String
+    var description: String?
     var videoType: VideoType?
     var videoReference: String?
     var enabled: Bool
@@ -25,13 +36,17 @@ final class Talk: Codable {
 
     init(
         id: Int? = nil,
+        talkType: TalkType,
         title: String,
+        description: String? = nil,
         videoType: VideoType? = nil,
         videoReference: String? = nil,
         enabled: Bool
     ) {
         self.id = id
+        self.talkType = talkType
         self.title = title
+        self.description = description
         self.videoType = videoType
         self.videoReference = videoReference
         self.enabled = enabled
@@ -49,6 +64,8 @@ extension Talk: Migration {
     static func prepare(on connection: MySQLConnection) -> Future<Void> {
         return MySQLDatabase.create(self, on: connection) { builder in
             try addProperties(to: builder, excluding: [
+                Talk.reflectProperty(forKey: \.talkType),
+                Talk.reflectProperty(forKey: \.description),
                 Talk.reflectProperty(forKey: \.videoType)
             ])
 
@@ -60,6 +77,16 @@ extension Talk: Migration {
                     VideoType.custom.rawValue
                 ])
             )
+
+            builder.field(
+                for: \.talkType,
+                type: MySQLDataType.enum([
+                    TalkType.talk.rawValue,
+                    TalkType.workshop.rawValue,
+                ])
+            )
+
+            builder.field(for: \.description, type: .text)
         }
     }
 }

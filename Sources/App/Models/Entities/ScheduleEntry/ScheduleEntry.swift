@@ -5,15 +5,15 @@ import Vapor
 final class ScheduleEntry: Codable {
      enum EntryType: String, Codable, ReflectionDecodable {
         case talk
-        case workshop
         case other
 
         static func reflectDecoded() throws -> (ScheduleEntry.EntryType, ScheduleEntry.EntryType) {
-            return (.talk, .workshop)
+            return (.talk, .other)
         }
     }
 
     var id: Int?
+    var dayID: Int
     var roomID: Int
     var talkID: Int?
 
@@ -29,6 +29,7 @@ final class ScheduleEntry: Codable {
 
     init(
         id: Int? = nil,
+        dayID: Int,
         roomID: Int,
         talkID: Int?,
         title: String?,
@@ -38,6 +39,7 @@ final class ScheduleEntry: Codable {
         enabled: Bool
     ) {
         self.id = id
+        self.dayID = dayID
         self.roomID = roomID
         self.talkID = talkID
         self.title = title
@@ -66,13 +68,13 @@ extension ScheduleEntry: Migration {
                 for: \.entryType,
                 type: MySQLDataType.enum([
                     EntryType.talk.rawValue,
-                    EntryType.workshop.rawValue,
                     EntryType.other.rawValue
                 ])
             )
 
             builder.reference(from: \.roomID, to: \Room.id)
             builder.reference(from: \.talkID, to: \Talk.id)
+            builder.reference(from: \.dayID, to: \Day.id)
         }
     }
 }
