@@ -43,3 +43,9 @@ extension Event: Migration {
     }
 }
 extension Event: Parameter {}
+
+extension Event {
+    var days: Children<Event, Day> {
+        return children(\.eventID)
+    }
+}

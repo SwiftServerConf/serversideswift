@@ -1,4 +1,5 @@
 import Vapor
+import Fluent
 
 struct Year2018Controller: RouteCollection {
     func boot(router: Router) throws {
@@ -34,10 +35,36 @@ struct Year2018Controller: RouteCollection {
     
     func allSpeakersHandler(_ req: Request) throws -> Future<View> {
         struct SpeakersContext: Encodable {
-            
+            let speakers: [Speaker]
         }
-        let context = SpeakersContext()
-        return try req.view().render("year2018/speakers", context)
+        // TOOD tidy up with a join
+        return Event.query(on: req).filter(\.title == "2018").first().unwrap(or: Abort(.internalServerError)).flatMap { event in
+            return try event.days.query(on: req).all().flatMap { days in
+                var entryResults = [Future<[ScheduleEntry]>]()
+                for day in days {
+                    try entryResults.append(day.scheduleEntries.query(on: req).all())
+                }
+                return entryResults.flatten(on: req).flatMap { entryArray in
+                    let entries = entryArray.flatMap { $0 }
+                    var talkResults = [Future<[Talk]>]()
+                    for entry in entries {
+                        talkResults.append(Talk.query(on: req).filter(\.id == entry.talkID).all())
+                    }
+                    return talkResults.flatten(on: req).flatMap { talkArrays in
+                        let talks = talkArrays.flatMap { $0 }
+                        var speakerResults = [Future<[Speaker]>]()
+                        for talk in talks {
+                            try speakerResults.append(talk.speakers.query(on: req).all())
+                        }
+                        return speakerResults.flatten(on: req).flatMap { speakerArray in
+                            let speakers = speakerArray.flatMap { $0 }
+                            let context = SpeakersContext(speakers: speakers)
+                            return try req.view().render("year2018/speakers", context)
+                        }
+                    }
+                }
+            }
+        }
     }
     
     func speakerHandler(_ req: Request) throws -> Future<View> {

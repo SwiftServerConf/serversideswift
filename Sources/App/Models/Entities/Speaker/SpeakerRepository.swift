@@ -62,7 +62,7 @@ extension MySQLSpeakerRepository {
     }
 }
 
-fileprivate extension Talk {
+extension Talk {
     // this planet's related tags
     var speakers: Siblings<Talk, Speaker, TalkSpeaker> {
         return siblings()
