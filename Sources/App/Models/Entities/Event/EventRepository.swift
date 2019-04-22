@@ -4,6 +4,7 @@ import Foundation
 
 protocol EventRepository: ServiceType {
     func find(id: Int, enabled: Bool) -> Future<Event?>
+    func find(slug: String, enabled: Bool) -> EventLoopFuture<Event?>
     func all(enabled: Bool) -> Future<[Event]>
     func save(event: Event) -> Future<Event>
 }
@@ -25,11 +26,21 @@ final class MySQLEventRepository: EventRepository {
         }
     }
 
+    func find(slug: String, enabled: Bool = true) -> EventLoopFuture<Event?> {
+        return db.withConnection { conn in
+            return Event
+                .query(on: conn)
+                .filter(\Event.slug == slug)
+                .filter(\.enabled == enabled)
+                .first()
+        }
+    }
+
     func all(enabled: Bool = true) -> EventLoopFuture<[Event]> {
         return db.withConnection { conn in
             return Event
                 .query(on: conn)
-                .filter(\.enabled == true)
+                .filter(\.enabled == enabled)
                 .sort(\.order, .ascending)
                 .all()
         }

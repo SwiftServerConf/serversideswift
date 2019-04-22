@@ -29,7 +29,7 @@ final class MySQLRoomRepository: RoomRepository {
         return db.withConnection { conn in
             return Room
                 .query(on: conn)
-                .filter(\.enabled == true)
+                .filter(\.enabled == enabled)
                 .sort(\.order, .ascending)
                 .all()
         }

@@ -4,6 +4,7 @@ import Vapor
 final class Event: Codable {
     var id: Int?
 
+    var slug: String
     var title: String
     var order: Int
     var primary: Bool
@@ -15,12 +16,14 @@ final class Event: Codable {
 
     init(
         id: Int? = nil,
+        slug: String,
         title: String,
         order: Int,
         primary: Bool,
         enabled: Bool
     ) {
         self.id = id
+        self.slug = slug
         self.title = title
         self.order = order
         self.primary = primary

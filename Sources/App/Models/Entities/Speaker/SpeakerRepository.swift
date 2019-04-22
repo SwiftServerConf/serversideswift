@@ -6,6 +6,7 @@ protocol SpeakerRepository: ServiceType {
     func find(id: Int, enabled: Bool) -> Future<Speaker?>
     func all(enabled: Bool) -> Future<[Speaker]>
     func all(talk: Talk, enabled: Bool) -> Future<[Speaker]>
+    func all(event: Event, enabled: Bool) throws -> EventLoopFuture<[(Speaker, Talk)]>
     func save(speaker: Speaker) -> Future<Speaker>
 }
 
@@ -30,7 +31,7 @@ final class MySQLSpeakerRepository: SpeakerRepository {
         return db.withConnection { conn in
             return Speaker
                 .query(on: conn)
-                .filter(\.enabled == true)
+                .filter(\.enabled == enabled)
                 .sort(\.name, .ascending)
                 .all()
         }
@@ -40,8 +41,26 @@ final class MySQLSpeakerRepository: SpeakerRepository {
         return db.withConnection { conn in
             return try talk.speakers
                 .query(on: conn)
-                .filter(\.enabled == true)
+                .filter(\.enabled == enabled)
                 .sort(\.name, .ascending)
+                .all()
+        }
+    }
+
+    func all(event: Event, enabled: Bool = true) throws -> EventLoopFuture<[(Speaker, Talk)]> {
+        guard let id = event.id else { throw Abort(.badRequest) }
+
+        return db.withConnection { conn in
+            return Speaker
+                .query(on: conn)
+                .join(\TalkSpeaker.speakerID, to: \Speaker.id)
+                .join(\Talk.id, to: \TalkSpeaker.talkID)
+                .join(\ScheduleEntry.talkID, to: \TalkSpeaker.talkID)
+                .join(\Day.id, to: \ScheduleEntry.dayID)
+                .filter(\Day.eventID == id)
+                .filter(\Speaker.enabled == enabled)
+                .sort(\Speaker.name, .ascending)
+                .alsoDecode(Talk.self)
                 .all()
         }
     }
