@@ -44,3 +44,9 @@ extension Day: Migration {
     }
 }
 extension Day: Parameter {}
+
+extension Day {
+    var scheduleEntries: Children<Day, ScheduleEntry> {
+        return children(\.dayID)
+    }
+}

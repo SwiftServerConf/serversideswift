@@ -2,7 +2,6 @@ import AdminPanel
 import Bugsnag
 import FluentMySQL
 import Leaf
-import NMeta
 import Paginator
 import Redis
 import Reset
@@ -53,8 +52,7 @@ extension CORSMiddleware.Configuration {
                 .contentType,
                 .origin,
                 .userAgent,
-                .xRequestedWith,
-                HTTPHeaderName(NMetaConfig.current.headerKey)
+                .xRequestedWith
             ]
         )
     }
@@ -79,30 +77,6 @@ extension MySQLDatabaseConfig {
         }
 
         return config
-    }
-}
-
-extension NMetaConfig {
-    static var current: NMetaConfig {
-        return NMetaConfig(
-            exceptPaths: [
-                // favicons
-                "/apple-touch-icon-precomposed.png",
-                "/apple-touch-icon.png",
-                "/favicon.ico",
-                "/favicons/*",
-
-                "/AdminPanel/*",
-                "/NodesSSO/*",
-                "/Reset/*",
-                "/admin*",
-                "/api/users/reset-password/*",
-                "/css/*",
-                "/images/*",
-                "/js/*",
-                "/robots.txt"
-            ]
-        )
     }
 }
 

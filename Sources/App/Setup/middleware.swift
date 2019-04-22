@@ -1,5 +1,4 @@
 import Bugsnag
-import NMeta
 import Submissions
 import Vapor
 
@@ -8,7 +7,6 @@ func middleware(config: inout MiddlewareConfig) throws {
     config.use(CORSMiddleware(configuration: .current))
     config.use(ErrorMiddleware.self) // Catches errors and converts to HTTP response
     config.use(SessionsMiddleware.self)
-    config.use(NMetaMiddleware.self)
     // ⚠️ The BugsnagMiddleware needs to be the second to last middleware (right before
     // the FileMiddleware).
     config.use(BugsnagMiddleware.self)

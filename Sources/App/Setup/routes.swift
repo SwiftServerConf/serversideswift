@@ -28,4 +28,7 @@ func routes(_ router: Router, _ container: Container) throws {
     // MARK: Backend
     // let unprotectedBackend = router
     // let protectedBackend = unprotectedBackend.grouped(adminPanel.middlewares.secure)
+    
+    // MARK: Website
+    try router.register(collection: WebsiteController())
 }

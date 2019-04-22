@@ -2,7 +2,8 @@ import FluentMySQL
 import Vapor
 
 final class Talk: Codable {
-     enum TalkType: String, Codable, ReflectionDecodable {
+    enum TalkType: String, Codable, ReflectionDecodable {
+
         case talk
         case workshop
 

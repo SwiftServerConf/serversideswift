@@ -30,7 +30,7 @@ final class MySQLScheduleEntryRepository: ScheduleEntryRepository {
         return db.withConnection { conn in
             return ScheduleEntry
                 .query(on: conn)
-                .filter(\.enabled == true)
+                .filter(\.enabled == enabled)
                 .sort(\.startTime, .ascending)
                 .all()
         }
@@ -45,7 +45,7 @@ final class MySQLScheduleEntryRepository: ScheduleEntryRepository {
             return ScheduleEntry
                 .query(on: conn)
                 .filter(\.roomID == roomID)
-                .filter(\.enabled == true)
+                .filter(\.enabled == enabled)
                 .sort(\.startTime, .ascending)
                 .all()
         }

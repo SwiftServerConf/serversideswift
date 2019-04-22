@@ -3,7 +3,6 @@ import Bugsnag
 import FluentMySQL
 import Leaf
 import Mailgun
-import NMeta
 import Redis
 import Reset
 import Sugar
@@ -44,6 +43,5 @@ func setUpProviders(
 
     // MARK: Misc
 
-    try services.register(NMetaProvider(config: .current))
     try services.register(BugsnagProvider(config: .current(environment)))
 }

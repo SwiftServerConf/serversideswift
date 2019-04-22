@@ -1,0 +1,50 @@
+.speaker-profile {
+    background-color: #f5f5f5 !important;
+    border: none !important;
+    background: #0C1D28 !important;
+    border-radius: 5px !important;
+    padding: 15px !important;
+    border-left: 2px solid #F88A36 !important;
+    border-right: 2px solid #FD2020 !important;
+    -webkit-box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    background-position: 0 0, 0 100% !important;
+    background-repeat: no-repeat !important;
+    -webkit-background-size: 100% 2px !important;
+    -moz-background-size: 100% 2px !important;
+    background-size: 100% 2px !important;
+    background-image: -webkit-linear-gradient(left, #F88A36 0%, #FD2020 100%), -webkit-linear-gradient(left, #F88A36 0%, #FD2020 100%) !important;
+    background-image: -moz-linear-gradient(left, #F88A36 0%, #FD2020 100%), -moz-linear-gradient(left, #F88A36 0%, #FD2020 100%) !important;
+    background-image: -o-linear-gradient(left, #F88A36 0%, #FD2020 100%), -o-linear-gradient(left, #F88A36 0%, #FD2020 100%) !important;
+    background-image: linear-gradient(to right, #F88A36 0%, #FD2020 100%), linear-gradient(to right, #F88A36 0%, #FD2020 100%) !important;
+    overflow: auto;
+}
+
+.speaker-profile .image {
+    padding: 0;
+    border-radius: 5px;
+    float: left;
+    overflow: hidden;
+}
+
+.speaker-profile .image img {
+    width: 100%;
+}
+
+.speaker-profile .card {
+    padding: 0 20px;
+    float: left;
+}
+
+.speaker-profile .card .title {
+    color: #fff;
+}
+
+.speaker-profile h2 {
+    font-size: 18px;
+}
+
+.speaker-profile .video {
+    margin-top: 20px;
+}

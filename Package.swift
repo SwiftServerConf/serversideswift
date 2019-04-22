@@ -12,7 +12,6 @@ let package = Package(
         // Nodes
         .package(url: "https://github.com/nodes-vapor/admin-panel.git", from:"2.0.0-rc"),
         .package(url: "https://github.com/nodes-vapor/bugsnag.git", from: "3.0.0-rc"),
-        .package(url: "https://github.com/nodes-vapor/n-meta.git", from: "3.0.0-beta"),
         .package(url: "https://github.com/nodes-vapor/paginator.git", from: "3.2.0"),
         .package(url: "https://github.com/nodes-vapor/storage.git", from: "1.0.0-beta"),
         .package(url: "https://github.com/nodes-vapor/submissions.git", from: "2.0.0-rc"),
@@ -27,7 +26,6 @@ let package = Package(
             "Bugsnag",
             "FluentMySQL",
             "Mailgun",
-            "NMeta",
             "Paginator",
             "Redis",
             "Storage",

@@ -29,7 +29,7 @@ final class MySQLDayRepository: DayRepository {
         return db.withConnection { conn in
             return Day
                 .query(on: conn)
-                .filter(\.enabled == true)
+                .filter(\.enabled == enabled)
                 .sort(\.date, .ascending)
                 .all()
         }

@@ -6,6 +6,7 @@ protocol TalkRepository: ServiceType {
     func find(id: Int, enabled: Bool) -> Future<Talk?>
     func all(enabled: Bool) -> Future<[Talk]>
     func all(speaker: Speaker, enabled: Bool) -> Future<[Talk]>
+    func all(speaker: Speaker, event: Event, enabled: Bool) throws -> Future<[Talk]>
     func save(talk: Talk) -> Future<Talk>
 }
 
@@ -30,7 +31,7 @@ final class MySQLTalkRepository: TalkRepository {
         return db.withConnection { conn in
             return Talk
                 .query(on: conn)
-                .filter(\.enabled == true)
+                .filter(\.enabled == enabled)
                 .sort(\.title, .ascending)
                 .all()
         }
@@ -40,8 +41,23 @@ final class MySQLTalkRepository: TalkRepository {
         return db.withConnection { conn in
             return try speaker.talks
                 .query(on: conn)
-                .filter(\.enabled == true)
+                .filter(\.enabled == enabled)
                 .sort(\.title, .ascending)
+                .all()
+        }
+    }
+
+    func all(speaker: Speaker, event: Event, enabled: Bool) throws -> Future<[Talk]> {
+        guard let eventID = event.id else { throw Abort(.badRequest) }
+
+        return db.withConnection { conn in
+            return try speaker.talks
+                .query(on: conn)
+                .join(\ScheduleEntry.talkID, to: \Talk.id)
+                .join(\Day.id, to: \ScheduleEntry.dayID)
+                .filter(\Day.eventID == eventID)
+                .filter(\Talk.enabled == enabled)
+                .sort(\ScheduleEntry.startTime, .ascending)
                 .all()
         }
     }

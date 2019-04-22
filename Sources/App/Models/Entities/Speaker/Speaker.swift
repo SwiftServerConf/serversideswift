@@ -4,12 +4,14 @@ import Vapor
 final class Speaker: Codable {
     var id: Int?
 
+    var slug: String
     var name: String
     var title: String
     var company: String?
+    var imageURL: String?
     var bio: String
-    var twitterURL: String?
-    var gitHubURL: String?
+    var twitterHandle: String?
+    var gitHubHandle: String?
 
     var order: Int
     var enabled: Bool
@@ -20,22 +22,26 @@ final class Speaker: Codable {
 
     init(
         id: Int? = nil,
+        slug: String,
         name: String,
         title: String,
         company: String? = nil,
+        imageURL: String? = nil,
         bio: String,
-        twitterURL: String? = nil,
-        gitHubURL: String? = nil,
+        twitterHandle: String? = nil,
+        gitHubHandle: String? = nil,
         order: Int,
         enabled: Bool
     ) {
         self.id = id
+        self.slug = slug
         self.name = name
         self.title = title
         self.company = company
+        self.imageURL = imageURL
         self.bio = bio
-        self.twitterURL = twitterURL
-        self.gitHubURL = gitHubURL
+        self.twitterHandle = twitterHandle
+        self.gitHubHandle = gitHubHandle
         self.order = order
         self.enabled = enabled
     }
@@ -58,4 +64,18 @@ extension Speaker: Migration {
         }
     }
 }
-extension Speaker: Parameter {}
+extension Speaker: Parameter {
+    public static func resolveParameter(_ parameter: String, on container: Container) throws -> Future<Speaker> {
+        func findModel(in connection: Database.Connection) throws -> Future<Speaker> {
+            return Speaker.query(on: connection).filter(\.slug == parameter).first().map { model in
+                guard let model = model else {
+                    throw Abort(.notFound)
+                }
+                return model
+            }
+        }
+
+        let dbid = try Speaker.requireDefaultDatabase()
+        return container.withPooledConnection(to: dbid, closure: findModel)
+    }
+}

@@ -1,0 +1,7 @@
+.venue-images img:first-of-type {
+    margin-bottom:20px;
+}
+
+.venue-images img {
+    height:450px;
+}
