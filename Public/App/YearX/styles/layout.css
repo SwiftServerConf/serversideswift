@@ -1,0 +1,26 @@
+body {
+  padding-top: 50px;
+}
+
+/* Icons (Feather) */
+.feather {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+/* Icons (Linea Basic) */
+@font-face {
+  font-family: "linea-basic-10";
+  src:url("App/YearX/images/icons/lineabasic/linea-basic-10.eot");
+  src:url("App/YearX/images/icons/lineabasic/linea-basic-10.eot?#iefix") format("embedded-opentype"),
+  url("App/YearX/images/icons/lineabasic/linea-basic-10.woff") format("woff"),
+  url("App/YearX/images/icons/lineabasic/linea-basic-10.ttf") format("truetype"),
+  url("App/YearX/images/icons/lineabasic/linea-basic-10.svg#linea-basic-10") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}

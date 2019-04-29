@@ -1,0 +1,8 @@
+footer.navbar.footer {
+  background-color: #0C1D28;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+}

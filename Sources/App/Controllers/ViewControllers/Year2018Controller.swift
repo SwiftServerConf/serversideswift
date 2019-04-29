@@ -31,8 +31,9 @@ struct Year2018Controller: RouteCollection {
 
         return eventRepo
             .find(slug: "2018", enabled: true)
-            .flatMap { event in
-                try speakerRepo.all(event: event!, enabled: true)
+            .flatMap { event -> Future<[(Speaker, Talk)]> in
+                guard let event = event else { throw Abort(.internalServerError) }
+                return try speakerRepo.all(event: event, enabled: true)
             }
             .map { speakers in
                 return speakers.map { TalkAndSpeaker(speaker: $0.0, talk: $0.1)}
