@@ -7,11 +7,11 @@ struct YearXController: RouteCollection {
   }
   
   func homepageHandler(_ req: Request) throws -> Future<View> {
-    let homeContext = HomeContext(page: ["home": true])
+    let homeContext = HomeContext()
     return try req.view().render("App/YearX/Pages/home", homeContext)
   }
 }
 
 struct HomeContext: Encodable {
-  let page: [String: Bool]
+  let page = ["home": true]
 }

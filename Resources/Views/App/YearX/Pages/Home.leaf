@@ -1,5 +1,0 @@
-#set("content") {
-  Home
-}
-
-#embed("App/YearX/Layout/base")
