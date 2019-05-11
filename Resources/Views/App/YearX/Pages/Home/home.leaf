@@ -1,0 +1,6 @@
+#set("content") {
+  #embed("App/YearX/Pages/Home/Partials/hero")
+  #embed("App/YearX/Pages/Home/Partials/description")
+}
+
+#embed("App/YearX/Layout/base")

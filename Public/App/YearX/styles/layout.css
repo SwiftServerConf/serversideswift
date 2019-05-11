@@ -30,16 +30,26 @@ body {
   font-style: normal;
 }
 
+/* MARK: - Font */
+
 .ff-monofur {
   font-family: 'Monofur', sans-serif, Arial !important;
 }
 
+/* MARK: -  Page Block */
+
 .page-block {
-  height: 500px;
+  min-height: 500px;
   position: relative;
   z-index: 0;
 }
 
-.page-block.bg-hero {
+.page-block.bg-blue {
   background: #1d303e;
+}
+
+.h3 {
+  background: linear-gradient(to right, #F88A36 , #FD2020) no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

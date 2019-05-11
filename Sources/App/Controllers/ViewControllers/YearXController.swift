@@ -8,7 +8,7 @@ struct YearXController: RouteCollection {
   
   func homepageHandler(_ req: Request) throws -> Future<View> {
     let homeContext = HomeContext()
-    return try req.view().render("App/YearX/Pages/home", homeContext)
+    return try req.view().render("App/YearX/Pages/Home/home", homeContext)
   }
 }
 

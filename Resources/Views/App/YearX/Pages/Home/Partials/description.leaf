@@ -1,0 +1,48 @@
+<div class="page-block description">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-6">
+        <h3 class="h3">The Conference</h3>
+        
+        <p>
+        ServerSide.swift is a framework-independent conference, where we will learn and share on a number of different related topics. The conference is aimed at being a non-profit conference and solely run for the love of server-side Swift.
+        </p>
+      </div>
+      <div class="col-12 col-sm-6">
+        <h3 class="h3">Where and When</h3>
+        
+        <p>
+        The conference will take place in awesome Copenhagen, Denmark and last for 3 days from 30th Oct - 1st Nov 2019! September 12th will be a day of workshops and September 13th-14th will be packed with talks. Please note that a separate workshop ticket is required to participate in the workshops on September 12th.
+        </p>
+      </div>
+      <div class="col-12 col-sm-6">
+        <h3 class="h3">Speakers</h3>
+        
+        <p>
+        We have an awesome line up of speakers with some incredible talks. Check out our Speakers page to see them all!
+        </p>
+      </div>
+      <div class="col-12 col-sm-6">
+        <h3 class="h3">The Team</h3>
+        
+        <p>
+        Collaboration between Martin J. Lasek (Berlin - DE), Tim Condon (Manchester - UK), Steffen D. Sommer (Copenhagen - DK)
+        </p>
+      </div>
+      <div class="col-12 col-sm-6">
+        <h3 class="h3">Sponsoring</h3>
+        
+        <p>
+        We are currently looking for sponsors so if you work for a company that would want to help sponsor ServerSide.swift then please get in contact on sponsors@serversideswift.info
+        </p>
+      </div>
+      <div class="col-12 col-sm-6">
+        <h3 class="h3">Want to help?</h3>
+        
+        <p>
+        As we are a non-profit conference then the best way you can help at the moment is by spreading the word! Feel free to share the link on whatever platforms that you like.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

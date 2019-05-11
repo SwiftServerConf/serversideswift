@@ -6,3 +6,11 @@ footer.navbar.footer {
   width: 100%;
   z-index: 10;
 }
+
+footer.navbar.footer .social-media a {
+  padding-left: 10px;
+}
+
+footer.navbar.footer .social-media a:last-child {
+  padding-left: 5px;
+}

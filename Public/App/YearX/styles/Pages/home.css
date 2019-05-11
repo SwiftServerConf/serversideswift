@@ -4,14 +4,18 @@
   color: #ffffff;
 }
 
-.bg-hero .brand h2 {
+.bg-blue .brand h2 {
   font-size: 32px;
 }
 
-.bg-hero h1 {
+.bg-blue h1 {
   font-size: 36px;
 }
 
-.bg-hero h2 {
+.bg-blue h2 {
   font-size: 22px;
+}
+
+.page-block.description {
+  font-weight: 300;
 }
