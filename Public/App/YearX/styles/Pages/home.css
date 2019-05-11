@@ -17,6 +17,19 @@
   font-size: 22px;
 }
 
-.page-block.description {
+.description {
   font-weight: 300;
+}
+
+.newsletter {
+  padding: 30px 0;
+}
+
+.newsletter .submit {
+  background: linear-gradient(to right, #F88A36 , #FD2020) no-repeat;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  width: 200px;
+  height: 40px;
 }
