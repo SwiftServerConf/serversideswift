@@ -3,18 +3,18 @@
     <a href="/">Home</a>
     <span class="underline"></span>
   </li>
-  <li class="#if(currentSite.videos){active}">
+<!--   <li class="#if(currentSite.videos){active}">
     <a href="/videos">Videos</a>
     <span class="underline"></span>
-  </li>
-  <li class="#if(currentSite.photos){active}">
+  </li> -->
+<!--   <li class="#if(currentSite.photos){active}">
     <a href="/photos">Photos</a>
     <span class="underline"></span>
-  </li>
-  <li class="#if(currentSite.schedule){active}">
+  </li> -->
+<!--   <li class="#if(currentSite.schedule){active}">
     <a href="/schedule">Schedule</a>
     <span class="underline"></span>
-  </li>
+  </li> -->
   <li class="#if(currentSite.speakers){active}">
     <a href="/speakers">Speakers</a>
     <span class="underline"></span>
@@ -35,10 +35,10 @@
     <a href="/about">About</a>
     <span class="underline"></span>
   </li>
-  <li class="buy-ticket">
+<!--   <li class="buy-ticket">
     <a href="/tickets"><strike>Buy Tickets</strike></a>
     <span class="underline"></span>
-  </li>
+  </li> -->
 }
 
 <nav class="navigation">

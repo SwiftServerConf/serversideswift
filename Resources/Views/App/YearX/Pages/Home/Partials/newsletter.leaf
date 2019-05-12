@@ -6,7 +6,7 @@
         <h3 class="h3 text-center">Newsletter</h3>
         <p class="text-white text-center">
         The best way to keep posted about the conference is by signing up below!
-        Next newsletter will contain everything about sponsor levels, ticket prices, schedule and more!
+        Future newsletters will contain everything about sponsor levels, ticket prices, schedule and more!
         </p>
         <form
           action="https://serversideswift.us17.list-manage.com/subscribe/post?u=214a68ae1b6b77f2b00664b9c&amp;id=3eb6684609"
@@ -18,7 +18,7 @@
           novalidate=""
         >
           <p>
-            <input type="email" value="" name="EMAIL" class="form-control" id="mce-EMAIL" placeholder="Enter your E-Mail">
+            <input type="email" value="" name="EMAIL" class="form-control" id="mce-EMAIL" placeholder="Enter your email">
           </p>
           <div style="position: absolute; left: -5000px;" aria-hidden="true">
             <input type="text" name="b_214a68ae1b6b77f2b00664b9c_3eb6684609" tabindex="-1" value="">
