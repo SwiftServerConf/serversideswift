@@ -13,12 +13,12 @@ final class Talk: Codable {
     }
 
      enum VideoType: String, Codable, ReflectionDecodable {
-        case youtube
+        case youTube
         case vimeo
         case custom
 
         static func reflectDecoded() throws -> (Talk.VideoType, Talk.VideoType) {
-            return (.youtube, .vimeo)
+            return (.youTube, .vimeo)
         }
     }
 
@@ -73,7 +73,7 @@ extension Talk: Migration {
             builder.field(
                 for: \.videoType,
                 type: MySQLDataType.enum([
-                    VideoType.youtube.rawValue,
+                    VideoType.youTube.rawValue,
                     VideoType.vimeo.rawValue,
                     VideoType.custom.rawValue
                 ])

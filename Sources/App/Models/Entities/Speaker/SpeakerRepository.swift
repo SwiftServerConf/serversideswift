@@ -59,7 +59,7 @@ final class MySQLSpeakerRepository: SpeakerRepository {
                 .join(\Day.id, to: \ScheduleEntry.dayID)
                 .filter(\Day.eventID == id)
                 .filter(\Speaker.enabled == enabled)
-                .sort(\Speaker.name, .ascending)
+                .sort(\Speaker.order, .ascending)
                 .alsoDecode(Talk.self)
                 .all()
         }

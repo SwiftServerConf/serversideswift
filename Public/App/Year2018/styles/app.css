@@ -1,3 +1,20 @@
+/* TEMPORARY */
+.conference-2019-banner {
+  background: white;
+  color: #fa532a;
+  padding: 15px;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 150px;
+}
+.conference-2019-banner h2 {
+  margin: 0;
+}
+.conference-2019-banner span {
+  font-size: 14px;
+}
+/* TEMPORARY */
+
 @font-face {
 	font-family: 'Monofur';
 	src: url('monof55.ttf')  format('truetype');
@@ -271,6 +288,17 @@ footer a.twitter {
   padding-top: 2px;
 }
 
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
+
+.flex-item {
+  width: 280px;
+  padding: 5px;
+}
+
 /* Pulse Effect */
 
 .buy-tickets .btn-default {
@@ -337,21 +365,20 @@ footer a.twitter {
 
 /* Youtube */
 
-.embed-container { 
-    position: relative; 
-    padding-bottom: 56.25%; 
-    height: 0; 
-    overflow: hidden; 
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
     max-width: 100%;
     border: 1px solid #fa5329;
     border-radius: 10px;
-    overflow: hidden;
-} 
+}
 
-.embed-container iframe, .embed-container object, .embed-container embed { 
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%; 
+.embed-container iframe, .embed-container object, .embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
