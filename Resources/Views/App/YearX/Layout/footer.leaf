@@ -1,7 +1,6 @@
 <footer class="navbar footer">
-    <div class="container d-flex">
-        <a href="/imprint" class="text-white #if(currentSite.imprint) {active}">Imprint</a>
-        <div class="social-media d-flex">
+    <div class="container d-flex justify-content-center">
+        <div class="social-media">
             <a href="https://github.com/SwiftServerConf" target="_blank">
                 <span class="icon">
                     <svg class="feather text-white">
