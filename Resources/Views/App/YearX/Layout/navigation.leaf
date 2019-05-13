@@ -1,37 +1,37 @@
 #set("links") {
-<li class="#if(currentSite.home){active}">
+  <li class="#if(page.home){active}">
     <a href="/">Home</a>
     <span class="underline"></span>
   </li>
-<!--   <li class="#if(currentSite.videos){active}">
+<!--   <li class="#if(page.videos){active}">
     <a href="/videos">Videos</a>
     <span class="underline"></span>
   </li> -->
-<!--   <li class="#if(currentSite.photos){active}">
+<!--   <li class="#if(page.photos){active}">
     <a href="/photos">Photos</a>
     <span class="underline"></span>
   </li> -->
-<!--   <li class="#if(currentSite.schedule){active}">
+<!--   <li class="#if(page.schedule){active}">
     <a href="/schedule">Schedule</a>
     <span class="underline"></span>
   </li> -->
-  <li class="#if(currentSite.speakers){active}">
+  <li class="#if(page.speakers){active}">
     <a href="/speakers">Speakers</a>
     <span class="underline"></span>
   </li>
-  <li class="#if(currentSite.location){active}">
+  <li class="#if(page.location){active}">
     <a href="/location">Location</a>
     <span class="underline"></span>
   </li>
-  <li class="#if(currentSite.sponsors){active}">
+  <li class="#if(page.sponsors){active}">
     <a href="/sponsors">Sponsors</a>
     <span class="underline"></span>
   </li>
-  <li class="#if(currentSite.faq){active}">
+  <li class="#if(page.faq){active}">
     <a href="/faq">FAQ</a>
     <span class="underline"></span>
   </li>
-  <li class="#if(currentSite.about){active}">
+  <li class="#if(page.about){active}">
     <a href="/about">About</a>
     <span class="underline"></span>
   </li>

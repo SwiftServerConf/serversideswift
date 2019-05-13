@@ -1,0 +1,20 @@
+<div class="sponsors">
+  <div class="container">
+    <div class="row">
+      
+      <div class="col">
+        <h3 class="h3 text-center">Sponsors</h3>
+        <div class="logos">
+          <a href="https://www.skelpo.com" target="_blank">
+            <img src="/App/YearX/images/sponsors/skelpo.png" alt="Skelpo" class="h-100">
+          </a>
+          
+          <a href="https://raywenderlich.com" target="_blank">
+            <img src="/App/YearX/images/sponsors/ray_wenderlich.png" alt="Ray Wenderlich" class="h-80">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
