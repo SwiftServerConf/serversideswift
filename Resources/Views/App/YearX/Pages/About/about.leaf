@@ -3,13 +3,12 @@
       <div class="page-block no-height pt-5 pb-5">
         <div class="container">
           <h1 class="text-center">About</h1>
-          <h4 class="text-center"> ServerSide.swift is solely run for the love of server-side Swift. </h2>
+          <h4 class="text-center mb-5"> ServerSide.swift is solely run for the love of server-side Swift. </h2>
+            
+          #embed("App/YearX/Pages/About/Partials/organizer-list")
         </div>
       </div>
-      
-      #embed("App/YearX/Pages/About/Partials/the-conference")
-      #embed("App/YearX/Pages/About/Partials/the-team")
-      #embed("App/YearX/Pages/About/Partials/getting-in-touch")
+      #embed("App/YearX/Pages/About/Partials/information")
     </div>
   </div>
 }

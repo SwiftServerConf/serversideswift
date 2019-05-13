@@ -1,0 +1,34 @@
+<div class="organizer-list">
+  <div class="organizer">
+    <a href="https://www.twitter.com/0xtim" target="_blank"></a>
+    <div class="image">
+      <img src="/App/YearX/images/team/timcondon.jpg" alt="Tim">
+        </div>
+    <div class="description p-2">
+      <h3>Tim Condon</h3>
+      <h4 class="f-weight-300">Author, Lead Developer &amp; Vapor Tutorial Caster</h4>
+    </div>
+  </div>
+  
+  <div class="organizer">
+    <a href="https://www.instagram.com/martin_lasek/" target="_blank"></a>
+    <div class="image">
+      <img src="/App/YearX/images/team/martinlasek.jpg" alt="Martin">
+        </div>
+    <div class="description p-2">
+      <h3>Martin Lasek</h3>
+      <h4 class="f-weight-300">Indie Game Developer, Vapor Tutorial Writer &amp; Swift Developer</h4>
+    </div>
+  </div>
+  
+  <div class="organizer">
+    <a href="https://twitter.com/steffendsommer" target="_blank"></a>
+    <div class="image">
+      <img src="/App/YearX/images/team/steffendsommer.jpg" alt="Steffen">
+        </div>
+    <div class="description p-2">
+      <h3>Steffen D. Sommer</h3>
+      <h4 class="f-weight-300">Lead Developer, Author &amp; Conference speaker</h4>
+    </div>
+  </div>
+</div>
