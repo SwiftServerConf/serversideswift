@@ -7,7 +7,7 @@
     #embed("App/YearX/Layout/Assets/css")
     #embed("App/YearX/Layout/Assets/javascript")
 </head>
-<body>
+<body class="#if(isBlueBackground) {bg-blue}">
     #embed("App/YearX/Layout/navigation")
     #embed("App/YearX/Layout/content")
     #embed("App/YearX/Layout/footer")

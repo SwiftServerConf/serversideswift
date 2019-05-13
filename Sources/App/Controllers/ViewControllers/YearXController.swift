@@ -1,5 +1,6 @@
 import Vapor
 import Fluent
+import FluentMySQL
 
 struct YearXController: RouteCollection {
     func boot(router: Router) throws {
@@ -7,6 +8,7 @@ struct YearXController: RouteCollection {
         router.get("about", use: aboutHandler)
         router.get("faq", use: faqHandler)
         router.get("code-of-conduct", use: codeOfConductHandler)
+        router.get("speakers", use: speakersHandler)
     }
 
     func homepageHandler(_ req: Request) throws -> Future<View> {
@@ -17,6 +19,14 @@ struct YearXController: RouteCollection {
     func aboutHandler(_ req: Request) throws -> Future<View> {
         let aboutContext = AboutContext()
         return try req.view().render("App/YearX/Pages/About/about", aboutContext)
+    }
+  
+    func speakersHandler(_ req: Request) throws -> Future<View> {
+        let speakerSlugs = ["kaitlin-mahar"]
+        return Speaker.query(on: req).filter(\Speaker.slug ~~ speakerSlugs).all().flatMap { speakerList in
+          let speakerContext = SpeakerContext(speakerList: speakerList)
+          return try req.view().render("App/YearX/Pages/Speaker/speaker", speakerContext)
+        }
     }
 
     func faqHandler(_ req: Request) throws -> Future<View> {
@@ -36,6 +46,11 @@ struct HomeContext: Encodable {
 
 struct AboutContext: Encodable {
     let page = ["about": true]
+}
+
+struct SpeakerContext: Encodable {
+    let page = ["speaker": true]
+    let speakerList: [Speaker]
 }
 
 struct FaqContext: Encodable {

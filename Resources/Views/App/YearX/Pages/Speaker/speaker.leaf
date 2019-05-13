@@ -1,0 +1,30 @@
+#set("content") {
+<div class="speakers">
+  <div class="text-white pt-5 pb-5">
+    <div class="container">
+      <h1 class="text-center">Speaker</h1>
+      <h4 class="text-center mb-5"> We host a diverse selection of inspiring speakers. </h2>
+      
+      <div class="list">
+        #for(speaker in speakerList) {
+          <div class="card">
+            <a href="/speakers/#(speaker.slug)"></a>
+            <div class="image">
+              <img src="#(speaker.imageURL)" alt="#(speaker.name)">
+            </div>
+            <div class="description p-2">
+              <h3>#(speaker.name)</h3>
+              <h4 class="f-weight-300">#(speaker.title) @ #(speaker.company)</h4>
+            </div>
+          </div>
+        }
+      </div>
+      
+    </div>
+  </div>
+</div>
+}
+
+#set("isBlueBackground"){true}
+
+#embed("App/YearX/Layout/base")
