@@ -1,0 +1,103 @@
+<div class="page-block no-height">
+  <div class="container">
+    <h2 class="h3 text-center mb-4">The Team</h3>
+    
+    <div class="organizer-list">
+      <div class="organizer">
+        <a href="https://www.twitter.com/0xtim" target="_blank"></a>
+        <div class="image">
+          <img src="/App/YearX/images/team/timcondon.jpg" alt="Tim">
+        </div>
+        <div class="description p-2">
+          <h3>Tim Condon</h3>
+          <h4 class="f-weight-300">Author, Lead Developer &amp; Vapor Tutorial Caster</h4>
+        </div>
+      </div>
+      
+      <div class="organizer">
+        <a href="https://www.instagram.com/martin_lasek/" target="_blank"></a>
+        <div class="image">
+          <img src="/App/YearX/images/team/martinlasek.jpg" alt="Martin">
+            </div>
+        <div class="description p-2">
+          <h3>Martin Lasek</h3>
+          <h4 class="f-weight-300">Indie Game Developer, Vapor Tutorial Writer &amp; Swift Developer</h4>
+        </div>
+      </div>
+      
+      <div class="organizer">
+        <a href="https://twitter.com/steffendsommer" target="_blank"></a>
+        <div class="image">
+          <img src="/App/YearX/images/team/steffendsommer.jpg" alt="Steffen">
+            </div>
+        <div class="description p-2">
+          <h3>Steffen D. Sommer</h3>
+          <h4 class="f-weight-300">Lead Developer, Author &amp; Conference speaker</h4>
+        </div>
+      </div>
+    </div>
+<!--
+    <div class="organizer">
+      <div class="image">
+        <img src="/App/Year2018/images/team/timcondon.jpg" alt="Tim">
+        <div class="social-media">
+          <a href="https://www.twitter.com/0xtim" target="_blank">
+            #embed("App/Year2018/Partials/icons/twitter")
+          </a>
+        </div>
+      </div>
+ 
+      <div class="card">
+        <div class="title">
+          Tim Condon
+        </div>
+        <div class="sub-title">
+          Author, Lead Developer &amp; Vapor Tutorial Caster
+        </div>
+      </div>
+    </div>
+  </div>
+<!--
+  <div class="col-xs-12 col-sm-4 col-md-4">
+    <div class="organizer">
+      <div class="image">
+        <img src="/App/Year2018/images/team/martinlasek.jpg" alt="Martin">
+          <div class="social-media">
+            <a href="https://twitter.com/martinlasek" target="_blank">
+              #embed("App/Year2018/Partials/icons/twitter")
+            </a>
+          </div>
+          </div>
+      <div class="card">
+        <div class="title">
+          Martin Lasek
+        </div>
+        <div class="sub-title">
+          Indie Game Developer, Vapor Tutorial Writer &amp; Swift Developer
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="col-xs-12 col-sm-4 col-md-4">
+    <div class="organizer">
+      <div class="image">
+        <img src="/App/Year2018/images/team/steffendsommer.jpg" alt="Steffen">
+          <div class="social-media">
+            <a href="https://twitter.com/steffendsommer" target="_blank">
+              #embed("App/Year2018/Partials/icons/twitter")
+            </a>
+          </div>
+          </div>
+      <div class="card">
+        <div class="title">
+          Steffen D. Sommer
+        </div>
+        <div class="sub-title">
+          Lead Developer, Author &amp; Conference speaker
+        </div>
+      </div>
+    </div>
+-->
+  </div>
+</div>

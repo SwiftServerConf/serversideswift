@@ -1,0 +1,9 @@
+<div class="page-block no-height bg-blue">
+  <div class="container">
+    <h3 class="h3">The Conference</h3>
+    <p class="text-white f-weight-300">
+    ServerSide.swift is a framework-independent, server-side Swift conference, where we will learn and share on a number of different related topics.
+    The conference is aimed at being a non-profit conference and solely run for the love of server-side Swift. This space is still new and we hope to be able to contribute to the growth of ServerSide.swift by facilitating a conference where people can meet and collaborate. We have all been following and taking part in the server-side Swift movement and after running meetups in Berlin and London, we believe that the community is ready for a conference dedicated to server-side Swift!
+    </p>
+  </div>
+</div>
