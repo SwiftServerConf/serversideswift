@@ -1,6 +1,6 @@
 #set("content") {
-<div class="speakers">
-  <div class="text-white pt-5 pb-5">
+<div class="page-block speakers">
+  <div class="text-white">
     <div class="container">
       <h1 class="text-center">Speaker</h1>
       <h4 class="text-center mb-5"> We host a diverse selection of inspiring speakers. </h2>
