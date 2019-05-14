@@ -40,6 +40,12 @@ body {
   font-weight: 300;
 }
 
+.f-gradient {
+  background: linear-gradient(to right, #F88A36 , #FD2020) no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* MARK: -  Page Block */
 
 .page-block {
@@ -63,7 +69,7 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-/* Height/Width Helper */
+/* MARK: - Height */
 
 .h-50 {
   height: 50px !important;

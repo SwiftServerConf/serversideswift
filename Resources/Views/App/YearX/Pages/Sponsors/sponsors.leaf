@@ -1,0 +1,55 @@
+#set("content") {
+<div class="sponsors">
+  <div class="pt-5 pb-5">
+    <div class="container">
+      <h1 class="text-center text-white">Sponsors</h1>
+      <h4 class="text-center mb-5 text-white">Thanks a lot to all of our sponsors for helping us to run this conference.</h2>
+        
+        <div class="sponsor-list row">
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="sponsor">
+              <a href="https://www.nodesagency.com/" target="_blank"></a>
+              <div class="image">
+                <img src="/App/YearX/images/sponsors/nodes.png" alt="Nodes">
+                  </div>
+              <div class="description p-2">
+                <h4>Nodes Agency</h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="sponsor">
+              <a href="https://www.skelpo.com" target="_blank"></a>
+              <div class="image">
+                <img src="/App/YearX/images/sponsors/skelpo.png" alt="Skelpo">
+              </div>
+              <div class="description p-2">
+                <h4>Skelpo</h4>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="sponsor">
+              <a href="https://raywenderlich.com" target="_blank"></a>
+              <div class="image">
+                <img src="/App/YearX/images/sponsors/ray_wenderlich.png" alt="Ray Wenderlich">
+              </div>
+              <div class="description p-2">
+                <h4>Ray Wenderlich</h4>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        
+        </div>
+  </div>
+</div>
+}
+
+#set("isBlueBackground"){true}
+
+#embed("App/YearX/Layout/base")

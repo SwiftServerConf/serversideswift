@@ -1,0 +1,50 @@
+.sponsors .sponsor-list .sponsor {
+  width: 210px;
+  height: 210px;
+  background-color: #ffffff;
+  color: black;
+  border-radius: 20px;
+  box-shadow: rgb(0, 0, 0, 0.1) 0px 5px 10px 5px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto 30px;
+  transition: box-shadow .2s ease-in-out;
+  background: white;
+}
+
+.sponsors .sponsor-list .sponsor:hover {
+  box-shadow: rgb(0, 0, 0, 0.1) 0px 7px 15px 7px;
+}
+
+.sponsors .sponsor-list .sponsor a {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.sponsors .sponsor-list .sponsor .image {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  padding: 10px;
+}
+
+.sponsors .sponsor-list .sponsor .image img {
+  height: 100%;
+  width: auto;
+}
+
+.sponsors .sponsor-list .sponsor .description {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}
+
+.sponsors .sponsor-list .sponsor .description h4 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0;
+}

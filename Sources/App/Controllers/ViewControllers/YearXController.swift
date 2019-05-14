@@ -1,14 +1,14 @@
 import Vapor
 import Fluent
-import FluentMySQL
 
 struct YearXController: RouteCollection {
     func boot(router: Router) throws {
         router.get(use: homepageHandler)
-        router.get("about", use: aboutHandler)
-        router.get("faq", use: faqHandler)
-        router.get("code-of-conduct", use: codeOfConductHandler)
         router.get("speakers", use: speakersHandler)
+        router.get("sponsors", use: sponsorsHandler)
+        router.get("faq", use: faqHandler)
+        router.get("about", use: aboutHandler)
+        router.get("code-of-conduct", use: codeOfConductHandler)
     }
 
     func homepageHandler(_ req: Request) throws -> Future<View> {
@@ -27,6 +27,11 @@ struct YearXController: RouteCollection {
           let speakerContext = SpeakerContext(speakerList: speakerList)
           return try req.view().render("App/YearX/Pages/Speaker/speaker", speakerContext)
         }
+    }
+  
+    func sponsorsHandler(_ req: Request) throws -> Future<View> {
+        let sponsorsContext = SponsorsContext()
+        return try req.view().render("App/YearX/Pages/Sponsors/sponsors", sponsorsContext)
     }
 
     func faqHandler(_ req: Request) throws -> Future<View> {
@@ -49,8 +54,12 @@ struct AboutContext: Encodable {
 }
 
 struct SpeakerContext: Encodable {
-    let page = ["speaker": true]
+    let page = ["speakers": true]
     let speakerList: [Speaker]
+}
+
+struct SponsorsContext: Encodable {
+  let page = ["sponsors": true]
 }
 
 struct FaqContext: Encodable {
