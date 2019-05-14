@@ -5,7 +5,7 @@
 }
 
 .about .organizer {
-  width: 250px;
+  width: 230px;
   height: 325px;
   background-color: #ffffff;
   color: black;
@@ -13,13 +13,8 @@
   box-shadow: rgb(0, 0, 0, 0.1) 0px 5px 10px 5px;
   overflow: hidden;
   position: relative;
-  margin: 0 45px 30px;
+  margin: 0 20px 30px;
   transition: box-shadow .2s ease-in-out;
-}
-
-.about .organizer:first-child,
-.about .organizer:last-child {
-  margin: 0 0 30px;
 }
 
 .about .organizer:hover {
@@ -50,4 +45,5 @@
 
 .about .organizer .description h4 {
   font-size: 16px;
+  margin: 0;
 }
