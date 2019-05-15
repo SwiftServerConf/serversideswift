@@ -79,6 +79,7 @@ struct SpeakerContext: Encodable {
 }
 
 struct SpeakerProfileContext: Encodable {
+    let page = ["speakers": true]
     let speaker: Speaker
 }
 
