@@ -10,6 +10,7 @@ struct YearXController: RouteCollection {
         router.get("faq", use: faqHandler)
         router.get("about", use: aboutHandler)
         router.get("code-of-conduct", use: codeOfConductHandler)
+        router.get("speakers", String.parameter, use: speakerProfileHanlder)
     }
 
     func homepageHandler(_ req: Request) throws -> Future<View> {
@@ -49,6 +50,19 @@ struct YearXController: RouteCollection {
         let cocContext = CodeOfConductContext()
         return try req.view().render("App/YearX/Pages/CodeOfConduct/code-of-conduct", cocContext)
     }
+  
+    func speakerProfileHanlder(_ req: Request) throws -> Future<View> {
+        let speakerSlug = try req.parameters.next(String.self)
+        return Speaker.query(on: req).filter(\Speaker.slug, .equal, speakerSlug).first().flatMap { speaker in
+            guard let speaker = speaker else {
+                throw Abort(.notFound)
+            }
+            
+            let context = SpeakerProfileContext(speaker: speaker)
+            return try req.view().render("App/YearX/Pages/Speakers/profile", context)
+        }
+        
+    }
 }
 
 struct HomeContext: Encodable {
@@ -62,6 +76,10 @@ struct AboutContext: Encodable {
 struct SpeakerContext: Encodable {
     let page = ["speakers": true]
     let speakerList: [Speaker]
+}
+
+struct SpeakerProfileContext: Encodable {
+    let speaker: Speaker
 }
 
 struct LocationContext: Encodable {

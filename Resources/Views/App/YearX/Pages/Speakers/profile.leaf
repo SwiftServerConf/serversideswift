@@ -1,0 +1,58 @@
+#set("content") {
+<div class="page-block profile">
+    <div class="container">
+        <h1 class="text-center mb-5">Profile</h1>
+        
+        <div class="card">
+            <div class="image">
+                <img src="#(speaker.imageURL)" alt="#(speaker.name)">
+                    </div>
+            <div class="description p-3">
+                
+                <div class="head">
+                    <h3>#(speaker.name)</h4>
+
+                    <div class="social-media">
+                        #if(speaker.twitterHandle) {
+                        <a href="#(speaker.twitterHandle)" target="_blank">
+                            <span class="icon">
+                                <svg class="feather">
+                                    <use xlink:href="/App/YearX/images/icons/feather-sprite.svg#twitter"></use>
+                                </svg>
+                            </span>
+                        </a>
+                        }
+                        #if(speaker.githubHandle) {
+                        <a href="#(speaker.githubHandle)" target="_blank">
+                            <span class="icon">
+                                <svg class="feather">
+                                    <use xlink:href="/App/YearX/images/icons/feather-sprite.svg#github"></use>
+                                </svg>
+                            </span>
+                        </a>
+                        }
+                    </div>
+                </div>
+                
+                <div class="body">
+                    <div class="section">
+                        <h4 class="f-gradient"> Position </h4>
+                        <h6 class="f-weight-300">#(speaker.title) @ #(speaker.company)</h5>
+                    </div>
+                    
+                    <div class="section">
+                        <h4 class="f-gradient"> Bio </h4>
+                        <h6 class="f-weight-300">#(speaker.bio)</h5>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</div>
+}
+
+#set("isBlueBackground"){true}
+
+#embed("App/YearX/Layout/base")

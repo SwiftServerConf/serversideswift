@@ -1,0 +1,75 @@
+.profile .card {
+    border-radius: 20px;
+    max-width: 500px;
+    margin: auto;
+}
+
+.profile .card .image {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: -80px;
+}
+
+.profile .card .image img {
+    width: 100%;
+    height: auto;
+}
+
+.profile .head {
+    text-align: center;
+    margin: 115px 0 15px;
+}
+
+/* MARK: - Gradient Border Trick */
+
+.profile .card .image {
+    border-radius: 50%;
+}
+
+.profile .card .image:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background: linear-gradient(to right, #F88A36 , #FD2020) no-repeat;
+}
+
+.profile .card .image {
+    z-index: 1;
+}
+
+.profile .card .image img {
+    border-radius: 50%;
+    border: 5px solid transparent;
+}
+
+.profile .card .description .social-media a {
+    margin: 0 5px;
+}
+
+/* MARK: - Tablet / Desktop */
+/*
+@media screen and (min-width: 576px) {
+    .profile .card .image {
+        left: 15px;
+        margin-left: 0;
+    }
+    
+    .profile .head {
+        margin: 0 0 0 215px;
+        text-align: left;
+    }
+    
+    .profile .body {
+        margin-top: 50px;
+    }
+}
+*/
