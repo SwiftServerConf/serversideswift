@@ -1,30 +1,16 @@
 #set("content") {
-<div class="page-block speakers">
-  <div class="text-white">
-    <div class="container">
-      <h1 class="text-center">Speakers</h1>
-      <h4 class="text-center mb-5"> We host a diverse selection of inspiring speakers. </h2>
-      
-      <div class="list">
-        #for(speaker in speakerList) {
-          <div class="card">
-            <a href="/speakers/#(speaker.slug)"></a>
-            <div class="image">
-              <img src="#(speaker.imageURL)" alt="#(speaker.name)">
-            </div>
-            <div class="description p-2">
-              <h3 class="h3">#(speaker.name)</h3>
-              <h4 class="f-weight-300">#(speaker.title)<br><i>#(speaker.company)</i></h4>
-            </div>
-          </div>
-        }
+  <div class="speakers">
+    <div class="page-block bg-blue text-white">
+      <div class="container">
+        <h1 class="text-center">Speakers</h1>
+        <h4 class="text-center mb-5"> We host a diverse selection of inspiring speakers. </h4>
+          
+        #embed("App/YearX/Pages/Speakers/Partials/speaker-list")
       </div>
-      
     </div>
-  </div>
-</div>
-}
 
-#set("isBlueBackground"){true}
+    #embed("App/YearX/Pages/Speakers/Partials/cfp")
+  </div>
+}
 
 #embed("App/YearX/Layout/base")
