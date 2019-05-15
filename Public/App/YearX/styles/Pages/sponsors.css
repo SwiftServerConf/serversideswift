@@ -1,6 +1,4 @@
 .sponsors .sponsor-list .sponsor {
-  width: 210px;
-  height: 210px;
   background-color: #ffffff;
   color: black;
   border-radius: 20px;
@@ -9,7 +7,6 @@
   position: relative;
   margin: 0 auto 30px;
   transition: box-shadow .2s ease-in-out;
-  background: white;
 }
 
 .sponsors .sponsor-list .sponsor:hover {
@@ -23,8 +20,6 @@
 }
 
 .sponsors .sponsor-list .sponsor .image {
-  width: 150px;
-  height: 150px;
   margin: auto;
   padding: 20px;
 }
@@ -39,7 +34,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 60px;
 }
 
 .sponsors .sponsor-list .sponsor .description h4 {
@@ -47,4 +41,80 @@
   white-space: nowrap;
   overflow: hidden;
   margin: 0;
+}
+
+/* Gold */
+.sponsors .sponsor-list .f-gold {
+    background: linear-gradient(to right, #FFCC40, #FD9908) no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.sponsors .sponsor-list .gold .sponsor {
+    width: 210px;
+    height: 210px;
+}
+.sponsors .sponsor-list .gold .sponsor .image {
+    width: 160px;
+    height: 160px;
+}
+.sponsors .sponsor-list .sponsor .description {
+    height: 50px;
+}
+
+
+/* Silver */
+.sponsors .sponsor-list .f-silver {
+    background: linear-gradient(to right, #c3c3c3, #969595) no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.sponsors .sponsor-list .silver .sponsor {
+    width: 180px;
+    height: 180px;
+}
+.sponsors .sponsor-list .silver .sponsor .image {
+    width: 130px;
+    height: 130px;
+}
+.sponsors .sponsor-list .silver h4 {
+    font-size: 20px;
+}
+
+/* Bronze */
+.sponsors .sponsor-list .f-bronze {
+    background: linear-gradient(to right, #F88A36, #FF3634) no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.sponsors .sponsor-list .bronze .sponsor {
+    width: 160px;
+    height: 160px;
+}
+.sponsors .sponsor-list .bronze .sponsor .image {
+    width: 110px;
+    height: 110px;
+}
+.sponsors .sponsor-list .bronze h4 {
+    font-size: 18px;
+}
+
+/* Custom */
+.sponsors .sponsor-list .f-custom {
+    background: linear-gradient(to right, #bfd1da, #4a4e52) no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.sponsors .sponsor-list .custom .sponsor {
+    width: 140px;
+    height: 140px;
+}
+.sponsors .sponsor-list .custom .sponsor .image {
+    width: 100px;
+    height: 100px;
+}
+.sponsors .sponsor-list .custom .description {
+    height: 40px;
+}
+.sponsors .sponsor-list .custom h4 {
+    font-size: 16px;
 }

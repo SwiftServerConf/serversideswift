@@ -37,7 +37,7 @@
                 <div class="body">
                     <div class="section">
                         <h4 class="f-gradient"> Position </h4>
-                        <h6 class="f-weight-300">#(speaker.title) @ #(speaker.company)</h5>
+                        <h6 class="f-weight-300">#(speaker.title) at #(speaker.company)</h5>
                     </div>
                     
                     <div class="section">
