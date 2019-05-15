@@ -100,3 +100,9 @@ body {
   height: 100px !important;
   width: auto;
 }
+
+/* MARK: - Opacity */
+
+.opacity-25 {
+    opacity: 0.25
+}
