@@ -5,6 +5,7 @@ struct YearXController: RouteCollection {
     func boot(router: Router) throws {
         router.get(use: homepageHandler)
         router.get("speakers", use: speakersHandler)
+        router.get("location", use: locationHandler)
         router.get("sponsors", use: sponsorsHandler)
         router.get("faq", use: faqHandler)
         router.get("about", use: aboutHandler)
@@ -25,8 +26,13 @@ struct YearXController: RouteCollection {
         let speakerSlugs = ["kaitlin-mahar"]
         return Speaker.query(on: req).filter(\Speaker.slug ~~ speakerSlugs).all().flatMap { speakerList in
           let speakerContext = SpeakerContext(speakerList: speakerList)
-          return try req.view().render("App/YearX/Pages/Speaker/speaker", speakerContext)
+          return try req.view().render("App/YearX/Pages/Speakers/speakers", speakerContext)
         }
+    }
+
+    func locationHandler(_ req: Request) throws -> Future<View> {
+        let locationContext = LocationContext()
+        return try req.view().render("App/YearX/Pages/Location/location", locationContext)
     }
   
     func sponsorsHandler(_ req: Request) throws -> Future<View> {
@@ -56,6 +62,10 @@ struct AboutContext: Encodable {
 struct SpeakerContext: Encodable {
     let page = ["speakers": true]
     let speakerList: [Speaker]
+}
+
+struct LocationContext: Encodable {
+    let page = ["location": true]
 }
 
 struct SponsorsContext: Encodable {

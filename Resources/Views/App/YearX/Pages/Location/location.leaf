@@ -1,0 +1,161 @@
+#set("content") {
+
+  <div class="location">
+      <div class="page-block no-height bg-blue text-white">
+        <div class="container">
+            <h1 class="text-center text-white">Location</h1>
+            <h4 class="text-center mb-5 text-white">In the architectural center of Copenhagen</h4>
+
+            <div class="row">
+                <div class="col-md-12 mb-5 mt-4">
+
+                      <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <img class="img-fluid" src="/App/YearX/images/location/blox1.jpg"/>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <img class="img-fluid" src="/App/YearX/images/location/blox2.jpg"/>
+                        </div>
+                      </div>
+
+                    <div class="container text-left m-t-30">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6">
+                                <h3 class="h3">Location</h3>
+                                <p>
+                                    The conference will take place at <a href="https://www.blox.dk/" target="_blank">BLOX</a> which is a part of the Danish Architecture Center, located on the Copenhagen Harbourfront in the city center. The venue is easily reached by using public transportation, such as the city metro.<br /><br />
+                                    The address for the venue is:<br />
+                                    <span class="f-weight-md">Bryghuspladsen, 1473 Copenhagen</span>
+                                </p>
+                            </div>
+                            <div class="col-xs-12 col-sm-6">
+                                <h3> &nbsp; </h3>
+                                <h4>
+                                    <div id="venue-map" class="map"></div>
+                                </h4>
+                            </div>
+                        </div>
+
+                        <br />
+
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6">
+                                <h3 class="h3">Transportation</h3>
+                                <p>
+                                    <strong>From the Copenhagen Airport:</strong>
+                                    <ul>
+                                      <li>🚊 Metro line M2 Vanløse st → 8 stops  (13 minutes) → Kongens Nytorv st.</li>
+                                      <li>🚶‍♂️ Walk about 13 minutes to reach BLOX</li>
+                                    </ul>
+                                    <strong>Arriving by car:</strong><br />
+                                    The address for BLOX' parking garage is Vester Voldgade 129, 1552 Copenhagen V. There's multiple parking areas near the venue as well.
+                                </p>
+                            </div>
+                            <div class="col-xs-12 col-sm-6">
+                                <h3> &nbsp; </h3>
+                                <h4>
+                                  <div id="transportation-map" class="map"></div>
+                                </h4>
+                            </div>
+                        </div>
+
+                        <br />
+
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6">
+                                <h3 class="h3">Accommodation</h3>
+                                <p>
+                                    Since the conference will take place in the city center, there's many hotels to choose from. Here are some suggestions:
+                                
+                                    <ul>
+                                        <li>
+                                            <a href="https://www.wakeupcopenhagen.com/the-hotels/copenhagen/bernstorffsgade#/" target="_blank">Wakeup Copenhagen</a>
+                                            <br />Bernstorffsgade 35, 1577 Copenhagen (700 m from BLOX)
+                                            <br />From 60€ per night
+                                        </li>
+                                        <li>
+                                            <a href="https://danhostelcopenhagencity.dk/en" target="_blank">Danhostel Copenhagen City</a>
+                                            <br />H. C Andersens Blvd 50, 1553 Copenhagen (350 m from BLOX)
+                                            <br />From 47€ per night)
+                                        </li>
+                                        <li>
+                                          <a href="" target="_blank">Urban House Copenhagen by MEININGER</a>
+                                          <br />Colbjørnsensgade 11, 1652 København - (1,3km from BLOX)
+                                          <br />From 20€ per night</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <div class="col-xs-12 col-sm-6">
+                                <h3> &nbsp; </h3>
+                                <div id="accommodation-map" class="map"></div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+      mapkit.init({
+        authorizationCallback: function(done) {
+          done('eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjlKODk1RkNDVDkifQ.eyJpc3MiOiJZV0xXMjNMVDZHIiwiaWF0IjoxNTMxODU5NDY0LCJleHAiOjQwNzM1NjIwMzN9.n5nR7D9GDZAYiTrVCjYNtv61IlLI2x9zm66zPNVxhVgGjY8vmLMKjpcAzWJhkdC6_l3tDvw-GwM7JlO4TkoGGA');
+        \}
+      \});
+
+      // Venue
+      let VenueMarkerAnnotation = mapkit.MarkerAnnotation;
+
+      let Venue = new mapkit.CoordinateRegion(
+        new mapkit.Coordinate(52.432524280286664, 13.538247942358339),
+        new mapkit.CoordinateSpan(0.167647972, 0.354985255)
+      );
+
+      let venuePoint = new mapkit.Coordinate(52.432524280286664,13.538247942358339);
+      let venueAnnotation = new VenueMarkerAnnotation(venuePoint);
+      venueAnnotation.title = 'BLOX';
+      venueAnnotation.subtitle = 'Bryghuspladsen';
+
+      let venueMap = new mapkit.Map("venue-map");
+      venueMap.region = Venue;
+      venueMap.showItems([venueAnnotation]);
+      venueMap.showsZoomControl = true;
+
+      // Transportation
+      let TransportationMarkerAnnotation = mapkit.MarkerAnnotation;
+
+      let Transportation = new mapkit.CoordinateRegion(
+        new mapkit.Coordinate(52.4350944,13.541023699999982),
+        new mapkit.CoordinateSpan(0.167647972, 0.354985255)
+      );
+
+      let transportPoint = new mapkit.Coordinate(52.4350944,13.541023699999982);
+      let transportAnnotation = new TransportationMarkerAnnotation(transportPoint);
+      transportAnnotation.title = 'Kongens Nytorv st.';
+      transportAnnotation.subtitle = 'Metro station';
+
+
+      let transportationMap = new mapkit.Map("transportation-map");
+      transportationMap.region = Transportation;
+      transportationMap.showItems([transportAnnotation]);
+      transportationMap.showsZoomControl = true;
+
+      // Accommodation
+      let AccommodationMarkerAnnotation = mapkit.MarkerAnnotation;
+
+      let accommodationPoint = new mapkit.Coordinate(52.432395, 13.532417);
+      let accommodationAnnotation = new AccommodationMarkerAnnotation(accommodationPoint);
+      accommodationAnnotation.title = 'Adapt Apartments Berlin';
+      accommodationAnnotation.subtitle = 'Erich-Thilo-Straße 3';
+
+      let accommodationMap = new mapkit.Map("accommodation-map");
+      let Accommodation = new mapkit.CoordinateRegion(
+          accommodationPoint,
+          new mapkit.CoordinateSpan(0.167647972, 0.354985255)
+      );
+      accommodationMap.region = Accommodation;
+      accommodationMap.showItems([accommodationAnnotation]);
+      accommodationMap.showsZoomControl = true;
+    </script>
+}
+
+#embed("App/YearX/layout/base")
