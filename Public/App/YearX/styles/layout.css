@@ -103,6 +103,10 @@ body {
 
 /* MARK: - Opacity */
 
-.opacity-25 {
-    opacity: 0.25
+.opacity-15 {
+    opacity: 0.15;
+    transition: opacity .2s ease-in-out !important;
+}
+.opacity-15:hover {
+    opacity: 1
 }

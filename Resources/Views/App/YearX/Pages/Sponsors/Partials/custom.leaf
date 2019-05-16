@@ -1,5 +1,5 @@
 <div class="col-12">
-    <h3 class="f-custom text-center pt-2 pb-3">CUSTOM</h3>
+    <h3 class="f-custom text-center pt-2 pb-3">OTHERS</h3>
 </div>
 
 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
@@ -16,12 +16,12 @@
     </div>
 </div>
 
-<div class="col-12 col-sm-6 col-md-4 col-lg-3 opacity-25">
+<div class="col-12 col-sm-6 col-md-4 col-lg-3">
     <div class="custom">
-        <div class="sponsor">
+        <div class="sponsor  opacity-15">
             <a href="mailto:sponsors@serversideswift.info"></a>
             <div class="image">
-                <img src="/App/YearX/images/sponsor-levels/sponsor_custom_2.png" alt="Nodes">
+                <img src="/App/YearX/images/sponsor-levels/sponsor_custom.png" alt="Custom">
                     </div>
             <div class="description p-2">
                 <h4 class="f-custom">FREE SPOT</h4>
@@ -30,12 +30,12 @@
     </div>
 </div>
 
-<div class="col-12 col-sm-6 col-md-4 col-lg-3 opacity-25">
+<div class="col-12 col-sm-6 col-md-4 col-lg-3">
     <div class="custom">
-        <div class="sponsor">
+        <div class="sponsor opacity-15">
             <a href="mailto:sponsors@serversideswift.info"></a>
             <div class="image">
-                <img src="/App/YearX/images/sponsor-levels/sponsor_custom_2.png" alt="Nodes">
+                <img src="/App/YearX/images/sponsor-levels/sponsor_custom.png" alt="Custom">
                     </div>
             <div class="description p-2">
                 <h4 class="f-custom">FREE SPOT</h4>
@@ -44,12 +44,12 @@
     </div>
 </div>
 
-<div class="col-12 col-sm-6 col-md-4 col-lg-3 opacity-25">
+<div class="col-12 col-sm-6 col-md-4 col-lg-3">
     <div class="custom">
-        <div class="sponsor">
+        <div class="sponsor opacity-15">
             <a href="mailto:sponsors@serversideswift.info"></a>
             <div class="image">
-                <img src="/App/YearX/images/sponsor-levels/sponsor_custom_2.png" alt="Nodes">
+                <img src="/App/YearX/images/sponsor-levels/sponsor_custom.png" alt="Custom">
                     </div>
             <div class="description p-2">
                 <h4 class="f-custom">FREE SPOT</h4>

@@ -5,6 +5,7 @@
     <h4 class="text-center mb-5 text-white">Thanks a lot to all of our sponsors for helping us to run this conference.</h4>
       
     <div class="sponsor-list row">
+        #embed("App/YearX/Pages/Sponsors/Partials/platinum")
         #embed("App/YearX/Pages/Sponsors/Partials/gold")
         #embed("App/YearX/Pages/Sponsors/Partials/silver")
         #embed("App/YearX/Pages/Sponsors/Partials/bronze")

@@ -1,59 +1,59 @@
 <div class="col-12">
-    <h3 class="f-silver text-center pt-2 pb-3">SILVER</h3>
+    <h3 class="f-platinum text-center pt-2 pb-3">PLATINUM</h3>
 </div>
 
 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-    <div class="silver">
+    <div class="platinum">
         <div class="sponsor">
-            <a href="https://raywenderlich.com" target="_blank"></a>
+            <a href="https://www.nodesagency.com/" target="_blank"></a>
             <div class="image">
-                <img src="/App/YearX/images/sponsors/ray_wenderlich.png" alt="Ray Wenderlich">
+                <img src="/App/YearX/images/sponsors/nodes.png" alt="Nodes">
                     </div>
             <div class="description p-2">
-                <h4>Ray Wenderlich</h4>
+                <h4>Nodes Agency</h4>
             </div>
         </div>
     </div>
 </div>
 
 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-    <div class="silver">
+    <div class="platinum">
         <div class="sponsor opacity-15">
             <a href="mailto:sponsors@serversideswift.info"></a>
             <div class="image">
-                <img src="/App/YearX/images/sponsor-levels/sponsor_silver.png" alt="Silver">
+                <img src="/App/YearX/images/sponsor-levels/sponsor_platinum.png" alt="Platinum">
                     </div>
             <div class="description p-2">
-                <h4 class="f-silver">FREE SPOT</h4>
+                <h4 class="f-platinum">FREE SPOT</h4>
             </div>
         </div>
     </div>
 </div>
 
 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-    <div class="silver">
+    <div class="platinum">
         <div class="sponsor opacity-15">
             <a href="mailto:sponsors@serversideswift.info"></a>
             <div class="image">
-                <img src="/App/YearX/images/sponsor-levels/sponsor_silver.png" alt="Silver">
+                <img src="/App/YearX/images/sponsor-levels/sponsor_platinum.png" alt="Platinum">
                     </div>
             <div class="description p-2">
-                <h4 class="f-silver">FREE SPOT</h4>
+                <h4 class="f-platinum">FREE SPOT</h4>
             </div>
         </div>
     </div>
 </div>
 
 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-    <div class="silver">
+    <div class="platinum">
         <div class="sponsor opacity-15">
             <a href="mailto:sponsors@serversideswift.info"></a>
             <div class="image">
-                <img src="/App/YearX/images/sponsor-levels/sponsor_silver.png" alt="Silver">
+                <img src="/App/YearX/images/sponsor-levels/sponsor_platinum.png" alt="Platinum">
                     </div>
             <div class="description p-2">
-                <h4 class="f-silver">FREE SPOT</h4>
+                <h4 class="f-platinum">FREE SPOT</h4>
             </div>
         </div>
     </div>
-    </div>
+</div>
