@@ -71,4 +71,6 @@
   </div>
 }
 
+#set("isBlueBackground"){true}
+
 #embed("App/YearX/Layout/base")
