@@ -1,5 +1,9 @@
 <footer class="navbar footer">
-    <div class="container d-flex justify-content-center">
+    <div class="container d-flex justify-content-spacearound">
+        <div class="year-switcher #if(page.years){active}">
+            <a href="/years" class="text-white">Years</a>
+            <span class="underline"></span>
+        </div>
         <div class="social-media">
             <a href="https://github.com/SwiftServerConf" target="_blank">
                 <span class="icon">

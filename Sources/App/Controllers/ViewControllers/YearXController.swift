@@ -11,6 +11,7 @@ struct YearXController: RouteCollection {
         router.get("about", use: aboutHandler)
         router.get("code-of-conduct", use: codeOfConductHandler)
         router.get("speakers", String.parameter, use: speakerProfileHanlder)
+        router.get("years", use: yearsHandler)
     }
 
     func homepageHandler(_ req: Request) throws -> Future<View> {
@@ -63,6 +64,11 @@ struct YearXController: RouteCollection {
         }
         
     }
+    
+    func yearsHandler(_ req: Request) throws -> Future<View> {
+        let context = YearContext()
+        return try req.view().render("App/YearX/Pages/Years/years", context)
+    }
 }
 
 struct HomeContext: Encodable {
@@ -97,4 +103,22 @@ struct FaqContext: Encodable {
 
 struct CodeOfConductContext: Encodable {
     let page = ["code-of-conduct": true]
+}
+
+struct YearContext: Encodable {
+    let page = ["years": true]
+    let yearList: [Year] = [
+        Year(number: 2019, isCurrent: true),
+        Year(number: 2018)
+    ]
+    
+    struct Year: Encodable {
+        let number: Int
+        var isCurrent: Bool
+        
+        init(number: Int, isCurrent: Bool = false) {
+            self.number = number
+            self.isCurrent = isCurrent
+        }
+    }
 }
