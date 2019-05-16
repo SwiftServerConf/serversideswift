@@ -1,7 +1,7 @@
 <nav class="navigation">
     <div class="container">
         <div class="logo">
-            <a href="/2018">
+            <a href="/">
                 <img src="/App/Year2018/images/logo.png" alt="serverside.swift">
             </a>
         </div>
