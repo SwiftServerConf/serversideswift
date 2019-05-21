@@ -1,7 +1,7 @@
 <div class="list">
   #for(speaker in speakerList) {
     <div class="card">
-      <a href="/speakers/#(speaker.slug)"></a>
+      <a href="/2019/speakers/#(speaker.slug)"></a>
       <div class="image">
         <img src="#(speaker.imageURL)" alt="#(speaker.name)">
       </div>

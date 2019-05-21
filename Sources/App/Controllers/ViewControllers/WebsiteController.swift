@@ -2,7 +2,9 @@ import Vapor
 
 struct WebsiteController: RouteCollection {
     func boot(router: Router) throws {
-        let yearX = router
+        try router.register(collection: YearXController())
+
+        let yearX = router.grouped("2019")
         try yearX.register(collection: YearXController())
       
         let year2018 = router.grouped("2018")
