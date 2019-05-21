@@ -25,7 +25,7 @@ struct YearXController: RouteCollection {
     }
   
     func speakersHandler(_ req: Request) throws -> Future<View> {
-        let speakerSlugs = ["kaitlin-mahar"]
+        let speakerSlugs = ["kaitlin-mahar", "heidi-hermann", "daniel-alm", "joannis-orlandos"]
         return Speaker.query(on: req).filter(\Speaker.slug ~~ speakerSlugs).all().flatMap { speakerList in
           let speakerContext = SpeakerContext(speakerList: speakerList)
           return try req.view().render("App/YearX/Pages/Speakers/speakers", speakerContext)
@@ -54,15 +54,10 @@ struct YearXController: RouteCollection {
   
     func speakerProfileHanlder(_ req: Request) throws -> Future<View> {
         let speakerSlug = try req.parameters.next(String.self)
-        return Speaker.query(on: req).filter(\Speaker.slug, .equal, speakerSlug).first().flatMap { speaker in
-            guard let speaker = speaker else {
-                throw Abort(.notFound)
-            }
-            
+        return try Speaker.resolveParameter(speakerSlug, on: req).flatMap { speaker in
             let context = SpeakerProfileContext(speaker: speaker)
             return try req.view().render("App/YearX/Pages/Speakers/profile", context)
         }
-        
     }
     
     func yearsHandler(_ req: Request) throws -> Future<View> {

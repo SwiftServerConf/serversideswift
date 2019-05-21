@@ -14,7 +14,7 @@
 
                     <div class="social-media">
                         #if(speaker.twitterHandle) {
-                        <a href="#(speaker.twitterHandle)" target="_blank">
+                        <a href="https://www.twitter.com/#(speaker.twitterHandle)" target="_blank">
                             <span class="icon">
                                 <svg class="feather">
                                     <use xlink:href="/App/YearX/images/icons/feather-sprite.svg#twitter"></use>
@@ -22,8 +22,8 @@
                             </span>
                         </a>
                         }
-                        #if(speaker.githubHandle) {
-                        <a href="#(speaker.githubHandle)" target="_blank">
+                        #if(speaker.gitHubHandle) {
+                        <a href="https://www.github.com/#(speaker.gitHubHandle)" target="_blank">
                             <span class="icon">
                                 <svg class="feather">
                                     <use xlink:href="/App/YearX/images/icons/feather-sprite.svg#github"></use>
