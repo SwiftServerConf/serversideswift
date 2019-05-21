@@ -75,8 +75,17 @@ nav.navigation ul li.buy-ticket a {
     border: 2px solid #fc4327;
     border-radius: 4px;
     font-weight: 300;
-    padding: 6px 0;
+    padding: 6px;
     margin: 2px 0;
+}
+nav.navigation ul li.buy-ticket:hover a,
+nav.navigation ul li.buy-ticket.active a {
+  background: linear-gradient(to right, #F88A36 , #FD2020);
+  color: #ffffff;
+}
+nav.navigation ul li.buy-ticket:hover .underline,
+nav.navigation ul li.buy-ticket.active .underline {
+  display: none;
 }
 
 @media screen and (min-width: 992px) {

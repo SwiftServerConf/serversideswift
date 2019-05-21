@@ -35,7 +35,7 @@
     <a href="/2019/about">About</a>
     <span class="underline"></span>
   </li>
-  <li class="buy-ticket">
+  <li class="buy-ticket #if(page.tickets){active}">
     <a href="/2019/tickets">Buy Tickets</a>
     <span class="underline"></span>
   </li>
