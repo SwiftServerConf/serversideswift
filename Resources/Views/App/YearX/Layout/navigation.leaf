@@ -1,44 +1,44 @@
 #set("links") {
   <li class="#if(page.home){active}">
-    <a href="/">Home</a>
+    <a href="/2019/">Home</a>
     <span class="underline"></span>
   </li>
 <!--   <li class="#if(page.videos){active}">
-    <a href="/videos">Videos</a>
+    <a href="/2019/videos">Videos</a>
     <span class="underline"></span>
   </li> -->
 <!--   <li class="#if(page.photos){active}">
-    <a href="/photos">Photos</a>
+    <a href="/2019/photos">Photos</a>
     <span class="underline"></span>
   </li> -->
 <!--   <li class="#if(page.schedule){active}">
-    <a href="/schedule">Schedule</a>
+    <a href="/2019/schedule">Schedule</a>
     <span class="underline"></span>
   </li> -->
   <li class="#if(page.speakers){active}">
-    <a href="/speakers">Speakers</a>
+    <a href="/2019/speakers">Speakers</a>
     <span class="underline"></span>
   </li>
   <li class="#if(page.location){active}">
-    <a href="/location">Location</a>
+    <a href="/2019/location">Location</a>
     <span class="underline"></span>
   </li>
   <li class="#if(page.sponsors){active}">
-    <a href="/sponsors">Sponsors</a>
+    <a href="/2019/sponsors">Sponsors</a>
     <span class="underline"></span>
   </li>
   <li class="#if(page.faq){active}">
-    <a href="/faq">FAQ</a>
+    <a href="/2019/faq">FAQ</a>
     <span class="underline"></span>
   </li>
   <li class="#if(page.about){active}">
-    <a href="/about">About</a>
+    <a href="/2019/about">About</a>
     <span class="underline"></span>
   </li>
-<!--   <li class="buy-ticket">
-    <a href="/tickets"><strike>Buy Tickets</strike></a>
+  <li class="buy-ticket">
+    <a href="/2019/tickets">Buy Tickets</a>
     <span class="underline"></span>
-  </li> -->
+  </li>
 }
 
 <nav class="navigation">

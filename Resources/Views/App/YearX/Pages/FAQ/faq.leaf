@@ -2,7 +2,8 @@
   <div class="faq">
       <div class="page-block no-height bg-blue text-white">
         <div class="container">
-            <h1 class="text-center text-white mb-5">FAQ</h1>
+            <h1 class="text-center text-white">FAQ</h1>
+            <h4 class="text-center mb-5">Answers to the most commonly asked questions</h2>
 
             <div class="row">
                 <div class="col-xs-12 mb-4">
@@ -42,7 +43,7 @@
             <div class="row">
                 <div class="col-xs-12 mb-4">
                     <h3 class="h3">Can you recommend a hotel?</h1>
-                    <p>Yes we can. Please have a look at our <a href="/location">location</a> page for more information.</p>
+                    <p>Yes we can. Please have a look at our <a href="/2019/location">location</a> page for more information.</p>
                 </div>
             </div>
 
@@ -56,7 +57,7 @@
             <div class="row">
                 <div class="col-xs-12 mb-4">
                     <h3 class="h3">Do you have a Code of Conduct?</h1>
-                    <p>Yes we do! Our Code of Conduct can be found <a href="/code-of-conduct">here</a>.</p>
+                    <p>Yes we do! Our Code of Conduct can be found <a href="/2019/code-of-conduct">here</a>.</p>
                 </div>
             </div>
 
