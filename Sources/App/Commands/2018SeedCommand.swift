@@ -62,11 +62,8 @@ struct Seed2018Command: Command {
                     let (days, rooms) = arg
 
                     guard
-                        let workshopDayID = days[0].id,
                         let conferenceDay1ID = days[1].id,
                         let conferenceDay2ID = days[2].id,
-                        let workshopRoom1ID = rooms[0].id,
-                        let workshopRoom2ID = rooms[1].id,
                         let conferenceRoomID = rooms[2].id
                     else {
                         throw Abort(.internalServerError)
@@ -528,87 +525,6 @@ struct Seed2018Command: Command {
                                 enabled: true
                             )
                         ),
-                        (
-                          Schedule(
-                            dayID: conferenceDay2ID,
-                            roomID: conferenceRoomID,
-                            startTime: dateFormatter.date(from: "2018-09-14 09:45")!,
-                            endTime: dateFormatter.date(from: "2018-09-14 10:30")!
-                          ),
-                          [Speaker(
-                            slug: "daniel-alm",
-                            name: "Daniel Alm",
-                            title: "Mac & iOS Developer",
-                            company: "Self-Employed",
-                            imageURL: "/App/Images/speakers/daniel-alm.jpg",
-                            bio: "Daniel Alm is an independent Mac and iOS developer. After two years at Google, he nowadays mostly works on his app Timing (https://timingapp.com/). He also is a core contributor to the SwiftGRPC Open Source project (https://github.com/grpc/grpc-swift).",
-                            twitterHandle: "daniel_a_a",
-                            gitHubHandle: "mrmage",
-                            order: 18,
-                            enabled: true
-                            )],
-                          Talk(
-                            talkType: .talk,
-                            title: "--dummy--",
-                            videoType: .youTube,
-                            videoReference: "--dummy--",
-                            enabled: false
-                          )
-                      ),
-                      (
-                        Schedule(
-                          dayID: conferenceDay2ID,
-                          roomID: conferenceRoomID,
-                          startTime: dateFormatter.date(from: "2018-09-14 09:45")!,
-                          endTime: dateFormatter.date(from: "2018-09-14 10:30")!
-                        ),
-                        [Speaker(
-                          slug: "joannis-orlandos",
-                          name: "Joannis Orlandos",
-                          title: "Writer",
-                          company: "Ray Wenderlich",
-                          imageURL: "/App/Images/speakers/joannis-orlandos.jpg",
-                          bio: "I'm the developer of the OpenKitten libraries and have been one of the two designers and developers of Vapor 3 during it's alpha and beta stages. I'm also a writer for Ray Wenderlich under the server-side Swift pillar.",
-                          twitterHandle: "joannisorlandos",
-                          gitHubHandle: "joannis",
-                          order: 19,
-                          enabled: true
-                          )],
-                        Talk(
-                          talkType: .talk,
-                          title: "--dummy--",
-                          videoType: .youTube,
-                          videoReference: "--dummy--",
-                          enabled: false
-                        )
-                      ),
-                      (
-                        Schedule(
-                          dayID: conferenceDay2ID,
-                          roomID: conferenceRoomID,
-                          startTime: dateFormatter.date(from: "2018-09-14 09:45")!,
-                          endTime: dateFormatter.date(from: "2018-09-14 10:30")!
-                        ),
-                        [Speaker(
-                          slug: "heidi-hermann",
-                          name: "Heidi Hermann",
-                          title: "Junior Vapor Developer",
-                          company: "Nodes",
-                          imageURL: "/App/Images/speakers/heidi-hermann.jpeg",
-                          bio: "Heidi is a self-made Swift and Vapor developer. With a background in Physics and teaching she transitioned into  software development just over two years ago. Today she works as a Backend Junior Vapor Developer at Nodes Agency in Berlin.",
-                          twitterHandle: "heidipuk",
-                          gitHubHandle: "heidipuk",
-                          order: 20,
-                          enabled: true
-                          )],
-                        Talk(
-                          talkType: .talk,
-                          title: "--dummy--",
-                          videoType: .youTube,
-                          videoReference: "--dummy--",
-                          enabled: false
-                        )
-                      ),
                     ]
 
                     let futures = talks

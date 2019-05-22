@@ -26,11 +26,22 @@ struct YearXController: RouteCollection {
     }
   
     func speakersHandler(_ req: Request) throws -> Future<View> {
-        let speakerSlugs = ["kaitlin-mahar", "heidi-hermann", "daniel-alm", "joannis-orlandos"]
-        return Speaker.query(on: req).filter(\Speaker.slug ~~ speakerSlugs).all().flatMap { speakerList in
-          let speakerContext = SpeakerContext(speakerList: speakerList)
-          return try req.view().render("App/YearX/Pages/Speakers/speakers", speakerContext)
-        }
+        let eventRepo = try req.make(EventRepository.self)
+        let speakerRepo = try req.make(SpeakerRepository.self)
+
+        return eventRepo
+            .find(slug: "2019", enabled: true)
+            .flatMap(to: [(Speaker, Talk)].self) { event in
+                guard let event = event else { throw Abort(.internalServerError) }
+                return try speakerRepo.all(event: event, enabled: true)
+            }
+            .map(to: [Speaker].self) { speakers in
+                return speakers.map { $0.0 }
+            }
+            .flatMap { speakers in
+                let context = SpeakerContext(speakerList: speakers)
+                return try req.view().render("App/YearX/Pages/Speakers/speakers", context)
+            }
     }
 
     func locationHandler(_ req: Request) throws -> Future<View> {
