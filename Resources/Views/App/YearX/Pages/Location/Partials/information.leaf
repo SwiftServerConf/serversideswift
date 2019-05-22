@@ -76,8 +76,8 @@ The venue is easily reached by using public transportation, such as the city met
       mapkit.init({
         authorizationCallback: function(done) {
           done('eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjlKODk1RkNDVDkifQ.eyJpc3MiOiJZV0xXMjNMVDZHIiwiaWF0IjoxNTMxODU5NDY0LCJleHAiOjQwNzM1NjIwMzN9.n5nR7D9GDZAYiTrVCjYNtv61IlLI2x9zm66zPNVxhVgGjY8vmLMKjpcAzWJhkdC6_l3tDvw-GwM7JlO4TkoGGA');
-        \}
-      \});
+        }
+      });
 
       // Venue
       let VenueMarkerAnnotation = mapkit.MarkerAnnotation;
