@@ -1,0 +1,22 @@
+<script src='https://js.tito.io/v1' async></script>
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="/App/YearX/javascript/particles.js"></script>
+
+<script>
+function toggleHamburger() {
+  const button = document.querySelector('.hamburger');
+  const nav = document.querySelector('.navigation');
+  
+  toggleClass(button);
+  toggleClass(nav);
+}
+
+function toggleClass(element) {
+  const isActiveClass = "is-active";
+  if (element.classList.contains(isActiveClass)) {
+    element.classList.remove(isActiveClass)
+  } else {
+    element.classList.add(isActiveClass)
+  }
+}
+</script>

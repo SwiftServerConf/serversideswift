@@ -1,0 +1,47 @@
+<div class="organizer-list row">
+  
+  <div class="organizer">
+    <a href="https://www.twitter.com/0xtim" target="_blank"></a>
+    <div class="image">
+      <img src="/App/YearX/images/team/timcondon.jpg" alt="Tim">
+        </div>
+    <div class="description p-2">
+      <h3 class="h3">Tim Condon</h3>
+      <h4 class="f-weight-300">Server-side Swift team lead @ raywenderlich.com</h4>
+    </div>
+  </div>
+  
+  <div class="organizer">
+    <a href="https://www.instagram.com/martin_lasek/" target="_blank"></a>
+    <div class="image">
+      <img src="/App/YearX/images/team/martinlasek.jpg" alt="Martin">
+        </div>
+    <div class="description p-2">
+      <h3 class="h3">Martin Lasek</h3>
+      <h4 class="f-weight-300">Vapor Tutorial Writer, Game Developer &amp; Swift Developer</h4>
+    </div>
+  </div>
+  
+  <div class="organizer">
+    <a href="https://twitter.com/steffendsommer" target="_blank"></a>
+    <div class="image">
+      <img src="/App/YearX/images/team/steffendsommer.jpg" alt="Steffen">
+        </div>
+    <div class="description p-2">
+      <h3 class="h3">Steffen D. Sommer</h3>
+      <h4 class="f-weight-300">Technical Director, Author & Conference speaker</h4>
+    </div>
+  </div>
+  
+  <div class="organizer">
+    <a href="https://www.instagram.com/olivialippmann" target="_blank"></a>
+    <div class="image">
+      <img src="/App/YearX/images/team/olivialippmann.jpg" alt="Olivia">
+        </div>
+    <div class="description p-2">
+      <h3 class="h3">Olivia Lippmanm</h3>
+      <h4 class="f-weight-300">Event Coordinator</h4>
+    </div>
+  </div>
+  
+</div>

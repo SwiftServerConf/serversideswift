@@ -1,0 +1,16 @@
+#set("content") {
+  <div class="speakers">
+    <div class="page-block bg-blue text-white">
+      <div class="container">
+        <h1 class="text-center">Speakers</h1>
+        <h4 class="text-center mb-5"> We host a diverse selection of inspiring speakers. </h4>
+          
+        #embed("App/YearX/Pages/Speakers/Partials/speaker-list")
+      </div>
+    </div>
+
+    #embed("App/YearX/Pages/Speakers/Partials/cfp")
+  </div>
+}
+
+#embed("App/YearX/Layout/base")
