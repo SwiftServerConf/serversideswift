@@ -1,0 +1,65 @@
+#set("links") {
+  <li class="#if(page.home){active}">
+    <a href="/2019/">Home</a>
+    <span class="underline"></span>
+  </li>
+<!--   <li class="#if(page.videos){active}">
+    <a href="/2019/videos">Videos</a>
+    <span class="underline"></span>
+  </li> -->
+<!--   <li class="#if(page.photos){active}">
+    <a href="/2019/photos">Photos</a>
+    <span class="underline"></span>
+  </li> -->
+<!--   <li class="#if(page.schedule){active}">
+    <a href="/2019/schedule">Schedule</a>
+    <span class="underline"></span>
+  </li> -->
+  <li class="#if(page.speakers){active}">
+    <a href="/2019/speakers">Speakers</a>
+    <span class="underline"></span>
+  </li>
+  <li class="#if(page.location){active}">
+    <a href="/2019/location">Location</a>
+    <span class="underline"></span>
+  </li>
+  <li class="#if(page.sponsors){active}">
+    <a href="/2019/sponsors">Sponsors</a>
+    <span class="underline"></span>
+  </li>
+  <li class="#if(page.faq){active}">
+    <a href="/2019/faq">FAQ</a>
+    <span class="underline"></span>
+  </li>
+  <li class="#if(page.about){active}">
+    <a href="/2019/about">About</a>
+    <span class="underline"></span>
+  </li>
+  <li class="buy-ticket #if(page.tickets){active}">
+    <a href="/2019/tickets">Buy Tickets</a>
+    <span class="underline"></span>
+  </li>
+}
+
+<nav class="navigation">
+  <div class="container">
+    <div class="logo">
+      <a class="navbar-brand bg-none" href="/">
+        <img src="/App/YearX/images/layout/logo.png" alt="ServerSide.swift" />
+      </a>
+    </div>
+    
+    <button class="hamburger hamburger--squeeze" type="button" onClick="toggleHamburger()">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    
+    <ul class="d-none d-md-flex">
+      #get(links)
+    </ul>
+  </div>
+  <ul class="d-flex d-md-none">
+    #get(links)
+  </ul>
+</nav>

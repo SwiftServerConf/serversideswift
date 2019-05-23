@@ -1,27 +1,41 @@
-// swift-tools-version:4.0
-
+// swift-tools-version:4.2
 import PackageDescription
 
 let package = Package(
-    name: "serversideswift",
-    products: [
-        .library(name: "App", targets: ["App"]),
-        .executable(name: "Run", targets: ["Run"])
-    ],
+    name: "ServerSideSwift",
     dependencies: [
-        .package(url: "https://github.com/vapor/vapor.git", .upToNextMajor(from: "2.2.0")),
-        .package(url: "https://github.com/vapor/leaf-provider.git", .upToNextMajor(from: "1.1.0")),
+        // Vapor
+        .package(url: "https://github.com/vapor/fluent-mysql.git", from: "3.0.0"),
+        .package(url: "https://github.com/vapor/redis.git", from: "3.0.0"),
+        .package(url: "https://github.com/vapor/vapor.git", from: "3.0.0"),
+
+        // Nodes
+        .package(url: "https://github.com/nodes-vapor/admin-panel.git", from:"2.0.0-rc"),
+        .package(url: "https://github.com/nodes-vapor/bugsnag.git", from: "3.0.0-rc"),
+        .package(url: "https://github.com/nodes-vapor/paginator.git", from: "3.2.0"),
+        .package(url: "https://github.com/nodes-vapor/storage.git", from: "1.0.0-beta"),
+        .package(url: "https://github.com/nodes-vapor/submissions.git", from: "2.0.0-rc"),
+        .package(url: "https://github.com/nodes-vapor/sugar.git", from: "4.0.0-rc"),
+
+        // 3rd Party
+        .package(url: "https://github.com/twof/VaporMailgunService.git", from: "1.1.0"),
     ],
     targets: [
-        .target(name: "App", dependencies: ["Vapor", "LeafProvider"],
-               exclude: [
-                   "Config",
-                   "Database",
-                   "Public",
-                   "Resources"
-               ]),
+        .target(name: "App", dependencies: [
+            "AdminPanel",
+            "Bugsnag",
+            "FluentMySQL",
+            "Mailgun",
+            "Paginator",
+            "Redis",
+            "Storage",
+            "Submissions",
+            "Sugar",
+            "Vapor"
+        ]),
         .target(name: "Run", dependencies: ["App"]),
-        .testTarget(name: "AppTests", dependencies: ["App", "Testing"])
+        .testTarget(name: "AppTests", dependencies: ["App"])
     ]
 )
+
 

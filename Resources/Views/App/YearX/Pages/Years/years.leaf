@@ -1,0 +1,31 @@
+#set("content") {
+<div class="years">
+    <div class="page-block no-height text-white">
+        <div class="container">
+            <h1 class="text-center">Years</h1>
+            <h4 class="text-center mb-5"> Click on a year and time travel to past conferences! </h4>
+            
+            <div class="year-list">
+                #for(year in yearList) {
+                    <div class="year">
+                        #if(year.isCurrent) {
+                            <a href="/" class="btn year current">#(year.number)</a>
+                        } else {
+                            <a href="/#(year.number)" class="btn year">#(year.number)</a>
+                        }
+                        <span class="line">
+                            <span class="anchor"></span>
+                        </span>
+                    </div>
+                }
+                
+            </div>
+            
+        </div>
+    </div>
+</div>
+}
+
+#set("isBlueBackground"){true}
+
+#embed("App/YearX/Layout/base")

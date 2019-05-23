@@ -1,0 +1,48 @@
+<div class="page-block description">
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-12 col-sm-6 mt-2 mb-2">
+        <h3 class="h3">The Conference</h3>
+        <p>
+        ServerSide.swift is a framework-independent conference, where we will learn and share on a number of different related topics. The conference is aimed at being a non-profit conference and solely run for the love of server-side Swift.
+        </p>
+      </div>
+      
+      <div class="col-12 col-sm-6 mt-2 mb-2">
+        <h3 class="h3">Where and When</h3>
+        <p>
+        The conference will take place in awesome <b>Copenhagen, Denmark</b> and last for 3 days from <b>30th Oct - 1st Nov 2019</b>! October 30th will be a day of workshops and October 31th - November 1st will be packed with inspiring talks.
+        </p>
+      </div>
+      
+      <div class="col-12 col-sm-6 mt-2 mb-2">
+        <h3 class="h3">Speakers</h3>
+        <p>
+        We have an awesome line up of speakers with some incredible talks. Check out our <a href="/2019/speakers">Speakers page</a> to see them all! Please note that our CFP is open: <a href="https://goo.gl/forms/MN99aYDgIle4bMlI2" target="_blank">register a talk here</a>.
+        </p>
+      </div>
+      
+      <div class="col-12 col-sm-6 mt-2 mb-2">
+        <h3 class="h3">The Team</h3>
+        <p>
+        Collaboration between <a href="https://instagram.com/martin_lasek" target="_blank">Martin J. Lasek</a> (Berlin - DE), <a href="https://twitter.com/0xTim" target="_blank">Tim Condon</a> (Manchester - UK), <a href="https://twitter.com/steffendsommer" target="_blank">Steffen D. Sommer</a> (Copenhagen - DK)
+        </p>
+      </div>
+      
+      <div class="col-12 col-sm-6 mt-2 mb-2">
+        <h3 class="h3">Sponsoring</h3>
+        <p>
+        We are currently looking for sponsors so if you work for a company that would want to help sponsor ServerSide.swift then please get in contact on <a href="mailto:sponsors@serversideswift.info">sponsors@serversideswift.info</a>
+        </p>
+      </div>
+      
+      <div class="col-12 col-sm-6 mt-2 mb-2">
+        <h3 class="h3">Want to help?</h3>
+        <p>
+        As we are a non-profit conference then the best way you can help at the moment is by spreading the word! Feel free to share the link on whatever platforms that you like.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+#set("content") {
+
+  <div class="tickets">
+      <div class="page-block no-height">
+        <div class="container">
+            <h1 class="text-center">Tickets</h1>
+            <h4 class="text-center mb-5">Grab your ticket to this year's event</h2>
+
+            <div class="tito-embed">
+                <tito-widget event="serverside-swift/serverside-swift-2019"></tito-widget>
+            </div>
+
+            <p class="text-center">Please note that tickets are non-refundable, but can be re-assigned to someone else.</p>
+
+        </div>
+      </div>
+    </div>
+}
+
+#embed("App/YearX/Layout/base")

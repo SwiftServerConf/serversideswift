@@ -1,0 +1,33 @@
+<div class="bg-blue newsletter">
+  <div class="container">
+    <div class="row">
+      
+      <div class="col">
+        <h3 class="h3 text-center">Newsletter</h3>
+        <p class="text-white text-center">
+        The best way to keep posted about the conference is by signing up below!
+        Future newsletters will contain everything about sponsor levels, ticket prices, schedule and more!
+        </p>
+        <form
+          action="https://serversideswift.us17.list-manage.com/subscribe/post?u=214a68ae1b6b77f2b00664b9c&amp;id=3eb6684609"
+          method="post"
+          id="mc-embedded-subscribe-form"
+          name="mc-embedded-subscribe-form"
+          class="validate col-12 col-sm-8 ml-auto mr-auto mt-4"
+          target="_blank"
+          novalidate=""
+        >
+          <p>
+            <input type="email" value="" name="EMAIL" class="form-control" id="mce-EMAIL" placeholder="Enter your email">
+          </p>
+          <div style="position: absolute; left: -5000px;" aria-hidden="true">
+            <input type="text" name="b_214a68ae1b6b77f2b00664b9c_3eb6684609" tabindex="-1" value="">
+          </div>
+          <p class="text-center">
+            <input type="submit" value="Notify Me" name="subscribe" id="mc-embedded-subscribe" class="btn btn-default submit">
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+#set("content") {
+  <div class="about">
+      <div class="page-block no-height bg-blue text-white">
+        <div class="container">
+          <h1 class="text-center">About</h1>
+          <h4 class="text-center mb-5"> ServerSide.swift is solely run for the love of server-side Swift. </h2>
+            
+          #embed("App/YearX/Pages/About/Partials/organizer-list")
+        </div>
+      </div>
+      
+      #embed("App/YearX/Pages/About/Partials/information")
+    </div>
+  </div>
+}
+
+#embed("App/YearX/Layout/base")

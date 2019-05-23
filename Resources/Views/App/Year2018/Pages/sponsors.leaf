@@ -1,0 +1,107 @@
+#set("content") {
+
+    <div class="container">
+        <div class="first-content">
+
+            <div class="thanks">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="text-center fc-orange">Sponsors</h1>
+                        <h3 class="fc-white">
+                            Thanks a lot to all of our sponsors for helping us to run this conference.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sponsors">
+                <div class="row">
+                    <div class="col-xs-12">
+
+                        <div class="gold">
+                            <h3 class="text-center"> GOLD </h3>
+                            <div class="box text-center">
+                                <div class="sponsor">
+                                    <div class="image">
+                                        <a href="https://nodesagency.com" target="_blank">
+                                            <img src="/App/Year2018/images/sponsors/nodes_large.png" alt="Nodes">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12">
+
+                        <div class="silver">
+                            <h3 class="text-center"> SILVER </h3>
+                            <div class="box text-center">
+                                <div class="sponsor">
+                                    <div class="image">
+                                        <br />
+                                        <a href="https://www.skelpo.com" target="_blank">
+                                            <img src="/App/Year2018/images/sponsors/skelpo_large.png" alt="Skelpo">
+                                        </a>
+                                        <br />
+                                        <br />
+                                        <br />
+                                        <a href="https://www.gastrofix.com" target="_blank">
+                                            <img src="/App/Year2018/images/sponsors/gastrofix_large.png" alt="Gastrofix" class="height-md">
+                                        </a>
+                                        <br />
+                                        <br />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12">
+
+                        <div class="bronze">
+                            <h3 class="text-center"> BRONZE </h3>
+                            <div class="box text-center">
+                                <div class="sponsor">
+                                    <a href="https://www.jetbrains.com/" target="_blank">
+                                        <img src="/App/Year2018/images/sponsors/jetbrains_logo.png" alt="JetBrains">
+                                    </a>
+
+                                    <a href="https://raywenderlich.com" target="_blank">
+                                        <img src="/App/Year2018/images/sponsors/ray_wenderlich_black.png" alt="Ray Wenderlich">
+                                    </a>
+
+                                    <a href="https://www.brokenhands.io" target="_blank">
+                                        <img src="/App/Year2018/images/sponsors/brokenhands.png" alt="Broken Hands">
+                                    </a>
+
+                                    <a href="https://swiftengine.io" target="_blank">
+                                        <img src="/App/Year2018/images/sponsors/swiftengine.png" alt="SwiftEngine">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h4 class="text-center f-weight-sm">
+                            If you're interested in sponsoring, please reach out to us at <a href="mailto:sponsors@serversideswift.info">sponsors@serversideswift.info</a> for more information.
+                        </h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+}
+
+#embed("App/Year2018/Layout/base")
