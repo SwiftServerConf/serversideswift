@@ -1,8 +1,6 @@
 #set("content") {
 <div class="page-block profile">
-    <div class="container">
-        <h1 class="text-center mb-5">Profile</h1>
-        
+    <div class="container">        
         <div class="card">
             <div class="image">
                 <img src="#(speaker.imageURL)" alt="#(speaker.name)">

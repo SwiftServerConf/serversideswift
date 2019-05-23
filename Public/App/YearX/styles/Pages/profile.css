@@ -1,7 +1,7 @@
 .profile .card {
     border-radius: 20px;
     max-width: 500px;
-    margin: auto;
+    margin: 120px auto 0;
 }
 
 .profile .card .image {
