@@ -9,7 +9,7 @@ struct YearXController: RouteCollection {
         router.get("sponsors", use: sponsorsHandler)
         router.get("faq", use: faqHandler)
         router.get("about", use: aboutHandler)
-        router.get("coc", use: codeOfConductHandler)
+        router.get("code-of-conduct", use: codeOfConductHandler)
         router.get("speakers", String.parameter, use: speakerProfileHanlder)
         router.get("years", use: yearsHandler)
         router.get("tickets", use: ticketsHandler)
