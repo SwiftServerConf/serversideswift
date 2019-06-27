@@ -1,3 +1,12 @@
+.sponsors.header {
+  background-color: #ffffff;
+}
+
+.sponsors .action-buttons {
+  display: flex;
+  justify-content: center;
+}
+
 .sponsors .sponsor-list .sponsor {
   background-color: #ffffff;
   color: black;

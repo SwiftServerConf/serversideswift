@@ -31,8 +31,24 @@
                         }
                     </div>
                 </div>
-                
+
                 <div class="body">
+                  <hr/>
+                    #if(speaker.talk) {
+                        <div class="section">
+                            <h4 class="f-gradient"> Talk </h4>
+                            <h6 class="f-weight-300">#(speaker.talke)</h5>
+                        </div>
+                    }
+                    #if(speaker.description) {
+                        <div class="section">
+                            <h4 class="f-gradient"> Description </h4>
+                            <h6 class="f-weight-300">#(speaker.description)</h5>
+                        </div>
+                        
+                        <hr />
+                    }
+                  
                     <div class="section">
                         <h4 class="f-gradient"> Position </h4>
                         <h6 class="f-weight-300">#(speaker.title) at #(speaker.company)</h5>

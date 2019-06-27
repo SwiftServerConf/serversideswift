@@ -6,4 +6,8 @@
   </div>
   <h1 class="text-center text-white">Server-Side Swift Conference</h1>
   <h2 class="text-center text-white">30th October - 1st November 2019. Copenhagen, Denmark.</h2>
+  <div class="action-buttons pt-5 pb-3">
+    <input type="button" value="Become Sponsor" class="btn btn-default btn-gradient">
+    <input type="button" value="Become Speaker" class="btn btn-default btn-gradient ml-3">
+  </div>
 </div>

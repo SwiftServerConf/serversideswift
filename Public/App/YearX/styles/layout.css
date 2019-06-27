@@ -107,6 +107,20 @@ body {
     opacity: 0.15;
     transition: opacity .2s ease-in-out !important;
 }
+
 .opacity-15:hover {
     opacity: 1
+}
+
+/* MARK: - Button */
+
+.btn-gradient {
+  background: linear-gradient(to right, #F88A36 , #FD2020) no-repeat;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+}
+
+.btn-gradient:hover {
+  color: #eeeeee
 }
