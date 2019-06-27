@@ -15,5 +15,3 @@ DerivedData/
 # End of https://www.gitignore.io/api/vapor
 
 .idea
-Package.resolved
-Package.pins
