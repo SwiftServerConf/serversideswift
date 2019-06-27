@@ -36,7 +36,8 @@ func setUpProviders(
     services.register(
         Mailgun(
             apiKey: env(EnvironmentKey.Mailgun.apiKey, ""),
-            domain: env(EnvironmentKey.Mailgun.domain, "")
+            domain: env(EnvironmentKey.Mailgun.domain, ""),
+            region: .eu
         ),
         as: Mailgun.self
     )
