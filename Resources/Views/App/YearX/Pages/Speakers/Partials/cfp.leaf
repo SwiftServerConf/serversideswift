@@ -9,7 +9,7 @@
 
 
         <p class="text-center">
-          <a href="https://goo.gl/forms/MN99aYDgIle4bMlI2" target="_blank" class="btn btn-default submit">Submit Talk</a>
+          <a href="https://goo.gl/forms/MN99aYDgIle4bMlI2" target="_blank" class="btn btn-default btn-gradient">Submit Talk</a>
         </p>
       </form>
     </div>

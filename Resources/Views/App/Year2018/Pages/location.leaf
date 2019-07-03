@@ -1,97 +1,102 @@
 #set("content") {
+<div class="container">
+  <div class="first-content">
 
-    <div class="container">
-        <div class="first-content">
+    <div class="more-info">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-center fc-orange">Location</h1>
+          <h3 class="text-center fc-white">
+            In one of the most successful high-technology locations in Germany
+          </h3>
 
-            <div class="more-info">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h1 class="text-center fc-orange">Location</h1>
-                        <h3 class="text-center fc-white">
-                            In one of the most successful high-technology locations in Germany
-                        </h3>
-
-                        <div class="container text-left m-t-30 venue-images">
-                          <div class="row">
-                            <div class="col-xs-12 col-sm-6">
-                              <div class="media">
-                                <img src="/App/Year2018/images/venue.jpg"/>
-                              </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-6">
-                              <div class="media">
-                                <img src="/App/Year2018/images/adlershoftovenue.png"/>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="container text-left m-t-30">
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-6">
-                                    <h3> Location </h3>
-                                    <h4>
-                                        The conference will take place at <a href="https://conventions.wista.de/en/rooms-locations/" target="_blank"> WISTA conventions </a> in the heart of the Technology Park of Adlershof, Berlin. Close to Schönefeld airport and with easy access to restaurants and accommodations, we found this venue to be perfect for this conference.<br /><br />
-                                        The address for the venue is:<br />
-                                        <span class="f-weight-md">Rudower Chaussee 17, 12489 Berlin</span>
-                                    </h4>
-                                </div>
-                                <div class="col-xs-12 col-sm-6">
-                                    <h3> &nbsp; </h3>
-                                    <h4>
-                                        <div id="venue-map" class="map"></div>
-                                    </h4>
-                                </div>
-                            </div>
-
-                            <br />
-
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-6">
-                                    <h3> Transportation </h3>
-                                    <h4>
-                                        <span class="f-weight-md">S-Bahn / Bus</span> <br />
-                                        S-Bahnhof Adlershof <br /> <br />
-                                        The conference venue is accessible by S-Bahn and bus. The closest airport is Schönefeld and from their you can take the S-Bahn S9 or S45 to S-Bahnhof Adlershof. <br /><br />
-                                        Arriving by car, there's multiple parking areas near the venue as well.
-                                    </h4>
-                                </div>
-                                <div class="col-xs-12 col-sm-6">
-                                    <h3> &nbsp; </h3>
-                                    <h4>
-                                      <div id="transportation-map" class="map"></div>
-                                    </h4>
-                                </div>
-                            </div>
-
-                            <br />
-
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-6">
-                                    <h3> Accommodation </h3>
-                                    <h4>
-                                        We've worked out a discount for all attendees of our conference for both hotels <a href="https://www.adaptberlin.de/en/locations/berlin/adlershof.html" target="_blank">Adapt Apartments Berlin</a> and <a href="http://www.airporthotel-berlin-adlershof.de/hotel-route.html" target="_blank">Airporthotel Berlin-Adlershof</a>.
-                                        <br /> <br />
-                                        <span class="f-weight-md">Book via email or phone and refer to a code to get a discount!
-                                            <br />
-                                            <ul>
-                                                <li>Adapt Apartments Berlin: "WISTA17"</li>
-                                                <li>Airporthotel Berlin-Adlershof: "WIS17"</li>
-                                            </ul>
-                                        </span>
-                                    </h4>
-                                </div>
-                                <div class="col-xs-12 col-sm-6">
-                                    <h3> &nbsp; </h3>
-                                    <div id="accommodation-map" class="map"></div>
-                                </div>
-                            </div>
-                    </div>
+          <div class="container text-left m-t-30 venue-images">
+            <div class="row">
+              <div class="col-xs-12 col-sm-6">
+                <div class="media">
+                  <img src="/App/Year2018/images/venue.jpg"/>
                 </div>
+              </div>
+              <div class="col-xs-12 col-sm-6">
+                <div class="media">
+                  <img src="/App/Year2018/images/adlershoftovenue.png"/>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container text-left m-t-30">
+            <div class="row">
+              <div class="col-xs-12 col-sm-6">
+                <h3> Location </h3>
+                <h4>
+                  The conference will take place at <a href="https://conventions.wista.de/en/rooms-locations/"
+                                                       target="_blank"> WISTA conventions </a> in the heart of the
+                  Technology Park of Adlershof, Berlin. Close to Schönefeld airport and with easy access to restaurants
+                  and accommodations, we found this venue to be perfect for this conference.<br/><br/>
+                  The address for the venue is:<br/>
+                  <span class="f-weight-md">Rudower Chaussee 17, 12489 Berlin</span>
+                </h4>
+              </div>
+              <div class="col-xs-12 col-sm-6">
+                <h3> &nbsp; </h3>
+                <h4>
+                  <div id="venue-map" class="map"></div>
+                </h4>
+              </div>
             </div>
 
+            <br/>
+
+            <div class="row">
+              <div class="col-xs-12 col-sm-6">
+                <h3> Transportation </h3>
+                <h4>
+                  <span class="f-weight-md">S-Bahn / Bus</span> <br/>
+                  S-Bahnhof Adlershof <br/> <br/>
+                  The conference venue is accessible by S-Bahn and bus. The closest airport is Schönefeld and from their
+                  you can take the S-Bahn S9 or S45 to S-Bahnhof Adlershof. <br/><br/>
+                  Arriving by car, there's multiple parking areas near the venue as well.
+                </h4>
+              </div>
+              <div class="col-xs-12 col-sm-6">
+                <h3> &nbsp; </h3>
+                <h4>
+                  <div id="transportation-map" class="map"></div>
+                </h4>
+              </div>
+            </div>
+
+            <br/>
+
+            <div class="row">
+              <div class="col-xs-12 col-sm-6">
+                <h3> Accommodation </h3>
+                <h4>
+                  We've worked out a discount for all attendees of our conference for both hotels <a
+                    href="https://www.adaptberlin.de/en/locations/berlin/adlershof.html" target="_blank">Adapt
+                  Apartments Berlin</a> and <a href="http://www.airporthotel-berlin-adlershof.de/hotel-route.html"
+                                               target="_blank">Airporthotel Berlin-Adlershof</a>.
+                  <br/> <br/>
+                  <span class="f-weight-md">Book via email or phone and refer to a code to get a discount!
+                      <br/>
+                      <ul>
+                          <li>Adapt Apartments Berlin: "WISTA17"</li>
+                          <li>Airporthotel Berlin-Adlershof: "WIS17"</li>
+                      </ul>
+                  </span>
+                </h4>
+              </div>
+              <div class="col-xs-12 col-sm-6">
+                <h3> &nbsp; </h3>
+                <div id="accommodation-map" class="map"></div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 
     <script>
       mapkit.init({
