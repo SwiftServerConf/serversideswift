@@ -34,16 +34,16 @@
 
                 <div class="body">
                   <hr/>
-                    #if(speaker.talk) {
+                    #if(talk.title) {
                         <div class="section">
                             <h4 class="f-gradient"> Talk </h4>
-                            <h6 class="f-weight-300">#(speaker.talke)</h5>
+                            <h6 class="f-weight-300">#(talk.title)</h5>
                         </div>
                     }
-                    #if(speaker.description) {
+                    #if(talk.description) {
                         <div class="section">
                             <h4 class="f-gradient"> Description </h4>
-                            <h6 class="f-weight-300">#(speaker.description)</h5>
+                            <h6 class="f-weight-300">#(talk.description)</h5>
                         </div>
                         
                         <hr />

@@ -65,10 +65,28 @@ struct YearXController: RouteCollection {
     }
   
     func speakerProfileHanlder(_ req: Request) throws -> Future<View> {
+        let eventRepo = try req.make(EventRepository.self)
+        let talkRepo = try req.make(TalkRepository.self)
+      
+        // Closure to serve view with just speaker if no event or talk is given yet.
+        let viewWithNoTalk = { (speaker: Speaker) -> Future<View> in
+          let context = SpeakerProfileContext(speaker: speaker, talk: nil)
+          return try req.view().render("App/YearX/Pages/Speakers/profile", context)
+        }
+      
         let speakerSlug = try req.parameters.next(String.self)
-        return try Speaker.resolveParameter(speakerSlug, on: req).flatMap { speaker in
-            let context = SpeakerProfileContext(speaker: speaker)
-            return try req.view().render("App/YearX/Pages/Speakers/profile", context)
+        return try Speaker.resolveParameter(speakerSlug, on: req)
+          .and(eventRepo.find(slug: "2019", enabled: true))
+          .flatMap { speaker, event in
+            guard let event = event else { return try viewWithNoTalk(speaker) }
+            return try talkRepo
+              .all(speaker: speaker, event: event, enabled: true)
+              .flatMap { talks in
+                // Assuming 1 talk per peaker
+                guard let talk = talks.first else { return try viewWithNoTalk(speaker) }
+                let context = SpeakerProfileContext(speaker: speaker, talk: talk)
+                return try req.view().render("App/YearX/Pages/Speakers/profile", context)
+            }
         }
     }
     
@@ -99,6 +117,7 @@ struct SpeakerContext: Encodable {
 struct SpeakerProfileContext: Encodable {
     let page = ["speakers": true]
     let speaker: Speaker
+    let talk: Talk?
 }
 
 struct LocationContext: Encodable {
