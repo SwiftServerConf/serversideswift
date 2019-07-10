@@ -1,10 +1,14 @@
 #set("content") {
+<div id="particles-js">
+  <canvas class="particles-js-canvas-el" width="1474" height="100%" style="width: 100%; height: 100%;">
+  </canvas>
+</div>
 <div class="page-block profile">
     <div class="container">        
         <div class="card">
             <div class="image">
-                <img src="#(speaker.imageURL)" alt="#(speaker.name)">
-                    </div>
+              <img src="#(speaker.imageURL)" alt="#(speaker.name)">
+            </div>
             <div class="description p-3">
                 
                 <div class="head">
