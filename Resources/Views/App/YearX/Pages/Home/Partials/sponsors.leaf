@@ -18,12 +18,16 @@
             <img src="/App/YearX/images/sponsors/ray_wenderlich.png" alt="Ray Wenderlich" class="h-80">
           </a>
           
+          <a href="https://www.jetbrains.com/" target="_blank">
+            <img src="/App/YearX/images/sponsors/jetbrains.png" alt="Jet Brains" class="h-80">
+          </a>
+          
           <a href="https://vapor.codes/" target="_blank">
             <img src="/App/YearX/images/sponsors/vapor.png" alt="Vapor" class="h-80">
           </a>
           
           <a href="http://stickermule.com/supports/serverside19-sponsorship" target="_blank">
-            <img src="/App/YearX/images/sponsors/stickermule.png" alt="Vapor" class="h-80">
+            <img src="/App/YearX/images/sponsors/stickermule.png" alt="Stickermule" class="h-80">
           </a>
           
         </div>
