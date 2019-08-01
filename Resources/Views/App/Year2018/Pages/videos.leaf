@@ -11,20 +11,22 @@
 
     <div class="row videos">
       #for(item in data) {
-      <div class="flex-container">
-        <div class="flex-item">
-          <div class='embed-container'>
-            <iframe src="https://www.youtube.com/embed/#(item.talk.videoReference)" frameborder="0"
-                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        #for(talk in item.talks) {
+          <div class="flex-container">
+            <div class="flex-item">
+              <div class='embed-container'>
+                <iframe src="https://www.youtube.com/embed/#(talk.videoReference)" frameborder="0"
+                        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="flex-item">
+              <div class="speaker">
+                <h2 class="m-t-0 m-b-30 title"><a href="/speakers/#(item.speaker.key)">#(talk.title) (#(item.speaker.name))</a>
+                </h2>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="flex-item">
-          <div class="speaker">
-            <h2 class="m-t-0 m-b-30 title"><a href="/speakers/#(item.speaker.key)">#(item.talk.title) (#(item.speaker.name))</a>
-            </h2>
-          </div>
-        </div>
-      </div>
+        }
       }
       <div class="flex-container">
         <div class="flex-item">
