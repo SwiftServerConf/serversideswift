@@ -11,10 +11,10 @@
     <a href="/2019/photos">Photos</a>
     <span class="underline"></span>
   </li> -->
-<!--   <li class="#if(page.schedule){active}">
+  <li class="#if(page.schedule){active}">
     <a href="/2019/schedule">Schedule</a>
     <span class="underline"></span>
-  </li> -->
+  </li>
   <li class="#if(page.speakers){active}">
     <a href="/2019/speakers">Speakers</a>
     <span class="underline"></span>

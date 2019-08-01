@@ -31,12 +31,12 @@ struct Year2018Controller: RouteCollection {
 
         return eventRepo
             .find(slug: "2018", enabled: true)
-            .flatMap { event -> Future<[(Speaker, Talk)]> in
+            .flatMap { event -> Future<[(Speaker, [Talk])]> in
                 guard let event = event else { throw Abort(.internalServerError) }
                 return try speakerRepo.all(event: event, enabled: true)
             }
             .map { speakers in
-                return speakers.map { TalkAndSpeaker(speaker: $0.0, talk: $0.1)}
+                return speakers.map { TalkAndSpeaker(speaker: $0.0, talks: $0.1)}
             }
             .flatMap { speakers in
                 let context = VideosContext(data: speakers)
@@ -106,7 +106,7 @@ struct Year2018Controller: RouteCollection {
 
         return eventRepo
             .find(slug: "2018", enabled: true)
-            .flatMap(to: [(Speaker, Talk)].self) { event in
+            .flatMap(to: [(Speaker, [Talk])].self) { event in
                 guard let event = event else { throw Abort(.internalServerError) }
                 return try speakerRepo.all(event: event, enabled: true)
             }
@@ -135,8 +135,7 @@ struct Year2018Controller: RouteCollection {
                 return try talkRepo.all(speaker: speaker, event: event, enabled: true)
             .flatMap { talks in
                 // Assuming 1 talk per speaker
-                guard let talk = talks.first else { throw Abort(.internalServerError) }
-                let context = SpeakerContext(data: TalkAndSpeaker(speaker: speaker, talk: talk))
+                let context = SpeakerContext(data: TalkAndSpeaker(speaker: speaker, talks: talks))
                 return try req.view().render("App/Year2018/Pages/speaker-profile", context)
             }
         }
@@ -173,5 +172,5 @@ struct Year2018Controller: RouteCollection {
 
 struct TalkAndSpeaker: Encodable {
     let speaker: Speaker
-    let talk: Talk
+    let talks: [Talk]
 }

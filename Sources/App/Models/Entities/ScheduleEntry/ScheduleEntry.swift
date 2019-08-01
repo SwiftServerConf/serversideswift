@@ -14,7 +14,7 @@ final class ScheduleEntry: Codable {
 
     var id: Int?
     var dayID: Int
-    var roomID: Int
+    var roomID: Int?
     var talkID: Int?
 
     var title: String?
@@ -79,3 +79,19 @@ extension ScheduleEntry: Migration {
     }
 }
 extension ScheduleEntry: Parameter {}
+
+// MARK: Migrations
+
+extension ScheduleEntry {
+    struct MakeRoomIDOptional: Migration {
+        typealias Database = MySQLDatabase
+
+        static func prepare(on conn: MySQLConnection) -> EventLoopFuture<Void> {
+            return conn.raw("ALTER TABLE \(ScheduleEntry.entity) MODIFY roomID BIGINT(20) NULL;").run()
+        }
+
+        static func revert(on conn: MySQLConnection) -> EventLoopFuture<Void> {
+            return conn.raw("ALTER TABLE \(ScheduleEntry.entity) MODIFY roomID BIGINT(20);").run()
+        }
+    }
+}
