@@ -9,9 +9,9 @@
             <table class="table table-striped table-bordered">
               <thead class="thead-dark">
                 <tr>
-                  <th scope="col">When</th>
+                  <th scope="col" class="time-column">When</th>
                   <th scope="col">What</th>
-                  <th scope="col">Where</th>
+                  <th scope="col" class="room-column">Where</th>
                 </tr>
               </thead>
               <tbody>

@@ -5,6 +5,15 @@
   background-color: #ffffff;
 }
 
+.schedule .panel .table .time-column {
+  width: 150px;
+  text-align: center;
+}
+
+.schedule .panel .table .room-column {
+  width: 250px;
+}
+
 .schedule .panel table thead tr th {
   background: transparent;
   border-color: inherit;
