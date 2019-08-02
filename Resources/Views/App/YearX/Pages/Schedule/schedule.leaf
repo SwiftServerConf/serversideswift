@@ -3,7 +3,7 @@
       <div class="page-block no-height bg-blue text-white">
         <div class="container">
           <h1 class="text-center">Schedule</h1>
-          <h4 class="text-center mb-5">Three days packed with inspiring content</h2>
+          <h4 class="text-center mb-5">Three days packed with inspiring content.</h2>
             
           #embed("App/YearX/Pages/Schedule/Partials/timetable")
         </div>

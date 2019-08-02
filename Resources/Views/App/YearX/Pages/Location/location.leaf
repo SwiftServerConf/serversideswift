@@ -3,7 +3,7 @@
       <div class="page-block no-height bg-blue text-white">
         <div class="container">
           <h1 class="text-center">Location</h1>
-          <h4 class="text-center mb-5">In the architectural center of Copenhagen</h2>
+          <h4 class="text-center mb-5">In the architectural center of Copenhagen.</h2>
             
           #embed("App/YearX/Pages/Location/Partials/pictures")
         </div>

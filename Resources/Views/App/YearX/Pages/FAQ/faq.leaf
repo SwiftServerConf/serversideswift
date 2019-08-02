@@ -3,7 +3,7 @@
       <div class="page-block no-height bg-blue text-white">
         <div class="container">
             <h1 class="text-center text-white">FAQ</h1>
-            <h4 class="text-center mb-5">Answers to the most commonly asked questions</h4>
+            <h4 class="text-center mb-5">Answers to the most commonly asked questions.</h4>
 
             <div class="row">
                 <div class="col-xs-12 mb-4">
