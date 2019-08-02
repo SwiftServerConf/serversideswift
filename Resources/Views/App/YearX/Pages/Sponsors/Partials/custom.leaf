@@ -31,17 +31,17 @@
 </div>
 
 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-  <div class="custom">
-    <div class="sponsor">
-      <a href="https://workingcopy.app/" target="_blank"></a>
-      <div class="image">
-        <img src="/App/YearX/images/sponsors/working_copy.png" alt="Working Copy">
-      </div>
-      <div class="description p-2">
-        <h4>Working Copy</h4>
-      </div>
+    <div class="custom">
+        <div class="sponsor">
+            <a href="https://workingcopy.app/" target="_blank"></a>
+            <div class="image">
+                <img src="/App/YearX/images/sponsors/working_copy.png" alt="Working Copy">
+            </div>
+            <div class="description p-2">
+                <h4>Working Copy</h4>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
@@ -50,10 +50,10 @@
             <a href="mailto:sponsors@serversideswift.info"></a>
             <div class="image">
                 <img src="/App/YearX/images/sponsor-levels/sponsor_custom.png" alt="Custom">
-                    </div>
+            </div>
             <div class="description p-2">
                 <h4 class="f-custom">FREE SPOT</h4>
             </div>
         </div>
     </div>
-    </div>
+</div>
