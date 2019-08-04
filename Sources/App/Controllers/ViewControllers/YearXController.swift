@@ -58,7 +58,7 @@ struct YearXController: RouteCollection {
                 return try dayRepo.all(event: event, enabled: true)
             }
             .flatMap(to: [ScheduleContext.DayWithScheduleEntry].self) { days in
-                let foo = try days.map { day in
+                return try days.map { day in
                     try scheduleEntryRepo
                         .all(day: day, enabled: true)
                         .flatMap(to: [ScheduleContext.ScheduleEntryWithSpeakerAndTalk].self) { scheduleEntries in
@@ -82,8 +82,6 @@ struct YearXController: RouteCollection {
                         }
                 }
                 .flatten(on: req)
-
-                return foo
             }
             .flatMap { scheduleData in
                 let context = ScheduleContext(days: scheduleData)
