@@ -5,6 +5,7 @@ import Foundation
 protocol DayRepository: ServiceType {
     func find(id: Int, enabled: Bool) -> Future<Day?>
     func all(enabled: Bool) -> Future<[Day]>
+    func all(event: Event, enabled: Bool) throws -> EventLoopFuture<[Day]>
     func save(day: Day) -> Future<Day>
 }
 
@@ -29,6 +30,19 @@ final class MySQLDayRepository: DayRepository {
         return db.withConnection { conn in
             return Day
                 .query(on: conn)
+                .filter(\.enabled == enabled)
+                .sort(\.date, .ascending)
+                .all()
+        }
+    }
+
+    func all(event: Event, enabled: Bool = true) throws -> EventLoopFuture<[Day]> {
+        guard let id = event.id else { throw Abort(.badRequest) }
+
+        return db.withConnection { conn in
+            return Day
+                .query(on: conn)
+                .filter(\.eventID == id)
                 .filter(\.enabled == enabled)
                 .sort(\.date, .ascending)
                 .all()

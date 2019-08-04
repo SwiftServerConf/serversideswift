@@ -14,6 +14,5 @@ func migrate(migrations: inout MigrationConfig) throws {
     migrations.add(model: TalkSpeaker.self, database: .mysql)
 
     // MARK: Migrations
-    // Add your migrations like this:
-    // migrations.add(migration: AppUser.AddForeignKeyToAddressId.self, database: .mysql)
+     migrations.add(migration: ScheduleEntry.MakeRoomIDOptional.self, database: .mysql)
 }
