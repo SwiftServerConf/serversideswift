@@ -6,6 +6,7 @@ protocol ScheduleEntryRepository: ServiceType {
     func find(id: Int, enabled: Bool) -> Future<ScheduleEntry?>
     func all(enabled: Bool) -> Future<[ScheduleEntry]>
     func all(room: Room, enabled: Bool) throws -> Future<[ScheduleEntry]>
+    func all(day: Day, enabled: Bool) throws -> EventLoopFuture<[(ScheduleEntry, Room?)]>
     func save(entry: ScheduleEntry) -> Future<ScheduleEntry>
 }
 
@@ -51,6 +52,33 @@ final class MySQLScheduleEntryRepository: ScheduleEntryRepository {
         }
     }
 
+    func all(day: Day, enabled: Bool = true) throws -> EventLoopFuture<[(ScheduleEntry, Room?)]> {
+        guard let dayID = day.id else {
+            throw Abort(.badRequest, reason: "Missing ID on day")
+        }
+
+        return db.withConnection { conn in
+            return ScheduleEntry
+                .query(on: conn)
+                .filter(\.dayID == dayID)
+                .filter(\.enabled == enabled)
+                .sort(\.startTime, .ascending)
+                .all()
+                .flatMap(to: [(ScheduleEntry, Room?)].self) { scheduleEntries in
+                    return scheduleEntries.map { scheduleEntry in
+                        return Room
+                            .query(on: conn)
+                            .filter(\.id == scheduleEntry.roomID)
+                            .first()
+                            .map { room in
+                                return (scheduleEntry, room)
+                            }
+                    }
+                    .flatten(on: conn)
+                }
+        }
+    }
+
     func save(entry: ScheduleEntry) -> EventLoopFuture<ScheduleEntry> {
         return db.withConnection { conn in
             return entry.save(on: conn)
@@ -64,5 +92,11 @@ extension MySQLScheduleEntryRepository {
 
     static func makeService(for worker: Container) throws -> Self {
         return .init(try worker.connectionPool(to: .mysql))
+    }
+}
+
+extension Talk {
+    var scheduleEntries: Children<Talk, ScheduleEntry> {
+        return children(\.talkID)
     }
 }

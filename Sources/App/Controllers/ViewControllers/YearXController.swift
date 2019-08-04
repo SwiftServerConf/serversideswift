@@ -5,12 +5,13 @@ struct YearXController: RouteCollection {
     func boot(router: Router) throws {
         router.get(use: homepageHandler)
         router.get("speakers", use: speakersHandler)
+        router.get("schedule", use: scheduleHandler)
         router.get("location", use: locationHandler)
         router.get("sponsors", use: sponsorsHandler)
         router.get("faq", use: faqHandler)
         router.get("about", use: aboutHandler)
         router.get("code-of-conduct", use: codeOfConductHandler)
-        router.get("speakers", String.parameter, use: speakerProfileHanlder)
+        router.get("speakers", String.parameter, use: speakerProfileHandler)
         router.get("years", use: yearsHandler)
         router.get("tickets", use: ticketsHandler)
     }
@@ -31,7 +32,7 @@ struct YearXController: RouteCollection {
 
         return eventRepo
             .find(slug: "2019", enabled: true)
-            .flatMap(to: [(Speaker, Talk)].self) { event in
+            .flatMap(to: [(Speaker, [Talk])].self) { event in
                 guard let event = event else { throw Abort(.internalServerError) }
                 return try speakerRepo.all(event: event, enabled: true)
             }
@@ -41,6 +42,50 @@ struct YearXController: RouteCollection {
             .flatMap { speakers in
                 let context = SpeakerContext(speakerList: speakers)
                 return try req.view().render("App/YearX/Pages/Speakers/speakers", context)
+            }
+    }
+
+    func scheduleHandler(_ req: Request) throws -> Future<View> {
+        let eventRepo = try req.make(EventRepository.self)
+        let dayRepo = try req.make(DayRepository.self)
+        let scheduleEntryRepo = try req.make(ScheduleEntryRepository.self)
+        let speakerRepo = try req.make(SpeakerRepository.self)
+
+        return eventRepo
+            .find(slug: "2019", enabled: true)
+            .flatMap(to: [Day].self) { event in
+                guard let event = event else { throw Abort(.internalServerError) }
+                return try dayRepo.all(event: event, enabled: true)
+            }
+            .flatMap(to: [ScheduleContext.DayWithScheduleEntry].self) { days in
+                return try days.map { day in
+                    try scheduleEntryRepo
+                        .all(day: day, enabled: true)
+                        .flatMap(to: [ScheduleContext.ScheduleEntryWithSpeakerAndTalk].self) { scheduleEntries in
+                            try scheduleEntries.map { scheduleEntryAndRoom in
+                                let (scheduleEntry, room) = scheduleEntryAndRoom
+                                return try speakerRepo
+                                    .find(scheduleEntry: scheduleEntry, enabled: true)
+                                    .map(to: ScheduleContext.ScheduleEntryWithSpeakerAndTalk.self) { speakerAndTalk in
+                                        return ScheduleContext.ScheduleEntryWithSpeakerAndTalk(
+                                            scheduleEntry: scheduleEntry,
+                                            speaker: speakerAndTalk?.0,
+                                            talk: speakerAndTalk?.1,
+                                            room: room
+                                        )
+                                    }
+                            }
+                            .flatten(on: req)
+                        }
+                        .map(to: ScheduleContext.DayWithScheduleEntry.self) { scheduleEntries in
+                            return ScheduleContext.DayWithScheduleEntry(day: day, scheduleEntries: scheduleEntries)
+                        }
+                }
+                .flatten(on: req)
+            }
+            .flatMap { scheduleData in
+                let context = ScheduleContext(days: scheduleData)
+                return try req.view().render("App/YearX/Pages/Schedule/schedule", context)
             }
     }
 
@@ -64,30 +109,46 @@ struct YearXController: RouteCollection {
         return try req.view().render("App/YearX/Pages/CodeOfConduct/code-of-conduct", cocContext)
     }
   
-    func speakerProfileHanlder(_ req: Request) throws -> Future<View> {
+    func speakerProfileHandler(_ req: Request) throws -> Future<View> {
         let eventRepo = try req.make(EventRepository.self)
         let talkRepo = try req.make(TalkRepository.self)
+        let roomRepo = try req.make(RoomRepository.self)
       
         // Closure to serve view with just speaker if no event or talk is given yet.
         let viewWithNoTalk = { (speaker: Speaker) -> Future<View> in
-          let context = SpeakerProfileContext(speaker: speaker, talk: nil)
-          return try req.view().render("App/YearX/Pages/Speakers/profile", context)
+            let context = SpeakerProfileContext(speaker: speaker, talksWithScheduleEntries: [])
+            return try req.view().render("App/YearX/Pages/Speakers/profile", context)
         }
       
         let speakerSlug = try req.parameters.next(String.self)
         return try Speaker.resolveParameter(speakerSlug, on: req)
-          .and(eventRepo.find(slug: "2019", enabled: true))
-          .flatMap { speaker, event in
-            guard let event = event else { return try viewWithNoTalk(speaker) }
-            return try talkRepo
-              .all(speaker: speaker, event: event, enabled: true)
-              .flatMap { talks in
-                // Assuming 1 talk per peaker
-                guard let talk = talks.first else { return try viewWithNoTalk(speaker) }
-                let context = SpeakerProfileContext(speaker: speaker, talk: talk)
-                return try req.view().render("App/YearX/Pages/Speakers/profile", context)
+            .and(eventRepo.find(slug: "2019", enabled: true))
+            .flatMap { speaker, event in
+                guard let event = event else { return try viewWithNoTalk(speaker) }
+                return try talkRepo
+                    .all(speaker: speaker, event: event, enabled: true)
+                    .flatMap(to: [SpeakerProfileContext.TalkAndScheduleEntryAndRoom].self) { talks in
+                        return try talks.map { talk in
+                            return try talk.scheduleEntries
+                                .query(on: req)
+                                .first()
+                                .flatMap(to: SpeakerProfileContext.TalkAndScheduleEntryAndRoom.self) { scheduleEntry in
+                                    guard let scheduleEntry = scheduleEntry else {
+                                        return req.future(SpeakerProfileContext.TalkAndScheduleEntryAndRoom(talk: talk, scheduleEntry: nil, room: nil))
+                                    }
+
+                                    return try roomRepo.find(scheduleEntry: scheduleEntry, enabled: true)
+                                        .map { room in
+                                            SpeakerProfileContext.TalkAndScheduleEntryAndRoom(talk: talk, scheduleEntry: scheduleEntry, room: room)
+                                        }
+                                }
+                        }.flatten(on: req)
+                    }
+                    .flatMap { talksWithScheduleEntries in
+                        let context = SpeakerProfileContext(speaker: speaker, talksWithScheduleEntries: talksWithScheduleEntries)
+                        return try req.view().render("App/YearX/Pages/Speakers/profile", context)
+                    }
             }
-        }
     }
     
     func yearsHandler(_ req: Request) throws -> Future<View> {
@@ -114,10 +175,33 @@ struct SpeakerContext: Encodable {
     let speakerList: [Speaker]
 }
 
+struct ScheduleContext: Encodable {
+    struct ScheduleEntryWithSpeakerAndTalk: Encodable {
+        let scheduleEntry: ScheduleEntry
+        let speaker: Speaker?
+        let talk: Talk?
+        let room: Room?
+    }
+
+    struct DayWithScheduleEntry: Encodable {
+        let day: Day
+        let scheduleEntries: [ScheduleEntryWithSpeakerAndTalk]
+    }
+
+    let page = ["schedule": true]
+    let days: [DayWithScheduleEntry]
+}
+
 struct SpeakerProfileContext: Encodable {
+    struct TalkAndScheduleEntryAndRoom: Encodable {
+        let talk: Talk
+        let scheduleEntry: ScheduleEntry?
+        let room: Room?
+    }
+
     let page = ["speakers": true]
     let speaker: Speaker
-    let talk: Talk?
+    let talksWithScheduleEntries: [TalkAndScheduleEntryAndRoom]
 }
 
 struct LocationContext: Encodable {

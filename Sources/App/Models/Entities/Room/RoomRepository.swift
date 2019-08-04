@@ -4,6 +4,7 @@ import Foundation
 
 protocol RoomRepository: ServiceType {
     func find(id: Int, enabled: Bool) -> Future<Room?>
+    func find(scheduleEntry: ScheduleEntry, enabled: Bool) throws -> Future<Room?>
     func all(enabled: Bool) -> Future<[Room]>
     func save(room: Room) -> Future<Room>
 }
@@ -20,6 +21,20 @@ final class MySQLRoomRepository: RoomRepository {
             return Room
                 .query(on: conn)
                 .filter(Room.idKey == id)
+                .filter(\.enabled == enabled)
+                .first()
+        }
+    }
+
+    func find(scheduleEntry: ScheduleEntry, enabled: Bool = true) throws -> EventLoopFuture<Room?> {
+        guard let roomID = scheduleEntry.roomID else {
+            throw Abort(.badRequest, reason: "Missing room ID on schedule entry")
+        }
+
+        return db.withConnection { conn in
+            return Room
+                .query(on: conn)
+                .filter(Room.idKey == roomID)
                 .filter(\.enabled == enabled)
                 .first()
         }
