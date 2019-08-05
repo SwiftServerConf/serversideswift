@@ -58,6 +58,7 @@ final class MySQLTalkRepository: TalkRepository {
                 .filter(\Day.eventID == eventID)
                 .filter(\Talk.enabled == enabled)
                 .sort(\ScheduleEntry.startTime, .ascending)
+                .groupBy(\Talk.id)
                 .all()
         }
     }
