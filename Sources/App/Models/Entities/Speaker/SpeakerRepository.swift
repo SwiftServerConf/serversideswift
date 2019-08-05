@@ -80,6 +80,7 @@ final class MySQLSpeakerRepository: SpeakerRepository {
                 .filter(\Day.eventID == id)
                 .filter(\Speaker.enabled == enabled)
                 .sort(\Speaker.order, .ascending)
+                .groupBy(\Speaker.id)
                 .all()
                 .flatMap(to: [(Speaker, [Talk])].self) { speakers in
                     return try speakers.map { speaker in
