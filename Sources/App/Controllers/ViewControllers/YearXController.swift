@@ -131,6 +131,7 @@ struct YearXController: RouteCollection {
                         return try talks.map { talk in
                             return try talk.scheduleEntries
                                 .query(on: req)
+                                .filter(\.enabled == true)
                                 .first()
                                 .flatMap(to: SpeakerProfileContext.TalkAndScheduleEntryAndRoom.self) { scheduleEntry in
                                     guard let scheduleEntry = scheduleEntry else {
