@@ -66,11 +66,11 @@ struct YearXController: RouteCollection {
                                 let (scheduleEntry, room) = scheduleEntryAndRoom
                                 return try speakerRepo
                                     .find(scheduleEntry: scheduleEntry, enabled: true)
-                                    .map(to: ScheduleContext.ScheduleEntryWithSpeakerAndTalk.self) { speakerAndTalk in
+                                    .map(to: ScheduleContext.ScheduleEntryWithSpeakerAndTalk.self) { speakersAndTalk in
                                         return ScheduleContext.ScheduleEntryWithSpeakerAndTalk(
                                             scheduleEntry: scheduleEntry,
-                                            speaker: speakerAndTalk?.0,
-                                            talk: speakerAndTalk?.1,
+                                            speakers: speakersAndTalk?.0 ?? [],
+                                            talk: speakersAndTalk?.1,
                                             room: room
                                         )
                                     }
@@ -178,7 +178,7 @@ struct SpeakerContext: Encodable {
 struct ScheduleContext: Encodable {
     struct ScheduleEntryWithSpeakerAndTalk: Encodable {
         let scheduleEntry: ScheduleEntry
-        let speaker: Speaker?
+        let speakers: [Speaker]
         let talk: Talk?
         let room: Room?
     }

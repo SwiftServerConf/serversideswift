@@ -24,17 +24,22 @@
                     <td class="">#(data.scheduleEntry.title)</td>
                   } else {
                     <td>
-                        <div class="row">
-                          <div class="col-sm-1">
-                            <div class="image">
-                              <img class="img-fluid" src="#(data.speaker.imageURL)" alt="#(data.speaker.name)">
-                            </div>
-                          </div>
-                          <div class="col-sm-11">
-                            #(data.speaker.name) <br>
-                            <a href="/2019/speakers/#(data.speaker.slug)">#(data.talk.title)</a>
-                          </div>
+                      <div class="talk">
+                        <div class="avatars">
+                          #for(speaker in data.speakers) {
+                            <span class="avatar">
+                              <img src="#(speaker.imageURL)" alt="#(speaker.name)">
+                            </span>
+                          }
                         </div>
+                        <div class="talk-info"> 
+                          <ul class="speaker-list">
+                            #for(speaker in data.speakers) { <li>#(speaker.name)</li> }
+                          </ul>
+                          <br>
+                          <a href="/2019/speakers/#(data.speakers.slug)">#(data.talk.title)</a>
+                        </div>
+                      </div>
                     </td>
                   }
 
