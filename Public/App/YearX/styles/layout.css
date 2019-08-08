@@ -127,10 +127,16 @@ body {
 
 /* MARK: - Sales Banner */
 
-.sales-banner {
+a.sales-banner {
   background: linear-gradient(to right, #F88A36 , #FD2020) no-repeat;
   color: #ffffff;
   border: none;
   text-align: center;
   text-transform: uppercase;
+  display: block;
+}
+
+a.sales-banner: hover {
+  font-weight: 400;
+  color: #ffffff;
 }
