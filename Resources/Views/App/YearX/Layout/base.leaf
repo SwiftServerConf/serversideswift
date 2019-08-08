@@ -12,6 +12,7 @@
     #embed("App/YearX/Layout/navigation")
     #embed("App/YearX/Layout/content")
     #embed("App/YearX/Layout/footer")
+    #embed("App/YearX/Layout/modal")
     
     #embed("App/YearX/Layout/Assets/javascript")
 </body>

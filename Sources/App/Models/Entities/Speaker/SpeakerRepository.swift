@@ -4,7 +4,7 @@ import Foundation
 
 protocol SpeakerRepository: ServiceType {
     func find(id: Int, enabled: Bool) -> Future<Speaker?>
-    func find(scheduleEntry: ScheduleEntry, enabled: Bool) throws -> EventLoopFuture<(Speaker, Talk)?>
+    func find(scheduleEntry: ScheduleEntry, enabled: Bool) throws -> EventLoopFuture<([Speaker], Talk)?>
     func all(enabled: Bool) -> Future<[Speaker]>
     func all(talk: Talk, enabled: Bool) -> Future<[Speaker]>
     func all(event: Event, enabled: Bool) throws -> EventLoopFuture<[(Speaker, [Talk])]>
@@ -30,11 +30,18 @@ final class MySQLSpeakerRepository: SpeakerRepository {
         }
     }
 
-    func find(scheduleEntry: ScheduleEntry, enabled: Bool = true) throws -> EventLoopFuture<(Speaker, Talk)?> {
+    func find(scheduleEntry: ScheduleEntry, enabled: Bool = true) throws -> EventLoopFuture<([Speaker], Talk)?> {
         guard let id = scheduleEntry.id else { throw Abort(.badRequest) }
 
         return db.withConnection { conn in
-            return Speaker
+            let talk = Talk
+                .query(on: conn)
+                .join(\ScheduleEntry.talkID, to: \Talk.id)
+                .filter(\ScheduleEntry.id == id)
+                .filter(\Talk.enabled == enabled)
+                .first()
+
+            let speakers = Speaker
                 .query(on: conn)
                 .join(\TalkSpeaker.speakerID, to: \Speaker.id)
                 .join(\Talk.id, to: \TalkSpeaker.talkID)
@@ -42,8 +49,13 @@ final class MySQLSpeakerRepository: SpeakerRepository {
                 .join(\Day.id, to: \ScheduleEntry.dayID)
                 .filter(\ScheduleEntry.id == id)
                 .filter(\Speaker.enabled == enabled)
-                .alsoDecode(Talk.self)
-                .first()
+                .all()
+
+            return speakers.and(talk).map { speakersAndTalk in
+                let (speakers, talk) = speakersAndTalk
+                guard let unwrappedTalk = talk else { return nil }
+                return (speakers, unwrappedTalk)
+            }
         }
     }
 
