@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  padding: 50px 0;
+  padding: 75px 0; // Added 25px due to the "sales-banner"
 }
 
 /* Icons (Feather) */
@@ -131,9 +131,12 @@ a.sales-banner {
   background: linear-gradient(to right, #F88A36 , #FD2020) no-repeat;
   color: #ffffff;
   border: none;
-  text-align: center;
   text-transform: uppercase;
   display: block;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 a.sales-banner: hover {

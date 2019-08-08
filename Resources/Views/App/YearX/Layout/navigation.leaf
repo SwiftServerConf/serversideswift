@@ -62,6 +62,6 @@
   <ul class="d-flex d-md-none">
     #get(links)
   </ul>
-  <a href="http://localhost:8080/2019/tickets" class="sales-banner">Ticket sales are closing soon!</a>
+  <a href="http://localhost:8080/2019/tickets" class="sales-banner">Ticket sales will close soon!</a>
 </nav>
 
