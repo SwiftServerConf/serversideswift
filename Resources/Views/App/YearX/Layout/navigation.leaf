@@ -62,4 +62,6 @@
   <ul class="d-flex d-md-none">
     #get(links)
   </ul>
+  <div class="sales-banner">Ticket sales are closing soon!</div>
 </nav>
+
