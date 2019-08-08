@@ -133,10 +133,11 @@ a.sales-banner {
   border: none;
   text-transform: uppercase;
   display: block;
-  height: 25px;
+  min-height: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 a.sales-banner: hover {
