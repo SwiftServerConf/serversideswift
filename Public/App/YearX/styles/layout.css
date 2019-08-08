@@ -115,7 +115,7 @@ body {
 /* MARK: - Button */
 
 .btn-gradient {
-  background: linear-gradient(to right, #F88A36 , #FD2020) no-repeat;
+  background: linear-gradient(90deg, #F88A36 , #FD2020) no-repeat;
   color: #ffffff;
   border: none;
   border-radius: 6px;
@@ -128,7 +128,7 @@ body {
 /* MARK: - Sales Banner */
 
 a.sales-banner {
-  background: linear-gradient(to right, #F88A36 , #FD2020) no-repeat;
+  background: linear-gradient(90deg, #F88A36 , #FD2020) no-repeat;
   color: #ffffff;
   border: none;
   text-transform: uppercase;
