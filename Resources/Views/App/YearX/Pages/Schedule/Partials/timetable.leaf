@@ -20,23 +20,36 @@
                   <tr>
                     <td class="text-center font-weight-bold">#date(data.scheduleEntry.startTime, "HH:mm") - #date(data.scheduleEntry.endTime, "HH:mm")</td>
 
-                  #if(data.scheduleEntry.entryType == "other") {
-                    <td class="">#(data.scheduleEntry.title)</td>
-                  } else {
-                    <td>
-                        <div class="row">
-                          <div class="col-sm-1">
-                            <div class="image">
-                              <img class="img-fluid" src="#(data.speaker.imageURL)" alt="#(data.speaker.name)">
-                            </div>
+                    #if(data.scheduleEntry.entryType == "other") {
+                      <td class="">#(data.scheduleEntry.title)</td>
+                    } else {
+                      <td>
+                        <div class="talk">
+                          <div class="avatars">
+                            #for(speaker in data.speakers) {
+                              <span class="avatar">
+                                <img src="#(speaker.imageURL)" alt="#(speaker.name)">
+                              </span>
+                            }
                           </div>
-                          <div class="col-sm-11">
-                            #(data.speaker.name) <br>
-                            <a href="/2019/speakers/#(data.speaker.slug)">#(data.talk.title)</a>
+                          <div class="talk-info">
+                            <ul class="speaker-list">
+                              #for(speaker in data.speakers) { <li>#(speaker.name)</li> }
+                            </ul>
+                            <br>
+                            <a
+                              href
+                              data-toggle="modal"
+                              data-target="#global-modal"
+                              data-title="#(data.talk.title)"
+                              data-description="#(data.talk.description)"
+                            >
+                              #(data.talk.title)
+                            </a>
                           </div>
                         </div>
-                    </td>
-                  }
+                      </td>
+                    }
 
                     <td>
                       #(data.room.title)
