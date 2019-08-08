@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  padding: 50px 0;
+  padding: 75px 0; /* Added 25px due to the "sales-banner" */
 }
 
 /* Icons (Feather) */
@@ -115,7 +115,7 @@ body {
 /* MARK: - Button */
 
 .btn-gradient {
-  background: linear-gradient(to right, #F88A36 , #FD2020) no-repeat;
+  background: linear-gradient(90deg, #F88A36 , #FD2020) no-repeat;
   color: #ffffff;
   border: none;
   border-radius: 6px;
@@ -128,12 +128,16 @@ body {
 /* MARK: - Sales Banner */
 
 a.sales-banner {
-  background: linear-gradient(to right, #F88A36 , #FD2020) no-repeat;
+  background: linear-gradient(90deg, #F88A36 , #FD2020) no-repeat;
   color: #ffffff;
   border: none;
-  text-align: center;
   text-transform: uppercase;
   display: block;
+  min-height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 a.sales-banner: hover {
