@@ -15,12 +15,13 @@
 }
 
 .schedule .panel table thead tr th {
-  background: transparent;
+  background: none;
+  background-color: transparent;
   border-color: inherit;
 }
 
 .schedule .panel table thead tr {
-  background: linear-gradient(to right, #F88A36 , #FD2020);
+  background: linear-gradient(90deg, #F88A36 , #FD2020);
 }
 
 .schedule .talk div {
