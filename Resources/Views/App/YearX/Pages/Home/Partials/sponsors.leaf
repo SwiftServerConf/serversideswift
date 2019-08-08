@@ -10,16 +10,20 @@
             <img src="/App/YearX/images/sponsors/nodes.png" alt="Nodes" class="h-80">
           </a>
           
-          <a href="https://www.skelpo.com" target="_blank">
-            <img src="/App/YearX/images/sponsors/skelpo.png" alt="Skelpo" class="h-80">
-          </a>
-          
           <a href="https://raywenderlich.com" target="_blank">
             <img src="/App/YearX/images/sponsors/ray_wenderlich.png" alt="Ray Wenderlich" class="h-80">
           </a>
           
+          <a href="https://www.skelpo.com" target="_blank">
+            <img src="/App/YearX/images/sponsors/skelpo.png" alt="Skelpo" class="h-80">
+          </a>
+          
           <a href="https://www.jetbrains.com/" target="_blank">
             <img src="/App/YearX/images/sponsors/jetbrains.png" alt="Jet Brains" class="h-80">
+          </a>
+          
+          <a href="https://jayway.com" target="_blank">
+            <img src="/App/YearX/images/sponsors/jayway.png" alt="Jayway" class="h-80">
           </a>
           
           <a href="https://vapor.codes/" target="_blank">
@@ -32,6 +36,10 @@
           
           <a href="https://workingcopy.app" target="_blank">
             <img src="/App/YearX/images/sponsors/working_copy.png" alt="Working Copy" class="h-80">
+          </a>
+          
+          <a href="https://www.womenwhocode.com/" target="_blank">
+            <img src="/App/YearX/images/sponsors/womenwhocode.png" alt="Women Who Code" class="h-80">
           </a>
           
         </div>

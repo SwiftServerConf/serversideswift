@@ -23,7 +23,7 @@
   data-toggle="modal"
   data-target="#global-modal"
   data-title="Hey, Listen!"
-  data-description="Hello! wake up Link!"
+  data-description="It's dangerous to go alone. Take this!"
 >
     Open modal with "Hey, Listen!"
 </button> -->

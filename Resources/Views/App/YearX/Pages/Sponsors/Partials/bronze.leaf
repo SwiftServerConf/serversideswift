@@ -21,7 +21,7 @@
         <div class="sponsor">
             <a href="https://www.jetbrains.com/" target="_blank"></a>
             <div class="image">
-                <img src="/App/YearX/images/sponsors/jetbrains.png" alt="Bronze">
+                <img src="/App/YearX/images/sponsors/jetbrains.png" alt="JetBrains">
             </div>
             <div class="description p-2">
                 <h4>JetBrains</h4>
@@ -32,13 +32,13 @@
 
 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
     <div class="bronze">
-        <div class="sponsor opacity-15">
-            <a href="mailto:sponsors@serversideswift.info"></a>
+        <div class="sponsor">
+            <a href="https://www.jayway.com/" target="_blank"></a>
             <div class="image">
-                <img src="/App/YearX/images/sponsor-levels/sponsor_bronze.png" alt="Bronze">
-                    </div>
+                <img src="/App/YearX/images/sponsors/jayway.png" alt="Jayway">
+            </div>
             <div class="description p-2">
-                <h4 class="f-gradient">FREE SPOT</h4>
+                <h4>Jayway</h4>
             </div>
         </div>
     </div>
