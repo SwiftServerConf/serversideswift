@@ -62,6 +62,6 @@
   <ul class="d-flex d-md-none">
     #get(links)
   </ul>
-  <a href="http://localhost:8080/2019/tickets" class="sales-banner">Ticket sales will be closing on September 30</a>
+  <a href="https://www.serversideswift.info/2019/tickets" class="sales-banner">Ticket sales will close on September 30!</a>
 </nav>
 
