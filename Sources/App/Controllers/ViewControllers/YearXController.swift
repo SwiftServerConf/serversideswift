@@ -14,6 +14,7 @@ struct YearXController: RouteCollection {
         router.get("speakers", String.parameter, use: speakerProfileHandler)
         router.get("years", use: yearsHandler)
         router.get("tickets", use: ticketsHandler)
+        router.get("reasonsToAttend", use: reasonsToAttendHandler)
     }
 
     func homepageHandler(_ req: Request) throws -> Future<View> {
@@ -104,7 +105,7 @@ struct YearXController: RouteCollection {
         return try req.view().render("App/YearX/Pages/FAQ/faq", faqContext)
     }
     
-    func reasonsToAttend(_ req: Request) throws -> Future<View> {
+    func reasonsToAttendHandler(_ req: Request) throws -> Future<View> {
         let reasonsToAttendContext = ReasonsToAttendContext()
         return try req.view().render("App/YearX/Pages/ReasonsToAttend/reasonsToAttend", reasonsToAttendContext)
     }
