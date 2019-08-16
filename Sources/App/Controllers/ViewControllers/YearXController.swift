@@ -103,6 +103,11 @@ struct YearXController: RouteCollection {
         let faqContext = FaqContext()
         return try req.view().render("App/YearX/Pages/FAQ/faq", faqContext)
     }
+    
+    func reasonsToAttend(_ req: Request) throws -> Future<View> {
+        let reasonsToAttendContext = ReasonsToAttendContext()
+        return try req.view().render("App/YearX/Pages/ReasonsToAttend/reasonsToAttend", reasonsToAttendContext)
+    }
 
     func codeOfConductHandler(_ req: Request) throws -> Future<View> {
         let cocContext = CodeOfConductContext()
@@ -215,6 +220,10 @@ struct SponsorsContext: Encodable {
 
 struct FaqContext: Encodable {
     let page = ["faq": true]
+}
+
+struct ReasonsToAttendContext: Encodable {
+    let page = ["reasonsToAttend": true]
 }
 
 struct CodeOfConductContext: Encodable {
