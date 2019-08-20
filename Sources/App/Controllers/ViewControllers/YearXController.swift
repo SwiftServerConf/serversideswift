@@ -14,6 +14,7 @@ struct YearXController: RouteCollection {
         router.get("speakers", String.parameter, use: speakerProfileHandler)
         router.get("years", use: yearsHandler)
         router.get("tickets", use: ticketsHandler)
+        router.get("reasonsToAttend", use: reasonsToAttendHandler)
     }
 
     func homepageHandler(_ req: Request) throws -> Future<View> {
@@ -102,6 +103,11 @@ struct YearXController: RouteCollection {
     func faqHandler(_ req: Request) throws -> Future<View> {
         let faqContext = FaqContext()
         return try req.view().render("App/YearX/Pages/FAQ/faq", faqContext)
+    }
+    
+    func reasonsToAttendHandler(_ req: Request) throws -> Future<View> {
+        let reasonsToAttendContext = ReasonsToAttendContext()
+        return try req.view().render("App/YearX/Pages/ReasonsToAttend/reasonsToAttend", reasonsToAttendContext)
     }
 
     func codeOfConductHandler(_ req: Request) throws -> Future<View> {
@@ -215,6 +221,10 @@ struct SponsorsContext: Encodable {
 
 struct FaqContext: Encodable {
     let page = ["faq": true]
+}
+
+struct ReasonsToAttendContext: Encodable {
+    let page = ["reasonsToAttend": true]
 }
 
 struct CodeOfConductContext: Encodable {

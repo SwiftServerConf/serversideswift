@@ -1,0 +1,57 @@
+#set("content") {
+  <div class="faq">
+      <div class="page-block no-height bg-blue text-white">
+        <div class="container">
+            <h1 class="text-center text-white">Reasons To Attend</h1>
+            <h4 class="text-center mb-5">Why should you attend ServerSide.swift 2019?</h4>
+
+            <div class="row">
+                <div class="col-xs-12 mb-4">
+                    <h3 class="h3">Engage with the community</h3>
+                    <p>ServerSide.swift is the only international conference dedicated to server-side Swift. The conference is an amazing opportunity to
+                    network and talk to people using Swift on the server! Make connections and talk about your experiences with like-minded people.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 mb-4">
+                    <h3 class="h3">Workshops from experts</h3>
+                    <p>We have a range of workshops on the 30th October from experts on their subject matters. Come to a workshop to get help on your projects
+                    or learn new technologies from the people creating them. Please note that a separate workshop ticket is required for the workshop days.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 mb-4">
+                    <h3 class="h3">Wide range of talks</h3>
+                    <p>Whether you're an expert on debugging Swift on Linux or you've never used Swift Package Manager you'll learn something at the conference. With
+                    beginner and advanced talks there's something for everyone.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 mb-4">
+                    <h3 class="h3">Learn from the best</h3>
+                    <p>We've organised an amazing lineup of <a href="/2019/speakers">speakers</a> who are all experts in their field. There isn't another
+                    conference with such concentrated server-side Swift knowledge anywhere in the world!</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 mb-4">
+                    <h3 class="h3">All major frameworks represented</h3>
+                    <p>Whether you use Kitura, Vapor or NIO, there will be attendees and speakers from those frameworks you can talk directly to!</p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+              <a href="/2019/tickets" class="btn btn-default btn-gradient">BUY A TICKET</a>
+            </div>
+        </div>
+    </div>
+  </div>
+}
+
+#set("isBlueBackground"){true}
+
+#embed("App/YearX/Layout/base")

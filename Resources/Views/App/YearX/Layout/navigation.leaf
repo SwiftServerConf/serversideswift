@@ -31,6 +31,10 @@
     <a href="/2019/faq">FAQ</a>
     <span class="underline"></span>
   </li>
+  <li class="#if(page.reasonsToAttend){active}">
+    <a href="/2019/reasonsToAttend">Why Attend?</a>
+    <span class="underline"></span>
+  </li>
   <li class="#if(page.about){active}">
     <a href="/2019/about">About</a>
     <span class="underline"></span>
@@ -48,13 +52,13 @@
         <img src="/App/YearX/images/layout/logo.png" alt="ServerSide.swift" />
       </a>
     </div>
-    
+
     <button class="hamburger hamburger--squeeze" type="button" onClick="toggleHamburger()">
       <span class="hamburger-box">
         <span class="hamburger-inner"></span>
       </span>
     </button>
-    
+
     <ul class="d-none d-md-flex">
       #get(links)
     </ul>
@@ -64,4 +68,3 @@
   </ul>
   <a href="https://www.serversideswift.info/2019/tickets" class="sales-banner">Ticket sales will close on September 30!</a>
 </nav>
-
