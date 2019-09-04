@@ -1,4 +1,5 @@
 <script>
+
   function toggleHamburger() {
     const button = document.querySelector('.hamburger');
     const nav = document.querySelector('.navigation');
