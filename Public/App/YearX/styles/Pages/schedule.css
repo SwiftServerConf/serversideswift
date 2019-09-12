@@ -5,6 +5,10 @@
   background-color: #ffffff;
 }
 
+.schedule .panel table td {
+  vertical-align: middle !important;
+}
+
 .schedule .panel .table .time-column {
   width: 150px;
   text-align: center;
