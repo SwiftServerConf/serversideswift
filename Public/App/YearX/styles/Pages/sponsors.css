@@ -115,18 +115,32 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 .sponsors .sponsor-list .bronze .sponsor {
     width: 140px;
     height: 140px;
 }
+
 .sponsors .sponsor-list .bronze .sponsor .image {
     width: 100px;
     height: 100px;
     text-align: center;
 }
+.sponsors .sponsor-list .bronze .sponsor .image.vertical {
+    width: 90%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+.sponsors .sponsor-list .bronze .sponsor .image.vertical img {
+    width: 100%;
+    height: auto;
+}
+
 .sponsors .sponsor-list .bronze .description {
     height: 40px;
 }
+
 .sponsors .sponsor-list .bronze h4 {
     font-size: 16px;
 }

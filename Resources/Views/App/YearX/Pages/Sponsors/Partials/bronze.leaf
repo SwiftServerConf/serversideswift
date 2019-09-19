@@ -46,13 +46,13 @@
 
 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
     <div class="bronze">
-        <div class="sponsor opacity-15">
-            <a href="mailto:sponsors@serversideswift.info"></a>
-            <div class="image">
-                <img src="/App/YearX/images/sponsor-levels/sponsor_bronze.png" alt="Bronze">
-                    </div>
+        <div class="sponsor">
+            <a href="https://www.macstadium.com/" target="_blank"></a>
+            <div class="image vertical">
+                <img src="/App/YearX/images/sponsors/mac_stadium.png" alt="MacStadium">
+            </div>
             <div class="description p-2">
-                <h4 class="f-gradient">FREE SPOT</h4>
+                <h4>MacStadium</h4>
             </div>
         </div>
     </div>
