@@ -56,6 +56,13 @@
 
             <div class="row">
                 <div class="col-xs-12 mb-4">
+                    <h3 class="h3">How do I apply for a diversity ticket?</h3>
+                    <p>If you come from a under-represented or less privileged group and would like to apply for a diversity ticket, please send us an <a href="mailto:info@serversideswift.info">email</a> with a few words about yourself and why you want to participate in the conference.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 mb-4">
                     <h3 class="h3">Do you have a Code of Conduct?</h3>
                     <p>Yes we do! Our Code of Conduct can be found <a href="/2019/code-of-conduct">here</a>.</p>
                 </div>
