@@ -101,7 +101,7 @@
     <script>
       mapkit.init({
         authorizationCallback: function(done) {
-          done('eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjlKODk1RkNDVDkifQ.eyJpc3MiOiJZV0xXMjNMVDZHIiwiaWF0IjoxNTMxODU5NDY0LCJleHAiOjQwNzM1NjIwMzN9.n5nR7D9GDZAYiTrVCjYNtv61IlLI2x9zm66zPNVxhVgGjY8vmLMKjpcAzWJhkdC6_l3tDvw-GwM7JlO4TkoGGA');
+          done('eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjkyQzhSMzNBNlAifQ.eyJpc3MiOiJZV0xXMjNMVDZHIiwiaWF0IjoxNTY5NTEwNTM0LCJleHAiOjE2NDA5MDg4MDB9.RNYFT7rFV2lVmMftDDFVf0J6wvhX-ZeHX7brC5w8LB8IWWtMRinWFor7V4L7l3bvrYUtRECc_q-S5RDO-yaYfw');
         \}
       \});
 
