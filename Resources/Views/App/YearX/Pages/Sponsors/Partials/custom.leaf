@@ -20,8 +20,8 @@
     <div class="custom">
         <div class="sponsor">
             <a href="http://stickermule.com/supports/serverside19-sponsorship" target="_blank"></a>
-            <div class="image">
-                <img src="/App/YearX/images/sponsors/stickermule.png" alt="Stickermule">
+            <div class="image vertical">
+                <img src="/App/YearX/images/sponsors/stickermule_with_text.png" alt="Stickermule">
             </div>
             <div class="description p-2">
                 <h4>stickermule</h4>

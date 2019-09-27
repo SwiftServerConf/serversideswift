@@ -126,13 +126,13 @@
     height: 100px;
     text-align: center;
 }
-.sponsors .sponsor-list .bronze .sponsor .image.vertical {
+.sponsors .sponsor-list .sponsor .image.vertical {
     width: 90%;
     padding: 0;
     display: flex;
     align-items: center;
 }
-.sponsors .sponsor-list .bronze .sponsor .image.vertical img {
+.sponsors .sponsor-list .sponsor .image.vertical img {
     width: 100%;
     height: auto;
 }
