@@ -60,9 +60,9 @@ var x = setInterval(
     const distance = countDownDate - now;
     
     // Time calculations for days, hours, minutes and seconds
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(distance / (1000 * 60 * 60));
     
-    const text = "TICKET SALES WILL CLOSE IN<b>: " + days + " days</b>";
+    const text = "TICKET SALES WILL CLOSE IN<b>: " + hours + " Hours</b>";
                     
     // Output the result in an element with id="demo"
     document.getElementById("sales-banner").innerHTML = text;
