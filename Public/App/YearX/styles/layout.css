@@ -4,7 +4,8 @@ html {
 }
 
 body {
-  padding: 75px 0; /* Added 25px due to the "sales-banner" */
+  /* Add 25px when using the "sales-banner" */
+  padding: 50px 0;
 }
 
 /* Icons (Feather) */
