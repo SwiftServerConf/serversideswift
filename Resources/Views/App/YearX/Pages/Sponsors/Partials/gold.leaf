@@ -5,7 +5,7 @@
 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
     <div class="gold">
         <div class="sponsor">
-            <a href="https://styleshoots.com/"></a>
+            <a href="https://styleshoots.com/" target="_blank""></a>
             <div class="image">
                 <img src="/App/YearX/images/sponsors/styleshoots.png" alt="StyleShoots">
             </div>

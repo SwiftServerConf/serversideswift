@@ -66,6 +66,7 @@
   <ul class="d-flex d-md-none">
     #get(links)
   </ul>
+  <!-- TICKET SALES BANNER
   <a
     href="https://www.serversideswift.info/2019/tickets"
     class="sales-banner"
@@ -73,4 +74,5 @@
   >
     Get Your Ticket!
   </a>
+  -->
 </nav>
