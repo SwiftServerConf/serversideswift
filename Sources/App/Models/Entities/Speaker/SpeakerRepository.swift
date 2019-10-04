@@ -4,6 +4,7 @@ import Foundation
 
 protocol SpeakerRepository: ServiceType {
     func find(id: Int, enabled: Bool) -> Future<Speaker?>
+    func find(slug: String, event: Event, enabled: Bool) throws -> EventLoopFuture<Speaker?>
     func find(scheduleEntry: ScheduleEntry, enabled: Bool) throws -> EventLoopFuture<([Speaker], Talk)?>
     func all(enabled: Bool) -> Future<[Speaker]>
     func all(talk: Talk, enabled: Bool) -> Future<[Speaker]>
@@ -26,6 +27,23 @@ final class MySQLSpeakerRepository: SpeakerRepository {
                 .query(on: conn)
                 .filter(Speaker.idKey == id)
                 .filter(\.enabled == enabled)
+                .first()
+        }
+    }
+
+    func find(slug: String, event: Event, enabled: Bool = true) throws -> EventLoopFuture<Speaker?> {
+        guard let id = event.id else { throw Abort(.badRequest) }
+
+        return db.withConnection { conn in
+            return Speaker
+                .query(on: conn)
+                .join(\TalkSpeaker.speakerID, to: \Speaker.id)
+                .join(\Talk.id, to: \TalkSpeaker.talkID)
+                .join(\ScheduleEntry.talkID, to: \TalkSpeaker.talkID)
+                .join(\Day.id, to: \ScheduleEntry.dayID)
+                .filter(\Day.eventID == id)
+                .filter(\Speaker.slug == slug)
+                .filter(\Speaker.enabled == enabled)
                 .first()
         }
     }

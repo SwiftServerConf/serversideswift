@@ -119,18 +119,15 @@ struct YearXController: RouteCollection {
         let eventRepo = try req.make(EventRepository.self)
         let talkRepo = try req.make(TalkRepository.self)
         let roomRepo = try req.make(RoomRepository.self)
-      
-        // Closure to serve view with just speaker if no event or talk is given yet.
-        let viewWithNoTalk = { (speaker: Speaker) -> Future<View> in
-            let context = SpeakerProfileContext(speaker: speaker, talksWithScheduleEntries: [])
-            return try req.view().render("App/YearX/Pages/Speakers/profile", context)
-        }
-      
+        let speakerRepo = try req.make(SpeakerRepository.self)
+
+        let eventSlug = "2019"
         let speakerSlug = try req.parameters.next(String.self)
-        return try Speaker.resolveParameter(speakerSlug, on: req)
-            .and(eventRepo.find(slug: "2019", enabled: true))
-            .flatMap { speaker, event in
-                guard let event = event else { return try viewWithNoTalk(speaker) }
+
+        return eventRepo.find(slug: eventSlug, enabled: true).flatMap { event in
+            guard let event = event else { throw Abort(.notFound) }
+            return try speakerRepo.find(slug: speakerSlug, event: event, enabled: true).flatMap { speaker in
+                guard let speaker = speaker else { throw Abort(.notFound) }
                 return try talkRepo
                     .all(speaker: speaker, event: event, enabled: true)
                     .flatMap(to: [SpeakerProfileContext.TalkAndScheduleEntryAndRoom].self) { talks in
@@ -156,6 +153,7 @@ struct YearXController: RouteCollection {
                         return try req.view().render("App/YearX/Pages/Speakers/profile", context)
                     }
             }
+        }
     }
     
     func yearsHandler(_ req: Request) throws -> Future<View> {
