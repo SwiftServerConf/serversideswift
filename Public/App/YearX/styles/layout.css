@@ -33,6 +33,11 @@ body {
 
 /* MARK: - Font */
 
+@font-face {
+  font-family: 'Monofur';
+  src: url('monof55.ttf')  format('truetype');
+}
+
 .ff-monofur {
   font-family: 'Monofur', sans-serif, Arial !important;
 }
