@@ -7,9 +7,18 @@
 
             <img src="/images/book.png">
 
-            #if(winningNumber) {
-              <h2>The Winner Is <span style="color: #fa532a; font-weight: bold; font-size: 30px;" class="odometer" id="odometer">111</span>!</h2>
-              <div id="winning-nummber-info" data-winning-number="#(winningNumber)"></div>
+            <h2>The Winners Are:</h2>
+            #if(winningNumbers) {
+              <h2><span style="color: #fa532a; font-weight: bold; font-size: 30px;" class="odometer" id="odometer-0">111</span></h2>
+              <div id="winning-nummber-info-0" data-winning-number="#(winningNumber0)"></div>
+              <h2><span style="color: #fa532a; font-weight: bold; font-size: 30px;" class="odometer" id="odometer-1">111</span></h2>
+              <div id="winning-nummber-info-1" data-winning-number="#(winningNumber1)"></div>
+              <h2><span style="color: #fa532a; font-weight: bold; font-size: 30px;" class="odometer" id="odometer-2">111</span></h2>
+              <div id="winning-nummber-info-2" data-winning-number="#(winningNumber2)"></div>
+              <h2><span style="color: #fa532a; font-weight: bold; font-size: 30px;" class="odometer" id="odometer-3">111</span></h2>
+              <div id="winning-nummber-info-3" data-winning-number="#(winningNumber3)"></div>
+              <h2><span style="color: #fa532a; font-weight: bold; font-size: 30px;" class="odometer" id="odometer-4">111</span></h2>
+              <div id="winning-nummber-info-4" data-winning-number="#(winningNumber4)"></div>
             }
 
             <form method="post">
@@ -19,7 +28,7 @@
         </div>
     </div>
 
-    #if(winningNumber) {
+    #if(winningNumbers) {
       <script src="/scripts/raffle.js"></script>
       <script src="/scripts/odometer.js"></script>
     }
