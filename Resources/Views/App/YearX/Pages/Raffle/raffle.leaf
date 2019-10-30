@@ -1,0 +1,28 @@
+#set("content") {
+
+    <div class="container">
+        <div class="first-content signup-form" style="text-align: center; padding-top: 60px; margin-bottom: 30px;">
+
+            <h1>The Book Raffle!</h1>
+
+            <img src="/images/book.png">
+
+            #if(winningNumber) {
+              <h2>The Winner Is <span style="color: #fa532a; font-weight: bold; font-size: 30px;" class="odometer" id="odometer">111</span>!</h2>
+              <div id="winning-nummber-info" data-winning-number="#(winningNumber)"></div>
+            }
+
+            <form method="post">
+              <button type="submit" class="btn btn-default submit">Draw</button>
+            </form>
+
+        </div>
+    </div>
+
+    #if(winningNumber) {
+      <script src="/scripts/raffle.js"></script>
+      <script src="/scripts/odometer.js"></script>
+    }
+}
+
+#embed("App/YearX/Layout/base")

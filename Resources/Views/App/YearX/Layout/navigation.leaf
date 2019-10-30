@@ -39,10 +39,15 @@
     <a href="/2019/about">About</a>
     <span class="underline"></span>
   </li>
+  <li class="#if(page.raffle){active}">
+    <a href="/2019/raffle">Raffle</a>
+    <span class="underline"></span>
+  </li>
   <li class="buy-ticket #if(page.tickets){active}">
     <a href="/2019/tickets">Buy Tickets</a>
     <span class="underline"></span>
   </li>
+
 }
 
 <nav class="navigation">

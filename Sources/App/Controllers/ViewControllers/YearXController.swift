@@ -1,7 +1,7 @@
 import Vapor
 import Fluent
 
-struct YearXController: RouteCollection {
+class YearXController: RouteCollection {
     func boot(router: Router) throws {
         router.get(use: homepageHandler)
         router.get("speakers", use: speakersHandler)
@@ -10,12 +10,16 @@ struct YearXController: RouteCollection {
         router.get("sponsors", use: sponsorsHandler)
         router.get("faq", use: faqHandler)
         router.get("about", use: aboutHandler)
+        router.get("raffle", use: raffleHandler)
+        router.post("raffle", use: rafflePostHandler)
         router.get("code-of-conduct", use: codeOfConductHandler)
         router.get("speakers", String.parameter, use: speakerProfileHandler)
         router.get("years", use: yearsHandler)
         router.get("tickets", use: ticketsHandler)
         router.get("reasonsToAttend", use: reasonsToAttendHandler)
     }
+    
+    var usedNumbers = [Int]()
 
     func homepageHandler(_ req: Request) throws -> Future<View> {
         let homeContext = HomeContext()
@@ -25,6 +29,22 @@ struct YearXController: RouteCollection {
     func aboutHandler(_ req: Request) throws -> Future<View> {
         let aboutContext = AboutContext()
         return try req.view().render("App/YearX/Pages/About/about", aboutContext)
+    }
+    
+    func raffleHandler(_ req: Request) throws -> Future<View> {
+        let raffleContext = RaffleContext(usedNumbers: usedNumbers, winningNumber: nil)
+        return try req.view().render("App/YearX/Pages/Raffle/raffle", raffleContext)
+    }
+    
+    func rafflePostHandler(_ req: Request) throws -> Future<View> {
+        var randomNumber = Int.random(in: 0...110)
+        while self.usedNumbers.contains(randomNumber) {
+            randomNumber = Int.random(in: 0...110)
+            
+        }
+        self.usedNumbers.append(randomNumber)
+        let raffleContext = RaffleContext(usedNumbers: self.usedNumbers, winningNumber: randomNumber)
+        return try req.view().render("App/YearX/Pages/Raffle/raffle", raffleContext)
     }
   
     func speakersHandler(_ req: Request) throws -> Future<View> {
@@ -173,6 +193,12 @@ struct HomeContext: Encodable {
 
 struct AboutContext: Encodable {
     let page = ["about": true]
+}
+
+struct RaffleContext: Encodable {
+    let page = ["raffle": true]
+    let usedNumbers: [Int]
+    let winningNumber: Int?
 }
 
 struct SpeakerContext: Encodable {

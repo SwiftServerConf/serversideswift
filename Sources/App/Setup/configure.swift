@@ -33,15 +33,15 @@ func configure(
 
     // MARK: Databases
 
-    var databasesConfig = DatabasesConfig()
-    try databases(config: &databasesConfig)
-    services.register(databasesConfig)
-
-    // MARK: Migrations
-
-    var migrationConfig = MigrationConfig()
-    try migrate(migrations: &migrationConfig)
-    services.register(migrationConfig)
+//    var databasesConfig = DatabasesConfig()
+//    try databases(config: &databasesConfig)
+//    services.register(databasesConfig)
+//
+//    // MARK: Migrations
+//
+//    var migrationConfig = MigrationConfig()
+//    try migrate(migrations: &migrationConfig)
+//    services.register(migrationConfig)
 
     // MARK: Repositories
 
@@ -62,7 +62,8 @@ func configure(
     // MARK: Configure
 
     // use Redis for caching
-    config.prefer(DatabaseKeyedCache<ConfiguredDatabase<RedisDatabase>>.self, for: KeyedCache.self)
+//    config.prefer(DatabaseKeyedCache<ConfiguredDatabase<RedisDatabase>>.self, for: KeyedCache.self)
+    config.prefer(MemoryKeyedCache.self, for: KeyedCache.self)
 
     // set default pagination settings
     services.register(OffsetPaginatorConfig.current)

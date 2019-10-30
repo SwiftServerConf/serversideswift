@@ -14,7 +14,7 @@ func routes(_ router: Router, _ container: Container) throws {
 
     // MARK: - Default routes
 
-    try router.useAdminPanelRoutes(AdminPanelUser.self, on: container)
+//    try router.useAdminPanelRoutes(AdminPanelUser.self, on: container)
 
     // MARK: - Project specific routes
 
