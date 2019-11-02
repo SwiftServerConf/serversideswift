@@ -19,7 +19,7 @@ class YearXController: RouteCollection {
         router.get("reasonsToAttend", use: reasonsToAttendHandler)
     }
     
-    var usedNumbers = [Int]()
+    var usedNumbers: [Int] = [16, 92, 37, 64, 59]
     
     func homepageHandler(_ req: Request) throws -> Future<View> {
         let homeContext = HomeContext()
@@ -39,9 +39,9 @@ class YearXController: RouteCollection {
     func rafflePostHandler(_ req: Request) throws -> Future<View> {
         var randomNumbers = [Int]()
         for _ in 1...5 {
-            var randomNumber = Int.random(in: 0...110)
+            var randomNumber = Int.random(in: 0...112)
             while self.usedNumbers.contains(randomNumber) {
-                randomNumber = Int.random(in: 0...110)
+                randomNumber = Int.random(in: 0...112)
                 
             }
             self.usedNumbers.append(randomNumber)

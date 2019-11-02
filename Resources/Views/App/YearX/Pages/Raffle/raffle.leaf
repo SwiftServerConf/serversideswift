@@ -5,19 +5,19 @@
 
             <h1>The Book Raffle!</h1>
 
-            <img src="/images/book.png">
+            <img src="/images/book-kitura.png" style="height: 400px;">
 
             <h2>The Winners Are:</h2>
             #if(winningNumbers) {
-              <h2><span style="color: #fa532a; font-weight: bold; font-size: 30px;" class="odometer" id="odometer-0">111</span></h2>
+              <h2><span style="color: #fa532a; font-weight: bold; font-size: 30px;" class="odometer" id="odometer-0">112</span></h2>
               <div id="winning-nummber-info-0" data-winning-number="#(winningNumber0)"></div>
-              <h2><span style="color: #fa532a; font-weight: bold; font-size: 30px;" class="odometer" id="odometer-1">111</span></h2>
+              <h2><span style="color: #fa532a; font-weight: bold; font-size: 30px;" class="odometer" id="odometer-1">112</span></h2>
               <div id="winning-nummber-info-1" data-winning-number="#(winningNumber1)"></div>
-              <h2><span style="color: #fa532a; font-weight: bold; font-size: 30px;" class="odometer" id="odometer-2">111</span></h2>
+              <h2><span style="color: #fa532a; font-weight: bold; font-size: 30px;" class="odometer" id="odometer-2">112</span></h2>
               <div id="winning-nummber-info-2" data-winning-number="#(winningNumber2)"></div>
-              <h2><span style="color: #fa532a; font-weight: bold; font-size: 30px;" class="odometer" id="odometer-3">111</span></h2>
+              <h2><span style="color: #fa532a; font-weight: bold; font-size: 30px;" class="odometer" id="odometer-3">112</span></h2>
               <div id="winning-nummber-info-3" data-winning-number="#(winningNumber3)"></div>
-              <h2><span style="color: #fa532a; font-weight: bold; font-size: 30px;" class="odometer" id="odometer-4">111</span></h2>
+              <h2><span style="color: #fa532a; font-weight: bold; font-size: 30px;" class="odometer" id="odometer-4">112</span></h2>
               <div id="winning-nummber-info-4" data-winning-number="#(winningNumber4)"></div>
             }
 
