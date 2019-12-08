@@ -40,6 +40,13 @@
                   <hr/>
                     #for(data in talksWithScheduleEntries) {
                         <h3>#capitalize(data.talk.talkType) details</h3>
+
+                        #if(data.talk.videoReference) {
+                            <div class='embed-container video'>
+                                <iframe src="https://www.youtube.com/embed/#(data.talk.videoReference)" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            </div>
+                        }
+
                         #if(data.talk.title) {
                             <div class="section">
                                 <h4 class="f-gradient"> Title </h4>
