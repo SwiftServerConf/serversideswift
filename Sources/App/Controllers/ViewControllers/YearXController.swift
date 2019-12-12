@@ -4,6 +4,7 @@ import Fluent
 struct YearXController: RouteCollection {
     func boot(router: Router) throws {
         router.get(use: homepageHandler)
+        router.get("videos", use: videosHandler)
         router.get("speakers", use: speakersHandler)
         router.get("schedule", use: scheduleHandler)
         router.get("location", use: locationHandler)
@@ -21,7 +22,28 @@ struct YearXController: RouteCollection {
         let homeContext = HomeContext()
         return try req.view().render("App/YearX/Pages/Home/home", homeContext)
     }
-  
+
+    func videosHandler(_ req: Request) throws -> Future<View> {
+        let eventRepo = try req.make(EventRepository.self)
+        let talkRepo = try req.make(TalkRepository.self)
+
+        return eventRepo
+            .find(slug: "2019", enabled: true)
+            .flatMap(to: [(Talk, [Speaker])].self) { event in
+                guard let event = event else { throw Abort(.internalServerError) }
+                return try talkRepo.all(event: event, enabled: true)
+            }
+            .map(to: [VideosContext.SpeakersAndTalk].self) { talksAndSpeakers in
+                return talksAndSpeakers.map { talkAndSpeakers in
+                    VideosContext.SpeakersAndTalk(speakers: talkAndSpeakers.1, talk: talkAndSpeakers.0)
+                }
+            }
+            .flatMap { speakers in
+                let context = VideosContext(videosList: speakers)
+                return try req.view().render("App/YearX/Pages/Videos/videos", context)
+            }
+    }
+
     func aboutHandler(_ req: Request) throws -> Future<View> {
         let aboutContext = AboutContext()
         return try req.view().render("App/YearX/Pages/About/about", aboutContext)
@@ -169,6 +191,16 @@ struct YearXController: RouteCollection {
 
 struct HomeContext: Encodable {
     let page = ["home": true]
+}
+
+struct VideosContext: Encodable {
+    struct SpeakersAndTalk: Encodable {
+        let speakers: [Speaker]
+        let talk: Talk?
+    }
+
+    let page = ["videos": true]
+    let videosList: [SpeakersAndTalk]
 }
 
 struct AboutContext: Encodable {

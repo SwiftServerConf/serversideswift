@@ -136,9 +136,12 @@ final class MySQLSpeakerRepository: SpeakerRepository {
 extension MySQLSpeakerRepository {
     static let serviceSupports: [Any.Type] = [SpeakerRepository.self]
 
-    static func makeService(for worker: Container) throws -> Self {
+    static func makeService(for worker: Container) throws -> MySQLSpeakerRepository {
         let conn = try worker.connectionPool(to: .mysql)
-        return .init(conn, talkRepository: MySQLTalkRepository.init(conn))
+        let talkRepository = MySQLTalkRepository.init(conn, speakerRepository: nil)
+        let speakerRepository = MySQLSpeakerRepository(conn, talkRepository: talkRepository)
+        talkRepository.speakerRepository = speakerRepository
+        return speakerRepository
     }
 }
 
