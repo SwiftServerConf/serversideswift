@@ -3,10 +3,10 @@
     <a href="/2019/">Home</a>
     <span class="underline"></span>
   </li>
-<!--   <li class="#if(page.videos){active}">
+  <li class="#if(page.videos){active}">
     <a href="/2019/videos">Videos</a>
     <span class="underline"></span>
-  </li> -->
+  </li>
 <!--   <li class="#if(page.photos){active}">
     <a href="/2019/photos">Photos</a>
     <span class="underline"></span>
@@ -40,7 +40,7 @@
     <span class="underline"></span>
   </li>
   <li class="buy-ticket #if(page.tickets){active}">
-    <a href="/2019/tickets">Buy Tickets</a>
+    <a href="/2019/tickets"><strike>Buy Tickets</strike></a>
     <span class="underline"></span>
   </li>
 }
