@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/nodes-vapor/admin-panel.git",
         "state": {
           "branch": null,
-          "revision": "a7a7d11528b7015c0ee76c5451a82830bd5af898",
-          "version": "2.0.0-rc.5"
+          "revision": "ffa792b1a4f6bc5328430ccf224a5a4fda436932",
+          "version": "2.0.0-rc7"
         }
       },
       {
@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/nodes-vapor/bootstrap.git",
         "state": {
           "branch": null,
-          "revision": "ecc1ee69fef4459bfd8886ffb1c399576fc80554",
-          "version": "4.0.0-rc.3"
+          "revision": "9e15935de2850cad59eeb7ea7e16153d5623e48a",
+          "version": "4.0.0"
         }
       },
       {
@@ -33,8 +33,8 @@
         "repositoryURL": "https://github.com/nodes-vapor/bugsnag.git",
         "state": {
           "branch": null,
-          "revision": "17949ac4b2e65a66629f6e530b3cd5372d760cc5",
-          "version": "3.0.0-rc.3"
+          "revision": "663a84f03240cbad8e0b422d284ca048a03606da",
+          "version": "3.1.0"
         }
       },
       {
@@ -51,8 +51,8 @@
         "repositoryURL": "https://github.com/vapor/core.git",
         "state": {
           "branch": null,
-          "revision": "c64f63cb21631010952f7abfef719d376ab6a441",
-          "version": "3.9.1"
+          "revision": "10d33362a47fab03a067e78fb0791341d9c634fa",
+          "version": "3.9.3"
         }
       },
       {
@@ -78,8 +78,8 @@
         "repositoryURL": "https://github.com/nodes-vapor/flash.git",
         "state": {
           "branch": null,
-          "revision": "b9fb42ab0699c806cc06639c0d7d4745b68fc4c2",
-          "version": "5.0.0-rc.2"
+          "revision": "1521ffe89add79c5afb3dc72c3ccdc063bc9830c",
+          "version": "5.0.0"
         }
       },
       {
@@ -87,8 +87,8 @@
         "repositoryURL": "https://github.com/vapor/fluent.git",
         "state": {
           "branch": null,
-          "revision": "b915c321c6f9e83743ee5efa35a30895e1b02e51",
-          "version": "3.2.0"
+          "revision": "783819d8838d15e1a05b459aa0fd1bde1e37ac26",
+          "version": "3.2.1"
         }
       },
       {
@@ -96,8 +96,8 @@
         "repositoryURL": "https://github.com/vapor/fluent-mysql.git",
         "state": {
           "branch": null,
-          "revision": "2e2f6ea6a97d0b352cf55e6ec289dc1276a6b31a",
-          "version": "3.0.1"
+          "revision": "b7b579307e32b479555e05be2ca8c3b3b7c4151a",
+          "version": "3.1.0"
         }
       },
       {
@@ -114,8 +114,8 @@
         "repositoryURL": "https://github.com/vapor/http.git",
         "state": {
           "branch": null,
-          "revision": "3808ed0401379b6e9f4a053f03090ea9d658caa9",
-          "version": "3.2.1"
+          "revision": "fba1329cd430e2f9a3f995b317b04f268d8b2978",
+          "version": "3.3.2"
         }
       },
       {
@@ -123,8 +123,8 @@
         "repositoryURL": "https://github.com/vapor/jwt.git",
         "state": {
           "branch": null,
-          "revision": "2e225c722bf26407c1c4bd11d341e48759f46095",
-          "version": "3.0.0"
+          "revision": "4265f12b3f2585b8f5792ba6078c2cda0e4043a1",
+          "version": "3.1.1"
         }
       },
       {
@@ -141,8 +141,8 @@
         "repositoryURL": "https://github.com/vapor/multipart.git",
         "state": {
           "branch": null,
-          "revision": "f919a01c4d10a281d6236a21b0b1d1759a72b8eb",
-          "version": "3.0.4"
+          "revision": "f063180d0b84832accd33194e06ed3c41f8609ac",
+          "version": "3.1.1"
         }
       },
       {
@@ -150,8 +150,8 @@
         "repositoryURL": "https://github.com/vapor/mysql.git",
         "state": {
           "branch": null,
-          "revision": "03f97974235bdc7259fc013e0feb963fd322372e",
-          "version": "3.2.5"
+          "revision": "97e9811b0b5d43d625bf5064032fe7b3b17a15f2",
+          "version": "3.3.1"
         }
       },
       {
@@ -159,8 +159,8 @@
         "repositoryURL": "https://github.com/nodes-vapor/paginator.git",
         "state": {
           "branch": null,
-          "revision": "34fc03d23f31d02b7de398e6984379f2fcf2f389",
-          "version": "3.3.3"
+          "revision": "1e3394ec3cf8bd71ee6f7d9b116185e921213d21",
+          "version": "3.3.6"
         }
       },
       {
@@ -168,8 +168,8 @@
         "repositoryURL": "https://github.com/vapor/redis.git",
         "state": {
           "branch": null,
-          "revision": "e54d03380405e22e77b71767a40d5c2d3f1e8767",
-          "version": "3.3.1"
+          "revision": "b6c0c98d2219f550ccf23c4bb8f8b14d75356bc6",
+          "version": "3.4.0"
         }
       },
       {
@@ -177,8 +177,8 @@
         "repositoryURL": "https://github.com/nodes-vapor/reset.git",
         "state": {
           "branch": null,
-          "revision": "3b50759f1a56bb5d42c268ac695d434ec4cc67ba",
-          "version": "1.0.0-rc.5"
+          "revision": "834cf253f6785b12a32b38c8c221fedde8e7995c",
+          "version": "1.0.0"
         }
       },
       {
@@ -186,8 +186,8 @@
         "repositoryURL": "https://github.com/vapor/routing.git",
         "state": {
           "branch": null,
-          "revision": "626190ddd2bd9f967743b60ba6adaf90bbd2651c",
-          "version": "3.0.2"
+          "revision": "d76f339c9716785e5079af9d7075d28ff7da3d92",
+          "version": "3.1.0"
         }
       },
       {
@@ -222,8 +222,8 @@
         "repositoryURL": "https://github.com/nodes-vapor/storage.git",
         "state": {
           "branch": null,
-          "revision": "8c728f822ed5869a02f66ef6d2fc90ea65aafcd7",
-          "version": "1.0.0-beta.6"
+          "revision": "702ee1ffa8ec5b03e5ae263d9a0511a6de6b3423",
+          "version": "1.0.0"
         }
       },
       {
@@ -231,8 +231,8 @@
         "repositoryURL": "https://github.com/nodes-vapor/submissions.git",
         "state": {
           "branch": null,
-          "revision": "7d0c69e7889f46afc401bf7be59fab31ee0e6fb8",
-          "version": "2.0.0-rc.7"
+          "revision": "fad5fc92b9185c08c5be60c168a4ab4e761dc528",
+          "version": "2.0.0"
         }
       },
       {
@@ -240,8 +240,8 @@
         "repositoryURL": "https://github.com/nodes-vapor/sugar.git",
         "state": {
           "branch": null,
-          "revision": "05d19dd4d8190a2341eff4b8acf3f7e332bc6b2a",
-          "version": "4.0.0-rc.5"
+          "revision": "341b836b567c8e87368facd475f592a3231ed289",
+          "version": "4.0.0"
         }
       },
       {
@@ -249,8 +249,8 @@
         "repositoryURL": "https://github.com/apple/swift-nio.git",
         "state": {
           "branch": null,
-          "revision": "ba7970fe396e8198b84c6c1b44b38a1d4e2eb6bd",
-          "version": "1.14.1"
+          "revision": "8da5c5a4e6c5084c296b9f39dc54f00be146e0fa",
+          "version": "1.14.2"
         }
       },
       {
@@ -294,8 +294,8 @@
         "repositoryURL": "https://github.com/vapor/url-encoded-form.git",
         "state": {
           "branch": null,
-          "revision": "82d8d63bdb76b6dd8febe916c639ab8608dbbaed",
-          "version": "1.0.6"
+          "revision": "20f68fbe7fac006d4d0617ea4edcba033227359e",
+          "version": "1.1.0"
         }
       },
       {
@@ -312,8 +312,8 @@
         "repositoryURL": "https://github.com/vapor/vapor.git",
         "state": {
           "branch": null,
-          "revision": "c86ada59b31c69f08a6abd4f776537cba48d5df6",
-          "version": "3.3.0"
+          "revision": "642f3d4d1f0eafad651c85524d0d1c698b55399f",
+          "version": "3.3.3"
         }
       },
       {
@@ -321,8 +321,8 @@
         "repositoryURL": "https://github.com/twof/VaporMailgunService.git",
         "state": {
           "branch": null,
-          "revision": "f9a86d68fd5366acdf3d1785c9b37ae218506a3e",
-          "version": "1.7.0"
+          "revision": "9c41e744bced6f2f854bd3632333d57d6db46d51",
+          "version": "1.8.1"
         }
       },
       {
