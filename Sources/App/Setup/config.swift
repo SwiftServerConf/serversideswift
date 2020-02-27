@@ -3,7 +3,6 @@ import Bugsnag
 import FluentMySQL
 import Leaf
 import Paginator
-import Redis
 import Reset
 import Sugar
 import Vapor
@@ -103,29 +102,6 @@ extension ProjectConfig {
                 subject: "Set Password"
             )
         )
-    }
-}
-
-extension RedisClientConfig {
-    static var current: RedisClientConfig {
-        guard
-            let urlString = env(EnvironmentKey.Redis.url),
-            let url = URL(string: urlString)
-        else {
-            var components = URLComponents()
-            components.host = env(EnvironmentKey.Redis.hostname, "127.0.0.1")
-            components.port = 6379
-            components.scheme = "redis"
-            components.path = "/" + env(EnvironmentKey.Redis.database, "0")
-
-            if let url = components.url {
-                return .init(url: url)
-            } else {
-                return .init()
-            }
-        }
-
-        return RedisClientConfig(url: url)
     }
 }
 
