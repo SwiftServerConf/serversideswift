@@ -12,12 +12,6 @@ enum EnvironmentKey {
         static let database = "DATABASE_DB"
     }
 
-    enum Redis {
-        static let url = "REDIS_URL"
-        static let hostname = "REDIS_HOSTNAME"
-        static let database = "REDIS_DATABASE"
-    }
-
     enum Mailgun {
         static let apiKey = "MAILGUN_PASSWORD"
         static let domain = "MAILGUN_DOMAIN"

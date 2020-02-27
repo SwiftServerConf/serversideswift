@@ -2,7 +2,6 @@ import AdminPanel
 import FluentMySQL
 import Leaf
 import Paginator
-import Redis
 import Storage
 import Sugar
 import Vapor
@@ -61,8 +60,7 @@ func configure(
 
     // MARK: Configure
 
-    // use Redis for caching
-    config.prefer(DatabaseKeyedCache<ConfiguredDatabase<RedisDatabase>>.self, for: KeyedCache.self)
+    config.prefer(MemoryKeyedCache.self, for: KeyedCache.self)
 
     // set default pagination settings
     services.register(OffsetPaginatorConfig.current)

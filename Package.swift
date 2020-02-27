@@ -6,7 +6,6 @@ let package = Package(
     dependencies: [
         // Vapor
         .package(url: "https://github.com/vapor/fluent-mysql.git", from: "3.0.0"),
-        .package(url: "https://github.com/vapor/redis.git", from: "3.0.0"),
         .package(url: "https://github.com/vapor/vapor.git", from: "3.0.0"),
 
         // Nodes
@@ -27,7 +26,6 @@ let package = Package(
             "FluentMySQL",
             "Mailgun",
             "Paginator",
-            "Redis",
             "Storage",
             "Submissions",
             "Sugar",

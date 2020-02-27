@@ -3,7 +3,6 @@ import Bugsnag
 import FluentMySQL
 import Leaf
 import Mailgun
-import Redis
 import Reset
 import Sugar
 import Vapor
@@ -17,14 +16,6 @@ func setUpProviders(
 
     try services.register(FluentMySQLProvider())
     try services.register(LeafProvider())
-    try services.register(RedisProvider())
-    services.register(RedisClientConfig.current)
-    services.register(RedisClientFactory())
-    services.register(
-        KeyedCache.self
-    ) { container -> DatabaseKeyedCache<ConfiguredDatabase<RedisDatabase>> in
-        try container.keyedCache(for: .redis)
-    }
 
     // Admin Panel
 
