@@ -28,7 +28,7 @@
                 },
                 {
                     "valueFrom": "arn:aws:secretsmanager:eu-west-1:478978960893:secret:sss-conf/prod/db-user-5aP93g",
-                    "name": "DATBASE_USER"
+                    "name": "DATABASE_USER"
                 },
                 {
                     "valueFrom": "arn:aws:secretsmanager:eu-west-1:478978960893:secret:sss-conf/prod/db-password-mPJsp9",
