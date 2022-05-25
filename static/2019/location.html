@@ -1,0 +1,549 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title> ServerSide.swift </title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/App/YearX/images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/App/YearX/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/App/YearX/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/App/YearX/images/favicon/site.webmanifest">
+<link rel="mask-icon" href="/App/YearX/images/favicon/safari-pinned-tab.svg" color="#f88a36">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="theme-color" content="#2d4c63">
+
+    <link rel="stylesheet" type="text/css" href='https://css.tito.io/v1.1' />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:100,300, 300i,700">
+<link rel="stylesheet" href="/App/YearX/styles/layout.css">
+<link rel="stylesheet" href="/App/YearX/styles/navigation.css">
+<link rel="stylesheet" href="/App/YearX/styles/hamburger-menu.css">
+<link rel="stylesheet" href="/App/YearX/styles/footer.css">
+<link rel="stylesheet" href="/App/YearX/styles/particles.css">
+<link rel="stylesheet" href="/App/YearX/styles/Pages/home.css">
+<link rel="stylesheet" href="/App/YearX/styles/Pages/about.css">
+<link rel="stylesheet" href="/App/YearX/styles/Pages/speakers.css">
+<link rel="stylesheet" href="/App/YearX/styles/Pages/sponsors.css">
+<link rel="stylesheet" href="/App/YearX/styles/Pages/location.css">
+<link rel="stylesheet" href="/App/YearX/styles/Pages/profile.css">
+<link rel="stylesheet" href="/App/YearX/styles/Pages/years.css">
+<link rel="stylesheet" href="/App/YearX/styles/Pages/tickets.css">
+<link rel="stylesheet" href="/App/YearX/styles/Pages/schedule.css">
+<link rel="stylesheet" href="/App/YearX/styles/Pages/videos.css">
+
+
+    <script src='https://js.tito.io/v1' async></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111252914-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-111252914-1');
+</script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="/App/YearX/javascript/particles.js"></script>
+<script src="https://cdn.apple-mapkit.com/mk/5.x.x/mapkit.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script>
+function toggleHamburger() {
+  const button = document.querySelector('.hamburger');
+  const nav = document.querySelector('.navigation');
+  
+  toggleClass(button);
+  toggleClass(nav);
+}
+
+function toggleClass(element) {
+  const isActiveClass = "is-active";
+  if (element.classList.contains(isActiveClass)) {
+    element.classList.remove(isActiveClass)
+  } else {
+    element.classList.add(isActiveClass)
+  }
+}
+</script>
+
+
+<script>
+$('#global-modal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget)
+  var titleText = button.data('title')
+  var descriptionText = button.data('description')
+  var modal = $(this)
+                      
+  modal.find('.modal-title').text(titleText)
+  modal.find('.modal-body').text(descriptionText)
+})
+</script>
+
+<script>
+/* TICKET SALES BANNER
+// Set the date we're counting down to
+var countDownDate = new Date("Sep 30, 2019 23:59:59").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(
+  function() {
+                    
+    // Get today's date and time
+    const now = new Date().getTime();
+    
+    // Find the distance between now and the count down date
+    const distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    const hours = Math.floor(distance / (1000 * 60 * 60));
+    
+    const text = "TICKET SALES WILL CLOSE IN<b>: " + hours + " Hours</b>";
+                    
+    // Output the result in an element with id="demo"
+    document.getElementById("sales-banner").innerHTML = text;
+    
+    // If the count down is over, write some text
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("sales-banner").innerHTML = "Ticket Sales Are Closed!";
+    }
+  }, 1000);
+ */
+</script>
+
+</head>
+<body class="">
+    
+
+<nav class="navigation">
+  <div class="container">
+    <div class="logo">
+      <a class="navbar-brand bg-none" href="/">
+        <img src="/App/YearX/images/layout/logo.png" alt="ServerSide.swift" />
+      </a>
+    </div>
+
+    <button class="hamburger hamburger--squeeze" type="button" onClick="toggleHamburger()">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+
+    <ul class="d-none d-md-flex">
+      
+  <li class="">
+    <a href="/2019/">Home</a>
+    <span class="underline"></span>
+  </li>
+  <li class="">
+    <a href="/2019/videos">Videos</a>
+    <span class="underline"></span>
+  </li>
+<!--   <li class="">
+    <a href="/2019/photos">Photos</a>
+    <span class="underline"></span>
+  </li> -->
+  <li class="">
+    <a href="/2019/schedule">Schedule</a>
+    <span class="underline"></span>
+  </li>
+  <li class="">
+    <a href="/2019/speakers">Speakers</a>
+    <span class="underline"></span>
+  </li>
+  <li class="active">
+    <a href="/2019/location">Location</a>
+    <span class="underline"></span>
+  </li>
+  <li class="">
+    <a href="/2019/sponsors">Sponsors</a>
+    <span class="underline"></span>
+  </li>
+  <li class="">
+    <a href="/2019/faq">FAQ</a>
+    <span class="underline"></span>
+  </li>
+  <li class="">
+    <a href="/2019/reasonsToAttend">Why Attend?</a>
+    <span class="underline"></span>
+  </li>
+  <li class="">
+    <a href="/2019/about">About</a>
+    <span class="underline"></span>
+  </li>
+  <li class="buy-ticket ">
+    <a href="/2019/tickets"><strike>Buy Tickets</strike></a>
+    <span class="underline"></span>
+  </li>
+
+    </ul>
+  </div>
+  <ul class="d-flex d-md-none">
+    
+  <li class="">
+    <a href="/2019/">Home</a>
+    <span class="underline"></span>
+  </li>
+  <li class="">
+    <a href="/2019/videos">Videos</a>
+    <span class="underline"></span>
+  </li>
+<!--   <li class="">
+    <a href="/2019/photos">Photos</a>
+    <span class="underline"></span>
+  </li> -->
+  <li class="">
+    <a href="/2019/schedule">Schedule</a>
+    <span class="underline"></span>
+  </li>
+  <li class="">
+    <a href="/2019/speakers">Speakers</a>
+    <span class="underline"></span>
+  </li>
+  <li class="active">
+    <a href="/2019/location">Location</a>
+    <span class="underline"></span>
+  </li>
+  <li class="">
+    <a href="/2019/sponsors">Sponsors</a>
+    <span class="underline"></span>
+  </li>
+  <li class="">
+    <a href="/2019/faq">FAQ</a>
+    <span class="underline"></span>
+  </li>
+  <li class="">
+    <a href="/2019/reasonsToAttend">Why Attend?</a>
+    <span class="underline"></span>
+  </li>
+  <li class="">
+    <a href="/2019/about">About</a>
+    <span class="underline"></span>
+  </li>
+  <li class="buy-ticket ">
+    <a href="/2019/tickets"><strike>Buy Tickets</strike></a>
+    <span class="underline"></span>
+  </li>
+
+  </ul>
+  <!-- TICKET SALES BANNER
+  <a
+    href="https://www.serversideswift.info/2019/tickets"
+    class="sales-banner"
+    id="sales-banner"
+  >
+    Get Your Ticket!
+  </a>
+  -->
+</nav>
+
+    
+  <div class="location">
+      <div class="page-block no-height bg-blue text-white">
+        <div class="container">
+          <h1 class="text-center">Location</h1>
+          <h4 class="text-center mb-5">In the architectural center of Copenhagen.</h2>
+            
+          <div class="location-pictures row">
+	<div class="col-xs-12 col-sm-6">
+	    <img class="img-fluid" src="/App/YearX/images/location/blox1.jpg"/>
+	</div>
+	<div class="col-xs-12 col-sm-6">
+	    <img class="img-fluid" src="/App/YearX/images/location/blox2.jpg"/>
+	</div>
+</div>
+        </div>
+      </div>
+      <div class="page-block no-height">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <h3 class="h3">Location</h3>
+        <p class="f-weight-300">
+The conference will take place at <a href="https://www.blox.dk/" target="_blank">BLOX</a> which is a part of the Danish Architecture Center, located on the Copenhagen Harbour front in the city centre.
+<br /><br />
+We are super excited to have the conference in this innovative and creative environment placed in this state-of-the-art building. BLOX is breathing Danish design and the great outdoor terrace will be open to you as well as the present design/architecture exhibition for free.
+<br /><br />
+The venue is easily reached by using public transportation, such as the city metro and is also located within walking distance to a number of interesting sights in Copenhagen.
+<br /><br />
+    The address for the venue is:<br />
+    <span class="f-weight-md">Bryghuspladsen, 1473 Copenhagen</span>
+        </p>
+      </div>
+
+      <div class="col-xs-12 col-sm-6">
+        <div id="venue-map" class="map"></div>
+      </div>
+    </div>
+    
+    <div class="row mt-4">
+      <div class="col-xs-12 col-sm-6">
+        <h3 class="h3">Transportation</h3>
+        <p class="f-weight-300">
+          <h5>From the Copenhagen Airport:</h5>
+          <ul>
+            <li>🚊 Metro line M2 Vanløse st → 8 stops  (13 minutes) → Kongens Nytorv st.</li>
+            <li>🚶‍♂️ Walk about 13 minutes to reach BLOX</li>
+          </ul>
+          <h5>Arriving by car:</h5>
+          The address for BLOX' parking garage is Vester Voldgade 129, 1552 Copenhagen V. There's multiple parking areas near the venue as well.
+        </p>
+      </div>
+
+      <div class="col-xs-12 col-sm-6">
+        <div id="transportation-map" class="map"></div>
+      </div>
+    </div>
+    
+    <div class="row mt-4">
+      <div class="col-xs-12 col-sm-6">
+        <h3 class="h3">Accommodation</h3>
+        <p class="f-weight-300">
+        Since the conference will take place in the city center, there's many hotels to choose from. Here are some suggestions:
+
+        <ul>
+            <li>
+                <a href="https://www.wakeupcopenhagen.com/the-hotels/copenhagen/bernstorffsgade#/" target="_blank">Wakeup Copenhagen</a>
+                <br />Bernstorffsgade 35, 1577 Copenhagen (700 m from BLOX)
+                <br />From 60€ per night
+            </li>
+            <li>
+                <a href="https://danhostelcopenhagencity.dk/en" target="_blank">Danhostel Copenhagen City</a>
+                <br />H. C Andersens Blvd 50, 1553 Copenhagen (350 m from BLOX)
+                <br />From 47€ per night)
+            </li>
+            <li>
+              <a href="" target="_blank">Urban House Copenhagen by MEININGER</a>
+              <br />Colbjørnsensgade 11, 1652 København - (1,3km from BLOX)
+              <br />From 20€ per night</li>
+        </ul>
+        </p>
+      </div>
+
+      <div class="col-xs-12 col-sm-6">
+        <div id="accommodation-map" class="map"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+ <script>
+      mapkit.init({
+        authorizationCallback: function(done) {
+          done('eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjkyQzhSMzNBNlAifQ.eyJpc3MiOiJZV0xXMjNMVDZHIiwiaWF0IjoxNTY5NTEwNTM0LCJleHAiOjE2NDA5MDg4MDB9.RNYFT7rFV2lVmMftDDFVf0J6wvhX-ZeHX7brC5w8LB8IWWtMRinWFor7V4L7l3bvrYUtRECc_q-S5RDO-yaYfw');
+        }
+      });
+
+      // Venue
+      let VenueMarkerAnnotation = mapkit.MarkerAnnotation;
+
+      let Venue = new mapkit.CoordinateRegion(
+        new mapkit.Coordinate(55.6723762, 12.5786809),
+        new mapkit.CoordinateSpan(0.167647972, 0.354985255)
+      );
+
+      let venuePoint = new mapkit.Coordinate(55.6723762,12.5786809);
+      let venueAnnotation = new VenueMarkerAnnotation(venuePoint);
+      venueAnnotation.title = 'BLOX';
+      venueAnnotation.subtitle = 'Bryghuspladsen';
+
+      let venueMap = new mapkit.Map("venue-map");
+      venueMap.region = Venue;
+      venueMap.showItems([venueAnnotation]);
+      venueMap.showsZoomControl = true;
+
+      // Transportation
+      let TransportationMarkerAnnotation = mapkit.MarkerAnnotation;
+
+      let Transportation = new mapkit.CoordinateRegion(
+        new mapkit.Coordinate(55.6808894,12.5852531),
+        new mapkit.CoordinateSpan(0.167647972, 0.354985255)
+      );
+
+      let transportPoint = new mapkit.Coordinate(55.6808894,12.5852531);
+      let transportAnnotation = new TransportationMarkerAnnotation(transportPoint);
+      transportAnnotation.title = 'Kongens Nytorv st.';
+      transportAnnotation.subtitle = 'Metro station';
+
+
+      let transportationMap = new mapkit.Map("transportation-map");
+      transportationMap.region = Transportation;
+      transportationMap.showItems([transportAnnotation]);
+      transportationMap.showsZoomControl = true;
+
+      // Accommodation
+      let AccommodationMarkerAnnotation = mapkit.MarkerAnnotation;
+
+      let accommodationPoint = new mapkit.Coordinate(55.668959,12.572118);
+      let accommodationAnnotation = new AccommodationMarkerAnnotation(accommodationPoint);
+      accommodationAnnotation.title = 'Wakeup Copenhagen';
+      accommodationAnnotation.subtitle = 'Bernstorffsgade 35';
+
+      let accommodationMap = new mapkit.Map("accommodation-map");
+      let Accommodation = new mapkit.CoordinateRegion(
+          accommodationPoint,
+          new mapkit.CoordinateSpan(0.167647972, 0.354985255)
+      );
+      accommodationMap.region = Accommodation;
+      accommodationMap.showItems([accommodationAnnotation]);
+      accommodationMap.showsZoomControl = true;
+</script>
+
+    </div>
+  </div>
+
+    <footer class="navbar footer">
+    <div class="container d-flex justify-content-spacearound">
+        <div class="year-switcher ">
+            <a href="/years" class="text-white">Years</a>
+            <span class="underline"></span>
+        </div>
+        <div class="social-media">
+            <a href="https://github.com/SwiftServerConf" target="_blank">
+                <span class="icon">
+                    <svg class="feather text-white">
+                        <use xlink:href="/App/YearX/images/icons/feather-sprite.svg#github"/>
+                    </svg>
+                </span>
+            </a>
+            <a href="https://twitter.com/SwiftServerConf" target="_blank">
+                <span class="icon">
+                    <svg class="feather text-white">
+                        <use xlink:href="/App/YearX/images/icons/feather-sprite.svg#twitter"/>
+                    </svg>
+                </span>
+            </a>
+            <a href="https://www.instagram.com/swiftserverconf/" target="_blank">
+                <span class="icon">
+                    <svg class="feather text-white">
+                        <use xlink:href="/App/YearX/images/icons/feather-sprite.svg#instagram"/>
+                    </svg>
+                </span>
+            </a>
+            <a href="https://www.facebook.com/SwiftServerConf" target="_blank">
+              <span class="icon">
+                <svg class="feather text-white">
+                  <use xlink:href="/App/YearX/images/icons/feather-sprite.svg#facebook"/>
+                </svg>
+              </span>
+            </a>
+        </div>
+    </div>
+</footer>
+
+    <!-- Modal -->
+<div class="modal fade" id="global-modal" tabindex="-1" role="dialog" aria-labelledby="global-modal" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Title Placeholder</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">Description Placeholder</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Example Button to open Modal -->
+<!-- <button
+  type="button"
+  class="btn btn-primary"
+  data-toggle="modal"
+  data-target="#global-modal"
+  data-title="Hey, Listen!"
+  data-description="It's dangerous to go alone. Take this!"
+>
+    Open modal with "Hey, Listen!"
+</button> -->
+
+    
+    <script src='https://js.tito.io/v1' async></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111252914-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-111252914-1');
+</script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="/App/YearX/javascript/particles.js"></script>
+<script src="https://cdn.apple-mapkit.com/mk/5.x.x/mapkit.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script>
+function toggleHamburger() {
+  const button = document.querySelector('.hamburger');
+  const nav = document.querySelector('.navigation');
+  
+  toggleClass(button);
+  toggleClass(nav);
+}
+
+function toggleClass(element) {
+  const isActiveClass = "is-active";
+  if (element.classList.contains(isActiveClass)) {
+    element.classList.remove(isActiveClass)
+  } else {
+    element.classList.add(isActiveClass)
+  }
+}
+</script>
+
+
+<script>
+$('#global-modal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget)
+  var titleText = button.data('title')
+  var descriptionText = button.data('description')
+  var modal = $(this)
+                      
+  modal.find('.modal-title').text(titleText)
+  modal.find('.modal-body').text(descriptionText)
+})
+</script>
+
+<script>
+/* TICKET SALES BANNER
+// Set the date we're counting down to
+var countDownDate = new Date("Sep 30, 2019 23:59:59").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(
+  function() {
+                    
+    // Get today's date and time
+    const now = new Date().getTime();
+    
+    // Find the distance between now and the count down date
+    const distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    const hours = Math.floor(distance / (1000 * 60 * 60));
+    
+    const text = "TICKET SALES WILL CLOSE IN<b>: " + hours + " Hours</b>";
+                    
+    // Output the result in an element with id="demo"
+    document.getElementById("sales-banner").innerHTML = text;
+    
+    // If the count down is over, write some text
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("sales-banner").innerHTML = "Ticket Sales Are Closed!";
+    }
+  }, 1000);
+ */
+</script>
+
+</body>
+</html>
+

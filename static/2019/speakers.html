@@ -1,0 +1,651 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title> ServerSide.swift </title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/App/YearX/images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/App/YearX/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/App/YearX/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/App/YearX/images/favicon/site.webmanifest">
+<link rel="mask-icon" href="/App/YearX/images/favicon/safari-pinned-tab.svg" color="#f88a36">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="theme-color" content="#2d4c63">
+
+    <link rel="stylesheet" type="text/css" href='https://css.tito.io/v1.1' />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:100,300, 300i,700">
+<link rel="stylesheet" href="/App/YearX/styles/layout.css">
+<link rel="stylesheet" href="/App/YearX/styles/navigation.css">
+<link rel="stylesheet" href="/App/YearX/styles/hamburger-menu.css">
+<link rel="stylesheet" href="/App/YearX/styles/footer.css">
+<link rel="stylesheet" href="/App/YearX/styles/particles.css">
+<link rel="stylesheet" href="/App/YearX/styles/Pages/home.css">
+<link rel="stylesheet" href="/App/YearX/styles/Pages/about.css">
+<link rel="stylesheet" href="/App/YearX/styles/Pages/speakers.css">
+<link rel="stylesheet" href="/App/YearX/styles/Pages/sponsors.css">
+<link rel="stylesheet" href="/App/YearX/styles/Pages/location.css">
+<link rel="stylesheet" href="/App/YearX/styles/Pages/profile.css">
+<link rel="stylesheet" href="/App/YearX/styles/Pages/years.css">
+<link rel="stylesheet" href="/App/YearX/styles/Pages/tickets.css">
+<link rel="stylesheet" href="/App/YearX/styles/Pages/schedule.css">
+<link rel="stylesheet" href="/App/YearX/styles/Pages/videos.css">
+
+
+    <script src='https://js.tito.io/v1' async></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111252914-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-111252914-1');
+</script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="/App/YearX/javascript/particles.js"></script>
+<script src="https://cdn.apple-mapkit.com/mk/5.x.x/mapkit.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script>
+function toggleHamburger() {
+  const button = document.querySelector('.hamburger');
+  const nav = document.querySelector('.navigation');
+  
+  toggleClass(button);
+  toggleClass(nav);
+}
+
+function toggleClass(element) {
+  const isActiveClass = "is-active";
+  if (element.classList.contains(isActiveClass)) {
+    element.classList.remove(isActiveClass)
+  } else {
+    element.classList.add(isActiveClass)
+  }
+}
+</script>
+
+
+<script>
+$('#global-modal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget)
+  var titleText = button.data('title')
+  var descriptionText = button.data('description')
+  var modal = $(this)
+                      
+  modal.find('.modal-title').text(titleText)
+  modal.find('.modal-body').text(descriptionText)
+})
+</script>
+
+<script>
+/* TICKET SALES BANNER
+// Set the date we're counting down to
+var countDownDate = new Date("Sep 30, 2019 23:59:59").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(
+  function() {
+                    
+    // Get today's date and time
+    const now = new Date().getTime();
+    
+    // Find the distance between now and the count down date
+    const distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    const hours = Math.floor(distance / (1000 * 60 * 60));
+    
+    const text = "TICKET SALES WILL CLOSE IN<b>: " + hours + " Hours</b>";
+                    
+    // Output the result in an element with id="demo"
+    document.getElementById("sales-banner").innerHTML = text;
+    
+    // If the count down is over, write some text
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("sales-banner").innerHTML = "Ticket Sales Are Closed!";
+    }
+  }, 1000);
+ */
+</script>
+
+</head>
+<body class="">
+    
+
+<nav class="navigation">
+  <div class="container">
+    <div class="logo">
+      <a class="navbar-brand bg-none" href="/">
+        <img src="/App/YearX/images/layout/logo.png" alt="ServerSide.swift" />
+      </a>
+    </div>
+
+    <button class="hamburger hamburger--squeeze" type="button" onClick="toggleHamburger()">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+
+    <ul class="d-none d-md-flex">
+      
+  <li class="">
+    <a href="/2019/">Home</a>
+    <span class="underline"></span>
+  </li>
+  <li class="">
+    <a href="/2019/videos">Videos</a>
+    <span class="underline"></span>
+  </li>
+<!--   <li class="">
+    <a href="/2019/photos">Photos</a>
+    <span class="underline"></span>
+  </li> -->
+  <li class="">
+    <a href="/2019/schedule">Schedule</a>
+    <span class="underline"></span>
+  </li>
+  <li class="active">
+    <a href="/2019/speakers">Speakers</a>
+    <span class="underline"></span>
+  </li>
+  <li class="">
+    <a href="/2019/location">Location</a>
+    <span class="underline"></span>
+  </li>
+  <li class="">
+    <a href="/2019/sponsors">Sponsors</a>
+    <span class="underline"></span>
+  </li>
+  <li class="">
+    <a href="/2019/faq">FAQ</a>
+    <span class="underline"></span>
+  </li>
+  <li class="">
+    <a href="/2019/reasonsToAttend">Why Attend?</a>
+    <span class="underline"></span>
+  </li>
+  <li class="">
+    <a href="/2019/about">About</a>
+    <span class="underline"></span>
+  </li>
+  <li class="buy-ticket ">
+    <a href="/2019/tickets"><strike>Buy Tickets</strike></a>
+    <span class="underline"></span>
+  </li>
+
+    </ul>
+  </div>
+  <ul class="d-flex d-md-none">
+    
+  <li class="">
+    <a href="/2019/">Home</a>
+    <span class="underline"></span>
+  </li>
+  <li class="">
+    <a href="/2019/videos">Videos</a>
+    <span class="underline"></span>
+  </li>
+<!--   <li class="">
+    <a href="/2019/photos">Photos</a>
+    <span class="underline"></span>
+  </li> -->
+  <li class="">
+    <a href="/2019/schedule">Schedule</a>
+    <span class="underline"></span>
+  </li>
+  <li class="active">
+    <a href="/2019/speakers">Speakers</a>
+    <span class="underline"></span>
+  </li>
+  <li class="">
+    <a href="/2019/location">Location</a>
+    <span class="underline"></span>
+  </li>
+  <li class="">
+    <a href="/2019/sponsors">Sponsors</a>
+    <span class="underline"></span>
+  </li>
+  <li class="">
+    <a href="/2019/faq">FAQ</a>
+    <span class="underline"></span>
+  </li>
+  <li class="">
+    <a href="/2019/reasonsToAttend">Why Attend?</a>
+    <span class="underline"></span>
+  </li>
+  <li class="">
+    <a href="/2019/about">About</a>
+    <span class="underline"></span>
+  </li>
+  <li class="buy-ticket ">
+    <a href="/2019/tickets"><strike>Buy Tickets</strike></a>
+    <span class="underline"></span>
+  </li>
+
+  </ul>
+  <!-- TICKET SALES BANNER
+  <a
+    href="https://www.serversideswift.info/2019/tickets"
+    class="sales-banner"
+    id="sales-banner"
+  >
+    Get Your Ticket!
+  </a>
+  -->
+</nav>
+
+    
+  <div class="speakers">
+    <div class="page-block bg-blue text-white">
+      <div class="container">
+        <h1 class="text-center">Speakers</h1>
+        <h4 class="text-center mb-5"> We host a diverse selection of inspiring speakers. </h4>
+          
+        <div class="list">
+<div id="particles-js">
+<canvas class="particles-js-canvas-el" width="1474" height="100%" style="width: 100%; height: 100%;">
+</canvas>
+</div>
+  
+    <div class="card">
+      <a href="/2019/speakers/daniel-alm"></a>
+      <div class="image">
+        <img src="/App/Images/speakers/daniel-alm.jpg" alt="Daniel Alm">
+      </div>
+      <div class="description p-2">
+        <h3 class="h3">Daniel Alm</h3>
+        <h4 class="f-weight-300">Mac &amp; iOS Developer<br><i>Self-Employed</i></h4>
+      </div>
+    </div>
+  
+    <div class="card">
+      <a href="/2019/speakers/joannis-orlandos"></a>
+      <div class="image">
+        <img src="/App/Images/speakers/joannis-orlandos.jpg" alt="Joannis Orlandos">
+      </div>
+      <div class="description p-2">
+        <h3 class="h3">Joannis Orlandos</h3>
+        <h4 class="f-weight-300">Writer<br><i>Ray Wenderlich</i></h4>
+      </div>
+    </div>
+  
+    <div class="card">
+      <a href="/2019/speakers/heidi-hermann"></a>
+      <div class="image">
+        <img src="/App/Images/speakers/heidi-hermann.jpeg" alt="Heidi Hermann">
+      </div>
+      <div class="description p-2">
+        <h3 class="h3">Heidi Hermann</h3>
+        <h4 class="f-weight-300">Vapor Developer<br><i>Nodes</i></h4>
+      </div>
+    </div>
+  
+    <div class="card">
+      <a href="/2019/speakers/kaitlin-mahar"></a>
+      <div class="image">
+        <img src="/App/Images/speakers/kaitlin-mahar.jpg" alt="Kaitlin Mahar">
+      </div>
+      <div class="description p-2">
+        <h3 class="h3">Kaitlin Mahar</h3>
+        <h4 class="f-weight-300">Software Engineer<br><i>MongoDB</i></h4>
+      </div>
+    </div>
+  
+    <div class="card">
+      <a href="/2019/speakers/ian-partridge"></a>
+      <div class="image">
+        <img src="/App/Year2018/images/speakers/ian-partridge.jpg" alt="Ian Partridge">
+      </div>
+      <div class="description p-2">
+        <h3 class="h3">Ian Partridge</h3>
+        <h4 class="f-weight-300">Kitura Team Lead Swift<br><i>IBM</i></h4>
+      </div>
+    </div>
+  
+    <div class="card">
+      <a href="/2019/speakers/john-sundell"></a>
+      <div class="image">
+        <img src="/App/Images/speakers/john-sundell.jpg" alt="John Sundell">
+      </div>
+      <div class="description p-2">
+        <h3 class="h3">John Sundell</h3>
+        <h4 class="f-weight-300">Creator<br><i>Swift by Sundell</i></h4>
+      </div>
+    </div>
+  
+    <div class="card">
+      <a href="/2019/speakers/jonas-schwartz"></a>
+      <div class="image">
+        <img src="/App/Images/speakers/jonas-schwartz.jpg" alt="Jonas Schwartz">
+      </div>
+      <div class="description p-2">
+        <h3 class="h3">Jonas Schwartz</h3>
+        <h4 class="f-weight-300">Partner and Core developer<br><i>Vapor</i></h4>
+      </div>
+    </div>
+  
+    <div class="card">
+      <a href="/2019/speakers/matias-piipari"></a>
+      <div class="image">
+        <img src="/App/Images/speakers/matias-piipari.png" alt="Matias Piipari">
+      </div>
+      <div class="description p-2">
+        <h3 class="h3">Matias Piipari</h3>
+        <h4 class="f-weight-300">Senior Product Director for Collaborative Research Tools<br><i>Atypon Systems</i></h4>
+      </div>
+    </div>
+  
+    <div class="card">
+      <a href="/2019/speakers/caleb-kleveter"></a>
+      <div class="image">
+        <img src="/App/Images/speakers/caleb-kleveter.jpg" alt="Caleb Kleveter">
+      </div>
+      <div class="description p-2">
+        <h3 class="h3">Caleb Kleveter</h3>
+        <h4 class="f-weight-300">Contract Developer<br><i>Skelpo Inc.</i></h4>
+      </div>
+    </div>
+  
+    <div class="card">
+      <a href="/2019/speakers/cory-benfield"></a>
+      <div class="image">
+        <img src="/App/Images/speakers/cory-benfield.jpg" alt="Cory Benfield">
+      </div>
+      <div class="description p-2">
+        <h3 class="h3">Cory Benfield</h3>
+        <h4 class="f-weight-300">Senior Software Engineer<br><i>Apple</i></h4>
+      </div>
+    </div>
+  
+    <div class="card">
+      <a href="/2019/speakers/johannes-weiss"></a>
+      <div class="image">
+        <img src="/App/Images/speakers/johannes-weiss.jpg" alt="Johannes Weiss">
+      </div>
+      <div class="description p-2">
+        <h3 class="h3">Johannes Weiss</h3>
+        <h4 class="f-weight-300">Senior Software Engineer<br><i>Apple</i></h4>
+      </div>
+    </div>
+  
+    <div class="card">
+      <a href="/2019/speakers/logan-wright"></a>
+      <div class="image">
+        <img src="/App/Images/speakers/logan-wright.jpg" alt="Logan Wright">
+      </div>
+      <div class="description p-2">
+        <h3 class="h3">Logan Wright</h3>
+        <h4 class="f-weight-300">Cofounder<br><i>Vapor</i></h4>
+      </div>
+    </div>
+  
+    <div class="card">
+      <a href="/2019/speakers/ivan-andriollo"></a>
+      <div class="image">
+        <img src="/App/Images/speakers/ivan-andriollo.jpg" alt="Ivan Andriollo">
+      </div>
+      <div class="description p-2">
+        <h3 class="h3">Ivan Andriollo</h3>
+        <h4 class="f-weight-300">Mobile Practise Lead<br><i>Equal Experts Germany</i></h4>
+      </div>
+    </div>
+  
+    <div class="card">
+      <a href="/2019/speakers/timirah-james"></a>
+      <div class="image">
+        <img src="/App/Images/speakers/timirah-james.jpeg" alt="Timirah James">
+      </div>
+      <div class="description p-2">
+        <h3 class="h3">Timirah James</h3>
+        <h4 class="f-weight-300">Developer Evangelist<br><i>Cloudinary</i></h4>
+      </div>
+    </div>
+  
+    <div class="card">
+      <a href="/2019/speakers/simonpilkington"></a>
+      <div class="image">
+        <img src="/App/Images/speakers/simon-pilkington.jpg" alt="Simon Pilkington">
+      </div>
+      <div class="description p-2">
+        <h3 class="h3">Simon Pilkington</h3>
+        <h4 class="f-weight-300">Senior Software Development Engineer<br><i>Amazon</i></h4>
+      </div>
+    </div>
+  
+    <div class="card">
+      <a href="/2019/speakers/joe-smith"></a>
+      <div class="image">
+        <img src="/App/Images/speakers/joe-smith.jpg" alt="Joe Smith">
+      </div>
+      <div class="description p-2">
+        <h3 class="h3">Joe Smith</h3>
+        <h4 class="f-weight-300">Site Reliability Engineer<br><i>Slack</i></h4>
+      </div>
+    </div>
+  
+    <div class="card">
+      <a href="/2019/speakers/ralph-kupper"></a>
+      <div class="image">
+        <img src="/App/Images/speakers/ralph-kuepper.jpeg" alt="Ralph Küpper">
+      </div>
+      <div class="description p-2">
+        <h3 class="h3">Ralph Küpper</h3>
+        <h4 class="f-weight-300">CEO<br><i>Skelpo Inc.</i></h4>
+      </div>
+    </div>
+  
+    <div class="card">
+      <a href="/2019/speakers/tanner-nelson"></a>
+      <div class="image">
+        <img src="/App/Images/speakers/tanner-nelson.jpeg" alt="Tanner Nelson">
+      </div>
+      <div class="description p-2">
+        <h3 class="h3">Tanner Nelson</h3>
+        <h4 class="f-weight-300">Co-Founder<br><i>Vapor</i></h4>
+      </div>
+    </div>
+  
+    <div class="card">
+      <a href="/2019/speakers/gerwin-de-haan"></a>
+      <div class="image">
+        <img src="/App/Images/speakers/gerwin-de-haan.png" alt="Gerwin de Haan">
+      </div>
+      <div class="description p-2">
+        <h3 class="h3">Gerwin de Haan</h3>
+        <h4 class="f-weight-300">CTO<br><i>StyleShoots</i></h4>
+      </div>
+    </div>
+  
+    <div class="card">
+      <a href="/2019/speakers/mathieu-barnachon"></a>
+      <div class="image">
+        <img src="/App/Images/speakers/mathieu-barnachon.png" alt="Mathieu Barnachon">
+      </div>
+      <div class="description p-2">
+        <h3 class="h3">Mathieu Barnachon</h3>
+        <h4 class="f-weight-300">Senior Software Engineer<br><i>StyleShoots</i></h4>
+      </div>
+    </div>
+  
+</div>
+      </div>
+    </div>
+
+    <div class="cfp page-block no-height">
+  <div class="container">
+    
+    <div class="col">
+      <h3 class="h3 text-center">Call For Proposals</h3>
+      <p class="text-center">
+      Call for proposals are now open! We're so excited to invite every interested speaker and/or workshop organizer to submit a talk/workshop through our form below.
+      </p>
+
+
+        <p class="text-center">
+          <a href="https://goo.gl/forms/MN99aYDgIle4bMlI2" target="_blank" class="btn btn-default btn-gradient">Submit Talk</a>
+        </p>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+  </div>
+
+    <footer class="navbar footer">
+    <div class="container d-flex justify-content-spacearound">
+        <div class="year-switcher ">
+            <a href="/years" class="text-white">Years</a>
+            <span class="underline"></span>
+        </div>
+        <div class="social-media">
+            <a href="https://github.com/SwiftServerConf" target="_blank">
+                <span class="icon">
+                    <svg class="feather text-white">
+                        <use xlink:href="/App/YearX/images/icons/feather-sprite.svg#github"/>
+                    </svg>
+                </span>
+            </a>
+            <a href="https://twitter.com/SwiftServerConf" target="_blank">
+                <span class="icon">
+                    <svg class="feather text-white">
+                        <use xlink:href="/App/YearX/images/icons/feather-sprite.svg#twitter"/>
+                    </svg>
+                </span>
+            </a>
+            <a href="https://www.instagram.com/swiftserverconf/" target="_blank">
+                <span class="icon">
+                    <svg class="feather text-white">
+                        <use xlink:href="/App/YearX/images/icons/feather-sprite.svg#instagram"/>
+                    </svg>
+                </span>
+            </a>
+            <a href="https://www.facebook.com/SwiftServerConf" target="_blank">
+              <span class="icon">
+                <svg class="feather text-white">
+                  <use xlink:href="/App/YearX/images/icons/feather-sprite.svg#facebook"/>
+                </svg>
+              </span>
+            </a>
+        </div>
+    </div>
+</footer>
+
+    <!-- Modal -->
+<div class="modal fade" id="global-modal" tabindex="-1" role="dialog" aria-labelledby="global-modal" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Title Placeholder</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">Description Placeholder</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Example Button to open Modal -->
+<!-- <button
+  type="button"
+  class="btn btn-primary"
+  data-toggle="modal"
+  data-target="#global-modal"
+  data-title="Hey, Listen!"
+  data-description="It's dangerous to go alone. Take this!"
+>
+    Open modal with "Hey, Listen!"
+</button> -->
+
+    
+    <script src='https://js.tito.io/v1' async></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111252914-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-111252914-1');
+</script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="/App/YearX/javascript/particles.js"></script>
+<script src="https://cdn.apple-mapkit.com/mk/5.x.x/mapkit.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script>
+function toggleHamburger() {
+  const button = document.querySelector('.hamburger');
+  const nav = document.querySelector('.navigation');
+  
+  toggleClass(button);
+  toggleClass(nav);
+}
+
+function toggleClass(element) {
+  const isActiveClass = "is-active";
+  if (element.classList.contains(isActiveClass)) {
+    element.classList.remove(isActiveClass)
+  } else {
+    element.classList.add(isActiveClass)
+  }
+}
+</script>
+
+
+<script>
+$('#global-modal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget)
+  var titleText = button.data('title')
+  var descriptionText = button.data('description')
+  var modal = $(this)
+                      
+  modal.find('.modal-title').text(titleText)
+  modal.find('.modal-body').text(descriptionText)
+})
+</script>
+
+<script>
+/* TICKET SALES BANNER
+// Set the date we're counting down to
+var countDownDate = new Date("Sep 30, 2019 23:59:59").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(
+  function() {
+                    
+    // Get today's date and time
+    const now = new Date().getTime();
+    
+    // Find the distance between now and the count down date
+    const distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    const hours = Math.floor(distance / (1000 * 60 * 60));
+    
+    const text = "TICKET SALES WILL CLOSE IN<b>: " + hours + " Hours</b>";
+                    
+    // Output the result in an element with id="demo"
+    document.getElementById("sales-banner").innerHTML = text;
+    
+    // If the count down is over, write some text
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("sales-banner").innerHTML = "Ticket Sales Are Closed!";
+    }
+  }, 1000);
+ */
+</script>
+
+</body>
+</html>
+

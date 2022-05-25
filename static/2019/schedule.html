@@ -1,0 +1,1700 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title> ServerSide.swift </title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/App/YearX/images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/App/YearX/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/App/YearX/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/App/YearX/images/favicon/site.webmanifest">
+<link rel="mask-icon" href="/App/YearX/images/favicon/safari-pinned-tab.svg" color="#f88a36">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="theme-color" content="#2d4c63">
+
+    <link rel="stylesheet" type="text/css" href='https://css.tito.io/v1.1' />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:100,300, 300i,700">
+<link rel="stylesheet" href="/App/YearX/styles/layout.css">
+<link rel="stylesheet" href="/App/YearX/styles/navigation.css">
+<link rel="stylesheet" href="/App/YearX/styles/hamburger-menu.css">
+<link rel="stylesheet" href="/App/YearX/styles/footer.css">
+<link rel="stylesheet" href="/App/YearX/styles/particles.css">
+<link rel="stylesheet" href="/App/YearX/styles/Pages/home.css">
+<link rel="stylesheet" href="/App/YearX/styles/Pages/about.css">
+<link rel="stylesheet" href="/App/YearX/styles/Pages/speakers.css">
+<link rel="stylesheet" href="/App/YearX/styles/Pages/sponsors.css">
+<link rel="stylesheet" href="/App/YearX/styles/Pages/location.css">
+<link rel="stylesheet" href="/App/YearX/styles/Pages/profile.css">
+<link rel="stylesheet" href="/App/YearX/styles/Pages/years.css">
+<link rel="stylesheet" href="/App/YearX/styles/Pages/tickets.css">
+<link rel="stylesheet" href="/App/YearX/styles/Pages/schedule.css">
+<link rel="stylesheet" href="/App/YearX/styles/Pages/videos.css">
+
+
+    <script src='https://js.tito.io/v1' async></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111252914-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-111252914-1');
+</script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="/App/YearX/javascript/particles.js"></script>
+<script src="https://cdn.apple-mapkit.com/mk/5.x.x/mapkit.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script>
+function toggleHamburger() {
+  const button = document.querySelector('.hamburger');
+  const nav = document.querySelector('.navigation');
+  
+  toggleClass(button);
+  toggleClass(nav);
+}
+
+function toggleClass(element) {
+  const isActiveClass = "is-active";
+  if (element.classList.contains(isActiveClass)) {
+    element.classList.remove(isActiveClass)
+  } else {
+    element.classList.add(isActiveClass)
+  }
+}
+</script>
+
+
+<script>
+$('#global-modal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget)
+  var titleText = button.data('title')
+  var descriptionText = button.data('description')
+  var modal = $(this)
+                      
+  modal.find('.modal-title').text(titleText)
+  modal.find('.modal-body').text(descriptionText)
+})
+</script>
+
+<script>
+/* TICKET SALES BANNER
+// Set the date we're counting down to
+var countDownDate = new Date("Sep 30, 2019 23:59:59").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(
+  function() {
+                    
+    // Get today's date and time
+    const now = new Date().getTime();
+    
+    // Find the distance between now and the count down date
+    const distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    const hours = Math.floor(distance / (1000 * 60 * 60));
+    
+    const text = "TICKET SALES WILL CLOSE IN<b>: " + hours + " Hours</b>";
+                    
+    // Output the result in an element with id="demo"
+    document.getElementById("sales-banner").innerHTML = text;
+    
+    // If the count down is over, write some text
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("sales-banner").innerHTML = "Ticket Sales Are Closed!";
+    }
+  }, 1000);
+ */
+</script>
+
+</head>
+<body class="">
+    
+
+<nav class="navigation">
+  <div class="container">
+    <div class="logo">
+      <a class="navbar-brand bg-none" href="/">
+        <img src="/App/YearX/images/layout/logo.png" alt="ServerSide.swift" />
+      </a>
+    </div>
+
+    <button class="hamburger hamburger--squeeze" type="button" onClick="toggleHamburger()">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+
+    <ul class="d-none d-md-flex">
+      
+  <li class="">
+    <a href="/2019/">Home</a>
+    <span class="underline"></span>
+  </li>
+  <li class="">
+    <a href="/2019/videos">Videos</a>
+    <span class="underline"></span>
+  </li>
+<!--   <li class="">
+    <a href="/2019/photos">Photos</a>
+    <span class="underline"></span>
+  </li> -->
+  <li class="active">
+    <a href="/2019/schedule">Schedule</a>
+    <span class="underline"></span>
+  </li>
+  <li class="">
+    <a href="/2019/speakers">Speakers</a>
+    <span class="underline"></span>
+  </li>
+  <li class="">
+    <a href="/2019/location">Location</a>
+    <span class="underline"></span>
+  </li>
+  <li class="">
+    <a href="/2019/sponsors">Sponsors</a>
+    <span class="underline"></span>
+  </li>
+  <li class="">
+    <a href="/2019/faq">FAQ</a>
+    <span class="underline"></span>
+  </li>
+  <li class="">
+    <a href="/2019/reasonsToAttend">Why Attend?</a>
+    <span class="underline"></span>
+  </li>
+  <li class="">
+    <a href="/2019/about">About</a>
+    <span class="underline"></span>
+  </li>
+  <li class="buy-ticket ">
+    <a href="/2019/tickets"><strike>Buy Tickets</strike></a>
+    <span class="underline"></span>
+  </li>
+
+    </ul>
+  </div>
+  <ul class="d-flex d-md-none">
+    
+  <li class="">
+    <a href="/2019/">Home</a>
+    <span class="underline"></span>
+  </li>
+  <li class="">
+    <a href="/2019/videos">Videos</a>
+    <span class="underline"></span>
+  </li>
+<!--   <li class="">
+    <a href="/2019/photos">Photos</a>
+    <span class="underline"></span>
+  </li> -->
+  <li class="active">
+    <a href="/2019/schedule">Schedule</a>
+    <span class="underline"></span>
+  </li>
+  <li class="">
+    <a href="/2019/speakers">Speakers</a>
+    <span class="underline"></span>
+  </li>
+  <li class="">
+    <a href="/2019/location">Location</a>
+    <span class="underline"></span>
+  </li>
+  <li class="">
+    <a href="/2019/sponsors">Sponsors</a>
+    <span class="underline"></span>
+  </li>
+  <li class="">
+    <a href="/2019/faq">FAQ</a>
+    <span class="underline"></span>
+  </li>
+  <li class="">
+    <a href="/2019/reasonsToAttend">Why Attend?</a>
+    <span class="underline"></span>
+  </li>
+  <li class="">
+    <a href="/2019/about">About</a>
+    <span class="underline"></span>
+  </li>
+  <li class="buy-ticket ">
+    <a href="/2019/tickets"><strike>Buy Tickets</strike></a>
+    <span class="underline"></span>
+  </li>
+
+  </ul>
+  <!-- TICKET SALES BANNER
+  <a
+    href="https://www.serversideswift.info/2019/tickets"
+    class="sales-banner"
+    id="sales-banner"
+  >
+    Get Your Ticket!
+  </a>
+  -->
+</nav>
+
+    
+  <div class="schedule">
+      <div class="page-block no-height bg-blue text-white">
+        <div class="container">
+          <h1 class="text-center">Schedule</h1>
+          <h4 class="text-center mb-5">Three days packed with inspiring content.</h2>
+            
+          <div class="row">
+  <div class="col-sm-12">
+    
+      <div class="mb-5">
+        <h3 class="h3">Wednesday, October 30 - Workshops</h3>    
+
+        
+          <div class="panel">
+            <table class="table table-striped table-bordered">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col" class="time-column">When</th>
+                  <th scope="col">What</th>
+                  <th scope="col" class="room-column">Where</th>
+                </tr>
+              </thead>
+              <tbody>
+
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">08:00 - 08:45</td>
+
+                    
+                      <td class="">Registration</td>
+                    
+
+                    <td>
+                      
+                    </td>
+
+                  </tr>
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">08:45 - 10:30</td>
+
+                    
+                      <td>
+                        <div class="talk">
+                          <div class="avatars">
+                            
+                              <span class="avatar">
+                                <img src="/App/Images/speakers/cory-benfield.jpg" alt="Cory Benfield">
+                              </span>
+                            
+                              <span class="avatar">
+                                <img src="/App/Images/speakers/johannes-weiss.jpg" alt="Johannes Weiss">
+                              </span>
+                            
+                          </div>
+                          <div class="talk-info">
+                            <ul class="speaker-list">
+                               <li>Cory Benfield</li>  <li>Johannes Weiss</li> 
+                            </ul>
+                            <br>
+                            <a
+                              href
+                              data-toggle="modal"
+                              data-target="#global-modal"
+                              data-title="Contributing to SwiftNIO and SSWG"
+                              data-description="Have you ever wanted to contribute to SwiftNIO, SwiftPM or one of the other foundational libraries that power server-side Swift? Or do you want to create your own library built on top of SwiftNIO? In this workshop you’ll have experts and SwiftNIO team members on hand to help guide you. Whether it’s just getting set up to start contributing, opening your first PR or fixing bugs, help will be available to you! You can even be guided through creating a library for the SSWG incubation process."
+                            >
+                              Contributing to SwiftNIO and SSWG
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    
+
+                    <td>
+                      Workshop room 1 (Havnerummet)
+                    </td>
+
+                  </tr>
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">08:45 - 10:30</td>
+
+                    
+                      <td>
+                        <div class="talk">
+                          <div class="avatars">
+                            
+                              <span class="avatar">
+                                <img src="/App/Images/speakers/tanner-nelson.jpeg" alt="Tanner Nelson">
+                              </span>
+                            
+                              <span class="avatar">
+                                <img src="/App/Images/speakers/jonas-schwartz.jpg" alt="Jonas Schwartz">
+                              </span>
+                            
+                          </div>
+                          <div class="talk-info">
+                            <ul class="speaker-list">
+                               <li>Tanner Nelson</li>  <li>Jonas Schwartz</li> 
+                            </ul>
+                            <br>
+                            <a
+                              href
+                              data-toggle="modal"
+                              data-target="#global-modal"
+                              data-title="Getting Started with Vapor"
+                              data-description="Learn how to create an API in Vapor 4 from the creators of the framework. This workshop will cover everything you need to know from preparing your computer for server-side Swift development to deploying your new application to the cloud. 
+Please have Xcode &gt;= 11 downloaded and installed for this workshop."
+                            >
+                              Getting Started with Vapor
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    
+
+                    <td>
+                      Workshop room 2 (Byrummet)
+                    </td>
+
+                  </tr>
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">10:30 - 10:45</td>
+
+                    
+                      <td class="">Coffee break</td>
+                    
+
+                    <td>
+                      
+                    </td>
+
+                  </tr>
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">10:45 - 12:30</td>
+
+                    
+                      <td>
+                        <div class="talk">
+                          <div class="avatars">
+                            
+                              <span class="avatar">
+                                <img src="/App/Images/speakers/cory-benfield.jpg" alt="Cory Benfield">
+                              </span>
+                            
+                              <span class="avatar">
+                                <img src="/App/Images/speakers/johannes-weiss.jpg" alt="Johannes Weiss">
+                              </span>
+                            
+                          </div>
+                          <div class="talk-info">
+                            <ul class="speaker-list">
+                               <li>Cory Benfield</li>  <li>Johannes Weiss</li> 
+                            </ul>
+                            <br>
+                            <a
+                              href
+                              data-toggle="modal"
+                              data-target="#global-modal"
+                              data-title="Contributing to SwiftNIO and SSWG"
+                              data-description="Have you ever wanted to contribute to SwiftNIO, SwiftPM or one of the other foundational libraries that power server-side Swift? Or do you want to create your own library built on top of SwiftNIO? In this workshop you’ll have experts and SwiftNIO team members on hand to help guide you. Whether it’s just getting set up to start contributing, opening your first PR or fixing bugs, help will be available to you! You can even be guided through creating a library for the SSWG incubation process."
+                            >
+                              Contributing to SwiftNIO and SSWG
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    
+
+                    <td>
+                      Workshop room 1 (Havnerummet)
+                    </td>
+
+                  </tr>
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">10:45 - 12:30</td>
+
+                    
+                      <td>
+                        <div class="talk">
+                          <div class="avatars">
+                            
+                              <span class="avatar">
+                                <img src="/App/Images/speakers/tanner-nelson.jpeg" alt="Tanner Nelson">
+                              </span>
+                            
+                              <span class="avatar">
+                                <img src="/App/Images/speakers/jonas-schwartz.jpg" alt="Jonas Schwartz">
+                              </span>
+                            
+                          </div>
+                          <div class="talk-info">
+                            <ul class="speaker-list">
+                               <li>Tanner Nelson</li>  <li>Jonas Schwartz</li> 
+                            </ul>
+                            <br>
+                            <a
+                              href
+                              data-toggle="modal"
+                              data-target="#global-modal"
+                              data-title="Getting Started with Vapor"
+                              data-description="Learn how to create an API in Vapor 4 from the creators of the framework. This workshop will cover everything you need to know from preparing your computer for server-side Swift development to deploying your new application to the cloud. 
+Please have Xcode &gt;= 11 downloaded and installed for this workshop."
+                            >
+                              Getting Started with Vapor
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    
+
+                    <td>
+                      Workshop room 2 (Byrummet)
+                    </td>
+
+                  </tr>
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">12:30 - 13:15</td>
+
+                    
+                      <td class="">Lunch</td>
+                    
+
+                    <td>
+                      
+                    </td>
+
+                  </tr>
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">13:15 - 15:00</td>
+
+                    
+                      <td>
+                        <div class="talk">
+                          <div class="avatars">
+                            
+                              <span class="avatar">
+                                <img src="/App/Year2018/images/speakers/ian-partridge.jpg" alt="Ian Partridge">
+                              </span>
+                            
+                          </div>
+                          <div class="talk-info">
+                            <ul class="speaker-list">
+                               <li>Ian Partridge</li> 
+                            </ul>
+                            <br>
+                            <a
+                              href
+                              data-toggle="modal"
+                              data-target="#global-modal"
+                              data-title="Build a cloud-native app with Kitura"
+                              data-description="In this workshop we’ll create a full-featured Kitura app including REST APIs, OpenAPI/Swagger and WebSockets for real-time streaming. We’ll build the Kitura server on your Macbook and connect it up to an iOS app locally. Next it’s time to build your server into a Docker microservice, deploy it into a cloud-ready Kubernetes cluster, and make it bullet-proof with monitoring, scaling and failover. Sounds complicated? We’ll make it easy and fun."
+                            >
+                              Build a cloud-native app with Kitura
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    
+
+                    <td>
+                      Workshop room 1 (Havnerummet)
+                    </td>
+
+                  </tr>
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">13:15 - 15:00</td>
+
+                    
+                      <td>
+                        <div class="talk">
+                          <div class="avatars">
+                            
+                              <span class="avatar">
+                                <img src="/App/Images/speakers/ralph-kuepper.jpeg" alt="Ralph Küpper">
+                              </span>
+                            
+                          </div>
+                          <div class="talk-info">
+                            <ul class="speaker-list">
+                               <li>Ralph Küpper</li> 
+                            </ul>
+                            <br>
+                            <a
+                              href
+                              data-toggle="modal"
+                              data-target="#global-modal"
+                              data-title="Building Microservices"
+                              data-description="Learn how to build microservice applications hands-on in this workshop.  By the end of this workshop you will have built your very own microservice application using the Vapor framework. We will cover topics like: 
+1. What should a microservice consists of? 
+2. How do microservices communicate with each other? 
+3. How to deploy and run microservice applications?
+It will be fun and easy for everyone to follow along!"
+                            >
+                              Building Microservices
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    
+
+                    <td>
+                      Workshop room 2 (Byrummet)
+                    </td>
+
+                  </tr>
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">15:00 - 15:15</td>
+
+                    
+                      <td class="">Coffee break</td>
+                    
+
+                    <td>
+                      
+                    </td>
+
+                  </tr>
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">15:15 - 17:00</td>
+
+                    
+                      <td>
+                        <div class="talk">
+                          <div class="avatars">
+                            
+                              <span class="avatar">
+                                <img src="/App/Year2018/images/speakers/ian-partridge.jpg" alt="Ian Partridge">
+                              </span>
+                            
+                          </div>
+                          <div class="talk-info">
+                            <ul class="speaker-list">
+                               <li>Ian Partridge</li> 
+                            </ul>
+                            <br>
+                            <a
+                              href
+                              data-toggle="modal"
+                              data-target="#global-modal"
+                              data-title="Build a cloud-native app with Kitura"
+                              data-description="In this workshop we’ll create a full-featured Kitura app including REST APIs, OpenAPI/Swagger and WebSockets for real-time streaming. We’ll build the Kitura server on your Macbook and connect it up to an iOS app locally. Next it’s time to build your server into a Docker microservice, deploy it into a cloud-ready Kubernetes cluster, and make it bullet-proof with monitoring, scaling and failover. Sounds complicated? We’ll make it easy and fun."
+                            >
+                              Build a cloud-native app with Kitura
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    
+
+                    <td>
+                      Workshop room 1 (Havnerummet)
+                    </td>
+
+                  </tr>
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">15:15 - 17:00</td>
+
+                    
+                      <td>
+                        <div class="talk">
+                          <div class="avatars">
+                            
+                              <span class="avatar">
+                                <img src="/App/Images/speakers/ralph-kuepper.jpeg" alt="Ralph Küpper">
+                              </span>
+                            
+                          </div>
+                          <div class="talk-info">
+                            <ul class="speaker-list">
+                               <li>Ralph Küpper</li> 
+                            </ul>
+                            <br>
+                            <a
+                              href
+                              data-toggle="modal"
+                              data-target="#global-modal"
+                              data-title="Building Microservices"
+                              data-description="Learn how to build microservice applications hands-on in this workshop.  By the end of this workshop you will have built your very own microservice application using the Vapor framework. We will cover topics like: 
+1. What should a microservice consists of? 
+2. How do microservices communicate with each other? 
+3. How to deploy and run microservice applications?
+It will be fun and easy for everyone to follow along!"
+                            >
+                              Building Microservices
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    
+
+                    <td>
+                      Workshop room 2 (Byrummet)
+                    </td>
+
+                  </tr>
+                
+
+              </tbody>
+            </table>
+          </div>  
+        
+      </div>
+    
+      <div class="mb-5">
+        <h3 class="h3">Thursday, October 31 - Conference day 1</h3>    
+
+        
+          <div class="panel">
+            <table class="table table-striped table-bordered">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col" class="time-column">When</th>
+                  <th scope="col">What</th>
+                  <th scope="col" class="room-column">Where</th>
+                </tr>
+              </thead>
+              <tbody>
+
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">08:00 - 09:00</td>
+
+                    
+                      <td class="">Registration</td>
+                    
+
+                    <td>
+                      Conference room (Salen)
+                    </td>
+
+                  </tr>
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">09:00 - 09:15</td>
+
+                    
+                      <td class="">Opening remarks</td>
+                    
+
+                    <td>
+                      Conference room (Salen)
+                    </td>
+
+                  </tr>
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">09:15 - 10:00</td>
+
+                    
+                      <td>
+                        <div class="talk">
+                          <div class="avatars">
+                            
+                              <span class="avatar">
+                                <img src="/App/Images/speakers/logan-wright.jpg" alt="Logan Wright">
+                              </span>
+                            
+                          </div>
+                          <div class="talk-info">
+                            <ul class="speaker-list">
+                               <li>Logan Wright</li> 
+                            </ul>
+                            <br>
+                            <a
+                              href
+                              data-toggle="modal"
+                              data-target="#global-modal"
+                              data-title="Swift Server Workgroup Update"
+                              data-description="The Swift Server Work Group (SSWG) goal is to create a robust, healthy ecosystem for server application development with Swift. Its current focus is to encourage the development of high quality, well maintained libraries and tools that the community can reliably lean on. In this talk, we will review the latest development since the SSWG was announced Sept 2018, describe the incubation process and how to get involved, and dive into the details of some of the active projects and proposals the community and teams are working on."
+                            >
+                              Swift Server Workgroup Update
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    
+
+                    <td>
+                      Conference room (Salen)
+                    </td>
+
+                  </tr>
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">10:00 - 10:45</td>
+
+                    
+                      <td>
+                        <div class="talk">
+                          <div class="avatars">
+                            
+                              <span class="avatar">
+                                <img src="/App/Images/speakers/caleb-kleveter.jpg" alt="Caleb Kleveter">
+                              </span>
+                            
+                          </div>
+                          <div class="talk-info">
+                            <ul class="speaker-list">
+                               <li>Caleb Kleveter</li> 
+                            </ul>
+                            <br>
+                            <a
+                              href
+                              data-toggle="modal"
+                              data-target="#global-modal"
+                              data-title="Resilient Micro-Services with Vapor"
+                              data-description="One of the popular architectures for server-side development these days is micro-services. By breaking our apps into small components, it not only makes it more maintainable, but it&#39;s also easier to replace components. But this isn&#39;t always the case. Badly designed micro-services result in a monolith that&#39;s just spread across multiple projects. In this talk, we&#39;ll discuss making both your micro-services and packages more agnostic, turning your app into a plug-and-play system."
+                            >
+                              Resilient Micro-Services with Vapor
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    
+
+                    <td>
+                      Conference room (Salen)
+                    </td>
+
+                  </tr>
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">10:45 - 11:00</td>
+
+                    
+                      <td class="">Coffee break</td>
+                    
+
+                    <td>
+                      Conference room (Salen)
+                    </td>
+
+                  </tr>
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">11:00 - 11:45</td>
+
+                    
+                      <td>
+                        <div class="talk">
+                          <div class="avatars">
+                            
+                              <span class="avatar">
+                                <img src="/App/Images/speakers/john-sundell.jpg" alt="John Sundell">
+                              </span>
+                            
+                          </div>
+                          <div class="talk-info">
+                            <ul class="speaker-list">
+                               <li>John Sundell</li> 
+                            </ul>
+                            <br>
+                            <a
+                              href
+                              data-toggle="modal"
+                              data-target="#global-modal"
+                              data-title="Static site generation in Swift"
+                              data-description="In this talk John will share his learnings from building a static site generator in Swift, the advantages of static content generation from both a publishing and hosting perspective, and what makes Swift such a great language for this task. You can expect lots of technical details and code examples, peeks behind the scenes of Swift by Sundell, and the story of what goes into making a website truly JavaScript-free."
+                            >
+                              Static site generation in Swift
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    
+
+                    <td>
+                      Conference room (Salen)
+                    </td>
+
+                  </tr>
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">11:45 - 12:30</td>
+
+                    
+                      <td>
+                        <div class="talk">
+                          <div class="avatars">
+                            
+                              <span class="avatar">
+                                <img src="/App/Images/speakers/joannis-orlandos.jpg" alt="Joannis Orlandos">
+                              </span>
+                            
+                          </div>
+                          <div class="talk-info">
+                            <ul class="speaker-list">
+                               <li>Joannis Orlandos</li> 
+                            </ul>
+                            <br>
+                            <a
+                              href
+                              data-toggle="modal"
+                              data-target="#global-modal"
+                              data-title="API Performance: A macro talk about micro decisions"
+                              data-description="API performance is important, but how important is it? When and where do you invest into performance? This talk will dive into the world of complex performance by diving into the details that matter. By covering the important and advanced aspects of performance, you’ll learn how to make these decisions a habit."
+                            >
+                              API Performance: A macro talk about micro decisions
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    
+
+                    <td>
+                      Conference room (Salen)
+                    </td>
+
+                  </tr>
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">12:30 - 13:30</td>
+
+                    
+                      <td class="">Lunch</td>
+                    
+
+                    <td>
+                      Conference room (Salen)
+                    </td>
+
+                  </tr>
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">13:30 - 14:15</td>
+
+                    
+                      <td>
+                        <div class="talk">
+                          <div class="avatars">
+                            
+                              <span class="avatar">
+                                <img src="/App/Year2018/images/speakers/ian-partridge.jpg" alt="Ian Partridge">
+                              </span>
+                            
+                          </div>
+                          <div class="talk-info">
+                            <ul class="speaker-list">
+                               <li>Ian Partridge</li> 
+                            </ul>
+                            <br>
+                            <a
+                              href
+                              data-toggle="modal"
+                              data-target="#global-modal"
+                              data-title="Cloud-native Swift microservices"
+                              data-description="Frameworks like Kitura, Vapor and others have made developing servers in Swift fun and achievable. But for Swift on the server to truly succeed it needs to be &quot;cloud-native&quot;. What does that even mean?
+In this session we&#39;ll talk about the key characteristics of cloud-native microservices, in the context of technologies like Docker and Kubernetes. How can Swift fit better into this world?
+The Kitura team has been working on a new tool called Appsody, designed to help empower teams to build microservices, with built-in support for Swift.  I&#39;ll talk about its design and demo Appsody to show what it can offer. I&#39;ll also talk about Kitura and what&#39;s happened in the project over the last year."
+                            >
+                              Cloud-native Swift microservices
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    
+
+                    <td>
+                      Conference room (Salen)
+                    </td>
+
+                  </tr>
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">14:15 - 15:00</td>
+
+                    
+                      <td>
+                        <div class="talk">
+                          <div class="avatars">
+                            
+                              <span class="avatar">
+                                <img src="/App/Images/speakers/heidi-hermann.jpeg" alt="Heidi Hermann">
+                              </span>
+                            
+                          </div>
+                          <div class="talk-info">
+                            <ul class="speaker-list">
+                               <li>Heidi Hermann</li> 
+                            </ul>
+                            <br>
+                            <a
+                              href
+                              data-toggle="modal"
+                              data-target="#global-modal"
+                              data-title="Breaking into tech"
+                              data-description="How can we as an industry embrace the next generation of developers that have decided to change their career later in life?  In this talk Heidi will share her experience transitioning from a successful career as high school teacher to a software developer. It will be an honest and anecdotal talk combined with the latest theories on learning and teaching, so we as an industry can become even better to help and coach our future colleagues.
+Updated bio:
+Heidi is a self-made Swift and Vapor developer. With a background in Physics and teaching she started her transition into software development just over two years ago. Today she works as a Vapor Developer at Nodes Agency in Berlin."
+                            >
+                              Breaking into tech
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    
+
+                    <td>
+                      Conference room (Salen)
+                    </td>
+
+                  </tr>
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">15:00 - 15:15</td>
+
+                    
+                      <td class="">Coffee break</td>
+                    
+
+                    <td>
+                      Conference room (Salen)
+                    </td>
+
+                  </tr>
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">15:15 - 16:00</td>
+
+                    
+                      <td>
+                        <div class="talk">
+                          <div class="avatars">
+                            
+                              <span class="avatar">
+                                <img src="/App/Images/speakers/cory-benfield.jpg" alt="Cory Benfield">
+                              </span>
+                            
+                          </div>
+                          <div class="talk-info">
+                            <ul class="speaker-list">
+                               <li>Cory Benfield</li> 
+                            </ul>
+                            <br>
+                            <a
+                              href
+                              data-toggle="modal"
+                              data-target="#global-modal"
+                              data-title="Building State Machines in Swift"
+                              data-description="State machines are a powerful tool for representing components in event driven systems, such as GUI applications and high-performance network servers. However, most programmers don&#39;t reach for explicit state machine code directly, instead evolving implicit state machines using large combinations of flags and optionals.
+As a modern language with a powerful type system, Swift has a number of tools for making it easy to write explicit state machines that perform well. More importantly, it makes it possible to avoid wide ranging classes of bugs by simply making illegal operations impossible to express in your program.
+This session will quickly reintroduce what a state machine is, and then give a guided walk through the best practices of building state machine implementations in Swift, with experience drawn from building finite state machines for network protocol implementations in SwiftNIO."
+                            >
+                              Building State Machines in Swift
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    
+
+                    <td>
+                      Conference room (Salen)
+                    </td>
+
+                  </tr>
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">16:00 - 16:45</td>
+
+                    
+                      <td>
+                        <div class="talk">
+                          <div class="avatars">
+                            
+                              <span class="avatar">
+                                <img src="/App/Images/speakers/jonas-schwartz.jpg" alt="Jonas Schwartz">
+                              </span>
+                            
+                          </div>
+                          <div class="talk-info">
+                            <ul class="speaker-list">
+                               <li>Jonas Schwartz</li> 
+                            </ul>
+                            <br>
+                            <a
+                              href
+                              data-toggle="modal"
+                              data-target="#global-modal"
+                              data-title="Swift development on Linux"
+                              data-description="This talk will give you the status of Swift development on Linux, what the options are, and how they compare. It will also show a real-life example of auto complete and differences between Linux and MacOS. Whether you are a Mac, Linux or Windows user, this talk will give you a unique insight into how to get started developing Swift on Linux."
+                            >
+                              Swift development on Linux
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    
+
+                    <td>
+                      Conference room (Salen)
+                    </td>
+
+                  </tr>
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">16:45 - 17:15</td>
+
+                    
+                      <td class="">Panel discussion</td>
+                    
+
+                    <td>
+                      Conference room (Salen)
+                    </td>
+
+                  </tr>
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">17:15 - 17:45</td>
+
+                    
+                      <td class="">Pre-boat-tour drinks on 3rd floor at the cafe at BLOX</td>
+                    
+
+                    <td>
+                      
+                    </td>
+
+                  </tr>
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">18:00 - 19:00</td>
+
+                    
+                      <td class="">Canal boat tour (starts outside of BLOX and ends in city centre)</td>
+                    
+
+                    <td>
+                      
+                    </td>
+
+                  </tr>
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">19:15 - 20:15</td>
+
+                    
+                      <td class="">Beers and tacos at Condesa (Ved Stranden 18, 1061 Copenhagen)</td>
+                    
+
+                    <td>
+                      
+                    </td>
+
+                  </tr>
+                
+
+              </tbody>
+            </table>
+          </div>  
+        
+      </div>
+    
+      <div class="mb-5">
+        <h3 class="h3">Friday, November 1 - Conference day 2</h3>    
+
+        
+          <div class="panel">
+            <table class="table table-striped table-bordered">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col" class="time-column">When</th>
+                  <th scope="col">What</th>
+                  <th scope="col" class="room-column">Where</th>
+                </tr>
+              </thead>
+              <tbody>
+
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">09:00 - 09:45</td>
+
+                    
+                      <td>
+                        <div class="talk">
+                          <div class="avatars">
+                            
+                              <span class="avatar">
+                                <img src="/App/Images/speakers/simon-pilkington.jpg" alt="Simon Pilkington">
+                              </span>
+                            
+                          </div>
+                          <div class="talk-info">
+                            <ul class="speaker-list">
+                               <li>Simon Pilkington</li> 
+                            </ul>
+                            <br>
+                            <a
+                              href
+                              data-toggle="modal"
+                              data-target="#global-modal"
+                              data-title="Building the next version of the Smoke Framework"
+                              data-description="Last year the Encoding Platform team within Prime Video launched a number of web services written in Swift using the Smoke Framework. This talk will start by looking back at the development and motivation for the Smoke Framework and discuss our experiences of launching in production. The talk will finish by looking forward to see how we are using these experiences and the evolution of the Server Side Swift eco-system to improve the operational performance of applications written using the Smoke Framework in areas such as logging, metrics and traceability."
+                            >
+                              Building the next version of the Smoke Framework
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    
+
+                    <td>
+                      Conference room (Salen)
+                    </td>
+
+                  </tr>
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">09:45 - 10:30</td>
+
+                    
+                      <td>
+                        <div class="talk">
+                          <div class="avatars">
+                            
+                              <span class="avatar">
+                                <img src="/App/Images/speakers/matias-piipari.png" alt="Matias Piipari">
+                              </span>
+                            
+                          </div>
+                          <div class="talk-info">
+                            <ul class="speaker-list">
+                               <li>Matias Piipari</li> 
+                            </ul>
+                            <br>
+                            <a
+                              href
+                              data-toggle="modal"
+                              data-target="#global-modal"
+                              data-title="How we Vapor-ised our Mac app"
+                              data-description="This talk will cover the pros, cons and gotchas of using existing codebases as a springboard for developing a new web service. We will discuss how you can take mature, battle-tested code from a macOS app and use it as the basis for a web service using the popular server-side Swift framework, Vapor."
+                            >
+                              How we Vapor-ised our Mac app
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    
+
+                    <td>
+                      Conference room (Salen)
+                    </td>
+
+                  </tr>
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">10:30 - 10:45</td>
+
+                    
+                      <td class="">Coffee break</td>
+                    
+
+                    <td>
+                      Conference room (Salen)
+                    </td>
+
+                  </tr>
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">10:45 - 11:30</td>
+
+                    
+                      <td>
+                        <div class="talk">
+                          <div class="avatars">
+                            
+                              <span class="avatar">
+                                <img src="/App/Images/speakers/daniel-alm.jpg" alt="Daniel Alm">
+                              </span>
+                            
+                          </div>
+                          <div class="talk-info">
+                            <ul class="speaker-list">
+                               <li>Daniel Alm</li> 
+                            </ul>
+                            <br>
+                            <a
+                              href
+                              data-toggle="modal"
+                              data-target="#global-modal"
+                              data-title="Supercharging your Web APIs with gRPC"
+                              data-description="gRPC is a battle-tested framework for making web API calls over the network originally developed by Google. In this talk, we will explain what gRPC is and what advantages it has over a plain ol&#39; HTTP+JSON API. We will also show how you can develop and run your own Swift-based gRPC backend in the cloud."
+                            >
+                              Supercharging your Web APIs with gRPC
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    
+
+                    <td>
+                      Conference room (Salen)
+                    </td>
+
+                  </tr>
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">11:30 - 12:15</td>
+
+                    
+                      <td>
+                        <div class="talk">
+                          <div class="avatars">
+                            
+                              <span class="avatar">
+                                <img src="/App/Images/speakers/gerwin-de-haan.png" alt="Gerwin de Haan">
+                              </span>
+                            
+                              <span class="avatar">
+                                <img src="/App/Images/speakers/mathieu-barnachon.png" alt="Mathieu Barnachon">
+                              </span>
+                            
+                          </div>
+                          <div class="talk-info">
+                            <ul class="speaker-list">
+                               <li>Gerwin de Haan</li>  <li>Mathieu Barnachon</li> 
+                            </ul>
+                            <br>
+                            <a
+                              href
+                              data-toggle="modal"
+                              data-target="#global-modal"
+                              data-title="Building high-tech robots with Swift – a story from the front lines"
+                              data-description="We will share our adventure of shipping industrial high-tech photo machines using Swift, and how we addressed the integration of cameras, mechatronics and photo- and video processing pipelines on the Mac, with an iPad control interface. We will touch upon choices in software architecture and frameworks from the past 4 years, and share how we’re pushing Swift beyond our machines and into the Cloud."
+                            >
+                              Building high-tech robots with Swift – a story from the front lines
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    
+
+                    <td>
+                      Conference room (Salen)
+                    </td>
+
+                  </tr>
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">12:15 - 13:15</td>
+
+                    
+                      <td class="">Lunch</td>
+                    
+
+                    <td>
+                      Conference room (Salen)
+                    </td>
+
+                  </tr>
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">13:15 - 14:00</td>
+
+                    
+                      <td>
+                        <div class="talk">
+                          <div class="avatars">
+                            
+                              <span class="avatar">
+                                <img src="/App/Images/speakers/timirah-james.jpeg" alt="Timirah James">
+                              </span>
+                            
+                          </div>
+                          <div class="talk-info">
+                            <ul class="speaker-list">
+                               <li>Timirah James</li> 
+                            </ul>
+                            <br>
+                            <a
+                              href
+                              data-toggle="modal"
+                              data-target="#global-modal"
+                              data-title="Let&#39;s Go Serverless with Swift using Vapor"
+                              data-description="Although Swift is steadily gaining traction and credibility amongst developers, some still have trouble with believing in Swift’s ability when it comes to serverless. This uncertainty is expected since Swift is still a very new language and is not as established and supported as other languages such as Python or frameworks like Node.JS. For this, most Swift developers continue to depend on other languages and platforms for their backend and server-side needs, and have not taken the time to try out the concept of server-side Swift. In this session, we’ll be exploring breaking the ice and warming cold feet about server-side Swift, and even walk thru the process of building a serverless app using the popular web framework, Vapor. Topics will include: 1) Swift vs. Your favorite backend language, 2) Benefits of Swift End-to-End, 3) An Intro to Vapor, 4) Building a Serverless App with Swift"
+                            >
+                              Let&#39;s Go Serverless with Swift using Vapor
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    
+
+                    <td>
+                      Conference room (Salen)
+                    </td>
+
+                  </tr>
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">14:00 - 14:45</td>
+
+                    
+                      <td>
+                        <div class="talk">
+                          <div class="avatars">
+                            
+                              <span class="avatar">
+                                <img src="/App/Images/speakers/johannes-weiss.jpg" alt="Johannes Weiss">
+                              </span>
+                            
+                          </div>
+                          <div class="talk-info">
+                            <ul class="speaker-list">
+                               <li>Johannes Weiss</li> 
+                            </ul>
+                            <br>
+                            <a
+                              href
+                              data-toggle="modal"
+                              data-target="#global-modal"
+                              data-title="Testing SwiftNIO Systems"
+                              data-description="We believe SwiftNIO is a great way to write your networking applications and libraries. Besides performance, reliability, composability, and the growing ecosystem around SwiftNIO, one of the biggest benefits is how straightforward it is to test your networking libraries written with SwiftNIO.
+In this session, we will see some practical examples where testing is very hard/near impossible using traditional networking libraries but pretty easy in the SwiftNIO development model. Concrete things that we will look at are the ChannelPipeline, ChannelHandlers, EmbeddedChannel, as well as the recent addition NIOTestUtils."
+                            >
+                              Testing SwiftNIO Systems
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    
+
+                    <td>
+                      Conference room (Salen)
+                    </td>
+
+                  </tr>
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">14:45 - 15:00</td>
+
+                    
+                      <td class="">Coffee break</td>
+                    
+
+                    <td>
+                      Conference room (Salen)
+                    </td>
+
+                  </tr>
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">15:00 - 15:45</td>
+
+                    
+                      <td>
+                        <div class="talk">
+                          <div class="avatars">
+                            
+                              <span class="avatar">
+                                <img src="/App/Images/speakers/kaitlin-mahar.jpg" alt="Kaitlin Mahar">
+                              </span>
+                            
+                          </div>
+                          <div class="talk-info">
+                            <ul class="speaker-list">
+                               <li>Kaitlin Mahar</li> 
+                            </ul>
+                            <br>
+                            <a
+                              href
+                              data-toggle="modal"
+                              data-target="#global-modal"
+                              data-title="Maintaining a Library in a Swiftly Moving Ecosystem"
+                              data-description="API evolution is tricky. You want to continually improve your library with new features and bug fixes, but at the same time, don&#39;t want to break your users&#39; existing code. When your library is written in a language that moves as fast as Swift, the choices you need to make as a maintainer can be especially difficult. How do you decide when to drop support for an old language version? When can you begin incorporating exciting new features like the &quot;some&quot; keyword into your public API? In this talk, we will discuss best practices for API evolution, and how you can use Swift language features to gracefully change your library over time."
+                            >
+                              Maintaining a Library in a Swiftly Moving Ecosystem
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    
+
+                    <td>
+                      Conference room (Salen)
+                    </td>
+
+                  </tr>
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">15:45 - 16:30</td>
+
+                    
+                      <td>
+                        <div class="talk">
+                          <div class="avatars">
+                            
+                              <span class="avatar">
+                                <img src="/App/Images/speakers/joe-smith.jpg" alt="Joe Smith">
+                              </span>
+                            
+                          </div>
+                          <div class="talk-info">
+                            <ul class="speaker-list">
+                               <li>Joe Smith</li> 
+                            </ul>
+                            <br>
+                            <a
+                              href
+                              data-toggle="modal"
+                              data-target="#global-modal"
+                              data-title="Fluently NoSQL: Creating FluentDynamoDB"
+                              data-description="Fluent is a framework for building integrations with SQL and NoSQL databases. Primarily, first-class support comes in the form of different SQL backends, like MySQL and SQLite. For cloud-native applications, there are many use cases where a fully-managed service like DynamoDB is a logical choice.
+
+This talk describes AWSSDKSwift an open-source, community-maintained framework for interacting with Amazon Web Services. The talk explains the semantics of DynamoDB and its API surface, Queries, and Transactions. Finally, the presentation explores keys parts of Fluent, in particular, the Database and Connection protocols, which build up the fluent-dynamodb library. Attendees will have a much better understanding of the core of Fluent, as well as how to approach adding support for a new datastore."
+                            >
+                              Fluently NoSQL: Creating FluentDynamoDB
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    
+
+                    <td>
+                      Conference room (Salen)
+                    </td>
+
+                  </tr>
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">16:30 - 17:15</td>
+
+                    
+                      <td>
+                        <div class="talk">
+                          <div class="avatars">
+                            
+                              <span class="avatar">
+                                <img src="/App/Images/speakers/ivan-andriollo.jpg" alt="Ivan Andriollo">
+                              </span>
+                            
+                          </div>
+                          <div class="talk-info">
+                            <ul class="speaker-list">
+                               <li>Ivan Andriollo</li> 
+                            </ul>
+                            <br>
+                            <a
+                              href
+                              data-toggle="modal"
+                              data-target="#global-modal"
+                              data-title="Full stack Swift development: how and why"
+                              data-description="Developing full stack apps using Swift has been possible for some time now, but is it something you should consider for your projects? 
+This talk will dive into the the benefits of using Swift in the backend and client code and how it can speed up development, and increase the quality of your products. It will show how to create a backend tailored perfectly for the client and how in the initial phases of development we can share code across environments to iterate early on and have a great API from your first release."
+                            >
+                              Full stack Swift development: how and why
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    
+
+                    <td>
+                      Conference room (Salen)
+                    </td>
+
+                  </tr>
+                
+                  <tr>
+                    <td class="text-center font-weight-bold">17:15 - 17:30</td>
+
+                    
+                      <td class="">Closing remarks</td>
+                    
+
+                    <td>
+                      Conference room (Salen)
+                    </td>
+
+                  </tr>
+                
+
+              </tbody>
+            </table>
+          </div>  
+        
+      </div>
+    
+
+  </div>
+</div>
+
+        </div>
+      </div>
+      <div class="container">
+<div class="row mb-5 mt-5">
+	<h3 class="h3">Location layout</h3>
+	<div class="col-xs-12 col-sm-12 text-center">
+    	<img class="img-fluid" src="/App/YearX/images/schedule/rooms.png"/>
+	</div>
+</div>
+</div>
+    </div>
+  </div>
+
+    <footer class="navbar footer">
+    <div class="container d-flex justify-content-spacearound">
+        <div class="year-switcher ">
+            <a href="/years" class="text-white">Years</a>
+            <span class="underline"></span>
+        </div>
+        <div class="social-media">
+            <a href="https://github.com/SwiftServerConf" target="_blank">
+                <span class="icon">
+                    <svg class="feather text-white">
+                        <use xlink:href="/App/YearX/images/icons/feather-sprite.svg#github"/>
+                    </svg>
+                </span>
+            </a>
+            <a href="https://twitter.com/SwiftServerConf" target="_blank">
+                <span class="icon">
+                    <svg class="feather text-white">
+                        <use xlink:href="/App/YearX/images/icons/feather-sprite.svg#twitter"/>
+                    </svg>
+                </span>
+            </a>
+            <a href="https://www.instagram.com/swiftserverconf/" target="_blank">
+                <span class="icon">
+                    <svg class="feather text-white">
+                        <use xlink:href="/App/YearX/images/icons/feather-sprite.svg#instagram"/>
+                    </svg>
+                </span>
+            </a>
+            <a href="https://www.facebook.com/SwiftServerConf" target="_blank">
+              <span class="icon">
+                <svg class="feather text-white">
+                  <use xlink:href="/App/YearX/images/icons/feather-sprite.svg#facebook"/>
+                </svg>
+              </span>
+            </a>
+        </div>
+    </div>
+</footer>
+
+    <!-- Modal -->
+<div class="modal fade" id="global-modal" tabindex="-1" role="dialog" aria-labelledby="global-modal" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Title Placeholder</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">Description Placeholder</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Example Button to open Modal -->
+<!-- <button
+  type="button"
+  class="btn btn-primary"
+  data-toggle="modal"
+  data-target="#global-modal"
+  data-title="Hey, Listen!"
+  data-description="It's dangerous to go alone. Take this!"
+>
+    Open modal with "Hey, Listen!"
+</button> -->
+
+    
+    <script src='https://js.tito.io/v1' async></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111252914-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-111252914-1');
+</script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="/App/YearX/javascript/particles.js"></script>
+<script src="https://cdn.apple-mapkit.com/mk/5.x.x/mapkit.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script>
+function toggleHamburger() {
+  const button = document.querySelector('.hamburger');
+  const nav = document.querySelector('.navigation');
+  
+  toggleClass(button);
+  toggleClass(nav);
+}
+
+function toggleClass(element) {
+  const isActiveClass = "is-active";
+  if (element.classList.contains(isActiveClass)) {
+    element.classList.remove(isActiveClass)
+  } else {
+    element.classList.add(isActiveClass)
+  }
+}
+</script>
+
+
+<script>
+$('#global-modal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget)
+  var titleText = button.data('title')
+  var descriptionText = button.data('description')
+  var modal = $(this)
+                      
+  modal.find('.modal-title').text(titleText)
+  modal.find('.modal-body').text(descriptionText)
+})
+</script>
+
+<script>
+/* TICKET SALES BANNER
+// Set the date we're counting down to
+var countDownDate = new Date("Sep 30, 2019 23:59:59").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(
+  function() {
+                    
+    // Get today's date and time
+    const now = new Date().getTime();
+    
+    // Find the distance between now and the count down date
+    const distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    const hours = Math.floor(distance / (1000 * 60 * 60));
+    
+    const text = "TICKET SALES WILL CLOSE IN<b>: " + hours + " Hours</b>";
+                    
+    // Output the result in an element with id="demo"
+    document.getElementById("sales-banner").innerHTML = text;
+    
+    // If the count down is over, write some text
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("sales-banner").innerHTML = "Ticket Sales Are Closed!";
+    }
+  }, 1000);
+ */
+</script>
+
+</body>
+</html>
+
