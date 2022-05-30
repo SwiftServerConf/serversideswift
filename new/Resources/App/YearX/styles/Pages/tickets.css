@@ -1,0 +1,27 @@
+.tickets .info-banner {
+    background: linear-gradient(to right, #F88A36 , #FD2020) no-repeat !important;
+    color: #ffffff;
+    padding: 30px;
+    border-radius: 5px;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.tickets .info-banner a {
+    text-decoration: underline;
+    color: #ffffff;
+    font-weight: 800;
+}
+
+.tito-submit {
+  background: linear-gradient(to right, #F88A36 , #FD2020) no-repeat !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 6px !important;
+  width: 200px !important;
+  height: 40px !important;
+}
+
+.tito-submit:hover {
+  background: linear-gradient(to right, #F88A36 , #FD2020) no-repeat !important;
+}

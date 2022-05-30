@@ -1,0 +1,49 @@
+.about .organizer-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about .organizer {
+  width: 230px;
+  height: 325px;
+  background-color: #ffffff;
+  color: black;
+  border-radius: 20px;
+  box-shadow: rgb(0, 0, 0, 0.1) 0px 5px 10px 5px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 20px 30px;
+  transition: box-shadow .2s ease-in-out;
+}
+
+.about .organizer:hover {
+  box-shadow: rgb(0, 0, 0, 0.1) 0px 7px 15px 7px;
+}
+
+.about .organizer a {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.about .organizer .image {
+  width: 250px;
+  height: 225px;
+  overflow: hidden;
+}
+
+.about .organizer .image img {
+  width: 100%;
+  height: auto;
+  margin-top: -10px;
+}
+
+.about .organizer .description h3 {
+  font-size: 22px;
+}
+
+.about .organizer .description h4 {
+  font-size: 16px;
+  margin: 0;
+}

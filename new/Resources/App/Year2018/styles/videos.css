@@ -1,0 +1,42 @@
+.videos {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.videos .flex-container {
+  margin-bottom: 15px;
+  width: 100%;
+  padding: 10px;
+}
+
+.videos .flex-item {
+  width: 100%;
+  padding: 0 15px;
+}
+
+.videos .flex-item:first-child {
+  padding-bottom: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .videos .flex-container {
+    width: 50%;
+  }
+
+  .videos .flex-item {
+    width: 100%;
+    padding: 5px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .videos .flex-container {
+    width: 33%;
+  }
+
+  .videos .flex-item {
+    width: 100%;
+    padding: 5px;
+  }
+}

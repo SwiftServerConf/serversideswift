@@ -1,0 +1,29 @@
+footer.navbar.footer {
+  background-color: #0C1D28;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+footer.navbar.footer .year-switcher {
+    position: relative
+}
+
+footer.navbar.footer .year-switcher a:hover {
+    text-decoration: none;
+}
+
+footer.navbar.footer .year-switcher:hover .underline,
+footer.navbar.footer .year-switcher.active .underline {
+    height: 2px;
+    width: 120%;
+    background: linear-gradient(to right, #F88A36 , #FD2020);
+    position: absolute;
+    left: -10%;
+}
+
+footer.navbar.footer .social-media a {
+  padding: 0 10px;
+}
