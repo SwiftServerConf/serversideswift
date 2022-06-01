@@ -3,7 +3,7 @@ import Publish
 import Plot
 
 // This type acts as the configuration for your website.
-struct New: Website {
+struct Conference: Website {
     enum SectionID: String, WebsiteSectionID {
         // Add the sections that you want your website to contain here:
         case posts
@@ -15,11 +15,14 @@ struct New: Website {
 
     // Update these properties to configure your website:
     var url = URL(string: "https://your-website-url.com")!
-    var name = "New"
-    var description = "A description of New"
+    var name = "ServerSide.swift Conference"
+    var description = "ServerSide.swift - the conference for server-side Swift developers"
     var language: Language { .english }
     var imagePath: Path? { nil }
+    var favicon: Favicon? {
+        Favicon(path: "/App/YearX/favicon.ico", type: "image/x-icon")
+    }
 }
 
 // This will generate your website using the built-in Foundation theme:
-try New().publish(withTheme: .foundation)
+try Conference().publish(withTheme: .conference)
