@@ -10,11 +10,6 @@ extension Theme where Site == Conference {
 
 private struct ConferenceThemeHTMLFactory: HTMLFactory {
     typealias Site = Conference
-    var dateFormatter: DateFormatter
-    init() {
-        dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd MMMM yyyy"
-    }
     
     func makeIndexHTML(for index: Index,
                        context: PublishingContext<Site>) throws -> HTML {
@@ -60,7 +55,6 @@ private struct ConferenceThemeHTMLFactory: HTMLFactory {
                     Wrapper {
                         Article {
                             Div(item.content.body).class("content")
-                            Div(dateFormatter.string(from: item.date))
                             Span("Tagged with: ")
                         }
                     }
