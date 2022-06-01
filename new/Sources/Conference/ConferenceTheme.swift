@@ -27,14 +27,6 @@ private struct ConferenceThemeHTMLFactory: HTMLFactory {
                     H1(index.title)
                     Paragraph(context.site.description)
                         .class("description")
-                    H2("Latest content")
-                    ItemList(
-                        items: context.allItems(
-                            sortedBy: \.date,
-                            order: .descending
-                        ),
-                        site: context.site, dateFormatter: dateFormatter
-                    )
                 }
                 SiteFooter()
             }
@@ -50,7 +42,6 @@ private struct ConferenceThemeHTMLFactory: HTMLFactory {
                 SiteHeader(context: context, selectedSelectionID: section.id)
                 Wrapper {
                     H1(section.title)
-                    ItemList(items: section.items, site: context.site, dateFormatter: dateFormatter)
                 }
                 SiteFooter()
             }
@@ -71,7 +62,6 @@ private struct ConferenceThemeHTMLFactory: HTMLFactory {
                             Div(item.content.body).class("content")
                             Div(dateFormatter.string(from: item.date))
                             Span("Tagged with: ")
-                            ItemTagList(item: item, site: context.site)
                         }
                     }
                     Script(url: "/static/scripts/syntax.js")
@@ -136,15 +126,6 @@ private struct ConferenceThemeHTMLFactory: HTMLFactory {
                         url: context.site.tagListPath.absoluteString
                     )
                     .class("browse-all")
-
-                    ItemList(
-                        items: context.items(
-                            taggedWith: page.tag,
-                            sortedBy: \.date,
-                            order: .descending
-                        ),
-                        site: context.site, dateFormatter: dateFormatter
-                    )
                 }
                 SiteFooter()
             }
