@@ -7,30 +7,54 @@ struct SiteHeader<Site: Website>: Component {
 
     var body: Component {
         Header {
-            Wrapper {
-                Node.a(
-                    .href("/"),
-                    .img(.alt("Vapor Logo"), .src("/static/images/header-logo.png"), .class("d-iblock va-baseline")),
-                    .h1("The Vapor Blog", .class("d-iblock ml-4 va-text-bottom"))
-                ).class("site-name d-iblock")
-
-                if Site.SectionID.allCases.count > 1 {
-                    navigation
-                }
-            }
+            navigation
         }
     }
 
     private var navigation: Component {
         Navigation {
+            Div {
+                Div {
+                    Link(url: "/") {
+                        Image(url: "/App/YearX/images/layout/logo.png", description: "ServerSide.swift")
+                    }.class("navbar-brand bg-none")
+                }.class("logo")
+                Button {
+                    Span {
+                        Span {}.class("hamburger-inner")
+                    }.class("hamburger-box")
+                }.class("hamburger hamburger--squeeze").attribute(named: "onclick", value: "toggleHamburger()")
+                List(Site.SectionID.allCases) { sectionID in
+                    let section = context.sections[sectionID]
+
+                    if section.title == "Home" {
+                        return Link(section.title,
+                            url: "/"
+                        )
+                        .class(sectionID == selectedSelectionID ? "active" : "")
+                    } else {
+                        return Link(section.title,
+                            url: section.path.absoluteString
+                        )
+                        .class(sectionID == selectedSelectionID ? "active" : "")
+                    }
+                }.class("d-none d-md-flex")
+            }.class("container")
             List(Site.SectionID.allCases) { sectionID in
                 let section = context.sections[sectionID]
 
-                return Link(section.title,
-                    url: section.path.absoluteString
-                )
-                .class(sectionID == selectedSelectionID ? "selected" : "")
-            }
-        }
+                if section.title == "Home" {
+                    return Link(section.title,
+                        url: "/"
+                    )
+                    .class(sectionID == selectedSelectionID ? "active" : "")
+                } else {
+                    return Link(section.title,
+                        url: section.path.absoluteString
+                    )
+                    .class(sectionID == selectedSelectionID ? "active" : "")
+                }
+            }.class("d-none d-md-flex")
+        }.class("navigation")
     }
 }

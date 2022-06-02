@@ -6,7 +6,8 @@ import Plot
 struct Conference: Website {
     enum SectionID: String, WebsiteSectionID {
         // Add the sections that you want your website to contain here:
-        case posts
+        case home
+//        case location
     }
 
     struct ItemMetadata: WebsiteItemMetadata {
@@ -18,7 +19,9 @@ struct Conference: Website {
     var name = "ServerSide.swift Conference"
     var description = "ServerSide.swift - the conference for server-side Swift developers"
     var language: Language { .english }
-    var imagePath: Path? { nil }
+    var imagePath: Path? {
+        "/App/YearX/images/layout/logo.png"
+    }
     var favicon: Favicon? {
         Favicon(path: "/App/YearX/favicon.ico", type: "image/x-icon")
     }

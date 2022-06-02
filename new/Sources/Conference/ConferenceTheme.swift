@@ -24,6 +24,7 @@ private struct ConferenceThemeHTMLFactory: HTMLFactory {
                         .class("description")
                 }
                 SiteFooter()
+                SiteScripts()
             }
         )
     }
@@ -39,6 +40,7 @@ private struct ConferenceThemeHTMLFactory: HTMLFactory {
                     H1(section.title)
                 }
                 SiteFooter()
+                SiteScripts()
             }
         )
     }
@@ -58,9 +60,8 @@ private struct ConferenceThemeHTMLFactory: HTMLFactory {
                             Span("Tagged with: ")
                         }
                     }
-                    Script(url: "/static/scripts/syntax.js")
-                    Script(url: "/static/scripts/start-syntax.js")
                     SiteFooter()
+                    SiteScripts()
                 }
             )
         )
@@ -75,6 +76,7 @@ private struct ConferenceThemeHTMLFactory: HTMLFactory {
                 SiteHeader(context: context, selectedSelectionID: nil)
                 Wrapper(page.body)
                 SiteFooter()
+                SiteScripts()
             }
         )
     }
@@ -99,6 +101,7 @@ private struct ConferenceThemeHTMLFactory: HTMLFactory {
                     .class("all-tags")
                 }
                 SiteFooter()
+                SiteScripts()
             }
         )
     }
@@ -122,14 +125,31 @@ private struct ConferenceThemeHTMLFactory: HTMLFactory {
                     .class("browse-all")
                 }
                 SiteFooter()
+                SiteScripts()
             }
         )
     }
     
     func buildHead(for page: Location, context: PublishingContext<Conference>) -> Node<HTML.DocumentContext> {
             .head(for: page, on: context.site, stylesheetPaths: [
-                "/static/styles/styles.css",
-                "/static/styles/syntax.css"
+                "https://css.tito.io/v1.1",
+                "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css",
+                "https://fonts.googleapis.com/css?family=Lato:100,300, 300i,700",
+                "/App/YearX/styles/layout.css",
+                "/App/YearX/styles/navigation.css",
+                "/App/YearX/styles/hamburger-menu.css",
+                "/App/YearX/styles/footer.css",
+                "/App/YearX/styles/particles.css",
+                "/App/YearX/styles/Pages/home.css",
+                "/App/YearX/styles/Pages/about.css",
+                "/App/YearX/styles/Pages/speakers.css",
+                "/App/YearX/styles/Pages/sponsors.css",
+                "/App/YearX/styles/Pages/location.css",
+                "/App/YearX/styles/Pages/profile.css",
+                "/App/YearX/styles/Pages/years.css",
+                "/App/YearX/styles/Pages/tickets.css",
+                "/App/YearX/styles/Pages/schedule.css",
+                "/App/YearX/styles/Pages/videos.css"
             ])
         }
 }
