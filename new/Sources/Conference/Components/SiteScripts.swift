@@ -20,5 +20,3 @@ struct SiteScripts: Component {
         }
     }
 }
-
-#warning("TODO")

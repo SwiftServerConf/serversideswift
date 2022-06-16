@@ -18,6 +18,26 @@ private struct ConferenceThemeHTMLFactory: HTMLFactory {
             buildHead(for: index, context: context),
             .body {
                 SiteHeader(context: context, selectedSelectionID: nil)
+                Div {
+                    Div().id("particles-js")
+                    Div {
+                        Image(url: "/App/YearX/images/layout/logo.png", description: "ServerSide.swift logo")
+                            .attribute(named: "height", value: "130px")
+                            .attribute(named: "width", value: "auto")
+                        H2 {
+                            Text("ServerSide.swift")
+                        }.class("text-center ff-monofur")
+                    }.class("brand")
+                    H1 {
+                        Text("Server-Side Swift Conference")
+                    }.class("text-center text-white")
+                    H2 {
+                        Text("8th-9th December 2022. London, UK")
+                    }.class("text-center text-white")
+                    Div {
+                        Link("Become a Sponsor", url: "mailto:sponsors@serversideswift.info").class("btn btn-default btn-gradient")
+                    }.class("action-buttons pt-5 pb-3")
+                }.class("page-block bg-blue hero")
                 Wrapper {
                     H1(index.title)
                     Paragraph(context.site.description)
