@@ -15,7 +15,7 @@ struct Conference: Website {
     }
 
     // Update these properties to configure your website:
-    var url = URL(string: "https://your-website-url.com")!
+    var url = URL(string: "https://www.serversideswift.info")!
     var name = "ServerSide.swift Conference"
     var description = "ServerSide.swift - the conference for server-side Swift developers"
     var language: Language { .english }
