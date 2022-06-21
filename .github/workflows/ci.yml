@@ -18,8 +18,8 @@ jobs:
       id: cred
       uses: aws-actions/configure-aws-credentials@v1
       with:
-        aws-access-key-id: ${{ secrets.DEPLOYER_AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.DEPLOYER_AWS_SECRET_ACCESS_KEY }}
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: 'us-east-1'
     - name: Deploy to AWS Cloudformation
       id: clouddeploy
@@ -38,8 +38,8 @@ jobs:
         args: --acl public-read --follow-symlinks --delete
       env:
         AWS_S3_BUCKET: 'www.serversideswift.info'
-        AWS_ACCESS_KEY_ID: ${{ secrets.DEPLOYER_AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.DEPLOYER_AWS_SECRET_ACCESS_KEY }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_REGION: 'us-east-1'
         SOURCE_DIR: 'Output'
       if: steps.clouddeploy.outcome == 'success'
@@ -48,6 +48,6 @@ jobs:
       env:
         SOURCE_PATH: '/*'
         AWS_REGION: 'us-east-1'
-        AWS_ACCESS_KEY_ID: ${{ secrets.DEPLOYER_AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.DEPLOYER_AWS_SECRET_ACCESS_KEY }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         DISTRIBUTION_ID: ${{ secrets.DISTRIBUTION_ID }}
