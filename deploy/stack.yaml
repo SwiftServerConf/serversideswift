@@ -41,7 +41,7 @@ Resources:
       BucketName: !Ref 'S3ApexBucketName'
       WebsiteConfiguration:
         RedirectAllRequestsTo:
-          HostName: !Sub 'www.{DomainName}'
+          HostName: !Sub 'www.${DomainName}'
           Protocol: 'https'
   WebsiteCloudfront:
     Type: AWS::CloudFront::Distribution
@@ -57,7 +57,7 @@ Resources:
         HttpVersion: 'http2'
         # DefaultRootObject: index.html
         Aliases:
-        - !Ref 'DomainName'
+        - !Sub 'www.${DomainName}'
         CustomErrorResponses:
           - ErrorCode: 403
             ResponseCode: 404
