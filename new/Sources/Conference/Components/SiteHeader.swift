@@ -54,7 +54,7 @@ struct SiteHeader<Site: Website>: Component {
                     )
                     .class(sectionID == selectedSelectionID ? "active" : "")
                 }
-            }.class("d-none d-md-flex")
+            }.class("d-flex d-md-none")
         }.class("navigation")
     }
 }
