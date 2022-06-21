@@ -16,3 +16,4 @@ DerivedData/
 # End of https://www.gitignore.io/api/vapor
 
 .idea
+.vscode/
