@@ -38,10 +38,10 @@ Resources:
   S3BucketForApex:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: !Ref 'S3BucketName'
+      BucketName: !Ref 'S3ApexBucketName'
       WebsiteConfiguration:
         RedirectAllRequestsTo:
-          Hostname: !Sub 'www.{DomainName}'
+          HostName: !Sub 'www.{DomainName}'
           Protocol: 'https'
   WebsiteCloudfront:
     Type: AWS::CloudFront::Distribution
@@ -94,9 +94,9 @@ Resources:
               Value: 'Vapor Blog'
               Override: true
         SecurityHeadersConfig:
-          ContentSecurityPolicy:
-              ContentSecurityPolicy: default-src 'none'; script-src 'self'; img-src 'self'; style-src 'self'; font-src 'self'
-              Override: false
+          # ContentSecurityPolicy:
+          #     ContentSecurityPolicy: default-src 'none'; script-src 'self'; img-src 'self'; style-src 'self'; font-src 'self'
+          #     Override: false
           ContentTypeOptions:
             Override: false
           FrameOptions:
