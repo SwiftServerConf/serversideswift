@@ -67,7 +67,7 @@ private struct ConferenceThemeHTMLFactory: HTMLFactory {
                                 }.class("h3")
                                 Paragraph {
                                     Text("We are currently puting together an amazing array of talks from amazing speakers. If you'd like to take part, you ")
-                                    Link("submit a talk here", url: "https://goo.gl/forms/MN99aYDgIle4bMlI2").linkTarget(.blank)
+                                    Link("submit a talk here", url: "https://forms.gle/tWMWZpChcuPL6q2C8").linkTarget(.blank)
                                     Text(".")
                                 }
                             }.class("col-12 col-sm-6 mt-2 mb-2")
