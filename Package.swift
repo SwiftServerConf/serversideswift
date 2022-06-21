@@ -1,39 +1,23 @@
-// swift-tools-version:4.2
+// swift-tools-version:5.5
+
 import PackageDescription
 
 let package = Package(
-    name: "ServerSideSwift",
+    name: "Conference",
+    platforms: [.macOS(.v12)],
+    products: [
+        .executable(
+            name: "Conference",
+            targets: ["Conference"]
+        )
+    ],
     dependencies: [
-        // Vapor
-        .package(url: "https://github.com/vapor/fluent-mysql.git", from: "3.0.0"),
-        .package(url: "https://github.com/vapor/vapor.git", from: "3.0.0"),
-
-        // Nodes
-        .package(url: "https://github.com/nodes-vapor/admin-panel.git", from:"2.0.0-rc"),
-        .package(url: "https://github.com/nodes-vapor/bugsnag.git", from: "3.0.0-rc"),
-        .package(url: "https://github.com/nodes-vapor/paginator.git", from: "3.2.0"),
-        .package(url: "https://github.com/nodes-vapor/storage.git", from: "1.0.0-beta"),
-        .package(url: "https://github.com/nodes-vapor/submissions.git", from: "2.0.0-rc"),
-        .package(url: "https://github.com/nodes-vapor/sugar.git", from: "4.0.0-rc"),
-
-        // 3rd Party
-        .package(url: "https://github.com/twof/VaporMailgunService.git", from: "1.1.0"),
+        .package(name: "Publish", url: "https://github.com/johnsundell/publish.git", from: "0.8.0")
     ],
     targets: [
-        .target(name: "App", dependencies: [
-            "AdminPanel",
-            "Bugsnag",
-            "FluentMySQL",
-            "Mailgun",
-            "Paginator",
-            "Storage",
-            "Submissions",
-            "Sugar",
-            "Vapor"
-        ]),
-        .target(name: "Run", dependencies: ["App"]),
-        .testTarget(name: "AppTests", dependencies: ["App"])
+        .executableTarget(
+            name: "Conference",
+            dependencies: ["Publish"]
+        )
     ]
 )
-
-

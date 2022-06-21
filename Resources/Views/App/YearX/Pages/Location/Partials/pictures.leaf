@@ -1,8 +1,0 @@
-<div class="location-pictures row">
-	<div class="col-xs-12 col-sm-6">
-	    <img class="img-fluid" src="/App/YearX/images/location/blox1.jpg"/>
-	</div>
-	<div class="col-xs-12 col-sm-6">
-	    <img class="img-fluid" src="/App/YearX/images/location/blox2.jpg"/>
-	</div>
-</div>

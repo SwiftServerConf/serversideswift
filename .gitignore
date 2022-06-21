@@ -17,3 +17,5 @@ DerivedData/
 
 .idea
 .vscode/
+.publish
+Output/
