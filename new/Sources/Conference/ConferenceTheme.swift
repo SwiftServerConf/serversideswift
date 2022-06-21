@@ -38,11 +38,112 @@ private struct ConferenceThemeHTMLFactory: HTMLFactory {
                         Link("Become a Sponsor", url: "mailto:sponsors@serversideswift.info").class("btn btn-default btn-gradient")
                     }.class("action-buttons pt-5 pb-3")
                 }.class("page-block bg-blue hero")
-                Wrapper {
-                    H1(index.title)
-                    Paragraph(context.site.description)
-                        .class("description")
-                }
+                Div {
+                    Div {
+                        Div {
+                            Div {
+                                H3 {
+                                    Text("The Conference")
+                                }.class("h3")
+                                Paragraph("ServerSide.swift is a framework-independent conference, where we will learn and share on a number of different related topics. The conference is aimed at being a non-profit conference and solely run for the love of server-side Swift.")
+                            }.class("col-12 col-sm-6 mt-2 mb-2")
+                            
+                            Div {
+                                H3 {
+                                    Text("Where and When")
+                                }.class("h3")
+                                Paragraph {
+                                    Text("The conference will take place in awesome ")
+                                    Text("London, UK").bold()
+                                    Text(" and last for 2 days from ")
+                                    Text("8th - 9th Decemember").bold()
+                                    Text(" and will be packed with inspiring talks.")
+                                }
+                            }.class("col-12 col-sm-6 mt-2 mb-2")
+                            
+                            Div {
+                                H3 {
+                                    Text("Speakers")
+                                }.class("h3")
+                                Paragraph {
+                                    Text("We are currently puting together an amazing array of talks from amazing speakers. If you'd like to take part, you ")
+                                    Link("submit a talk here", url: "https://goo.gl/forms/MN99aYDgIle4bMlI2").linkTarget(.blank)
+                                    Text(".")
+                                }
+                            }.class("col-12 col-sm-6 mt-2 mb-2")
+                            
+                            Div {
+                                H3 {
+                                    Text("The Team")
+                                }.class("h3")
+                                Paragraph {
+                                    Text("The conference is organised by ")
+                                    Link("Tim Condon", url: "https://twitter.com/0xTim").linkTarget(.blank)
+                                    Text(" and helped by a number of volunteers. If you'd like to volunteer to help out at the conference, ")
+                                    Link("please get in touch", url: "mailto:info@serversideswift.info")
+                                    Text("!")
+                                }
+                            }.class("col-12 col-sm-6 mt-2 mb-2")
+                            
+                            Div {
+                                H3 {
+                                    Text("Sponsoring")
+                                }.class("h3")
+                                Paragraph {
+                                    Text("We are currently looking for sponsors so if you work for a company that would want to help sponsor ServerSide.swift then please get in contact at ")
+                                    Link("sponsors@serversideswift.info", url: "mailto:sponsors@serversideswift.info")
+                                    Text(".")
+                                }
+                            }.class("col-12 col-sm-6 mt-2 mb-2")
+                            
+                            Div {
+                                H3 {
+                                    Text("Want to help?")
+                                }.class("h3")
+                                Paragraph {
+                                    Text("As we are a non-profit conference then the best way you can help at the moment is by spreading the word! Feel free to share the link on whatever platforms that you like. If you'd loke to volunteer at the conference then ")
+                                    Link("please get in touch", url: "mailto:info@serversideswift.info")
+                                    Text("!")
+                                }
+                            }.class("col-12 col-sm-6 mt-2 mb-2")
+                        }.class("row")
+                    }.class("container")
+                }.class("page-block description")
+                Div {
+                    Div {
+                        Div {
+                            Div {
+                                H3("Newsletter").class("h3 text-center")
+                                Paragraph("The best way to keep posted about the conference is by signing up below! Future newsletters will contain everything about sponsor levels, ticket prices, schedule and more!").class("text-white text-center")
+                                Form(url: "https://serversideswift.us17.list-manage.com/subscribe/post?u=214a68ae1b6b77f2b00664b9c&amp;id=3eb6684609", method: .post, enableValidation: false) {
+                                    Paragraph {
+                                        Input(type: .email, name: "EMAIL", value: "", placeholder: "Enter your email").class("form-control").id("mce-EMAIL")
+                                    }
+                                    Div {
+                                        Input(type: .text, name: "b_214a68ae1b6b77f2b00664b9c_3eb6684609", value: "").attribute(named: "tabindex", value: "-1")
+                                    }.style("position: absolute; left: -5000px;").attribute(named: "aria-hidden", value: "true")
+                                    Paragraph {
+                                        Input(type: .submit, name: "subscribe", value: "Notify Me").id("mc-embedded-subscribe").class("btn btn-default submit")
+                                    }.class("text-center")
+                                }.linkTarget(.blank).class("validate col-12 col-sm-8 ml-auto mr-auto mt-4").id("mc-embedded-subscribe-form").attribute(named: "name", value: "mc-embedded-subscribe-form")
+                            }.class("col")
+                        }.class("row")
+                    }.class("container")
+                }.class("bg-blue newsletter")
+                Div {
+                    Div {
+                        Div {
+                            Div {
+                                H3("Sponsors").class("h3 text-center")
+                                Div {
+                                    Link(url: "https://www.brokenhands.io") {
+                                        Image(url: "/App/YearX/images/sponsors/brokenhands.svg", description: "Broken Hands").class("h-80")
+                                    }.linkTarget(.blank)
+                                }.class("logos")
+                            }.class("col")
+                        }.class("row")
+                    }.class("container")
+                }.class("sponsors")
                 SiteFooter()
                 SiteScripts()
             }
