@@ -79,6 +79,38 @@ Resources:
         ViewerCertificate:
           AcmCertificateArn: !Ref 'AcmCertificateArn'
           SslSupportMethod: sni-only
+  WebsiteApexCloudfront:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Comment: Cloudfront Distribution pointing to the apex S3 bucket to redirect to www for HTTPS
+        Origins:
+        - DomainName: !Join [ '', !Split [ 'http://', !GetAtt 'S3BucketForApex.WebsiteURL' ] ]
+          Id: S3Origin
+          CustomOriginConfig:
+            OriginProtocolPolicy: 'http-only'
+        Enabled: true
+        HttpVersion: 'http2'
+        # DefaultRootObject: index.html
+        Aliases:
+        - !Sub '${DomainName}'
+        DefaultCacheBehavior:
+          AllowedMethods:
+          - GET
+          - HEAD
+          - OPTIONS
+          Compress: true
+          TargetOriginId: S3Origin
+          ForwardedValues:
+            QueryString: false
+            Cookies:
+              Forward: none
+          ViewerProtocolPolicy: redirect-to-https
+          ResponseHeadersPolicyId: !Ref WebsiteCloudFrontPolicies
+        PriceClass: PriceClass_All
+        ViewerCertificate:
+          AcmCertificateArn: !Ref 'AcmCertificateArn'
+          SslSupportMethod: sni-only
   WebsiteCloudFrontPolicies:
     Type: AWS::CloudFront::ResponseHeadersPolicy
     Properties:
@@ -118,6 +150,9 @@ Outputs:
   CloudfrontURL:
     Description: 'Cloudfront URL'
     Value: !GetAtt WebsiteCloudfront.DomainName
+  ApexCloudfrontURL:
+    Description: 'Cloudfront APEX URL'
+    Value: !GetAtt WebsiteApexCloudfront.DomainName
   BucketName:
     Value: !Ref 'S3BucketForWebsiteContent'
     Description: Name of S3 bucket to hold website content
