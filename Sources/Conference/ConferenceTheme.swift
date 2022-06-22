@@ -195,7 +195,9 @@ private struct ConferenceThemeHTMLFactory: HTMLFactory {
             buildHead(for: page, context: context),
             .body {
                 SiteHeader(context: context, selectedSelectionID: nil)
-                Wrapper(page.body)
+                Div {
+                    Wrapper(page.body)
+                }.class("container pt-5 pb-5")
                 SiteFooter()
                 SiteScripts()
             }
