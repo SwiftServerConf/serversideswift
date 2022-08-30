@@ -32,7 +32,7 @@ private struct ConferenceThemeHTMLFactory: HTMLFactory {
                         Text("Server-Side Swift Conference")
                     }.class("text-center text-white")
                     H2 {
-                        Text("8th-9th December 2022. London, UK")
+                        Text("9th December 2022. London, UK")
                     }.class("text-center text-white")
                     Div {
                         Link("Become a Sponsor", url: "mailto:sponsors@serversideswift.info").class("btn btn-default btn-gradient")
@@ -55,8 +55,8 @@ private struct ConferenceThemeHTMLFactory: HTMLFactory {
                                 Paragraph {
                                     Text("The conference will take place in awesome ")
                                     Text("London, UK").bold()
-                                    Text(" and last for 2 days from ")
-                                    Text("8th - 9th Decemember").bold()
+                                    Text(" and be held on ")
+                                    Text(" 9th December").bold()
                                     Text(" and will be packed with inspiring talks.")
                                 }
                             }.class("col-12 col-sm-6 mt-2 mb-2")
@@ -66,7 +66,7 @@ private struct ConferenceThemeHTMLFactory: HTMLFactory {
                                     Text("Speakers")
                                 }.class("h3")
                                 Paragraph {
-                                    Text("We are currently puting together an amazing array of talks from amazing speakers. If you'd like to take part, you ")
+                                    Text("We are currently putting together an amazing array of talks from amazing speakers. If you'd like to take part, you ")
                                     Link("submit a talk here", url: "https://forms.gle/tWMWZpChcuPL6q2C8").linkTarget(.blank)
                                     Text(".")
                                 }
@@ -101,7 +101,7 @@ private struct ConferenceThemeHTMLFactory: HTMLFactory {
                                     Text("Want to help?")
                                 }.class("h3")
                                 Paragraph {
-                                    Text("As we are a non-profit conference then the best way you can help at the moment is by spreading the word! Feel free to share the link on whatever platforms that you like. If you'd loke to volunteer at the conference then ")
+                                    Text("As we are a non-profit conference then the best way you can help at the moment is by spreading the word! Feel free to share the link on whatever platforms that you like. If you'd like to volunteer at the conference then ")
                                     Link("please get in touch", url: "mailto:info@serversideswift.info")
                                     Text("!")
                                 }
