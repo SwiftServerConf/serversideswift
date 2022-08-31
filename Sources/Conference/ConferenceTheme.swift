@@ -53,7 +53,7 @@ private struct ConferenceThemeHTMLFactory: HTMLFactory {
                                     Text("Where and When")
                                 }.class("h3")
                                 Paragraph {
-                                    Text("The conference will take place on the")
+                                    Text("The conference will take place on the ")
                                     Text("9th of December").bold()
                                     Text(" in the awesome ")
                                     Text("London, UK").bold()
