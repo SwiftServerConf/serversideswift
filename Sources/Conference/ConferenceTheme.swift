@@ -36,6 +36,7 @@ private struct ConferenceThemeHTMLFactory: HTMLFactory {
                     }.class("text-center text-white")
                     Div {
                         Link("Become a Sponsor", url: "mailto:sponsors@serversideswift.info").class("btn btn-default btn-gradient")
+                        Link("Buy a Ticket", url: "/tickets").class("btn btn-default btn-gradient ml-3")
                     }.class("action-buttons pt-5 pb-3")
                 }.class("page-block bg-blue hero")
                 Div {
@@ -157,8 +158,13 @@ private struct ConferenceThemeHTMLFactory: HTMLFactory {
             buildHead(for: section, context: context),
             .body {
                 SiteHeader(context: context, selectedSelectionID: section.id)
-                Wrapper {
-                    H1(section.title)
+                if section.title == "Faq" {
+                    FAQ()
+                } else {
+                    Wrapper {
+                        H1(section.title)
+                        H1("Section")
+                    }
                 }
                 SiteFooter()
                 SiteScripts()
@@ -196,8 +202,10 @@ private struct ConferenceThemeHTMLFactory: HTMLFactory {
             .body {
                 SiteHeader(context: context, selectedSelectionID: nil)
                 Div {
-                    Wrapper(page.body)
-                }.class("container pt-5 pb-5")
+                    Div {
+                        Wrapper(page.body)
+                    }.class("container pb-5")
+                }.class("page-block no-height bg-blue text-white")
                 SiteFooter()
                 SiteScripts()
             }

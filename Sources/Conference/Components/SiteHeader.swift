@@ -28,8 +28,21 @@ struct SiteHeader<Site: Website>: Component {
                     let section = context.sections[sectionID]
 
                     if section.title == "Home" {
+//                        let body: ElementComponent = {
+//                            Link(section.title,
+//                                url: "/"
+//                            )
+//                            .class(sectionID == selectedSelectionID ? "active" : "")
+//                            Span().class("underline")
+//                        }
+//                        return body
                         return Link(section.title,
                             url: "/"
+                        )
+                        .class(sectionID == selectedSelectionID ? "active" : "")
+                    } else if section.title == "tickets" {
+                        return Link(section.title,
+                            url: "/tickets"
                         )
                         .class(sectionID == selectedSelectionID ? "active" : "")
                     } else {
