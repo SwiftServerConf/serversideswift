@@ -1,10 +1,3 @@
-//
-//  File.swift
-//  
-//
-//  Created by Tim Condon on 02/09/2022.
-//
-
 import Plot
 
 struct FAQ: Component {

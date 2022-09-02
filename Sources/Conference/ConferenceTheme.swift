@@ -160,6 +160,8 @@ private struct ConferenceThemeHTMLFactory: HTMLFactory {
                 SiteHeader(context: context, selectedSelectionID: section.id)
                 if section.title == "Faq" {
                     FAQ()
+                } else if section.title == "Tickets" {
+                    Tickets()
                 } else {
                     Wrapper {
                         H1(section.title)
