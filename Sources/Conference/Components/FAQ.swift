@@ -65,6 +65,15 @@ struct FAQ: Component {
                 
                 Div {
                     Div {
+                        H3("What measures are you taking against COVID-19").class("h3")
+                        Paragraph {
+                            Text("We'll announce full measures nearer the time but expect masks and vaccinne passports to be required.")
+                        }
+                    }.class("col-xs-12 mb-4")
+                }.class("row")
+                
+                Div {
+                    Div {
                         H3("My question didn't get answered, what do I do?").class("h3")
                         Paragraph {
                             Text("Feel free to ")

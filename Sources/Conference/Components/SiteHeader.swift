@@ -4,15 +4,22 @@ import Publish
 struct SiteHeader<Site: Website>: Component {
     var context: PublishingContext<Site>
     var selectedSelectionID: Site.SectionID?
-
+    
     var body: Component {
         Header {
             navigation
         }
     }
-
+    
     private var navigation: Component {
-        Navigation {
+        
+        let currentSection: Section<Site>?
+        if let selected = selectedSelectionID {
+            currentSection = context.sections[selected]
+        } else {
+            currentSection = nil
+        }
+        return Navigation {
             Div {
                 Div {
                     Link(url: "/") {
@@ -24,48 +31,63 @@ struct SiteHeader<Site: Website>: Component {
                         Span {}.class("hamburger-inner")
                     }.class("hamburger-box")
                 }.class("hamburger hamburger--squeeze").attribute(named: "onclick", value: "toggleHamburger()")
-                List(Site.SectionID.allCases) { sectionID in
-                    let section = context.sections[sectionID]
-
-                    if section.title == "Home" {
-//                        let body: ElementComponent = {
-//                            Link(section.title,
-//                                url: "/"
-//                            )
-//                            .class(sectionID == selectedSelectionID ? "active" : "")
-//                            Span().class("underline")
-//                        }
-//                        return body
-                        return Link(section.title,
-                            url: "/"
-                        )
-                        .class(sectionID == selectedSelectionID ? "active" : "")
-                    } else if section.title == "tickets" {
-                        return Link(section.title,
-                            url: "/tickets"
-                        )
-                        .class(sectionID == selectedSelectionID ? "active" : "")
-                    } else {
-                        return Link(section.title,
-                            url: section.path.absoluteString
-                        )
-                        .class(sectionID == selectedSelectionID ? "active" : "")
+                List {
+                    let home = ListItem {
+                        Link("Home", url: "/")
+                        Span().class("underline")
+                    }
+                    let faq = ListItem {
+                        Link("FAQ", url: "/faq")
+                        Span().class("underline")
+                    }
+                    var tickets = ListItem {
+                        Link("Tickets", url: "/tickets")
+                        Span().class("underline")
+                    }.class("buy-ticket")
+                    if currentSection?.title == "Ticket" {
+                        tickets = tickets.class("active")
+                    }
+                    return ComponentGroup {
+                        home
+                        faq
+                        tickets
                     }
                 }.class("d-none d-md-flex")
             }.class("container")
-            List(Site.SectionID.allCases) { sectionID in
-                let section = context.sections[sectionID]
-
-                if section.title == "Home" {
-                    return Link(section.title,
-                        url: "/"
-                    )
-                    .class(sectionID == selectedSelectionID ? "active" : "")
-                } else {
-                    return Link(section.title,
-                        url: section.path.absoluteString
-                    )
-                    .class(sectionID == selectedSelectionID ? "active" : "")
+            //            List(Site.SectionID.allCases) { sectionID in
+            //                let section = context.sections[sectionID]
+            //
+            //                if section.title == "Home" {
+            //                    return Link(section.title,
+            //                                url: "/"
+            //                    )
+            //                    .class(sectionID == selectedSelectionID ? "active" : "")
+            //                } else {
+            //                    return Link(section.title,
+            //                                url: section.path.absoluteString
+            //                    )
+            //                    .class(sectionID == selectedSelectionID ? "active" : "")
+            //                }
+            List {
+                let home = ListItem {
+                    Link("Home", url: "/")
+                    Span().class("underline")
+                }
+                let faq = ListItem {
+                    Link("FAQ", url: "/faq")
+                    Span().class("underline")
+                }
+                var tickets = ListItem {
+                    Link("Tickets", url: "/tickets")
+                    Span().class("underline")
+                }.class("buy-ticket")
+                if currentSection?.title == "Ticket" {
+                    tickets = tickets.class("active")
+                }
+                return ComponentGroup {
+                    home
+                    faq
+                    tickets
                 }
             }.class("d-flex d-md-none")
         }.class("navigation")
