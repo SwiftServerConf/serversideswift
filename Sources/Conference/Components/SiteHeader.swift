@@ -5,6 +5,11 @@ struct SiteHeader<Site: Website>: Component {
     var context: PublishingContext<Site>
     var selectedSelectionID: Site.SectionID?
     
+    init(context: PublishingContext<Site>, selectedSelectionID: Site.SectionID?) {
+        self.context = context
+        self.selectedSelectionID = selectedSelectionID
+    }
+    
     var body: Component {
         Header {
             navigation
@@ -36,15 +41,18 @@ struct SiteHeader<Site: Website>: Component {
                         Link("Home", url: "/")
                         Span().class("underline")
                     }
-                    let faq = ListItem {
+                    var faq: Component = ListItem {
                         Link("FAQ", url: "/faq")
                         Span().class("underline")
+                    }
+                    if let currentSection = currentSection, let currentSectionID = currentSection.id as? Conference.SectionID, currentSectionID == Conference.SectionID.faq {
+                        faq = faq.class("active")
                     }
                     var tickets = ListItem {
                         Link("Tickets", url: "/tickets")
                         Span().class("underline")
                     }.class("buy-ticket")
-                    if currentSection?.title == "Ticket" {
+                    if let currentSection = currentSection, let currentSectionID = currentSection.id as? Conference.SectionID, currentSectionID == Conference.SectionID.tickets {
                         tickets = tickets.class("active")
                     }
                     return ComponentGroup {
@@ -54,34 +62,24 @@ struct SiteHeader<Site: Website>: Component {
                     }
                 }.class("d-none d-md-flex")
             }.class("container")
-            //            List(Site.SectionID.allCases) { sectionID in
-            //                let section = context.sections[sectionID]
-            //
-            //                if section.title == "Home" {
-            //                    return Link(section.title,
-            //                                url: "/"
-            //                    )
-            //                    .class(sectionID == selectedSelectionID ? "active" : "")
-            //                } else {
-            //                    return Link(section.title,
-            //                                url: section.path.absoluteString
-            //                    )
-            //                    .class(sectionID == selectedSelectionID ? "active" : "")
-            //                }
             List {
                 let home = ListItem {
                     Link("Home", url: "/")
                     Span().class("underline")
                 }
-                let faq = ListItem {
+                var faq: Component = ListItem {
                     Link("FAQ", url: "/faq")
                     Span().class("underline")
                 }
+                if let currentSection = currentSection, let currentSectionID = currentSection.id as? Conference.SectionID, currentSectionID == Conference.SectionID.faq {
+                    faq = faq.class("active")
+                }
+                
                 var tickets = ListItem {
                     Link("Tickets", url: "/tickets")
                     Span().class("underline")
                 }.class("buy-ticket")
-                if currentSection?.title == "Ticket" {
+                if let currentSection = currentSection, let currentSectionID = currentSection.id as? Conference.SectionID, currentSectionID == Conference.SectionID.tickets {
                     tickets = tickets.class("active")
                 }
                 return ComponentGroup {
