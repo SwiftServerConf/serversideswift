@@ -67,7 +67,7 @@ struct FAQ: Component {
                     Div {
                         H3("What measures are you taking against COVID-19").class("h3")
                         Paragraph {
-                            Text("We'll announce full measures nearer the time but expect masks and vaccinne passports to be required.")
+                            Text("We'll announce full measures nearer the time but expect masks and vaccine passports to be required.")
                         }
                     }.class("col-xs-12 mb-4")
                 }.class("row")
