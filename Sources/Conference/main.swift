@@ -9,6 +9,7 @@ struct Conference: Website {
         case home
 //        case coc
         case faq
+        case speakers
 //        case location
         case tickets
     }
