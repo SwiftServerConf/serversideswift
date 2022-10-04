@@ -50,9 +50,11 @@ struct SiteHeader<Site: Website>: Component {
         let home = buildNavComponent(for: .home, currentSection: currentSection)
         let faq = buildNavComponent(for: .faq, currentSection: currentSection)
         let tickets = buildNavComponent(for: .tickets, currentSection: currentSection)
+        let speakers = buildNavComponent(for: .speakers, currentSection: currentSection)
         return ComponentGroup {
             home
             faq
+            speakers
             tickets
         }
     }
