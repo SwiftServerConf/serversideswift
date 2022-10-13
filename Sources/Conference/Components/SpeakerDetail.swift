@@ -16,15 +16,15 @@ struct SpeakerDetail: Component {
                         Div {
                             H3(speaker.name)
                             Div {
-                                if speaker.github != nil {
-                                    Link(url: speaker.github!) {
+                                if let githubURL = speaker.github {
+                                    Link(url: githubURL) {
                                         Span {
                                             SVG(url: "/App/YearX/images/icons/feather-sprite.svg#github").class("feather")
                                         }.class("icon")
                                     }
                                 }
-                                if speaker.github != nil {
-                                    Link(url: speaker.twitter!) {
+                                if let twitterURL = speaker.twitter {
+                                    Link(url: twitterURL) {
                                         Span {
                                             SVG(url: "/App/YearX/images/icons/feather-sprite.svg#twitter").class("feather")
                                         }.class("icon")
