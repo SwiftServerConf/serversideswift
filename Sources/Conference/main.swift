@@ -9,6 +9,7 @@ struct Conference: Website {
         case home
 //        case coc
         case faq
+        case speakers
 //        case location
         case tickets
     }
@@ -30,5 +31,23 @@ struct Conference: Website {
     }
 }
 
-// This will generate your website using the built-in Foundation theme:
-try Conference().publish(withTheme: .conference)
+// Creates a list with all speaker detail pages and adds them to the speakers section
+var items: [Item<Conference>] = AllSpeakers.speakers.map { speaker in
+    Item<Conference>(
+        path: Path(speaker.url),
+        sectionID: .speakers,
+        metadata: Conference.ItemMetadata(),
+        tags: [],
+        content: Content(
+            title: speaker.name,
+            body: Content.Body(node: SpeakerDetail(speaker: speaker).body.convertToNode())
+        )
+    )
+}
+
+try Conference().publish(
+    withTheme: .conference,
+    additionalSteps: [
+        .addItems(in: items),
+    ]
+)

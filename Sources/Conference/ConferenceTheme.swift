@@ -162,6 +162,8 @@ private struct ConferenceThemeHTMLFactory: HTMLFactory {
                     FAQ()
                 } else if section.title == "Tickets" {
                     Tickets()
+                } else if section.title == "Speakers" {
+                    Speakers()
                 } else {
                     Wrapper {
                         H1(section.title)
@@ -180,15 +182,10 @@ private struct ConferenceThemeHTMLFactory: HTMLFactory {
             .lang(context.site.language),
             buildHead(for: item, context: context),
             .body(
-                .class("item-page"),
+                .class("bg-blue"),
                 .components {
                     SiteHeader(context: context, selectedSelectionID: item.sectionID)
-                    Wrapper {
-                        Article {
-                            Div(item.content.body).class("content")
-                            Span("Tagged with: ")
-                        }
-                    }
+                    Div(item.content.body)
                     SiteFooter()
                     SiteScripts()
                 }

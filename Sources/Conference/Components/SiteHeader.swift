@@ -37,57 +37,54 @@ struct SiteHeader<Site: Website>: Component {
                     }.class("hamburger-box")
                 }.class("hamburger hamburger--squeeze").attribute(named: "onclick", value: "toggleHamburger()")
                 List {
-                    let home = ListItem {
-                        Link("Home", url: "/")
-                        Span().class("underline")
-                    }
-                    var faq: Component = ListItem {
-                        Link("FAQ", url: "/faq")
-                        Span().class("underline")
-                    }
-                    if let currentSection = currentSection, let currentSectionID = currentSection.id as? Conference.SectionID, currentSectionID == Conference.SectionID.faq {
-                        faq = faq.class("active")
-                    }
-                    var tickets = ListItem {
-                        Link("Tickets", url: "/tickets")
-                        Span().class("underline")
-                    }.class("buy-ticket")
-                    if let currentSection = currentSection, let currentSectionID = currentSection.id as? Conference.SectionID, currentSectionID == Conference.SectionID.tickets {
-                        tickets = tickets.class("active")
-                    }
-                    return ComponentGroup {
-                        home
-                        faq
-                        tickets
-                    }
+                    return buildNavComponents(currentSection: currentSection)
                 }.class("d-none d-md-flex")
             }.class("container")
             List {
-                let home = ListItem {
-                    Link("Home", url: "/")
-                    Span().class("underline")
-                }
-                var faq: Component = ListItem {
-                    Link("FAQ", url: "/faq")
-                    Span().class("underline")
-                }
-                if let currentSection = currentSection, let currentSectionID = currentSection.id as? Conference.SectionID, currentSectionID == Conference.SectionID.faq {
-                    faq = faq.class("active")
-                }
-                
-                var tickets = ListItem {
-                    Link("Tickets", url: "/tickets")
-                    Span().class("underline")
-                }.class("buy-ticket")
-                if let currentSection = currentSection, let currentSectionID = currentSection.id as? Conference.SectionID, currentSectionID == Conference.SectionID.tickets {
-                    tickets = tickets.class("active")
-                }
-                return ComponentGroup {
-                    home
-                    faq
-                    tickets
-                }
+                return buildNavComponents(currentSection: currentSection)
             }.class("d-flex d-md-none")
         }.class("navigation")
+    }
+    
+    private func buildNavComponents(currentSection: Section<Site>?) -> ComponentGroup {
+        let home = buildNavComponent(for: .home, currentSection: currentSection)
+        let faq = buildNavComponent(for: .faq, currentSection: currentSection)
+        let tickets = buildNavComponent(for: .tickets, currentSection: currentSection)
+        let speakers = buildNavComponent(for: .speakers, currentSection: currentSection)
+        return ComponentGroup {
+            home
+            faq
+            speakers
+            tickets
+        }
+    }
+    
+    private func buildNavComponent(for section: Conference.SectionID, currentSection: Section<Site>?) -> Component {
+        var component: Component = ListItem {
+            buildLink(for: section)
+            Span().class("underline")
+        }
+        if section == .tickets {
+            component = component.class("buy-ticket")
+        }
+        if section != .home {
+            if let currentSection = currentSection, let currentSectionID = currentSection.id as? Conference.SectionID, currentSectionID == section {
+                component = component.class("active")
+            }
+        }
+        return component
+    }
+    
+    private func buildLink(for section: Conference.SectionID) -> Link {
+        switch section {
+        case .faq:
+            return Link("FAQ", url: "/faq")
+        case .tickets:
+            return Link("Tickets", url: "/tickets")
+        case .speakers:
+            return Link("Speakers", url: "/speakers")
+        case .home:
+            return Link("Home", url: "/")
+        }
     }
 }
