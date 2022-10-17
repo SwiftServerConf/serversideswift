@@ -1,4 +1,5 @@
 import Plot
+import Foundation
 
 struct SpeakerDetail: Component {
     let speaker: Speaker
@@ -55,7 +56,7 @@ struct SpeakerDetail: Component {
                                 if let eventSpecifics = talk.eventSpecifics {
                                     Div {
                                         H4("Time and Place").class("f-gradient")
-                                        H6("\(eventSpecifics.startTime.formatted(date: .long, time: .shortened)) in \(eventSpecifics.place)")
+                                        H6("\(eventSpecifics.startTime.formatted()) in \(eventSpecifics.place)")
                                             .class("f-weight-300")
                                     }
                                     .class("section")
