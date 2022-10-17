@@ -19,14 +19,16 @@ struct SpeakerDetail: Component {
                                 if let githubURL = speaker.github {
                                     Link(url: githubURL) {
                                         Span {
-                                            SVG(url: "/App/YearX/images/icons/feather-sprite.svg#github").class("feather")
+                                            SVG(url: "/App/YearX/images/icons/feather-sprite.svg#github")
+                                                .class("feather")
                                         }.class("icon")
                                     }
                                 }
                                 if let twitterURL = speaker.twitter {
                                     Link(url: twitterURL) {
                                         Span {
-                                            SVG(url: "/App/YearX/images/icons/feather-sprite.svg#twitter").class("feather")
+                                            SVG(url: "/App/YearX/images/icons/feather-sprite.svg#twitter")
+                                                .class("feather")
                                         }.class("icon")
                                     }
                                 }
@@ -35,6 +37,31 @@ struct SpeakerDetail: Component {
                         }
                         .class("head")
                         Div {
+                            if let talk = speaker.talks.first {
+                                Node.hr()
+                                H3("Talk Details")
+                                Div {
+                                    H4("Title").class("f-gradient")
+                                    H6(talk.title)
+                                        .class("f-weight-300")
+                                }
+                                .class("section")
+                                Div {
+                                    H4("Description").class("f-gradient")
+                                    H6(talk.description)
+                                        .class("f-weight-300")
+                                }
+                                .class("section")
+                                if let eventSpecifics = talk.eventSpecifics {
+                                    Div {
+                                        H4("Time and Place").class("f-gradient")
+                                        H6("\(eventSpecifics.startTime.formatted(date: .long, time: .shortened)) in \(eventSpecifics.place)")
+                                            .class("f-weight-300")
+                                    }
+                                    .class("section")
+                                }
+                            }
+                            Node.hr()
                             H3("About the Speaker")
                             Div {
                                 H4("Position").class("f-gradient")
