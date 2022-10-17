@@ -38,6 +38,7 @@ struct SpeakerDetail: Component {
                         .class("head")
                         Div {
                             if let talk = speaker.talks.first {
+                                Node.hr()
                                 H3("Talk Details")
                                 Div {
                                     H4("Title").class("f-gradient")
@@ -60,6 +61,7 @@ struct SpeakerDetail: Component {
                                     .class("section")
                                 }
                             }
+                            Node.hr()
                             H3("About the Speaker")
                             Div {
                                 H4("Position").class("f-gradient")
