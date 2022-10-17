@@ -22,4 +22,12 @@ extension Date {
         let date = dateStringFormatter.date(from: completeDateString)!
         self.init(timeInterval: 0, since: date)
     }
+    
+    func formatted() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE, MMMM d"
+        let timeFormatter = DateFormatter()
+        timeFormatter.dateFormat = "HH:mm"
+        return "\(dateFormatter.string(from: self)) at \(timeFormatter.string(from: self))"
+    }
 }
