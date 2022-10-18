@@ -40,7 +40,7 @@ struct AllTalks {
         
         Talk(
             id: 2,
-            title: "Server-Side Swift at Amazon Prime Video",
+            title: "How Prime Video Learned to Stop Worrying and Ingest at Scale",
             description: "Over the past four years, we have built a new Video-On-Demand Content Ingestion Orchestration layer using Swift-based backend components and a variety of AWS tools and services such as Fargate and Lambda. This layer is now being used at scale to support the launch of titles across Prime Video including high profile titles such as Lord of the Rings: The Rings of Power. This talk will dive into what we built, its architecture, how we applied lessons we learnt from our previous architecture and what we learnt from building the new one.",
             speakerNames: ["Simon Pilkington"]
 //            eventSpecifics: EventSpecifics(startTime: Date(at: "8:45"), endTime: Date(at: "10:00"), place: "Conference Room")
