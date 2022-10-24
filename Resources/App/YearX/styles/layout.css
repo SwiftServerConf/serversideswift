@@ -75,6 +75,12 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+.h2 {
+  background: linear-gradient(to right, #F88A36 , #FD2020) no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* MARK: - Height */
 
 .h-50 {

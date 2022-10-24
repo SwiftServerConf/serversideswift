@@ -135,10 +135,22 @@ private struct ConferenceThemeHTMLFactory: HTMLFactory {
                     Div {
                         Div {
                             Div {
-                                H3("Sponsors").class("h3 text-center")
+                                H2("Sponsors").class("h2 text-center")
+                                Node.hr()
+                                H3("Platinum Sponsors").class("h3 text-center")
                                 Div {
                                     Link(url: "https://www.brokenhands.io") {
                                         Image(url: "/App/YearX/images/sponsors/brokenhands.svg", description: "Broken Hands").class("h-80")
+                                    }.linkTarget(.blank)
+                                    Link(url: "https://www.apple.com") {
+                                        Image(url: "/App/YearX/images/sponsors/brokenhands.svg", description: "Apple Inc.").class("h-80")
+                                    }.linkTarget(.blank)
+                                }.class("logos")
+                                Node.hr()
+                                H3("Gold Sponsors").class("h3 text-center")
+                                Div {
+                                    Link(url: "https://responsive.software/") {
+                                        Image(url: "/App/YearX/images/sponsors/responsive-software.png", description: "Responsive Software").class("h-60")
                                     }.linkTarget(.blank)
                                 }.class("logos")
                             }.class("col")
