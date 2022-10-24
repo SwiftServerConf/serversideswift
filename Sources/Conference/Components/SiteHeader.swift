@@ -83,6 +83,8 @@ struct SiteHeader<Site: Website>: Component {
             return Link("Tickets", url: "/tickets")
         case .speakers:
             return Link("Speakers", url: "/speakers")
+        case .sponsors:
+            return Link("Sponsors", url: "/sponsors")
         case .home:
             return Link("Home", url: "/")
         }

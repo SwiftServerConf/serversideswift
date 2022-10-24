@@ -176,6 +176,8 @@ private struct ConferenceThemeHTMLFactory: HTMLFactory {
                     Tickets()
                 } else if section.title == "Speakers" {
                     Speakers()
+                } else if section.title == "Sponsors" {
+                    Sponsors()
                 } else {
                     Wrapper {
                         H1(section.title)
