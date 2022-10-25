@@ -90,7 +90,7 @@ struct Sponsors: Component {
                         }.class("image")
                         Div {
                             H4("Responsive Software")
-                        }.class("description p-2")
+                        }.class("description pl-2 pr-2 pb-2")
                     }.class("sponsor")
                 }.class("gold")
             }.class("col-12 col-sm-6 col-md-4 col-lg-3")
