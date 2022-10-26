@@ -52,7 +52,7 @@ struct Sponsors: Component {
                     Div {
                         Link("", url: "https://www.apple.com").linkTarget(.blank)
                         Div {
-                            Image(url: "/App/YearX/images/sponsors/apple.svg", description: "Apple, Inc.")
+                            Image(url: "/App/YearX/images/sponsors/apple.svg", description: "Apple, Inc.").class("apple-logo")
                         }.class("image")
                         Div {
                             H4("Apple")
