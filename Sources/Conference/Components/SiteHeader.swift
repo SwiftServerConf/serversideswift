@@ -51,10 +51,12 @@ struct SiteHeader<Site: Website>: Component {
         let faq = buildNavComponent(for: .faq, currentSection: currentSection)
         let tickets = buildNavComponent(for: .tickets, currentSection: currentSection)
         let speakers = buildNavComponent(for: .speakers, currentSection: currentSection)
+        let sponsors = buildNavComponent(for: .sponsors, currentSection: currentSection)
         return ComponentGroup {
             home
             faq
             speakers
+            sponsors
             tickets
         }
     }
@@ -83,6 +85,8 @@ struct SiteHeader<Site: Website>: Component {
             return Link("Tickets", url: "/tickets")
         case .speakers:
             return Link("Speakers", url: "/speakers")
+        case .sponsors:
+            return Link("Sponsors", url: "/sponsors")
         case .home:
             return Link("Home", url: "/")
         }

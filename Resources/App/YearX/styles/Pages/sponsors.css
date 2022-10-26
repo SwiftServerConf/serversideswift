@@ -47,7 +47,6 @@
 
 .sponsors .sponsor-list .sponsor .description h4 {
   text-overflow: ellipsis;
-  white-space: nowrap;
   overflow: hidden;
   margin: 0;
 }
@@ -165,4 +164,8 @@
 }
 .sponsors .sponsor-list .custom h4 {
     font-size: 14px;
+}
+
+.apple-logo {
+    margin-left: -3px;
 }

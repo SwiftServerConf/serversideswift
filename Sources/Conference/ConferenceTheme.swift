@@ -135,10 +135,22 @@ private struct ConferenceThemeHTMLFactory: HTMLFactory {
                     Div {
                         Div {
                             Div {
-                                H3("Sponsors").class("h3 text-center")
+                                H2("Sponsors").class("h2 text-center")
+                                Node.hr()
+                                H3("Platinum Sponsors").class("h3 text-center")
                                 Div {
                                     Link(url: "https://www.brokenhands.io") {
-                                        Image(url: "/App/YearX/images/sponsors/brokenhands.svg", description: "Broken Hands").class("h-80")
+                                        Image(url: "/App/YearX/images/sponsors/brokenhands.svg", description: "Broken Hands").class("h-90 pr-3 pt-2")
+                                    }.linkTarget(.blank)
+                                    Link(url: "https://www.apple.com") {
+                                        Image(url: "/App/YearX/images/sponsors/apple.svg", description: "Apple Inc.").class("h-90 pl-3")
+                                    }.linkTarget(.blank)
+                                }.class("logos")
+                                Node.hr()
+                                H3("Gold Sponsors").class("h3 text-center")
+                                Div {
+                                    Link(url: "https://responsive.software/") {
+                                        Image(url: "/App/YearX/images/sponsors/responsive-software.png", description: "Responsive Software").class("h-60")
                                     }.linkTarget(.blank)
                                 }.class("logos")
                             }.class("col")
@@ -164,6 +176,8 @@ private struct ConferenceThemeHTMLFactory: HTMLFactory {
                     Tickets()
                 } else if section.title == "Speakers" {
                     Speakers()
+                } else if section.title == "Sponsors" {
+                    Sponsors()
                 } else {
                     Wrapper {
                         H1(section.title)
