@@ -30,7 +30,7 @@ struct FAQ: Component {
                 Div {
                     Div {
                         H3("Can you recommend a hotel?").class("h3")
-                        Paragraph("We'll be addind some more information about the location in the next week or so.")
+                        Paragraph("We'll be adding some more information about the location in the next week or so.")
                     }.class("col-xs-12 mb-4")
                 }.class("row")
                 
