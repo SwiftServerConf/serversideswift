@@ -7,11 +7,13 @@ struct Conference: Website {
     enum SectionID: String, WebsiteSectionID {
         // Add the sections that you want your website to contain here:
         case home
-//        case coc
-        case faq
+        case schedule
         case speakers
+        case location
         case sponsors
-//        case location
+        case faq
+        case whyAttend
+        case about
         case tickets
     }
 

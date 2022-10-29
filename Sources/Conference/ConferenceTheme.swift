@@ -170,15 +170,18 @@ private struct ConferenceThemeHTMLFactory: HTMLFactory {
             buildHead(for: section, context: context),
             .body {
                 SiteHeader(context: context, selectedSelectionID: section.id)
-                if section.title == "Faq" {
+                switch section.title {
+                case "Faq":
                     FAQ()
-                } else if section.title == "Tickets" {
+                case "Tickets":
                     Tickets()
-                } else if section.title == "Speakers" {
+                case "Speakers":
                     Speakers()
-                } else if section.title == "Sponsors" {
+                case "Sponsors":
                     Sponsors()
-                } else {
+                case "About":
+                    About()
+                default:
                     Wrapper {
                         H1(section.title)
                         H1("Section")
