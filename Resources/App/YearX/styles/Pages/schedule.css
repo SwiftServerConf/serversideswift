@@ -9,12 +9,12 @@
   vertical-align: middle !important;
 }
 
-.schedule .panel .table .time-column {
+.schedule .panel table .time-column {
   width: 150px;
   text-align: center;
 }
 
-.schedule .panel .table .room-column {
+.schedule .panel table .room-column {
   width: 250px;
 }
 
@@ -22,6 +22,7 @@
   background: none;
   background-color: transparent;
   border-color: inherit;
+  color: #fff;
 }
 
 .schedule .panel table thead tr {
