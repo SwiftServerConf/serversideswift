@@ -109,7 +109,7 @@ private struct ConferenceThemeHTMLFactory: HTMLFactory {
                             }.class("col-12 col-sm-6 mt-2 mb-2")
                         }.class("row")
                     }.class("container")
-                }.class("page-block description")
+                }.class("page-block description bg-white")
                 Div {
                     Div {
                         Div {
@@ -156,7 +156,7 @@ private struct ConferenceThemeHTMLFactory: HTMLFactory {
                             }.class("col")
                         }.class("row")
                     }.class("container")
-                }.class("sponsors")
+                }.class("sponsors bg-white")
                 SiteFooter()
                 SiteScripts()
             }
@@ -181,6 +181,8 @@ private struct ConferenceThemeHTMLFactory: HTMLFactory {
                     Sponsors()
                 case "About":
                     About()
+                case "Whyattend":
+                    WhyAttend()
                 default:
                     Wrapper {
                         H1(section.title)

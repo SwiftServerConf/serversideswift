@@ -12,10 +12,8 @@ struct Speakers: Component {
                         .class("text-center mb-5")
                     Div().id("particles-js")
                     SpeakerList<Conference>(speakers: AllSpeakers.speakers)
-                }
-                .class("container")
-            }
-            .class("page-block bg-blue text-white")
+                }.class("container")
+            }.class("page-block bg-blue text-white")
             Div {
                 Div {
                     Div {
@@ -27,12 +25,9 @@ struct Speakers: Component {
                             Link("Submit Talk", url: URL(string: "https://forms.gle/tWMWZpChcuPL6q2C8")!)
                                 .class("btn btn-default btn-gradient"))
                             .class("text-center")
-                    }
-                    .class("col")
-                }
-                .class("container")
-            }
-            .class("cfp page-block no-height")
+                    }.class("col")
+                }.class("container")
+            }.class("cfp page-block no-height bg-white")
         }
         .class("speakers")
     }

@@ -44,7 +44,7 @@ struct About: Component {
                         Text(". You are also welcome to reach out to us through the social media channels at the bottom or using our individual Twitter handles.")
                     }
                 }.class("container")
-            }.class("page-block no-height")
+            }.class("page-block no-height bg-white")
         }.class("about")
     }
 }

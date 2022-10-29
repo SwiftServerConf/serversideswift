@@ -17,7 +17,7 @@ struct Sponsors: Component {
                 }
                 .class("container")
             }
-            .class("sponsors")
+            .class("sponsors bg-white")
             Div {
                 Div {
                     platinumSponsors()
