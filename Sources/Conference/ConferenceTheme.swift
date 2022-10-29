@@ -47,6 +47,8 @@ private struct ConferenceThemeHTMLFactory: HTMLFactory {
                     WhyAttend()
                 case "Schedule":
                     Schedule()
+                case "Location":
+                    ConferenceLocation()
                 default:
                     Wrapper {
                         H1(section.title)
