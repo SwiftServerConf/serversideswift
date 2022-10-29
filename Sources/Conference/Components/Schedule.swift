@@ -99,14 +99,3 @@ struct Schedule: Component {
         }.class("schedule")
     }
 }
-
-struct TableHead: Component {
-    let cells: [TableHeaderCell]
-    
-    var body: Component {
-        
-        Node<HTML.BodyContext>.element(named: "thead", nodes: cells.map {
-            $0.body.convertToNode()
-        })
-    }
-}
