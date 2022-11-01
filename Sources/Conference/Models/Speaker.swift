@@ -69,7 +69,30 @@ struct AllSpeakers {
             twitter: "https://twitter.com/DesignatedNerd",
             github: "https://github.com/DesignatedNerd",
             bio: "Ellen Shapiro is a native mobile developer currently working at Gusto (the US payroll/HR one, not the UK food delivery one). She's built iOS and Android apps and SDKs for the last decade, including for SpotHero and Apollo GraphQL. She enjoys kayaking, music, laser woodworking, and complaining about the cold. She lives in Madison, Wisconsin with her wife and two cats.",
-            talkIDs: [])
+            talkIDs: []),
+        Speaker(
+            name: "Cory Benfield",
+            role: "Senior Software Engineer",
+            company: "Apple",
+            twitter: "https://www.twitter.com/Lukasaoz",
+            github: "https://www.github.com/Lukasa",
+            bio: "Cory is a serial open source contributor and maintainer with almost a decade of experience building, maintaining, and innovating open source networking frameworks and protocol libraries. He's spent time as a core contributor or lead maintainer on a number of Python HTTP libraries and networking frameworks, including Requests, Hyper, and Twisted. Currently Cory is a Senior Software Engineer at Apple, putting his skills to use on high-performance networking frameworks such as SwiftNIO, Netty, and more.",
+            talkIDs: [3]),
+        Speaker(
+            name: "Johannes Weiss",
+            role: "Senior Software Engineer",
+            company: "Apple",
+            twitter: "https://www.twitter.com/johannesweiss",
+            github: "https://www.github.com/weissi",
+            bio: "ohannes likes low-level problems and high-level languages. He strives to reduce complexity and increase performance to enable beautiful, fast and correct programs.",
+            talkIDs: [4]),
+        Speaker(
+            name: "Andrew Barba",
+            role: "Founder",
+            company: "Swift Cloud",
+            bio: "Founder of Swift Cloud",
+            talkIDs: [5])
+        
     ]
 }
 
