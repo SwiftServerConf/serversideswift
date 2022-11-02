@@ -94,6 +94,25 @@ struct AllSpeakers {
             talkIDs: [5])
         
     ]
+    
+    static let lightningSpeakers: [Speaker] = [
+        Speaker(
+            name: "Dave Verwer",
+            role: "Co-Founder",
+            company: "Swift Package Index",
+            twitter: "https://twitter.com/daveverwer",
+            github: "https://github.com/daveverwer",
+            bio: "Dave is a independent and freelance writer and iOS developer. He is the creator of [iOS Dev Weekly](https://iosdevweekly.com) and co-founder of the [Swift Package Index](https://swiftpackageindex.com). He has been developing for the Mac and iOS since 2006 and is secretly quite proud that his first professional gig had him using a (real) vt100 green screen terminal. He's glad he doesn't have to use that any more though! If you'd like to learn more about Dave, visit his [personal site](https://daveverwer.com).",
+            talkIDs: [6]),
+        Speaker(
+            name: "Joannis Orlandos",
+            role: "Founder",
+            company: "Responsive Software",
+            twitter: "https://twitter.com/joannisorlandos",
+            github: "https://github.com/joannis",
+            bio: "Old Vapor core-team member, I maintain a lot (20+) of Vapor related libraries. Designer of Vapor 3.",
+            talkIDs: [])
+    ]
 }
 
 

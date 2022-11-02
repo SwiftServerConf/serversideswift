@@ -56,6 +56,11 @@ struct AllTalks {
             id: 5,
             title: "Globally distributed Server Side Swift",
             description: "Learn how to deploy Swift applications to the edge, while only paying for what you use. ",
-            speakerNames: ["Andrew Barba"])
+            speakerNames: ["Andrew Barba"]),
+        Talk(
+            id: 6,
+            title: "How I accidentally ended up running the largest open-source Vapor site",
+            description: "Tales from running the Swift Package Index",
+            speakerNames: ["Dave Verwer"])
     ]
 }

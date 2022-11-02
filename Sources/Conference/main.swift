@@ -35,7 +35,20 @@ struct Conference: Website {
 }
 
 // Creates a list with all speaker detail pages and adds them to the speakers section
-var items: [Item<Conference>] = AllSpeakers.speakers.map { speaker in
+var speakers: [Item<Conference>] = AllSpeakers.speakers.map { speaker in
+    Item<Conference>(
+        path: Path(speaker.url),
+        sectionID: .speakers,
+        metadata: Conference.ItemMetadata(),
+        tags: [],
+        content: Content(
+            title: speaker.name,
+            body: Content.Body(node: SpeakerDetail(speaker: speaker).body.convertToNode())
+        )
+    )
+}
+
+var lightningSpeakers: [Item<Conference>] = AllSpeakers.lightningSpeakers.map { speaker in
     Item<Conference>(
         path: Path(speaker.url),
         sectionID: .speakers,
@@ -51,6 +64,7 @@ var items: [Item<Conference>] = AllSpeakers.speakers.map { speaker in
 try Conference().publish(
     withTheme: .conference,
     additionalSteps: [
-        .addItems(in: items),
+        .addItems(in: speakers),
+        .addItems(in: lightningSpeakers),
     ]
 )
