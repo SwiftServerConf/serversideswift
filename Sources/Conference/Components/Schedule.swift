@@ -28,7 +28,7 @@ struct Schedule: Component {
                                             }
                                             TableRow {
                                                 TableCell("09:10 - 09:50").class("text-center font-weight-bold")
-                                                TableCell("Talk 1 TBC")
+                                                createTalkRow(speaker: AllSpeakers.speakers[1])
                                             }
                                             TableRow {
                                                 TableCell("09:50 - 10:30").class("text-center font-weight-bold")
@@ -92,29 +92,7 @@ struct Schedule: Component {
                                             }
                                             TableRow {
                                                 TableCell("16:40 - 17:20").class("text-center font-weight-bold")
-                                                TableCell {
-                                                    Div {
-                                                        Div {
-                                                            Span {
-                                                                Image(url: "/App/images/speakers/johannes-weiss.jpg", description: "Johannes Weiss")
-                                                            }.class("avatar")
-                                                        }.class("avatars")
-                                                        Div {
-                                                            List {
-                                                                ListItem {
-                                                                    Text("Johannes Weiss")
-                                                                }
-                                                            }.class("speaker-list")
-                                                            Node.br()
-                                                            Node.a(
-                                                                .attribute(named: "href"),
-                                                                .attribute(named: "data-toggle", value: "modal"),
-                                                                .attribute(named: "data-target", value: "#global-modal"),
-                                                                .attribute(named: "data-description", value: "This talk will cover the pros, cons and gotchas of using existing codebases as a springboard for developing a new web service. We will discuss how you can take mature, battle-tested code from a macOS app and use it as the basis for a web service using the popular server-side Swift framework, Vapor."),
-                                                                .component(Text("Swift At Scale")))
-                                                        }.class("talk-info")
-                                                    }.class("talk")
-                                                }
+                                                createTalkRow(speaker: AllSpeakers.speakers[5])
                                             }
                                             TableRow {
                                                 TableCell("17:20 - 17:30").class("text-center font-weight-bold")
@@ -151,6 +129,34 @@ struct Schedule: Component {
                     }.class("modal-content")
                 }.class("modal-dialog modal-lg modal-dialog-centered").attribute(named: "role", value: "document")
             }.class("modal fade").id("global-modal").attribute(named: "tabindex", value: "-1").attribute(named: "role", value: "dialog").attribute(named: "aria-labelledby", value: "global-modal").attribute(named: "aria-hidden", value: "true")
+        }
+    }
+    
+    func createTalkRow(speaker: Speaker) -> TableCell {
+        TableCell {
+            Div {
+                Div {
+                    Span {
+                        Image(url: speaker.image, description: speaker.name)
+                    }.class("avatar")
+                }.class("avatars")
+                Div {
+                    List {
+                        ListItem {
+                            Text(speaker.name)
+                        }
+                    }.class("speaker-list")
+                    Node.br()
+                    if let talk = speaker.talks.first {
+                        Node.a(
+                            .attribute(named: "href"),
+                            .attribute(named: "data-toggle", value: "modal"),
+                            .attribute(named: "data-target", value: "#global-modal"),
+                            .attribute(named: "data-description", value: talk.description),
+                            .component(Text(talk.title)))
+                    }
+                }.class("talk-info")
+            }.class("talk")
         }
     }
 }
