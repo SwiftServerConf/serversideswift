@@ -32,23 +32,23 @@ struct Schedule: Component {
                                             }
                                             TableRow {
                                                 TableCell("09:50 - 10:30").class("text-center font-weight-bold")
-                                                TableCell("Talk 2 TBC")
+                                                createTalkRow(speaker: AllSpeakers.speakers[6])
                                             }
                                             TableRow {
                                                 TableCell("10:30 - 11:00").class("text-center font-weight-bold")
-                                                TableCell("Talk 3 TBC")
+                                                createTalkRow(speaker: AllSpeakers.speakers[4])
                                             }
                                             TableRow {
                                                 TableCell("11:00 - 11:30").class("text-center font-weight-bold")
-                                                TableCell("Coffee Break")
+                                                createTalkRow(speaker: AllSpeakers.speakers[2])
                                             }
                                             TableRow {
                                                 TableCell("11:30 - 12:10").class("text-center font-weight-bold")
-                                                TableCell("Talk 4 TBC")
+                                                createTalkRow(speaker: AllSpeakers.speakers[0])
                                             }
                                             TableRow {
                                                 TableCell("12:10 - 12:45").class("text-center font-weight-bold")
-                                                TableCell("Talk 5 TBC")
+                                                createTalkRow(speaker: AllSpeakers.speakers[3])
                                             }
                                             TableRow {
                                                 TableCell("12:45 - 13:45").class("text-center font-weight-bold")
@@ -56,19 +56,19 @@ struct Schedule: Component {
                                             }
                                             TableRow {
                                                 TableCell("13:45 - 13:55").class("text-center font-weight-bold")
-                                                TableCell("Lightning Talk 1")
+                                                createTalkRow(speaker: AllSpeakers.lightningSpeakers[0])
                                             }
                                             TableRow {
                                                 TableCell("13:55 - 14:05").class("text-center font-weight-bold")
-                                                TableCell("Lightning Talk 2")
+                                                createTalkRow(speaker: AllSpeakers.lightningSpeakers[1])
                                             }
                                             TableRow {
                                                 TableCell("14:05 - 14:15").class("text-center font-weight-bold")
-                                                TableCell("Lightning Talk 3")
+                                                TableCell("Lightning Talk TBC")
                                             }
                                             TableRow {
                                                 TableCell("14:15 - 15:00").class("text-center font-weight-bold")
-                                                TableCell("Talk 6 TBC")
+                                                TableCell("Talk TBC")
                                             }
                                             TableRow {
                                                 TableCell("15:00 - 15:30").class("text-center font-weight-bold")
@@ -76,19 +76,19 @@ struct Schedule: Component {
                                             }
                                             TableRow {
                                                 TableCell("15:30 - 15:40").class("text-center font-weight-bold")
-                                                TableCell("Lightning Talk 4")
+                                                TableCell("Lightning Talk TBC")
                                             }
                                             TableRow {
                                                 TableCell("15:40 - 15:50").class("text-center font-weight-bold")
-                                                TableCell("Lightning Talk 5")
+                                                TableCell("Lightning Talk TBC")
                                             }
                                             TableRow {
                                                 TableCell("15:50 - 16:00").class("text-center font-weight-bold")
-                                                TableCell("Lightning Talk 6")
+                                                TableCell("Lightning Talk TBC")
                                             }
                                             TableRow {
                                                 TableCell("16:00 - 16:40").class("text-center font-weight-bold")
-                                                TableCell("Talk 7 TBC")
+                                                TableCell("Talk TBC")
                                             }
                                             TableRow {
                                                 TableCell("16:40 - 17:20").class("text-center font-weight-bold")
