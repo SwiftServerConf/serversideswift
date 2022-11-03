@@ -26,11 +26,7 @@ struct Speakers: Component {
                     Div {
                         H3("Call For Proposals")
                             .class("h3 text-center")
-                        Paragraph(" Call for proposals are now open! We're so excited to invite every interested speaker and/or workshop organizer to submit a talk/workshop through our form below. ")
-                            .class("text-center")
-                        Paragraph(
-                            Link("Submit Talk", url: URL(string: "https://forms.gle/tWMWZpChcuPL6q2C8")!)
-                                .class("btn btn-default btn-gradient"))
+                        Paragraph("Our CFP is now closed - please check back next year!")
                             .class("text-center")
                     }.class("col")
                 }.class("container")
