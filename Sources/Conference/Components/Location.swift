@@ -42,9 +42,9 @@ struct ConferenceLocation: Component {
                             }
                         }.class("col-xs-12 col-sm-6")
                         Div {
-                            Div().class("map").id("transport-map")
+                            Div().class("map").id("transportation-map")
                         }.class("col-xs-12 col-sm-6")
-                    }.class("row mt-4")
+                    }.class("row mt-5")
                     Div {
                         Div {
                             H3("Hotels").class("h3")
@@ -67,9 +67,9 @@ struct ConferenceLocation: Component {
                             }
                         }.class("col-xs-12 col-sm-6")
                         Div {
-                            Div().class("map").id("hotel-map")
+                            Div().class("map").id("accommodation-map")
                         }.class("col-xs-12 col-sm-6")
-                    }.class("row mt-4")
+                    }.class("row mt-5")
                 }.class("container")
             }.class("page-block no-height bg-white")
         }.class("location")
