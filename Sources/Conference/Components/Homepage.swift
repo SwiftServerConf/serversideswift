@@ -52,9 +52,8 @@ struct Homepage: Component {
                                 Text("Speakers")
                             }.class("h3")
                             Paragraph {
-                                Text("We are currently putting together an interesting array of talks from some amazing speakers. If you'd like to take part, you ")
-                                Link("can submit a talk here", url: "https://forms.gle/tWMWZpChcuPL6q2C8").linkTarget(.blank)
-                                Text(".")
+                                Text("We have a packed schedule full of amazing talks from some amazing speakers. ")
+                                Link("Take a look!", url: "/schedule")
                             }
                         }.class("col-12 col-sm-6 mt-2 mb-2")
                         
