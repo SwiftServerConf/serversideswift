@@ -30,7 +30,11 @@ struct FAQ: Component {
                 Div {
                     Div {
                         H3("Can you recommend a hotel?").class("h3")
-                        Paragraph("We'll be adding some more information about the location in the next week or so.")
+                        Paragraph {
+                            Text("Have a look at the ")
+                            Link("Location", url: "/location")
+                            Text(" page for more information on the conference location and hotel options.")
+                        }
                     }.class("col-xs-12 mb-4")
                 }.class("row")
                 
@@ -67,7 +71,8 @@ struct FAQ: Component {
                     Div {
                         H3("What measures are you taking against COVID-19").class("h3")
                         Paragraph {
-                            Text("We'll announce full measures nearer the time but expect masks and vaccine passports to be required.")
+                            Text("We ask that everyone is respectful and aware of different levels of comfort with regards to COVID-19. To enter the UK you must be fully vaccinated and the theatre will have a dedicated space for those who feel more ")
+                            Text("comfortable wearing masks. There will be hand sanitizer available throughout as well.")
                         }
                     }.class("col-xs-12 mb-4")
                 }.class("row")

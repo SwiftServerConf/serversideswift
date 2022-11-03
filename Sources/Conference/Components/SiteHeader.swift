@@ -52,11 +52,19 @@ struct SiteHeader<Site: Website>: Component {
         let tickets = buildNavComponent(for: .tickets, currentSection: currentSection)
         let speakers = buildNavComponent(for: .speakers, currentSection: currentSection)
         let sponsors = buildNavComponent(for: .sponsors, currentSection: currentSection)
+        let schedule = buildNavComponent(for: .schedule, currentSection: currentSection)
+        let location = buildNavComponent(for: .location, currentSection: currentSection)
+        let whyAttend = buildNavComponent(for: .whyAttend, currentSection: currentSection)
+        let about = buildNavComponent(for: .about, currentSection: currentSection)
         return ComponentGroup {
             home
-            faq
+            schedule
             speakers
+            location
             sponsors
+            faq
+            whyAttend
+            about
             tickets
         }
     }
@@ -89,6 +97,14 @@ struct SiteHeader<Site: Website>: Component {
             return Link("Sponsors", url: "/sponsors")
         case .home:
             return Link("Home", url: "/")
+        case .about:
+            return Link("About", url: "/about")
+        case .location:
+            return Link("Location", url: "/location")
+        case .whyAttend:
+            return Link("Why Attend?", url: "/whyAttend")
+        case .schedule:
+            return Link("Schedule", url: "/schedule")
         }
     }
 }

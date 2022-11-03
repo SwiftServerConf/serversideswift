@@ -7,11 +7,13 @@ struct Conference: Website {
     enum SectionID: String, WebsiteSectionID {
         // Add the sections that you want your website to contain here:
         case home
-//        case coc
-        case faq
+        case schedule
         case speakers
+        case location
         case sponsors
-//        case location
+        case faq
+        case whyAttend
+        case about
         case tickets
     }
 
@@ -33,7 +35,20 @@ struct Conference: Website {
 }
 
 // Creates a list with all speaker detail pages and adds them to the speakers section
-var items: [Item<Conference>] = AllSpeakers.speakers.map { speaker in
+var speakers: [Item<Conference>] = AllSpeakers.speakers.map { speaker in
+    Item<Conference>(
+        path: Path(speaker.url),
+        sectionID: .speakers,
+        metadata: Conference.ItemMetadata(),
+        tags: [],
+        content: Content(
+            title: speaker.name,
+            body: Content.Body(node: SpeakerDetail(speaker: speaker).body.convertToNode())
+        )
+    )
+}
+
+var lightningSpeakers: [Item<Conference>] = AllSpeakers.lightningSpeakers.map { speaker in
     Item<Conference>(
         path: Path(speaker.url),
         sectionID: .speakers,
@@ -49,6 +64,7 @@ var items: [Item<Conference>] = AllSpeakers.speakers.map { speaker in
 try Conference().publish(
     withTheme: .conference,
     additionalSteps: [
-        .addItems(in: items),
+        .addItems(in: speakers),
+        .addItems(in: lightningSpeakers),
     ]
 )

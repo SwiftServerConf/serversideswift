@@ -6,6 +6,7 @@ html {
 body {
   /* Add 25px when using the "sales-banner" */
   padding: 50px 0;
+  background-color: #1d303e;
 }
 
 /* Icons (Feather) */
