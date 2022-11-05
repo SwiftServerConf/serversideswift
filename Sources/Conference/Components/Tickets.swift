@@ -12,6 +12,6 @@ struct Tickets: Component {
                     ])
                 }
             }.class("container")
-        }.class("page-block no-height")
+        }.class("page-block no-height text-white")
     }
 }
