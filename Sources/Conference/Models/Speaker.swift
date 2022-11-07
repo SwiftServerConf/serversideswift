@@ -84,7 +84,7 @@ struct AllSpeakers {
             company: "Apple",
             twitter: "https://www.twitter.com/johannesweiss",
             github: "https://www.github.com/weissi",
-            bio: "ohannes likes low-level problems and high-level languages. He strives to reduce complexity and increase performance to enable beautiful, fast and correct programs.",
+            bio: "Johannes likes low-level problems and high-level languages. He strives to reduce complexity and increase performance to enable beautiful, fast and correct programs.",
             talkIDs: [4]),
         Speaker(
             name: "Andrew Barba",
