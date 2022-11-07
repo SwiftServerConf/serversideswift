@@ -1,3 +1,5 @@
+import Plot
+
 struct Speaker {
     let name: String
     let role: String
@@ -6,8 +8,28 @@ struct Speaker {
     let image: String
     let twitter: String?
     let github: String?
-    let bio: String
+    let bio: Component
     let talkIDs: [Int]
+    
+    internal init(
+        name: String,
+        role: String,
+        company: String,
+        twitter: String? = nil,
+        github: String? = nil,
+        bio: Component,
+        talkIDs: [Int]
+    ) {
+        self.name = name
+        self.role = role
+        self.company = company
+        self.url = name.lowercased().replacingOccurrences(of: " ", with: "-")
+        self.image = "/App/Images/speakers/\(name.lowercased().replacingOccurrences(of: " ", with: "-")).jpg"
+        self.twitter = twitter
+        self.github = github
+        self.bio = bio
+        self.talkIDs = talkIDs
+    }
     
     internal init(
         name: String,
@@ -25,7 +47,7 @@ struct Speaker {
         self.image = "/App/Images/speakers/\(name.lowercased().replacingOccurrences(of: " ", with: "-")).jpg"
         self.twitter = twitter
         self.github = github
-        self.bio = bio
+        self.bio = Text(bio)
         self.talkIDs = talkIDs
     }
     
@@ -102,7 +124,15 @@ struct AllSpeakers {
             company: "Swift Package Index",
             twitter: "https://twitter.com/daveverwer",
             github: "https://github.com/daveverwer",
-            bio: "Dave is a independent and freelance writer and iOS developer. He is the creator of [iOS Dev Weekly](https://iosdevweekly.com) and co-founder of the [Swift Package Index](https://swiftpackageindex.com). He has been developing for the Mac and iOS since 2006 and is secretly quite proud that his first professional gig had him using a (real) vt100 green screen terminal. He's glad he doesn't have to use that any more though! If you'd like to learn more about Dave, visit his [personal site](https://daveverwer.com).",
+            bio: ComponentGroup {
+                Text("Dave is a independent and freelance writer and iOS developer. He is the creator of ")
+                Link("iOS Dev Weekly", url: "https://iosdevweekly.com")
+                Text(" and co-founder of the ")
+                Link("Swift Package Index", url: "https://swiftpackageindex.com")
+                Text(". He has been developing for the Mac and iOS since 2006 and is secretly quite proud that his first professional gig had him using a (real) vt100 green screen terminal. He's glad he doesn't have to use that any more though! If you'd like to learn more about Dave, visit his ")
+                Link("personal site", url: "https://daveverwer.com")
+                Text(".")
+            },
             talkIDs: [6]),
         Speaker(
             name: "Joannis Orlandos",
