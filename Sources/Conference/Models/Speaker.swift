@@ -110,8 +110,8 @@ struct AllSpeakers {
             company: "Responsive Software",
             twitter: "https://twitter.com/joannisorlandos",
             github: "https://github.com/joannis",
-            bio: "Old Vapor core-team member, I maintain a lot (20+) of Vapor related libraries. Designer of Vapor 3.",
-            talkIDs: [])
+            bio: "Previously Vapor core-team member, designer of Vapor 3 and still maintains over 20 Vapor related libraries. Joannis enjoys low-level software development, and is a strong advocate for reducing code complexity through well designed software.",
+            talkIDs: [7])
     ]
 }
 

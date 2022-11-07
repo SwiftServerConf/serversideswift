@@ -61,6 +61,11 @@ struct AllTalks {
             id: 6,
             title: "How I accidentally ended up running the largest open-source Vapor site",
             description: "Tales from running the Swift Package Index",
-            speakerNames: ["Dave Verwer"])
+            speakerNames: ["Dave Verwer"]),
+        Talk(
+            id: 7,
+            title: "Why your libraries should use NIO Channels",
+            description: "SwiftNIO enjoys a lot of powerful tools and features. ByteBuffers, EventLoops and EventLoopFuture are all well known in the ecosystem. But there’s an unsung hero among them that arguably is even more important. The Channel. This talk give you a rundown of what they are, why they matter, and how you can use them to build incredible systems with minimal complexity.",
+            speakerNames: ["Joannis Orlandos"])
     ]
 }
