@@ -64,38 +64,30 @@ struct Schedule: Component {
                                             }
                                             TableRow {
                                                 TableCell("14:05 - 14:15").class("text-center font-weight-bold")
-                                                TableCell("Lightning Talk TBC")
+                                                createTalkRow(speaker: AllSpeakers.lightningSpeakers[2])
                                             }
                                             TableRow {
-                                                TableCell("14:15 - 15:00").class("text-center font-weight-bold")
-                                                createTalkRow(speaker: AllSpeakers.speakers[2])
+                                                TableCell("14:15 - 14:25").class("text-center font-weight-bold")
+                                                createTalkRow(speaker: AllSpeakers.lightningSpeakers[3])
+                                            }
+                                            TableRow {
+                                                TableCell("14:30 - 15:00").class("text-center font-weight-bold")
+                                                TableCell("SSWG Panel")
                                             }
                                             TableRow {
                                                 TableCell("15:00 - 15:30").class("text-center font-weight-bold")
                                                 TableCell("Coffee Break")
                                             }
                                             TableRow {
-                                                TableCell("15:30 - 15:40").class("text-center font-weight-bold")
-                                                TableCell("Lightning Talk TBC")
+                                                TableCell("15:30 - 16:10").class("text-center font-weight-bold")
+                                                createTalkRow(speaker: AllSpeakers.speakers[2])
                                             }
                                             TableRow {
-                                                TableCell("15:40 - 15:50").class("text-center font-weight-bold")
-                                                TableCell("Lightning Talk TBC")
-                                            }
-                                            TableRow {
-                                                TableCell("15:50 - 16:00").class("text-center font-weight-bold")
-                                                TableCell("Lightning Talk TBC")
-                                            }
-                                            TableRow {
-                                                TableCell("16:00 - 16:40").class("text-center font-weight-bold")
-                                                TableCell("Talk TBC")
-                                            }
-                                            TableRow {
-                                                TableCell("16:40 - 17:20").class("text-center font-weight-bold")
+                                                TableCell("16:10 - 16:50").class("text-center font-weight-bold")
                                                 createTalkRow(speaker: AllSpeakers.speakers[5])
                                             }
                                             TableRow {
-                                                TableCell("17:20 - 17:30").class("text-center font-weight-bold")
+                                                TableCell("16:50 - 17:00").class("text-center font-weight-bold")
                                                 TableCell("Closing Remarks")
                                             }
                                         }.class("table table-striped table-bordered")

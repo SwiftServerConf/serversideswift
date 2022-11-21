@@ -22,6 +22,7 @@ struct Sponsors: Component {
                 Div {
                     platinumSponsors()
                     goldSponsors()
+                    bronzeSponsors()
                 }
                 .class("container")
             }
@@ -132,6 +133,66 @@ struct Sponsors: Component {
                         }.class("description p-2")
                     }.class("sponsor opacity-15")
                 }.class("gold")
+            }.class("col-12 col-sm-6 col-md-4 col-lg-3")
+        }.class("sponsor-list row")
+    }
+    
+    func bronzeSponsors() -> Component {
+        Div {
+            Div {
+                H3("BRONZE").class("f-bronze text-center pt-2 pb-3")
+            }.class("col-12")
+            Div {
+                Div {
+                    Div {
+                        Link("", url: "http://www.tuparev.com/").linkTarget(.blank)
+                        Div {
+                            Image(url: "/App/YearX/images/sponsors/tuparev.png", description: "Tuparev Technologies")
+                        }.class("image")
+                        Div {
+                            H4("Tuparev Technologies")
+                        }.class("description pl-2 pr-2 pb-2")
+                    }.class("sponsor")
+                }.class("bronze")
+            }.class("col-12 col-sm-6 col-md-4 col-lg-3")
+            Div {
+                Div {
+                    Div {
+                        Link("", url: "mailto:sponsors@serversideswift.info")
+                        Div {
+                            Image(url: "/App/YearX/images/sponsor-levels/sponsor_bronze.png", description: "Bronze")
+                        }.class("image")
+                        Div {
+                            H4("FREE SPOT").class("f-bronze")
+                        }.class("description p-2")
+                    }.class("sponsor opacity-15")
+                }.class("bronze")
+            }.class("col-12 col-sm-6 col-md-4 col-lg-3")
+            Div {
+                Div {
+                    Div {
+                        Link("", url: "mailto:sponsors@serversideswift.info")
+                        Div {
+                            Image(url: "/App/YearX/images/sponsor-levels/sponsor_bronze.png", description: "Bronze")
+                        }.class("image")
+                        Div {
+                            H4("FREE SPOT").class("f-bronze")
+                        }.class("description p-2")
+                    }.class("sponsor opacity-15")
+                }.class("bronze")
+            }.class("col-12 col-sm-6 col-md-4 col-lg-3")
+            Div {
+                Div {
+                    Div {
+                        Link("", url: "mailto:sponsors@serversideswift.info")
+                        Div {
+                            Image(url: "/App/YearX/images/sponsor-levels/sponsor_bronze.png", description: "Bronze")
+                        }.class("image")
+                        Div {
+                            H4("FREE SPOT").class("f-bronze")
+                        }.class("description p-2")
+                    }.class("sponsor opacity-15")
+                }.class("bronze")
             }.class("col-12 col-sm-6 col-md-4 col-lg-3")
         }.class("sponsor-list row")
     }

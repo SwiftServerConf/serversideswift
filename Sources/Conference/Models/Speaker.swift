@@ -141,7 +141,22 @@ struct AllSpeakers {
             twitter: "https://twitter.com/joannisorlandos",
             github: "https://github.com/joannis",
             bio: "Previously Vapor core-team member, designer of Vapor 3 and still maintains over 20 Vapor related libraries. Joannis enjoys low-level software development, and is a strong advocate for reducing code complexity through well designed software.",
-            talkIDs: [7])
+            talkIDs: [7]),
+        Speaker(
+            name: "Firas Safa",
+            role: "iOS Engineer",
+            company: "The Inked Engineer",
+            github: "https://github.com/TheInkedEngineer",
+            bio: "iOS Engineer, server-side-swift lover and design enthusiast | I love building things, writing articles, gaming and music | I go by `TheInkedEngineer`. | Based in Milan, originally from Lebanon.",
+            talkIDs: []),
+        Speaker(
+            name: "Georg Tuparev",
+            role: "Founder",
+            company: "Tuparev Technologies",
+            twitter: "https://twitter.com/tuparev",
+            github: "https://github.com/tuparev",
+            bio: "Since Georg bought his first NeXTstation in 1991 he got hooked on any NeXT and later - Apple, technology. Early adopter of the revolutionary for its time Enterprise Objects Framework (EOF) and later WebObjects, he is the principle developer of dozens of server-side applications for health care, finance, banking, large knowledge repositories, and science and laboratory systems. Currently his company (Tuparev Technologies) is involved in one of the largest financial and banking systems in The Netherlands and is working on an extremely complex system for detecting and monitoring space debris (space junk), and an early satellite collision warning system for ESA and other space agencies.",
+            talkIDs: [8])
     ]
 }
 
