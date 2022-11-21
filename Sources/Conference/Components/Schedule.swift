@@ -152,7 +152,8 @@ struct Schedule: Component {
                             .attribute(named: "href"),
                             .attribute(named: "data-toggle", value: "modal"),
                             .attribute(named: "data-target", value: "#global-modal"),
-                            .attribute(named: "data-description", value: talk.description.render()),
+                            .attribute(named: "data-title", value: talk.title),
+                            .attribute(named: "data-description", value: talk.description.render().replacingOccurrences(of: "\"", with: "&quot;")),
                             .component(Text(talk.title)))
                     }
                 }.class("talk-info")

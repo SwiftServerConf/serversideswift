@@ -5,5 +5,5 @@ var descriptionText = button.data('description')
 var modal = $(this)
 
 modal.find('.modal-title').text(titleText)
-modal.find('.modal-body').text(descriptionText)
+modal.find('.modal-body').html(descriptionText)
 })
