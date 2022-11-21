@@ -84,6 +84,11 @@ body {
 
 /* MARK: - Height */
 
+.h-40 {
+  height: 40px !important;
+  width: auto;
+}
+
 .h-50 {
   height: 50px !important;
   width: auto;

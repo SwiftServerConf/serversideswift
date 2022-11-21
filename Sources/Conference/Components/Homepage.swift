@@ -137,6 +137,13 @@ struct Homepage: Component {
                                     Image(url: "/App/YearX/images/sponsors/responsive-software.png", description: "Responsive Software").class("h-60")
                                 }.linkTarget(.blank)
                             }.class("logos")
+                            Node.hr()
+                            H3("Bronze Sponsors").class("h3 text-center")
+                            Div {
+                                Link(url: "http://www.tuparev.com/") {
+                                    Image(url: "/App/YearX/images/sponsors/tuparev.png", description: "Tuparev Technologies").class("h-40")
+                                }.linkTarget(.blank)
+                            }.class("logos")
                         }.class("col")
                     }.class("row")
                 }.class("container")

@@ -22,7 +22,7 @@ struct SpeakerDetail: Component {
                                         Span {
                                             SVG(url: "/App/YearX/images/icons/feather-sprite.svg#github")
                                                 .class("feather")
-                                        }.class("icon")
+                                        }.linkTarget(.blank).class("icon")
                                     }
                                 }
                                 if let twitterURL = speaker.twitter {
@@ -30,7 +30,7 @@ struct SpeakerDetail: Component {
                                         Span {
                                             SVG(url: "/App/YearX/images/icons/feather-sprite.svg#twitter")
                                                 .class("feather")
-                                        }.class("icon")
+                                        }.linkTarget(.blank).class("icon")
                                     }
                                 }
                             }

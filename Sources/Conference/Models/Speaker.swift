@@ -141,7 +141,45 @@ struct AllSpeakers {
             twitter: "https://twitter.com/joannisorlandos",
             github: "https://github.com/joannis",
             bio: "Previously Vapor core-team member, designer of Vapor 3 and still maintains over 20 Vapor related libraries. Joannis enjoys low-level software development, and is a strong advocate for reducing code complexity through well designed software.",
-            talkIDs: [7])
+            talkIDs: [7]),
+        Speaker(
+            name: "Firas Safa",
+            role: "iOS Engineer",
+            company: "The Inked Engineer",
+            github: "https://github.com/TheInkedEngineer",
+            bio: "iOS Engineer, server-side-swift lover and design enthusiast | I love building things, writing articles, gaming and music | I go by `TheInkedEngineer`. | Based in Milan, originally from Lebanon.",
+            talkIDs: [11]),
+        Speaker(
+            name: "Georg Tuparev",
+            role: "Founder",
+            company: "Tuparev Technologies",
+            twitter: "https://twitter.com/tuparev",
+            github: "https://github.com/tuparev",
+            bio: "Since Georg bought his first NeXTstation in 1991 he got hooked on any NeXT and later - Apple, technology. Early adopter of the revolutionary for its time Enterprise Objects Framework (EOF) and later WebObjects, he is the principle developer of dozens of server-side applications for health care, finance, banking, large knowledge repositories, and science and laboratory systems. Currently his company (Tuparev Technologies) is involved in one of the largest financial and banking systems in The Netherlands and is working on an extremely complex system for detecting and monitoring space debris (space junk), and an early satellite collision warning system for ESA and other space agencies.",
+            talkIDs: [8]),
+        Speaker(
+            name: "Andrea Scuderi",
+            role: "Senior iOS Engineer",
+            company: "JustEatTakeaway.com",
+            twitter: "https://twitter.com/andreascuderi13",
+            github: "https://github.com/swift-sprinter/aws-serverless-swift-api-template",
+            bio: "Andrea is a Senior Engineer iOS @JustEat Takeaway with experience in the Marketplaces, Retail, Finance, Banking, Energy and Media industries. He is the creator of Swift-Sprinter an open-source library to work with Swift on AWS Lambda, ClippingCamera and  Trackyzer an app for Cyclists.",
+            talkIDs: [10]),
+        Speaker(
+            name: "Dorian Grolaux",
+            role: "iOS Engineer",
+            company: "data.ai",
+            twitter: "https://twitter.com/MrSkwiggs",
+            github: "https://github.com/MrSkwiggs",
+            bio: ComponentGroup {
+                Paragraph("I'm an iOS Engineer currently working at data.ai, have been in the field for the past 7 years and really, just love Swift!")
+                Paragraph {
+                    Text("I've kept a close eye on Vapor for years now, because I'm really into server-side tech, but never really had any projects where I could explore it. Until iOS support was implemented, then I started working on a camera-streaming app which is currently in development but about to release soon (Testflight here, if you'd like to see for yourself: ")
+                    Link("https://testflight.apple.com/join/G2nWjlsH", url: "https://testflight.apple.com/join/G2nWjlsH")
+                    Text(")")
+                }
+            },
+            talkIDs: [9])
     ]
 }
 

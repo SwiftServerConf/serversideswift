@@ -86,6 +86,32 @@ struct AllTalks {
             id: 7,
             title: "Why your libraries should use NIO Channels",
             description: "SwiftNIO enjoys a lot of powerful tools and features. ByteBuffers, EventLoops and EventLoopFuture are all well known in the ecosystem. But there’s an unsung hero among them that arguably is even more important. The Channel. This talk give you a rundown of what they are, why they matter, and how you can use them to build incredible systems with minimal complexity.",
-            speakerNames: ["Joannis Orlandos"])
+            speakerNames: ["Joannis Orlandos"]),
+        Talk(
+            id: 8,
+            title: "BrainObjects - new take on the 27 years old WebObjects/EOF framework",
+            description: ComponentGroup {
+                Paragraph("We will present ideas (and some initial architecture, design, and development) of a brand new open source Server-Side framework inspired by WebObjects/EOF, but written in Swift. EOF (Enterprise Object Framework) is data modelling and persistent layer that is a more powerful predecessor of CoreData.")
+                Paragraph {
+                    Text("The BrainObjects project on GitHub: ")
+                    Link("https://github.com/BrainObjects", url: "https://github.com/BrainObjects")
+                }
+            },
+            speakerNames: ["Georg Tuparev"]),
+        Talk(
+            id: 9,
+            title: "Running Vapor on iOS",
+            description: "See how to use Vapor as a web server in your applications",
+            speakerNames: ["Dorian Grolaux"]),
+        Talk(
+            id: 10,
+            title: "How to deploy an Swift Serverless API in AWS",
+            description: "See how to deploy serverless Swift Applications on AWS",
+            speakerNames: ["Andrea Scuderi"]),
+        Talk(
+            id: 11,
+            title: "Building a mock server using Vapor",
+            description: "See how to use Vapor to help mock APIs for testing",
+            speakerNames: ["Firas Safa"])
     ]
 }
