@@ -97,6 +97,21 @@ struct AllTalks {
                     Link("https://github.com/BrainObjects", url: "https://github.com/BrainObjects")
                 }
             },
-            speakerNames: ["Georg Tuparev"])
+            speakerNames: ["Georg Tuparev"]),
+        Talk(
+            id: 9,
+            title: "Running Vapor on iOS",
+            description: "See how to use Vapor as a web server in your applications",
+            speakerNames: ["Dorian Grolaux"]),
+        Talk(
+            id: 10,
+            title: "How to deploy an Swift Serverless API in AWS",
+            description: "See how to deploy serverless Swift Applications on AWS",
+            speakerNames: ["Andrea Scuderi"]),
+        Talk(
+            id: 11,
+            title: "Building a mock server using Vapor",
+            description: "See how to use Vapor to help mock APIs for testing",
+            speakerNames: ["Firas Safa"])
     ]
 }
