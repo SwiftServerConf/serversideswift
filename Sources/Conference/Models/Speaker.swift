@@ -145,7 +145,7 @@ struct AllSpeakers {
         Speaker(
             name: "Firas Safa",
             role: "iOS Engineer",
-            company: "The Inked Engineer",
+            company: "TrueLayer",
             github: "https://github.com/TheInkedEngineer",
             bio: "iOS Engineer, server-side-swift lover and design enthusiast | I love building things, writing articles, gaming and music | I go by `TheInkedEngineer`. | Based in Milan, originally from Lebanon.",
             talkIDs: [11]),

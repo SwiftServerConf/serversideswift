@@ -105,7 +105,7 @@ struct AllTalks {
             speakerNames: ["Dorian Grolaux"]),
         Talk(
             id: 10,
-            title: "How to deploy an Swift Serverless API in AWS",
+            title: "How to deploy a Swift Serverless API in AWS",
             description: "See how to deploy serverless Swift Applications on AWS",
             speakerNames: ["Andrea Scuderi"]),
         Talk(
