@@ -112,6 +112,21 @@ struct AllTalks {
             id: 11,
             title: "Building a mock server using Vapor",
             description: "See how to use Vapor to help mock APIs for testing",
-            speakerNames: ["Firas Safa"])
+            speakerNames: ["Firas Safa"]),
+        Talk(
+            id: 12,
+            title: "How to Make Vapor Fly, Deploying Vapor on Fly.io",
+            description: ComponentGroup {
+                Paragraph {
+                    Link("Fly.io", url: "https://fly.io")
+                    Text(" is another platform to deploy your Vapor app, for free! In this talk, attendees will learn how to deploy their Vapor app to Fly using the Dockerfile. Having a familiarity with Docker and Linux will be helpful, but isn’t required.")
+                }
+                Paragraph {
+                    Text("After this talk, attendees will understand Fly as a platform, and can have their Vapor app deployed onto ")
+                    Link("Fly.io", url: "https://fly.io")
+                    Text(".")
+                }
+            },
+            speakerNames: ["Mikaela Caron"])
     ]
 }

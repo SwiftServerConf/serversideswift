@@ -67,7 +67,7 @@ struct AllSpeakers {
             twitter: "https://twitter.com/mikaela__caron",
             github: "https://github.com/mikaelacaron",
             bio: "Mikaela Caron is an iOS Engineer at Lickability. She’s a self-taught developer, and transitioned into the tech industry from manufacturing. She creates content on YouTube, Instagram, and Twitter, sharing her knowledge about iOS development, daily life of a developer, and freelancing. She freelances part-time building iOS apps and her own indie apps. The first two apps she created were shared on her Instagram story, in her story highlights, showing how an app is built from sketch to published on the App Store. She is an organizer for iOSDevHappyHour and loves giving back to the community.",
-            talkIDs: []),
+            talkIDs: [12]),
         Speaker(
             name: "Matias Piipari",
             role: "Engineering Director",
