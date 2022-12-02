@@ -131,7 +131,7 @@ struct AllTalks {
         Talk(
             id: 13,
             title: "Generating Code and Other Mischief with Swift Package Manager Plugins",
-            description: "Generating Code and Other Mischief with Swift Package Manager Plugins",
+            description: "It’s the build tooling step everyone hates: “Now, add a new Run Script Build Phase.” The Swift and Xcode teams have worked to try to make things at least a little bit better for things which need to happen at build time by adding Build Tool Plugins and Command Plugins to Swift Package manager. In this talk, you’ll get a look at how to set these up to generate code and documentation, plus a look at some other silly things you can make it do.",
             speakerNames: ["Ellen Shapiro"])
     ]
 }

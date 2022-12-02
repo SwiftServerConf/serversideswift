@@ -11,6 +11,24 @@ struct Schedule: Component {
                         Div {
                             Div {
                                 Div {
+                                    H3("Thursday, December 8th - Social").class("h3")
+                                    Div {
+                                        let headerRow = TableRow {
+                                            TableHeaderCell("When").attribute(named: "scope", value: "col").class("time-column")
+                                            TableHeaderCell("What").attribute(named: "scope", value: "col")
+                                        }
+                                        Table(header: headerRow) {
+                                            TableRow {
+                                                TableCell("19:00 - 22:00").class("text-center font-weight-bold")
+                                                TableCell {
+                                                    Link("NSLondon × ServerSide.swift Social", url: "https://www.meetup.com/nslondon/events/289491932/").linkTarget(.blank)
+                                                }
+                                            }
+                                            
+                                        }.class("table table-striped table-bordered")
+                                    }.class("panel mb-5")
+                                }
+                                Div {
                                     H3("Friday, December 9th - Conference Day").class("h3")
                                     Div {
                                         let headerRow = TableRow {
@@ -97,6 +115,10 @@ struct Schedule: Component {
                                             TableRow {
                                                 TableCell("17:10 - 17:15").class("text-center font-weight-bold")
                                                 TableCell("Closing Remarks")
+                                            }
+                                            TableRow {
+                                                TableCell("18:00 - 21:00").class("text-center font-weight-bold")
+                                                TableCell("After Party at Hoop & Toy")
                                             }
                                         }.class("table table-striped table-bordered")
                                     }.class("panel")
