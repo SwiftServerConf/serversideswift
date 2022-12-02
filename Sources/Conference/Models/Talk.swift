@@ -127,6 +127,11 @@ struct AllTalks {
                     Text(".")
                 }
             },
-            speakerNames: ["Mikaela Caron"])
+            speakerNames: ["Mikaela Caron"]),
+        Talk(
+            id: 13,
+            title: "Generating Code and Other Mischief with Swift Package Manager Plugins",
+            description: "Generating Code and Other Mischief with Swift Package Manager Plugins",
+            speakerNames: ["Ellen Shapiro"])
     ]
 }

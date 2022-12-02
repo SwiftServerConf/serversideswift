@@ -91,7 +91,7 @@ struct AllSpeakers {
             twitter: "https://twitter.com/DesignatedNerd",
             github: "https://github.com/DesignatedNerd",
             bio: "Ellen Shapiro is a native mobile developer currently working at Gusto (the US payroll/HR one, not the UK food delivery one). She's built iOS and Android apps and SDKs for the last decade, including for SpotHero and Apollo GraphQL. She enjoys kayaking, music, laser woodworking, and complaining about the cold. She lives in Madison, Wisconsin with her wife and two cats.",
-            talkIDs: []),
+            talkIDs: [13]),
         Speaker(
             name: "Cory Benfield",
             role: "Senior Software Engineer",
