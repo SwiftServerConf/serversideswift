@@ -64,7 +64,7 @@ struct AllTalks {
             speakerNames: ["Cory Benfield"]),
         Talk(
             id: 4,
-            title: "Swift At Scale",
+            title: "Fearless Caching in the Cloud",
             description: ComponentGroup {
                 Paragraph("Swift is used at Apple not just for developing applications and operating systems but also large-scale distributed systems. To succeed, Swift is designed to support single process architectures and scale up to distributed systems across many processes and machines.")
                 Paragraph("One system that fits particularly well with Swift at scale is Content-Addressable Storage (CAS).")
