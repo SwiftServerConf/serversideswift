@@ -87,7 +87,7 @@ struct Sponsors: Component {
                     Div {
                         Link("", url: "https://responsive.software/").linkTarget(.blank)
                         Div {
-                            Image(url: "/App/YearX/images/sponsors/responsive-software.png", description: "Responsive Software")
+                            Image(url: "/App/YearX/images/sponsors/responsive-software.svg", description: "Responsive Software")
                         }.class("image")
                         Div {
                             H4("Responsive Software")
@@ -98,14 +98,14 @@ struct Sponsors: Component {
             Div {
                 Div {
                     Div {
-                        Link("", url: "mailto:sponsors@serversideswift.info")
+                        Link("", url: "https://profoto.com/int/ecommerce-studio-solutions").linkTarget(.blank)
                         Div {
-                            Image(url: "/App/YearX/images/sponsor-levels/sponsor_gold.png", description: "Gold")
+                            Image(url: "/App/YearX/images/sponsors/profoto-square.png", description: "Profoto")
                         }.class("image")
                         Div {
-                            H4("FREE SPOT").class("f-gold")
-                        }.class("description p-2")
-                    }.class("sponsor opacity-15")
+                            H4("Profoto")
+                        }.class("description pl-2 pr-2 pb-2")
+                    }.class("sponsor")
                 }.class("gold")
             }.class("col-12 col-sm-6 col-md-4 col-lg-3")
             Div {
