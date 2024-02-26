@@ -17,7 +17,7 @@ struct Homepage: Component {
                     Text("Server-Side Swift Conference")
                 }.class("text-center text-white")
                 H2 {
-                    Text("9th December 2022. London, UK")
+                    Text("26th-27th September 2024. London, UK")
                 }.class("text-center text-white")
                 Div {
                     Link("Become a Sponsor", url: "mailto:sponsors@serversideswift.info").class("btn btn-default btn-gradient")
@@ -40,9 +40,9 @@ struct Homepage: Component {
                             }.class("h3")
                             Paragraph {
                                 Text("The conference will take place on the ")
-                                Text("9th of December").bold()
+                                Text("26th and 27th of September").bold()
                                 Text(" in the awesome ")
-                                Text("London, UK").bold()
+                                Text("Science Museum in London, UK").bold()
                                 Text(", and it will be packed with inspiring talks.")
                             }
                         }.class("col-12 col-sm-6 mt-2 mb-2")
@@ -52,8 +52,14 @@ struct Homepage: Component {
                                 Text("Speakers")
                             }.class("h3")
                             Paragraph {
-                                Text("We have a packed schedule full of amazing talks from some amazing speakers. ")
+                                Text("We'll have a packed schedule full of amazing talks from some amazing speakers. ")
                                 Link("Take a look!", url: "/schedule")
+                                Text(" at the current schedule.")
+                            }
+                            Paragraph {
+                                Text("If you'd like to speak, you can ")
+                                Link("apply via our CFP", url: "https://www.papercall.io/server-side-swift-2024").linkTarget(.blank)
+                                Text(".")
                             }
                         }.class("col-12 col-sm-6 mt-2 mb-2")
                         

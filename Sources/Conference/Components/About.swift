@@ -29,6 +29,9 @@ struct About: Component {
                     Paragraph {
                         Text("ServerSide.swift is a framework-independent, server-side Swift conference, to bring all of the community toghether to learn and share. The conference is aimed at being a non-profit conference and solely run for the love of server-side Swift. We've had a number of successful editions and are looking foward to putting on another incredible event to help grow Swift on the server!")
                     }.class("f-weight-300")
+                    Paragraph {
+                        Text("The conference is a unique place to showcase a wide range of talks from the internals of Swift to success stories from across the industry. Every year we have highly technical talks you'll see at no other conference. We've even had fundamental changes in Swift, such as the new Open Source Foundation announced at the conference.")
+                    }.class("f-weight-300")
                     H3("Getting In Touch").class("h3")
                     Paragraph {
                         Text("For general ")

@@ -15,13 +15,10 @@ struct ConferenceLocation: Component {
                         Div {
                             H3("The Venue").class("h3")
                             Paragraph {
-                                Text("The conference wiil take place in the heart of London in Kensington.")
+                                Text("The conference wiil take place in the heart of London in Kensington at the National Science Museum.")
                             }
                             Paragraph {
-                                Text("We have an amazing location with the main conference taking place in an IMAX theatre.")
-                            }
-                            Paragraph {
-                                Text("Please note that due to venue restictions the specific details for the venue will be sent out via email.")
+                                Text("The talks will take place in the incredible IMAX theatre making an amazing experience for all attendees.")
                             }
                         }.class("col-xs-12 col-sm-6")
                         Div {
