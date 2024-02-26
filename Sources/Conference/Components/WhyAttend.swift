@@ -5,7 +5,7 @@ struct WhyAttend: Component {
         Div {
             Div {
                 H1("Reasons To Attend").class("text-center text-white")
-                H4("Why should you attend ServerSide.swift 2022?").class("text-center mb-5")
+                H4("Why should you attend ServerSide.swift 2024?").class("text-center mb-5")
                 Div {
                     Div {
                         H3("Engage with the community").class("h3")
@@ -17,6 +17,7 @@ struct WhyAttend: Component {
                     Div {
                         H3("Wide range of talks").class("h3")
                         Paragraph("Whether you're an expert on debugging Swift on Linux or you've never used Swift Package Manager you'll learn something at the conference. With beginner and advanced talks there's something for everyone.")
+                        Paragraph("Because of the conference's focus on Swift on the server you'll see talks you won't see anywhere else. It's a unique opportunity for higly technical deep talks.")
                     }.class("col-xs-12 mb-4")
                 }.class("row")
                 
@@ -34,7 +35,7 @@ struct WhyAttend: Component {
                 Div {
                     Div {
                         H3("Framework Agnostic").class("h3")
-                        Paragraph("We're not focused on one particular framework so whether you're building a site with Vapor, high performance systems with NIO or using Amazon's Smoke framework, there'll be something for you.")
+                        Paragraph("We're not focused on one particular framework so whether you're building a site with Vapor, Hummingbird, high performance systems with NIO or using Amazon's Smoke framework, there'll be something for you.")
                     }.class("col-xs-12 mb-4")
                 }.class("row")
             }.class("container")
