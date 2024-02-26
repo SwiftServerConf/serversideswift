@@ -132,9 +132,9 @@ struct Homepage: Component {
                                 Link(url: "https://www.brokenhands.io") {
                                     Image(url: "/App/YearX/images/sponsors/brokenhands.svg", description: "Broken Hands").class("h-90 pr-3 pt-2")
                                 }.linkTarget(.blank)
-                                Link(url: "https://www.apple.com") {
-                                    Image(url: "/App/YearX/images/sponsors/apple.svg", description: "Apple Inc.").class("h-90 pl-3")
-                                }.linkTarget(.blank)
+//                                Link(url: "https://www.apple.com") {
+//                                    Image(url: "/App/YearX/images/sponsors/apple.svg", description: "Apple Inc.").class("h-90 pl-3")
+//                                }.linkTarget(.blank)
                             }.class("logos")
                             Node.hr()
 //                            H3("Gold Sponsors").class("h3 text-center")
