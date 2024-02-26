@@ -137,22 +137,22 @@ struct Homepage: Component {
                                 }.linkTarget(.blank)
                             }.class("logos")
                             Node.hr()
-                            H3("Gold Sponsors").class("h3 text-center")
-                            Div {
-                                Link(url: "https://responsive.software/") {
-                                    Image(url: "/App/YearX/images/sponsors/responsive-software.svg", description: "Responsive Software").class("h-60")
-                                }.linkTarget(.blank)
-                                Link(url: "https://profoto.com/int/ecommerce-studio-solutions") {
-                                    Image(url: "/App/YearX/images/sponsors/profoto.png", description: "Styleshoots").class("h-30")
-                                }.linkTarget(.blank)
-                            }.class("logos")
-                            Node.hr()
-                            H3("Bronze Sponsors").class("h3 text-center")
-                            Div {
-                                Link(url: "http://www.tuparev.com/") {
-                                    Image(url: "/App/YearX/images/sponsors/tuparev.png", description: "Tuparev Technologies").class("h-40")
-                                }.linkTarget(.blank)
-                            }.class("logos")
+//                            H3("Gold Sponsors").class("h3 text-center")
+//                            Div {
+//                                Link(url: "https://responsive.software/") {
+//                                    Image(url: "/App/YearX/images/sponsors/responsive-software.svg", description: "Responsive Software").class("h-60")
+//                                }.linkTarget(.blank)
+//                                Link(url: "https://profoto.com/int/ecommerce-studio-solutions") {
+//                                    Image(url: "/App/YearX/images/sponsors/profoto.png", description: "Styleshoots").class("h-30")
+//                                }.linkTarget(.blank)
+//                            }.class("logos")
+//                            Node.hr()
+//                            H3("Bronze Sponsors").class("h3 text-center")
+//                            Div {
+//                                Link(url: "http://www.tuparev.com/") {
+//                                    Image(url: "/App/YearX/images/sponsors/tuparev.png", description: "Tuparev Technologies").class("h-40")
+//                                }.linkTarget(.blank)
+//                            }.class("logos")
                         }.class("col")
                     }.class("row")
                 }.class("container")
