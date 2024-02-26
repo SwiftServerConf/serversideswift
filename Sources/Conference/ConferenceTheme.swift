@@ -51,6 +51,8 @@ private struct ConferenceThemeHTMLFactory: HTMLFactory {
                     ConferenceLocation()
                 case "Years":
                     Years()
+                case "Videos":
+                    Videos()
                 default:
                     Wrapper {
                         H1(section.title)
