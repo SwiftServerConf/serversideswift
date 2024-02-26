@@ -91,9 +91,10 @@ struct SiteHeader<Site: Website>: Component {
             return Link("FAQ", url: "/faq")
         case .tickets:
             return Link(url: "/tickets") {
-                Node<HTML.BodyContext>.element(named: "strike", nodes: [
-                    Text("Tickets").convertToNode()
-                ])
+//                Node<HTML.BodyContext>.element(named: "strike", nodes: [
+//                    Text("Tickets").convertToNode()
+//                ])
+				Text("Tickets")
             }
         case .speakers:
             return Link("Speakers", url: "/speakers")
