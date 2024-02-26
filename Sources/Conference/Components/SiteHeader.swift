@@ -49,6 +49,7 @@ struct SiteHeader<Site: Website>: Component {
     private func buildNavComponents(currentSection: Section<Site>?) -> ComponentGroup {
         let home = buildNavComponent(for: .home, currentSection: currentSection)
         let faq = buildNavComponent(for: .faq, currentSection: currentSection)
+		let videos = buildNavComponent(for: .videos, currentSection: currentSection)
         let tickets = buildNavComponent(for: .tickets, currentSection: currentSection)
         let speakers = buildNavComponent(for: .speakers, currentSection: currentSection)
         let sponsors = buildNavComponent(for: .sponsors, currentSection: currentSection)
@@ -58,6 +59,7 @@ struct SiteHeader<Site: Website>: Component {
         let about = buildNavComponent(for: .about, currentSection: currentSection)
         return ComponentGroup {
             home
+			videos
             schedule
             speakers
             location
@@ -87,6 +89,8 @@ struct SiteHeader<Site: Website>: Component {
     
     private func buildLink(for section: Conference.SectionID) -> Link {
         switch section {
+		case .videos:
+			return Link("Videos", url: "/videos")
         case .faq:
             return Link("FAQ", url: "/faq")
         case .tickets:
@@ -110,6 +114,8 @@ struct SiteHeader<Site: Website>: Component {
             return Link("Why Attend?", url: "/whyAttend")
         case .schedule:
             return Link("Schedule", url: "/schedule")
+		case .years:
+			return Link("Years", url: "/years")
         }
     }
 }
