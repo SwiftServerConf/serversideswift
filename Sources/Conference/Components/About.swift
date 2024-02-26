@@ -11,7 +11,7 @@ struct About: Component {
                         Div {
                             Link("", url: "https://www.twitter.com/0xtim").linkTarget(.blank)
                             Div {
-                                Image(url: "/App/YearX/images/team/timcondon.jpg", description: "Tim")
+                                Image(url: "/App/YearX/images/team/timcondon-new.png", description: "Tim")
                             }.class("image")
                             Div {
                                 H3("Tim Condon").class("h3")
