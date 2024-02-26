@@ -14,6 +14,6 @@ struct Videos: Component {
                     }.class("text-center mt-4")
                 }.class("container")
             }.class("page-block no-height bg-blue text-white")
-        }.class("location")
+        }.class("videos")
     }
 }
