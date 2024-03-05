@@ -48,30 +48,17 @@ struct Sponsors: Component {
                     }.class("sponsor")
                 }.class("platinum")
             }.class("col-12 col-sm-6 col-md-4")
-//            Div {
-//                Div {
-//                    Div {
-//                        Link("", url: "https://www.apple.com").linkTarget(.blank)
-//                        Div {
-//                            Image(url: "/App/YearX/images/sponsors/apple.svg", description: "Apple, Inc.").class("apple-logo")
-//                        }.class("image")
-//                        Div {
-//                            H4("Apple")
-//                        }.class("description p-2")
-//                    }.class("sponsor")
-//                }.class("platinum")
-//            }.class("col-12 col-sm-6 col-md-4")
             Div {
                 Div {
                     Div {
-                        Link("", url: "mailto:sponsors@serversideswift.info")
+                        Link("", url: "https://www.apple.com").linkTarget(.blank)
                         Div {
-                            Image(url: "/App/YearX/images/sponsor-levels/sponsor_platinum.png", description: "Platinum")
-                        }.class("image")
+                            Image(url: "/App/YearX/images/sponsors/apple.svg", description: "Apple, Inc.").class("apple-logo d-block mx-auto")
+                        }.class("image text-center")
                         Div {
-                            H4("FREE SPOT").class("f-platinum")
+                            H4("Apple")
                         }.class("description p-2")
-                    }.class("sponsor opacity-15")
+                    }.class("sponsor")
                 }.class("platinum")
             }.class("col-12 col-sm-6 col-md-4")
             Div {
