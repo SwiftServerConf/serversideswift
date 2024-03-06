@@ -167,5 +167,6 @@
 }
 
 .apple-logo {
-    margin-left: -3px;
+    height: 110px !important;
+    margin-top: 10px
 }
