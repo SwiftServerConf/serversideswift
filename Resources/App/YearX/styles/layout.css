@@ -20,6 +20,16 @@ body {
   fill: none;
 }
 
+.feather-replacement {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
 /* Icons (Linea Basic) */
 @font-face {
   font-family: "linea-basic-10";
