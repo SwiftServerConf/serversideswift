@@ -36,7 +36,9 @@ struct SpeakerDetail: Component {
                                 if let mastodonURL = speaker.mastodon {
                                     Link(url: mastodonURL) {
                                         Span {
-                                            SVG(url: "/App/YearX/images/icons/mastodon.svg")
+                                            // SVG(url: "/App/YearX/images/icons/mastodon.svg")
+                                            //     .class("feather")
+                                            Image(url: "/App/YearX/images/icons/mastodon.svg", description: "Mastodon")
                                                 .class("feather-replacement")
                                         }.linkTarget(.blank).class("icon")
                                     }

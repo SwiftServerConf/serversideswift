@@ -28,6 +28,11 @@ body {
   stroke-linecap: round;
   stroke-linejoin: round;
   fill: none;
+  filter: invert(47%) sepia(74%) saturate(6012%) hue-rotate(199deg) brightness(100%) contrast(103%);
+}
+
+.feather-replacement:hover {
+  filter: invert(20%) sepia(92%) saturate(2263%) hue-rotate(200deg) brightness(91%) contrast(101%);
 }
 
 /* Icons (Linea Basic) */
@@ -173,7 +178,7 @@ a.sales-banner {
   text-align: center;
 }
 
-a.sales-banner: hover {
+a.sales-banner:hover {
   font-weight: 400;
   color: #ffffff;
 }
