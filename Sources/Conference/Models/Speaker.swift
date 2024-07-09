@@ -93,13 +93,13 @@ struct AllSpeakers {
                 Paragraph {
                     Text("Information on his ")
                     Link("books and videos", url: "https://editorscut.com/")
-                    Text(" is available on the")
+                    Text(" is available on the ")
                     Link("Editors Cut website", url: "https://editorscut.com/")
                     Text(". Details on his ")
                     Link("training", url: "https://dimsumthinking.com/Training/index.html")
                     Text(", and ")
                     Link("speaking", url: "https://dimsumthinking.com/Speaking/index.html")
-                    Text(" is on the")
+                    Text(" is on the ")
                     Link("Dim Sum Thinking website", url: "https://dimsumthinking.com/")
                     Text(".")
                 }
