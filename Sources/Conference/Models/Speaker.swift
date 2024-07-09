@@ -3,7 +3,7 @@ import Plot
 struct Speaker {
     let name: String
     let role: String
-    let company: String
+    let company: String?
     let url: String
     let image: String
     let twitter: String?
@@ -15,7 +15,7 @@ struct Speaker {
     internal init(
         name: String,
         role: String,
-        company: String,
+        company: String? = nil,
         image: String? = nil,
         twitter: String? = nil,
         github: String? = nil,
@@ -42,7 +42,7 @@ struct Speaker {
     internal init(
         name: String,
         role: String,
-        company: String,
+        company: String? = nil,
         image: String? = nil,
         twitter: String? = nil,
         github: String? = nil,
@@ -83,7 +83,7 @@ struct AllSpeakers {
                     Text(".")
                 }
                 Paragraph {
-                    Text("Daniel presents iOS, SwiftUI, and Swift training and consults through his company")
+                    Text("Daniel presents iOS, SwiftUI, and Swift training and consults through his company ")
                     Link("Dim Sum Thinking", url: "https://dimsumthinking.com/")
                     Text(".")
                 }
@@ -107,12 +107,11 @@ struct AllSpeakers {
             talkIDs: [1]),
         Speaker(
             name: "Mikaela Caron",
-            role: "iOS Engineer",
-            company: "Lickability",
+            role: "Independent iOS Engineer",
             twitter: "https://twitter.com/mikaela__caron",
             github: "https://github.com/mikaelacaron",
             mastodon: "https://swiftdevs.space/@mikaelacaron",
-            bio: "Mikaela Caron is an iOS Engineer at Lickability. She’s a self-taught developer, and transitioned into the tech industry from manufacturing. She creates content on YouTube, Instagram, and Twitter, sharing her knowledge about iOS development, daily life of a developer, and freelancing. She freelances part-time building iOS apps and her own indie apps. The first two apps she created were shared on her Instagram story, in her story highlights, showing how an app is built from sketch to published on the App Store. She is an organizer for iOSDevHappyHour and loves giving back to the community.",
+            bio: "Mikaela Caron is an independent iOS Engineer who actively shares her expertise on social media, focusing on iOS development, building apps in public, and freelancing. She develops her own indie apps, works part-time as a freelancer, and is an organizer for iOSDevHappyHour. Mikaela loves giving back to the community.",
             talkIDs: []),        
     ]
     
