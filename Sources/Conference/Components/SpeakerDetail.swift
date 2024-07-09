@@ -33,6 +33,14 @@ struct SpeakerDetail: Component {
                                         }.linkTarget(.blank).class("icon")
                                     }
                                 }
+                                if let mastodonURL = speaker.mastodon {
+                                    Link(url: mastodonURL) {
+                                        Span {
+                                            SVG(url: "/App/YearX/images/icons/feather-sprite.svg#twitter")
+                                                .class("feather")
+                                        }.linkTarget(.blank).class("icon")
+                                    }
+                                }
                             }
                             .class("social-media")
                         }
