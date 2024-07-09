@@ -56,11 +56,11 @@ struct Homepage: Component {
                                 Link("Take a look!", url: "/schedule")
                                 Text(" at the current schedule.")
                             }
-                            Paragraph {
-                                Text("If you'd like to speak, you can ")
-                                Link("apply via our CFP", url: "https://www.papercall.io/server-side-swift-2024").linkTarget(.blank)
-                                Text(".")
-                            }
+                            // Paragraph {
+                            //     Text("If you'd like to speak, you can ")
+                            //     Link("apply via our CFP", url: "https://www.papercall.io/server-side-swift-2024").linkTarget(.blank)
+                            //     Text(".")
+                            // }
                         }.class("col-12 col-sm-6 mt-2 mb-2")
                         
                         Div {
