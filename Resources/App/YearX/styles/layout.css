@@ -20,6 +20,22 @@ body {
   fill: none;
 }
 
+.footer {
+  .feather-replacement {
+    filter: invert(100%) sepia(0%) saturate(7483%) hue-rotate(294deg) brightness(101%) contrast(101%);
+  }
+}
+
+.profile {
+  .feather-replacement {
+    filter: invert(47%) sepia(74%) saturate(6012%) hue-rotate(199deg) brightness(100%) contrast(103%);
+  }
+
+  .feather-replacement:hover {
+    filter: invert(20%) sepia(92%) saturate(2263%) hue-rotate(200deg) brightness(91%) contrast(101%);
+  }
+}
+
 .feather-replacement {
   width: 24px;
   height: 24px;
@@ -28,11 +44,6 @@ body {
   stroke-linecap: round;
   stroke-linejoin: round;
   fill: none;
-  filter: invert(47%) sepia(74%) saturate(6012%) hue-rotate(199deg) brightness(100%) contrast(103%);
-}
-
-.feather-replacement:hover {
-  filter: invert(20%) sepia(92%) saturate(2263%) hue-rotate(200deg) brightness(91%) contrast(101%);
 }
 
 /* Icons (Linea Basic) */
