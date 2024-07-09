@@ -28,9 +28,11 @@ struct SpeakerOverview: Component {
                         .class("h3")
                     H4(speaker.role)
                         .class("f-weight-300 mb-0")
-                    H4(speaker.company)
-                        .class("f-weight-300")
-                        .style("font-style: italic")
+                    if let company = speaker.company {
+                        H4(company)
+                            .class("f-weight-300")
+                            .style("font-style: italic")
+                    }
                 }
                 .class("description p-2")
             }

@@ -15,6 +15,12 @@ struct SiteFooter: Component {
                             SVG(url: "/App/YearX/images/icons/feather-sprite.svg#github").class("feather text-white")
                         }.class("icon")
                     }.linkTarget(.blank)
+                    Link(url: "https://hachyderm.io/@swiftserverconf") {
+                        Span {
+                            Image(url: "/App/YearX/images/icons/mastodon.svg", description: "Mastodon")
+                                                .class("feather-replacement")
+                        }.class("icon")
+                    }.linkTarget(.blank)
                     Link(url: "https://twitter.com/SwiftServerConf") {
                         Span {
                             SVG(url: "/App/YearX/images/icons/feather-sprite.svg#twitter").class("feather text-white")

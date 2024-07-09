@@ -33,6 +33,14 @@ struct SpeakerDetail: Component {
                                         }.linkTarget(.blank).class("icon")
                                     }
                                 }
+                                if let mastodonURL = speaker.mastodon {
+                                    Link(url: mastodonURL) {
+                                        Span {
+                                            Image(url: "/App/YearX/images/icons/mastodon.svg", description: "Mastodon")
+                                                .class("feather-replacement")
+                                        }.linkTarget(.blank).class("icon")
+                                    }
+                                }
                             }
                             .class("social-media")
                         }
@@ -66,8 +74,14 @@ struct SpeakerDetail: Component {
                             H3("About the Speaker")
                             Div {
                                 H4("Position").class("f-gradient")
-                                H6("\(speaker.role) at \(speaker.company)")
-                                    .class("f-weight-300")
+                                if let company = speaker.company {
+                                    H6("\(speaker.role) at \(company)")
+                                        .class("f-weight-300")
+                                } else {
+                                    H6("\(speaker.role)")
+                                        .class("f-weight-300")
+
+                                }
                             }
                             .class("section")
                             Div {
