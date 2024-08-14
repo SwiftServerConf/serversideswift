@@ -9,6 +9,8 @@ struct Speaker {
     let twitter: String?
     let github: String?
     let mastodon: String?
+    let linkedIn: String?
+    let website: String?
     let bio: Component
     let talkIDs: [Int]
     
@@ -20,6 +22,8 @@ struct Speaker {
         twitter: String? = nil,
         github: String? = nil,
         mastodon: String? = nil,
+        linkedIn: String? = nil,
+        website: String? = nil,
         bio: Component,
         talkIDs: [Int]
     ) {
@@ -35,6 +39,8 @@ struct Speaker {
         self.twitter = twitter
         self.github = github
         self.mastodon = mastodon
+        self.linkedIn = linkedIn
+        self.website = website
         self.bio = bio
         self.talkIDs = talkIDs
     }
@@ -47,10 +53,12 @@ struct Speaker {
         twitter: String? = nil,
         github: String? = nil,
         mastodon: String? = nil,
+        linkedIn: String? = nil,
+        website: String? = nil,
         bio: String,
         talkIDs: [Int]
     ) {
-        self.init(name: name, role: role, company: company, image: image, twitter: twitter, github: github, mastodon: mastodon, bio: Text(bio), talkIDs: talkIDs)
+        self.init(name: name, role: role, company: company, image: image, twitter: twitter, github: github, mastodon: mastodon, linkedIn: linkedIn, website: website, bio: Text(bio), talkIDs: talkIDs)
     }
     
     var talks: [Talk] {
@@ -112,72 +120,131 @@ struct AllSpeakers {
             github: "https://github.com/mikaelacaron",
             mastodon: "https://swiftdevs.space/@mikaelacaron",
             bio: "Mikaela Caron is an independent iOS Engineer who actively shares her expertise on social media, focusing on iOS development, building apps in public, and freelancing. She develops her own indie apps, works part-time as a freelancer, and is an organizer for iOSDevHappyHour. Mikaela loves giving back to the community.",
-            talkIDs: []),        
+            talkIDs: []),
+        Speaker(
+            name: "Cory Benfield",
+            role: "Senior Software Engineer",
+            company: "Apple",
+            github: "https://www.github.com/Lukasa",
+            bio: "Cory is a serial open source contributor and maintainer with almost a decade of experience building, maintaining, and innovating open source networking frameworks and protocol libraries. Currently Cory is a Senior Software Engineer at Apple, putting his skills to use on high-performance networking frameworks such as SwiftNIO, Netty, and more.",
+            talkIDs: [2]), 
+        Speaker(
+            name: "Adegboyega Olusunmade",
+            role: "Founder",
+            company: "Do For Love",
+            twitter: "https://twitter.com/adeolusunmade",
+            website: "https://www.doforlove.co",
+            bio: "Founder of Do for Love a product company building exciting products",
+            talkIDs: [3]), 
+        Speaker(
+            name: "Tibor Bödecs",
+            role: "CEO",
+            company: "Binary Birds",
+            image: "/App/Images/speakers/tibor-bodecs.jpg",
+            twitter: "http://twitter.com/tiborbodecs",
+            website: "http://binarybirds.com/",
+            bio: "Tibor Bödecs is a seasoned software developer specializing in Swift on the server and backend technologies. He is the author of the popular book “Practical Server Side Swift,” which provides a comprehensive guide to the Vapor framework. Currently, Tibor is the CEO of Binary Birds, a company dedicated to server-side Swift development and consulting. As a member of the Swift Server Workgroup (SSWG), he regularly publishes insightful articles on swiftonserver.com, collaborating with fellow SSWG member Joannis Orlandos. Outside of work, Tibor loves metal music, plays the guitar, and has a passion for traveling, especially exploring Southeast Asia.",
+            talkIDs: [4]), 
+        // Speaker(
+        //     name: "Leo Dion",
+        //     role: "Founder",
+        //     company: "BrightDigit",
+        //     twitter: "http://twitter.com/leogdion",
+        //     website: "https://brightdigit.com/",
+        //     bio: ComponentGroup {
+        //         Paragraph {
+        //             Text("Leo Dion runs ")
+        //             Link("BrightDigit", url: "https://brightdigit.com/")
+        //             Text(", a company which specializes in software development in the Apple space: iOS, macOS, and watchOS as well as server-side. He has over 10 years of experience developing in iOS and has been developing in, blogging about and speaking about Swift since day 1. He lives in Michigan with his wife Betsy and 6 adorable kids. If you want to check out more content he currently runs ")
+        //             Link("empowerapps.show", url: "https://empowerapps.show/")
+        //             Text(", a bi-weekly podcast on Apple stuff, Swift and business as well as his ")
+        //             Link("other talks here", url: "https://www.youtube.com/watch?v=WVXvIso24Sc&list=PLmpJxPaZbSnBTtrr4V6bksOfLVK4uK9q6")
+        //             Text(".")
+        //         }
+        //     },
+        //     talkIDs: [7]), 
+        Speaker(
+            name: "Franz Busch",
+            role: "Software Engineer",
+            company: "Apple",
+            twitter: "http://twitter.com/FranzJBusch",
+            bio: "Franz is a member of a team developing foundational Swift libraries at Apple primarily focused on networking and concurrency. Franz is also a member of the Swift Server working group. Before joining Apple, Franz spent a decade working in the mobile applications space.",
+            talkIDs: [8]),
+        Speaker(
+            name: "Thomas Durand",
+            role: "Indie iOS Developer",
+            twitter: "http://twitter.com/deanatoire",
+            website: "https://thomasdurand.fr/",
+            bio: "I like to go by the name of Dean, because it’s way easier to pronounce in any language, including English than “Thomas Durand” Backend architect and security engineer by day, I’m also an iOS Indie Dev by night! On my free time, I’m building in public independent iOS app like SharePal and Padlok. I also share my discoveries while building on my blog, mostly about Swift, SwiftUI and software security. After a first talk at NSSpain XI, I’d like to continue growing in the community, sharing everything I learn along my journey of building indie apps, or reliable and scalable back-ends.",
+            talkIDs: [9]),
+        Speaker(
+            name: "Petr Pavlik",
+            role: "Developer",
+            twitter: "http://twitter.com/ptrpavlik",
+            bio: "Despite my main background being in iOS development, I’ve been affiliated with server-side Swift (especially Vapor) since it’s very beginning.",
+            talkIDs: [10]),
+        Speaker(
+            name: "Nick Lockwood",
+            role: "iOS Developer",
+            twitter: "http://twitter.com/nicklockwood",
+            github: "https://github.com/nicklockwood",
+            bio: "Nick is a veteran iOS developer, author and open sourcerer with a career spanning 20 years in software engineering",
+            talkIDs: [11]),
+        // Speaker(
+        //     name: "Steven Van Impe",
+        //     role: "Lecturer",
+        //     twitter: "http://twitter.com/pwsacademy",
+        //     website: "https://www.pwsacademy.org/",
+        //     bio: "Steven has been teaching Swift professionally since 2014. He is an active member of the open source community, focusing on anything that supports Swift as a general purpose cross-platform language.",
+        //     talkIDs: [13]),
+        // Speaker(
+        //     name: "Sebastien Stormacq", 
+        //     role: "Developer Advocate", 
+        //     company: "AWS",
+        //     twitter: "http://twitter.com/sebsto",
+        //     linkedIn: "https://www.linkedin.com/in/sebastienstormacq/",
+        //     website: "https://stormacq.com/",
+        //     bio: ComponentGroup {
+        //         Paragraph {
+        //             Text("Seb is Developer Advocate at AWS and member of the Swift Server Working Group. He is a ")
+        //             Link("regular speaker at conferences", url: "https://www.youtube.com/playlist?list=PLZ_TUMnTqfu807CK1WZis4h89umhDapCE")
+        //             Text(", a ")
+        //             Link("prolific author on the AWS News Blog", url: "https://aws.amazon.com/blogs/aws/author/stormacq/")
+        //             Text(", and a ")
+        //             Link("podcast producer", url: "https://aws.amazon.com/fr/blogs/france/podcasts/")
+        //             Text(".")
+        //         }
+        //     },
+        //     talkIDs: [14]),
     ]
     
     static let lightningSpeakers: [Speaker] = [
-        // Speaker(
-        //     name: "Dave Verwer",
-        //     role: "Co-Founder",
-        //     company: "Swift Package Index",
-        //     twitter: "https://twitter.com/daveverwer",
-        //     github: "https://github.com/daveverwer",
-        //     bio: ComponentGroup {
-        //         Text("Dave is a independent and freelance writer and iOS developer. He is the creator of ")
-        //         Link("iOS Dev Weekly", url: "https://iosdevweekly.com")
-        //         Text(" and co-founder of the ")
-        //         Link("Swift Package Index", url: "https://swiftpackageindex.com")
-        //         Text(". He has been developing for the Mac and iOS since 2006 and is secretly quite proud that his first professional gig had him using a (real) vt100 green screen terminal. He's glad he doesn't have to use that any more though! If you'd like to learn more about Dave, visit his ")
-        //         Link("personal site", url: "https://daveverwer.com")
-        //         Text(".")
-        //     },
-        //     talkIDs: [6]),
-        // Speaker(
-        //     name: "Joannis Orlandos",
-        //     role: "Founder",
-        //     company: "Responsive Software",
-        //     twitter: "https://twitter.com/joannisorlandos",
-        //     github: "https://github.com/joannis",
-        //     bio: "Previously Vapor core-team member, designer of Vapor 3 and still maintains over 20 Vapor related libraries. Joannis enjoys low-level software development, and is a strong advocate for reducing code complexity through well designed software.",
-        //     talkIDs: [7]),
-        // Speaker(
-        //     name: "Firas Safa",
-        //     role: "iOS Engineer",
-        //     company: "TrueLayer",
-        //     github: "https://github.com/TheInkedEngineer",
-        //     bio: "iOS Engineer, server-side-swift lover and design enthusiast | I love building things, writing articles, gaming and music | I go by `TheInkedEngineer`. | Based in Milan, originally from Lebanon.",
-        //     talkIDs: [11]),
-        // Speaker(
-        //     name: "Georg Tuparev",
-        //     role: "Founder",
-        //     company: "Tuparev Technologies",
-        //     twitter: "https://twitter.com/tuparev",
-        //     github: "https://github.com/tuparev",
-        //     bio: "Since Georg bought his first NeXTstation in 1991 he got hooked on any NeXT and later - Apple, technology. Early adopter of the revolutionary for its time Enterprise Objects Framework (EOF) and later WebObjects, he is the principle developer of dozens of server-side applications for health care, finance, banking, large knowledge repositories, and science and laboratory systems. Currently his company (Tuparev Technologies) is involved in one of the largest financial and banking systems in The Netherlands and is working on an extremely complex system for detecting and monitoring space debris (space junk), and an early satellite collision warning system for ESA and other space agencies.",
-        //     talkIDs: [8]),
-        // Speaker(
-        //     name: "Andrea Scuderi",
-        //     role: "Senior iOS Engineer",
-        //     company: "JustEatTakeaway.com",
-        //     twitter: "https://twitter.com/andreascuderi13",
-        //     github: "https://github.com/swift-sprinter/aws-serverless-swift-api-template",
-        //     bio: "Andrea is a Senior Engineer iOS @JustEat Takeaway with experience in the Marketplaces, Retail, Finance, Banking, Energy and Media industries. He is the creator of Swift-Sprinter an open-source library to work with Swift on AWS Lambda, ClippingCamera and  Trackyzer an app for Cyclists.",
-        //     talkIDs: [10]),
-        // Speaker(
-        //     name: "Dorian Grolaux",
-        //     role: "iOS Engineer",
-        //     company: "data.ai",
-        //     twitter: "https://twitter.com/MrSkwiggs",
-        //     github: "https://github.com/MrSkwiggs",
-        //     bio: ComponentGroup {
-        //         Paragraph("I'm an iOS Engineer currently working at data.ai, have been in the field for the past 7 years and really, just love Swift!")
-        //         Paragraph {
-        //             Text("I've kept a close eye on Vapor for years now, because I'm really into server-side tech, but never really had any projects where I could explore it. Until iOS support was implemented, then I started working on a camera-streaming app which is currently in development but about to release soon (Testflight here, if you'd like to see for yourself: ")
-        //             Link("https://testflight.apple.com/join/G2nWjlsH", url: "https://testflight.apple.com/join/G2nWjlsH")
-        //             Text(")")
-        //         }
-        //     },
-        //     talkIDs: [9])
+        Speaker(
+            name: "Babeth Velghe",
+            role: "",
+            bio: "",
+            talkIDs: [6]), 
+        Speaker(
+            name: "Vojtech Rylko",
+            role: "Software Engineer",
+            company: "Cultured Code",
+            website: "https://culturedcode.com/things/",
+            bio: "Software engineer at Cultured Code responsible for Things Cloud and sync architecture.",
+            talkIDs: [5]),
+        Speaker(
+            name: "Marwane Koutar",
+            role: "",
+            company: "",
+            github: "https://www.github.com/sebsto",
+            website: "https://culturedcode.com/things/",
+            bio: "HOGENT, Bachelor in Applied Computer Science (2021 - Present) Internship at AWS between February and May 2024",
+            talkIDs: [12]), 
+        Speaker(
+            name: "Euan Harris",
+            role: "Software Engineer",
+            company: "Apple",
+            bio: "Euan builds cloud services and infrastructure using Swift at Apple. He enjoys working with containers, virtual machines, networks and interesting programming languages. Previously, Euan helped maintain Docker Swarm’s overlay networking and HTTP ingress and contributed to XenServer’s open-source XenAPI control plane, the Xen hypervisor and OpenStack.",
+            talkIDs: [15]), 
     ]
 }
 

@@ -41,6 +41,22 @@ struct SpeakerDetail: Component {
                                         }.linkTarget(.blank).class("icon")
                                     }
                                 }
+                                if let linkedInURL = speaker.linkedIn {
+                                    Link(url: linkedInURL) {
+                                        Span {
+                                            SVG(url: "/App/YearX/images/icons/feather-sprite.svg#linkedin")
+                                                .class("feather")
+                                        }.linkTarget(.blank).class("icon")
+                                    }
+                                }
+                                if let website = speaker.website {
+                                    Link(url: website) {
+                                        Span {
+                                            SVG(url: "/App/YearX/images/icons/feather-sprite.svg#link")
+                                                .class("feather")
+                                        }.linkTarget(.blank).class("icon")
+                                    }
+                                }
                             }
                             .class("social-media")
                         }
