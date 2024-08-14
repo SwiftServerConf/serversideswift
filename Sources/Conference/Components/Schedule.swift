@@ -8,124 +8,156 @@ struct Schedule: Component {
                     Div {
                         H1("Schedule").class("text-center text-white")
                         H4("Two days packed with inspiring content.").class("text-center mb-5")
-                        H3("Coming Soon").class("h3 text-center")
-//                        Div {
-//                            Div {
-//                                Div {
-//                                    H3("Thursday, December 8th - Social").class("h3")
-//                                    Div {
-//                                        let headerRow = TableRow {
-//                                            TableHeaderCell("When").attribute(named: "scope", value: "col").class("time-column")
-//                                            TableHeaderCell("What").attribute(named: "scope", value: "col")
-//                                        }
-//                                        Table(header: headerRow) {
-//                                            TableRow {
-//                                                TableCell("19:00 - 22:00").class("text-center font-weight-bold")
-//                                                TableCell {
-//                                                    Link("NSLondon × ServerSide.swift Social", url: "https://www.meetup.com/nslondon/events/289491932/").linkTarget(.blank)
-//                                                }
-//                                            }
-//                                            
-//                                        }.class("table table-striped table-bordered")
-//                                    }.class("panel mb-5")
-//                                }
-//                                Div {
-//                                    H3("Friday, December 9th - Conference Day").class("h3")
-//                                    Div {
-//                                        let headerRow = TableRow {
-//                                            TableHeaderCell("When").attribute(named: "scope", value: "col").class("time-column")
-//                                            TableHeaderCell("What").attribute(named: "scope", value: "col")
-//                                        }
-//                                        Table(header: headerRow) {
-//                                            TableRow {
-//                                                TableCell("08:30 - 09:00").class("text-center font-weight-bold")
-//                                                TableCell("Breakfast and Registration")
-//                                            }
-//                                            TableRow {
-//                                                TableCell("09:00 - 09:10").class("text-center font-weight-bold")
-//                                                TableCell("Welcome")
-//                                            }
-//                                            TableRow {
-//                                                TableCell("09:10 - 09:50").class("text-center font-weight-bold")
-//                                                createTalkRow(speaker: AllSpeakers.speakers[4])
-//                                            }
-//                                            TableRow {
-//                                                TableCell("09:50 - 10:30").class("text-center font-weight-bold")
-//                                                createTalkRow(speaker: AllSpeakers.speakers[6])
-//                                            }
-//                                            TableRow {
-//                                                TableCell("10:30 - 11:00").class("text-center font-weight-bold")
-//                                                createTalkRow(speaker: AllSpeakers.speakers[0])
-//                                            }
-//                                            TableRow {
-//                                                TableCell("11:00 - 11:30").class("text-center font-weight-bold")
-//                                                Text("Coffee Break")
-//                                            }
-//                                            TableRow {
-//                                                TableCell("11:30 - 12:10").class("text-center font-weight-bold")
-//                                                createTalkRow(speaker: AllSpeakers.speakers[1])
-//                                            }
-//                                            TableRow {
-//                                                TableCell("12:10 - 12:45").class("text-center font-weight-bold")
-//                                                createTalkRow(speaker: AllSpeakers.speakers[3])
-//                                            }
-//                                            TableRow {
-//                                                TableCell("12:45 - 13:45").class("text-center font-weight-bold")
-//                                                TableCell("Lunch")
-//                                            }
-//                                            TableRow {
-//                                                TableCell("13:45 - 13:55").class("text-center font-weight-bold")
-//                                                createTalkRow(speaker: AllSpeakers.lightningSpeakers[0])
-//                                            }
-//                                            TableRow {
-//                                                TableCell("13:55 - 14:05").class("text-center font-weight-bold")
-//                                                createTalkRow(speaker: AllSpeakers.lightningSpeakers[1])
-//                                            }
-//                                            TableRow {
-//                                                TableCell("14:05 - 14:15").class("text-center font-weight-bold")
-//                                                createTalkRow(speaker: AllSpeakers.lightningSpeakers[2])
-//                                            }
-//                                            TableRow {
-//                                                TableCell("14:15 - 14:25").class("text-center font-weight-bold")
-//                                                createTalkRow(speaker: AllSpeakers.lightningSpeakers[4])
-//                                            }
-//                                            TableRow {
-//                                                TableCell("14:25 - 14:35").class("text-center font-weight-bold")
-//                                                createTalkRow(speaker: AllSpeakers.lightningSpeakers[5])
-//                                            }
-//                                            TableRow {
-//                                                TableCell("14:35 - 14:45").class("text-center font-weight-bold")
-//                                                createTalkRow(speaker: AllSpeakers.lightningSpeakers[3])
-//                                            }
-//                                            TableRow {
-//                                                TableCell("14:45 - 15:15").class("text-center font-weight-bold")
-//                                                TableCell("Coffee Break")
-//                                            }     
-//                                            TableRow {
-//                                                TableCell("15:15 - 15:55").class("text-center font-weight-bold")
-//                                                createTalkRow(speaker: AllSpeakers.speakers[2])
-//                                            }
-//                                            TableRow {
-//                                                TableCell("15:55 - 16:35").class("text-center font-weight-bold")
-//                                                createTalkRow(speaker: AllSpeakers.speakers[5])
-//                                            }
-//                                            TableRow {
-//                                                TableCell("16:40 - 17:10").class("text-center font-weight-bold")
-//                                                TableCell("Panel")
-//                                            }
-//                                            TableRow {
-//                                                TableCell("17:10 - 17:15").class("text-center font-weight-bold")
-//                                                TableCell("Closing Remarks")
-//                                            }
-//                                            TableRow {
-//                                                TableCell("18:00 - 21:00").class("text-center font-weight-bold")
-//                                                TableCell("After Party at Hoop & Toy")
-//                                            }
-//                                        }.class("table table-striped table-bordered")
-//                                    }.class("panel")
-//                                }.class("mb-5")
-//                            }.class("col-sm-12")
-//                        }.class("row")
+                       Div {
+                           Div {
+                               Div {
+                                   H3("Thursday, September 26th - Conference Day 1").class("h3")
+                                   Div {
+                                       let headerRow = TableRow {
+                                           TableHeaderCell("When").attribute(named: "scope", value: "col").class("time-column")
+                                           TableHeaderCell("What").attribute(named: "scope", value: "col")
+                                       }
+                                       Table(header: headerRow) {
+                                           TableRow {
+                                               TableCell("08:30 - 09:15").class("text-center font-weight-bold")
+                                               TableCell("Breakfast and Registration")
+                                           }
+                                           TableRow {
+                                               TableCell("09:15 - 09:20").class("text-center font-weight-bold")
+                                               TableCell("Welcome")
+                                           }
+                                           TableRow {
+                                               TableCell("09:20 - 10:00").class("text-center font-weight-bold")
+                                               TableCell("Keynote")
+                                           }
+                                           TableRow {
+                                               TableCell("10:00 - 10:40").class("text-center font-weight-bold")
+                                               createTalkRow(speaker: AllSpeakers.speakers[0])
+                                           }
+                                           TableRow {
+                                               TableCell("10:40 - 11:30").class("text-center font-weight-bold")
+                                               Text("Coffee Break")
+                                           }
+                                           TableRow {
+                                               TableCell("11:30 - 12:10").class("text-center font-weight-bold")
+                                               createTalkRow(speaker: AllSpeakers.speakers[4])
+                                           }
+                                           TableRow {
+                                               TableCell("12:10 - 12:45").class("text-center font-weight-bold")
+                                               Text("To Be Announced")
+                                           }
+                                           TableRow {
+                                               TableCell("12:45 - 14:00").class("text-center font-weight-bold")
+                                               TableCell("Lunch")
+                                           }
+                                           TableRow {
+                                               TableCell("14:00 - 14:40").class("text-center font-weight-bold")
+                                               createTalkRow(speaker: AllSpeakers.speakers[7])
+                                           }
+                                           TableRow {
+                                               TableCell("14:40 - 15:15").class("text-center font-weight-bold")
+                                               Text("To Be Announced")
+                                           }
+                                           TableRow {
+                                               TableCell("15:15 - 16:00").class("text-center font-weight-bold")
+                                               TableCell("Coffee Break")
+                                           }     
+                                           TableRow {
+                                               TableCell("16:00 - 16:40").class("text-center font-weight-bold")
+                                               Text("To Be Announced")
+                                           }
+                                           TableRow {
+                                               TableCell("16:40 - 17:15").class("text-center font-weight-bold")
+                                               Text("To Be Announced")
+                                           }
+                                           TableRow {
+                                               TableCell("18:00 - 21:00").class("text-center font-weight-bold")
+                                               TableCell("Social Event TBD")
+                                           }
+                                       }.class("table table-striped table-bordered")
+                                   }.class("panel")
+                               }.class("mb-5")
+                               Div {
+                                   H3("Thursday, September 26th - Conference Day 2").class("h3")
+                                   Div {
+                                       let headerRow = TableRow {
+                                           TableHeaderCell("When").attribute(named: "scope", value: "col").class("time-column")
+                                           TableHeaderCell("What").attribute(named: "scope", value: "col")
+                                       }
+                                       Table(header: headerRow) {
+                                           TableRow {
+                                               TableCell("08:30 - 09:30").class("text-center font-weight-bold")
+                                               TableCell("Breakfast")
+                                           }
+                                           TableRow {
+                                               TableCell("09:30 - 10:10").class("text-center font-weight-bold")
+                                               createTalkRow(speaker: AllSpeakers.speakers[5])
+                                           }
+                                           TableRow {
+                                               TableCell("10:10 - 10:50").class("text-center font-weight-bold")
+                                               createTalkRow(speaker: AllSpeakers.speakers[6])
+                                           }
+                                           TableRow {
+                                               TableCell("10:50 - 11:30").class("text-center font-weight-bold")
+                                               Text("Coffee Break")
+                                           }
+                                           TableRow {
+                                               TableCell("11:30 - 12:10").class("text-center font-weight-bold")
+                                               createTalkRow(speaker: AllSpeakers.speakers[1])
+                                           }
+                                           TableRow {
+                                               TableCell("12:10 - 12:45").class("text-center font-weight-bold")
+                                               createTalkRow(speaker: AllSpeakers.speakers[3])
+                                           }
+                                           TableRow {
+                                               TableCell("12:45 - 14:00").class("text-center font-weight-bold")
+                                               TableCell("Lunch")
+                                           }
+                                           TableRow {
+                                               TableCell("14:00 - 14:15").class("text-center font-weight-bold")
+                                            //    createTalkRow(speaker: AllSpeakers.lightningSpeakers[0])
+                                               Text("To Be Announced")
+                                           }
+                                           TableRow {
+                                               TableCell("14:15 - 14:30").class("text-center font-weight-bold")
+                                            //    createTalkRow(speaker: AllSpeakers.lightningSpeakers[1])
+                                               Text("To Be Announced")
+                                           }
+                                           TableRow {
+                                               TableCell("14:30 - 14:45").class("text-center font-weight-bold")
+                                            //    createTalkRow(speaker: AllSpeakers.lightningSpeakers[2])
+                                                Text("To Be Announced")
+                                           }
+                                           TableRow {
+                                               TableCell("14:45 - 15:00").class("text-center font-weight-bold")
+                                            //    createTalkRow(speaker: AllSpeakers.lightningSpeakers[3])
+                                               Text("To Be Announced")
+                                           }
+                                           TableRow {
+                                               TableCell("15:00 - 15:50").class("text-center font-weight-bold")
+                                               TableCell("Coffee Break")
+                                           }     
+                                           TableRow {
+                                               TableCell("15:50 - 16:30").class("text-center font-weight-bold")
+                                               createTalkRow(speaker: AllSpeakers.speakers[8])
+                                           }
+                                           TableRow {
+                                               TableCell("16:30 - 17:10").class("text-center font-weight-bold")
+                                               createTalkRow(speaker: AllSpeakers.speakers[2])
+                                           }
+                                           TableRow {
+                                               TableCell("17:10 - 17:15").class("text-center font-weight-bold")
+                                               TableCell("Closing Remarks")
+                                           }
+                                           TableRow {
+                                               TableCell("18:00 - 21:00").class("text-center font-weight-bold")
+                                               TableCell("After Party TBD")
+                                           }
+                                       }.class("table table-striped table-bordered")
+                                   }.class("panel")
+                               }.class("mb-5")
+                           }.class("col-sm-12")
+                       }.class("row")
                     }.class("container")
                 }.class("page-block no-height bg-blue text-white")
             }.class("schedule")
