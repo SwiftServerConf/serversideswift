@@ -192,13 +192,15 @@ struct Schedule: Component {
             Div {
                 Div {
                     Span {
-                        Image(url: speaker.image, description: speaker.name)
+                        Link(url: "/speakers/\(speaker.url)") {
+                            Image(url: speaker.image, description: speaker.name)
+                        }
                     }.class("avatar")
                 }.class("avatars")
                 Div {
                     List {
                         ListItem {
-                            Text(speaker.name)
+                            Link(speaker.name, url: "/speakers/\(speaker.url)").class("speakers-list-speaker-name")
                         }
                     }.class("speaker-list")
                     Node.br()
