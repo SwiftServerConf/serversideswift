@@ -172,24 +172,24 @@ struct AllSpeakers {
             github: "https://github.com/nicklockwood",
             bio: "Nick is a veteran iOS developer, author and open sourcerer with a career spanning 20 years in software engineering",
             talkIDs: [11]),
-        // Speaker(
-        //     name: "Leo Dion",
-        //     role: "Founder",
-        //     company: "BrightDigit",
-        //     twitter: "http://twitter.com/leogdion",
-        //     website: "https://brightdigit.com/",
-        //     bio: ComponentGroup {
-        //         Paragraph {
-        //             Text("Leo Dion runs ")
-        //             Link("BrightDigit", url: "https://brightdigit.com/")
-        //             Text(", a company which specializes in software development in the Apple space: iOS, macOS, and watchOS as well as server-side. He has over 10 years of experience developing in iOS and has been developing in, blogging about and speaking about Swift since day 1. He lives in Michigan with his wife Betsy and 6 adorable kids. If you want to check out more content he currently runs ")
-        //             Link("empowerapps.show", url: "https://empowerapps.show/")
-        //             Text(", a bi-weekly podcast on Apple stuff, Swift and business as well as his ")
-        //             Link("other talks here", url: "https://www.youtube.com/watch?v=WVXvIso24Sc&list=PLmpJxPaZbSnBTtrr4V6bksOfLVK4uK9q6")
-        //             Text(".")
-        //         }
-        //     },
-        //     talkIDs: [7]), 
+        Speaker(
+            name: "Leo Dion",
+            role: "Founder",
+            company: "BrightDigit",
+            twitter: "http://twitter.com/leogdion",
+            website: "https://brightdigit.com/",
+            bio: ComponentGroup {
+                Paragraph {
+                    Text("Leo Dion runs ")
+                    Link("BrightDigit", url: "https://brightdigit.com/")
+                    Text(", a company which specializes in software development in the Apple space: iOS, macOS, and watchOS as well as server-side. He has over 10 years of experience developing in iOS and has been developing in, blogging about and speaking about Swift since day 1. He lives in Michigan with his wife Betsy and 6 adorable kids. If you want to check out more content he currently runs ")
+                    Link("empowerapps.show", url: "https://empowerapps.show/")
+                    Text(", a bi-weekly podcast on Apple stuff, Swift and business as well as his ")
+                    Link("other talks here", url: "https://www.youtube.com/watch?v=WVXvIso24Sc&list=PLmpJxPaZbSnBTtrr4V6bksOfLVK4uK9q6")
+                    Text(".")
+                }
+            },
+            talkIDs: [7]), 
         // Speaker(
         //     name: "Steven Van Impe",
         //     role: "Lecturer",

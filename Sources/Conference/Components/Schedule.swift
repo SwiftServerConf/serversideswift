@@ -56,7 +56,7 @@ struct Schedule: Component {
                                            }
                                            TableRow {
                                                TableCell("14:40 - 15:15").class("text-center font-weight-bold")
-                                               Text("To Be Announced")
+                                               createTalkRow(speaker: AllSpeakers.speakers[9])
                                            }
                                            TableRow {
                                                TableCell("15:15 - 16:00").class("text-center font-weight-bold")
