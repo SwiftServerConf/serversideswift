@@ -44,7 +44,7 @@ struct Schedule: Component {
                                            }
                                            TableRow {
                                                TableCell("12:10 - 12:45").class("text-center font-weight-bold")
-                                               Text("To Be Announced")
+                                               createTalkRow(speaker: AllSpeakers.speakers[1])
                                            }
                                            TableRow {
                                                TableCell("12:45 - 14:00").class("text-center font-weight-bold")
@@ -56,7 +56,7 @@ struct Schedule: Component {
                                            }
                                            TableRow {
                                                TableCell("14:40 - 15:15").class("text-center font-weight-bold")
-                                               Text("To Be Announced")
+                                               createTalkRow(speaker: AllSpeakers.speakers[9])
                                            }
                                            TableRow {
                                                TableCell("15:15 - 16:00").class("text-center font-weight-bold")
@@ -64,7 +64,7 @@ struct Schedule: Component {
                                            }     
                                            TableRow {
                                                TableCell("16:00 - 16:40").class("text-center font-weight-bold")
-                                               Text("To Be Announced")
+                                               createTalkRow(speaker: AllSpeakers.speakers[10])
                                            }
                                            TableRow {
                                                TableCell("16:40 - 17:15").class("text-center font-weight-bold")
@@ -103,7 +103,7 @@ struct Schedule: Component {
                                            }
                                            TableRow {
                                                TableCell("11:30 - 12:10").class("text-center font-weight-bold")
-                                               createTalkRow(speaker: AllSpeakers.speakers[1])
+                                               createTalkRow(speaker: AllSpeakers.speakers[11])
                                            }
                                            TableRow {
                                                TableCell("12:10 - 12:45").class("text-center font-weight-bold")
