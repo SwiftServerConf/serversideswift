@@ -4,6 +4,14 @@
   flex-wrap: wrap;
 }
 
+.speakers-list-speaker-name {
+  color: #F88A36;
+}
+
+.speakers-list-speaker-name:hover {
+  color: #FD2020;
+}
+
 .speakers .card {
   width: 230px;
   height: 345px;
