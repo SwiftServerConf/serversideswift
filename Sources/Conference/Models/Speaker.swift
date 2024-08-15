@@ -190,6 +190,25 @@ struct AllSpeakers {
                 }
             },
             talkIDs: [7]), 
+        Speaker(
+            name: "Sebastien Stormacq", 
+            role: "Developer Advocate", 
+            company: "AWS",
+            twitter: "http://twitter.com/sebsto",
+            linkedIn: "https://www.linkedin.com/in/sebastienstormacq/",
+            website: "https://stormacq.com/",
+            bio: ComponentGroup {
+                Paragraph {
+                    Text("Seb is Developer Advocate at AWS and member of the Swift Server Working Group. He is a ")
+                    Link("regular speaker at conferences", url: "https://www.youtube.com/playlist?list=PLZ_TUMnTqfu807CK1WZis4h89umhDapCE")
+                    Text(", a ")
+                    Link("prolific author on the AWS News Blog", url: "https://aws.amazon.com/blogs/aws/author/stormacq/")
+                    Text(", and a ")
+                    Link("podcast producer", url: "https://aws.amazon.com/fr/blogs/france/podcasts/")
+                    Text(".")
+                }
+            },
+            talkIDs: [14]),
         // Speaker(
         //     name: "Steven Van Impe",
         //     role: "Lecturer",
@@ -197,25 +216,6 @@ struct AllSpeakers {
         //     website: "https://www.pwsacademy.org/",
         //     bio: "Steven has been teaching Swift professionally since 2014. He is an active member of the open source community, focusing on anything that supports Swift as a general purpose cross-platform language.",
         //     talkIDs: [13]),
-        // Speaker(
-        //     name: "Sebastien Stormacq", 
-        //     role: "Developer Advocate", 
-        //     company: "AWS",
-        //     twitter: "http://twitter.com/sebsto",
-        //     linkedIn: "https://www.linkedin.com/in/sebastienstormacq/",
-        //     website: "https://stormacq.com/",
-        //     bio: ComponentGroup {
-        //         Paragraph {
-        //             Text("Seb is Developer Advocate at AWS and member of the Swift Server Working Group. He is a ")
-        //             Link("regular speaker at conferences", url: "https://www.youtube.com/playlist?list=PLZ_TUMnTqfu807CK1WZis4h89umhDapCE")
-        //             Text(", a ")
-        //             Link("prolific author on the AWS News Blog", url: "https://aws.amazon.com/blogs/aws/author/stormacq/")
-        //             Text(", and a ")
-        //             Link("podcast producer", url: "https://aws.amazon.com/fr/blogs/france/podcasts/")
-        //             Text(".")
-        //         }
-        //     },
-        //     talkIDs: [14]),
     ]
     
     static let lightningSpeakers: [Speaker] = [
