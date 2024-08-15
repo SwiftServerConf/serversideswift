@@ -209,13 +209,13 @@ struct AllSpeakers {
                 }
             },
             talkIDs: [14]),
-        // Speaker(
-        //     name: "Steven Van Impe",
-        //     role: "Lecturer",
-        //     twitter: "http://twitter.com/pwsacademy",
-        //     website: "https://www.pwsacademy.org/",
-        //     bio: "Steven has been teaching Swift professionally since 2014. He is an active member of the open source community, focusing on anything that supports Swift as a general purpose cross-platform language.",
-        //     talkIDs: [13]),
+        Speaker(
+            name: "Steven Van Impe",
+            role: "Lecturer",
+            twitter: "http://twitter.com/pwsacademy",
+            website: "https://www.pwsacademy.org/",
+            bio: "Steven has been teaching Swift professionally since 2014. He is an active member of the open source community, focusing on anything that supports Swift as a general purpose cross-platform language.",
+            talkIDs: [13]),
     ]
     
     static let lightningSpeakers: [Speaker] = [
