@@ -14,13 +14,6 @@ struct Speakers: Component {
                     H4("More speakers to be announced soon!")
                             .class("text-center mb-5")
                 }.class("container")
-            //    Div {
-            //        H1("Lightning Talk Speakers")
-            //            .class("text-center")
-            //        H4("This year we have a range of lightning talks as well!")
-            //            .class("text-center mb-5")
-            //        SpeakerList<Conference>(speakers: AllSpeakers.lightningSpeakers)
-            //    }.class("container")
         }.class("bg-blue text-white mt-5")
             // Div {
             //     Div {

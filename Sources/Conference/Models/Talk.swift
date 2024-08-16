@@ -161,12 +161,12 @@ struct AllTalks {
             title: "Swift to the cloud in a single step", 
             description: ComponentGroup {
                 Paragraph("As a server-side engineer today, it’s not enough to build a stand-alone executable for your service. You need to wrap it in a container image, ready to run on any standard public or private cloud infrastructure.")
-                Paragraph("In this talk we’ll see that building a container image for your Swift project can be as quick and easy as building a native executable, using Swift Package Manager plugins and Swift SDKs:")
+                Paragraph("In this talk we’ll see that building a container image for your Swift project can be as quick and easy as building a native executable. Using Swift Package Manager plugins and Swift SDKs, we can extend Swift Package Manager, adding a new command tailor-made for wrapping Swift programs in container images:")
                 List {
-                    ListItem("Swift SDKs let us build Linux binaries directly on macOS. Builds are as fast as your native compiler, with no container runtime overhead.")
-                    ListItem("A Swift Package Manager command plugin can build any target in Package.swift , wrap it in a container and upload it to the cloud. A Dockerfile isn’t needed because the plugin already knows what to do.")
+                    ListItem("Swift SDKs let us build Linux binaries directly on macOS. Builds are as fast as your native compiler, with no virtualisation overhead.")
+                    ListItem("A Swift Package Manager command plugin can build any target in Package.swift, wrap it in a container and upload it to the cloud. A Dockerfile isn’t needed because the plugin already knows what to do.")
                 }
-                Paragraph("During this talk we’ll look inside a container image and learn how to build one from scratch using Swift. We’ll see how Swift SDKs can help us to build binaries for several popular Linux distributions, and even build statically-linked binaries with no runtime dependencies. Finally, we’ll show how a command plugin ties the whole process together into a single command.")
+                Paragraph("We’ll see how Swift SDKs can help us to build binaries for several popular Linux distributions, and even build statically-linked binaries with no runtime dependencies. We’ll take a quick look at the contents of the generated container image.Finally, we’ll show how a command plugin ties the whole process together into a single command.")
             },
             speakerNames: ["Euan Harris"]),
     ]
