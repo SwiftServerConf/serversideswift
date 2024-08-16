@@ -161,9 +161,9 @@ struct AllSpeakers {
             talkIDs: [9]),
         Speaker(
             name: "Petr Pavlik",
-            role: "Developer",
+            role: "Staff software enginner",
             twitter: "http://twitter.com/ptrpavlik",
-            bio: "Despite my main background being in iOS development, I’ve been affiliated with server-side Swift (especially Vapor) since it’s very beginning.",
+            bio: "Coming from iOS dev background, I've been a fan, and an occasional contributor, since the very beginning of Swift on the server. Guess I'm one of not that many who can say that they've tried all major versions of Vapor over the years.",
             talkIDs: [10]),
         Speaker(
             name: "Nick Lockwood",

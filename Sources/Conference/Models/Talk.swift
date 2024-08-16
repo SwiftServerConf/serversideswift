@@ -124,13 +124,8 @@ struct AllTalks {
             id: 10, 
             title: "Shipping a SaaS backend using Vapor", 
             description: ComponentGroup {
-                Paragraph {
-                    Text("I expect to ship V2 of IndiePitcher before the conference (")
-                    Link("https://indiepitcher.com", url: "https://indiepitcher.com")
-                    Paragraph("), which will be an alternative to services like ")
-                    Link("https://loops.so", url: "https://loops.so")
-                    Paragraph(". Basically a service for sending marketing and transactional emails using AWS SES under the hood. I’d be happy to give a talk about my journey focusing on the backend part, which is 100% written in Swift using Vapor, to show an example of Vapor being used in production.")
-                }
+                Paragraph("I'll share my journey of building and deploying a backend for a startup that focuses on sending emails using Swift and Vapor framework. We'll go through topics you'll likely need to address to build a backend REST API, such as user authentication, analytics, error reporting, as well as using AWS products such as S3 storage, and even collecting payments using Stripe.")
+                Paragraph("I hope to share a bit something interesting for everyone, especially iOS developers who are interesting in gaining more experience with server-related technologies.")
             }, 
             speakerNames: ["Petr Pavlik"]),
         Talk(
