@@ -32,7 +32,7 @@ struct Schedule: Component {
                                            }
                                            TableRow {
                                                TableCell("10:00 - 10:40").class("text-center font-weight-bold")
-                                               createTalkRow(speaker: AllSpeakers.speakers[0])
+                                               createTalkRow(speakerName: "Daniel Steinberg")
                                            }
                                            TableRow {
                                                TableCell("10:40 - 11:30").class("text-center font-weight-bold")
@@ -40,11 +40,11 @@ struct Schedule: Component {
                                            }
                                            TableRow {
                                                TableCell("11:30 - 12:10").class("text-center font-weight-bold")
-                                               createTalkRow(speaker: AllSpeakers.speakers[4])
+                                               createTalkRow(speakerName: "Tibor Bödecs")
                                            }
                                            TableRow {
                                                TableCell("12:10 - 12:45").class("text-center font-weight-bold")
-                                               createTalkRow(speaker: AllSpeakers.speakers[1])
+                                               createTalkRow(speakerName: "Mikaela Caron")
                                            }
                                            TableRow {
                                                TableCell("12:45 - 14:00").class("text-center font-weight-bold")
@@ -52,11 +52,11 @@ struct Schedule: Component {
                                            }
                                            TableRow {
                                                TableCell("14:00 - 14:40").class("text-center font-weight-bold")
-                                               createTalkRow(speaker: AllSpeakers.speakers[7])
+                                               createTalkRow(speakerName: "Petr Pavlik")
                                            }
                                            TableRow {
                                                TableCell("14:40 - 15:15").class("text-center font-weight-bold")
-                                               createTalkRow(speaker: AllSpeakers.speakers[9])
+                                               createTalkRow(speakerName: "Leo Dion")
                                            }
                                            TableRow {
                                                TableCell("15:15 - 16:00").class("text-center font-weight-bold")
@@ -64,7 +64,7 @@ struct Schedule: Component {
                                            }     
                                            TableRow {
                                                TableCell("16:00 - 16:40").class("text-center font-weight-bold")
-                                               createTalkRow(speaker: AllSpeakers.speakers[10])
+                                               createTalkRow(speakerName: "Sebastien Stormacq")
                                            }
                                            TableRow {
                                                TableCell("16:40 - 17:15").class("text-center font-weight-bold")
@@ -91,11 +91,11 @@ struct Schedule: Component {
                                            }
                                            TableRow {
                                                TableCell("09:30 - 10:10").class("text-center font-weight-bold")
-                                               createTalkRow(speaker: AllSpeakers.speakers[5])
+                                               createTalkRow(speakerName: "Franz Busch")
                                            }
                                            TableRow {
                                                TableCell("10:10 - 10:50").class("text-center font-weight-bold")
-                                               createTalkRow(speaker: AllSpeakers.speakers[6])
+                                               createTalkRow(speakerName: "Thomas Durand")
                                            }
                                            TableRow {
                                                TableCell("10:50 - 11:30").class("text-center font-weight-bold")
@@ -103,11 +103,11 @@ struct Schedule: Component {
                                            }
                                            TableRow {
                                                TableCell("11:30 - 12:10").class("text-center font-weight-bold")
-                                               createTalkRow(speaker: AllSpeakers.speakers[11])
+                                               createTalkRow(speakerName: "Steven Van Impe")
                                            }
                                            TableRow {
                                                TableCell("12:10 - 12:45").class("text-center font-weight-bold")
-                                               createTalkRow(speaker: AllSpeakers.speakers[3])
+                                               createTalkRow(speakerName: "Adegboyega Olusunmade")
                                            }
                                            TableRow {
                                                TableCell("12:45 - 14:00").class("text-center font-weight-bold")
@@ -115,18 +115,16 @@ struct Schedule: Component {
                                            }
                                            TableRow {
                                                TableCell("14:00 - 14:15").class("text-center font-weight-bold")
-                                            //    createTalkRow(speaker: AllSpeakers.lightningSpeakers[0])
-                                               Text("To Be Announced")
+                                                createTalkRow(speakerName: "Euan Harris")
                                            }
                                            TableRow {
                                                TableCell("14:15 - 14:30").class("text-center font-weight-bold")
-                                            //    createTalkRow(speaker: AllSpeakers.lightningSpeakers[1])
-                                               Text("To Be Announced")
+                                               createTalkRow(speakerName: "Vojtech Rylko")
                                            }
                                            TableRow {
                                                TableCell("14:30 - 14:45").class("text-center font-weight-bold")
-                                            //    createTalkRow(speaker: AllSpeakers.lightningSpeakers[2])
-                                                Text("To Be Announced")
+                                            //    createTalkRow(speaker: AllSpeakers.speakers[13])
+                                               Text("To Be Announced")
                                            }
                                            TableRow {
                                                TableCell("14:45 - 15:00").class("text-center font-weight-bold")
@@ -139,11 +137,11 @@ struct Schedule: Component {
                                            }     
                                            TableRow {
                                                TableCell("15:50 - 16:30").class("text-center font-weight-bold")
-                                               createTalkRow(speaker: AllSpeakers.speakers[8])
+                                               createTalkRow(speakerName: "Nick Lockwood")
                                            }
                                            TableRow {
                                                TableCell("16:30 - 17:10").class("text-center font-weight-bold")
-                                               createTalkRow(speaker: AllSpeakers.speakers[2])
+                                               createTalkRow(speakerName: "Cory Benfield")
                                            }
                                            TableRow {
                                                TableCell("17:10 - 17:15").class("text-center font-weight-bold")
@@ -185,6 +183,11 @@ struct Schedule: Component {
                 }.class("modal-dialog modal-lg modal-dialog-centered").attribute(named: "role", value: "document")
             }.class("modal fade").id("global-modal").attribute(named: "tabindex", value: "-1").attribute(named: "role", value: "dialog").attribute(named: "aria-labelledby", value: "global-modal").attribute(named: "aria-hidden", value: "true")
         }
+    }
+
+    func createTalkRow(speakerName: String) -> TableCell {
+        let speaker = AllSpeakers.speakers.first { $0.name == speakerName }!
+        return createTalkRow(speaker: speaker)
     }
     
     func createTalkRow(speaker: Speaker) -> TableCell {

@@ -50,23 +50,8 @@ var speakers: [Item<Conference>] = AllSpeakers.speakers.map { speaker in
     )
 }
 
-var lightningSpeakers: [Item<Conference>] = AllSpeakers.lightningSpeakers.map { speaker in
-    Item<Conference>(
-        path: Path(speaker.url),
-        sectionID: .speakers,
-        metadata: Conference.ItemMetadata(),
-        tags: [],
-        content: Content(
-            title: speaker.name,
-            body: Content.Body(node: SpeakerDetail(speaker: speaker).body.convertToNode())
-        )
-    )
-}
-
 try Conference().publish(
     withTheme: .conference,
     additionalSteps: [
-        .addItems(in: speakers),
-        .addItems(in: lightningSpeakers),
-    ]
+        .addItems(in: speakers),    ]
 )
