@@ -78,7 +78,7 @@ struct Schedule: Component {
                                    }.class("panel")
                                }.class("mb-5")
                                Div {
-                                   H3("Thursday, September 26th - Conference Day 2").class("h3")
+                                   H3("Friday, September 27th - Conference Day 2").class("h3")
                                    Div {
                                        let headerRow = TableRow {
                                            TableHeaderCell("When").attribute(named: "scope", value: "col").class("time-column")
