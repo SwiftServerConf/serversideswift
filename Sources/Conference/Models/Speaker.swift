@@ -217,6 +217,7 @@ struct AllSpeakers {
         Speaker(
             name: "Steven Van Impe",
             role: "Lecturer",
+            company: "HOGENT University of Applied Sciences",
             twitter: "http://twitter.com/pwsacademy",
             website: "https://www.pwsacademy.org/",
             bio: "Steven has been teaching Swift professionally since 2014. He is an active member of the open source community, focusing on anything that supports Swift as a general purpose cross-platform language.",

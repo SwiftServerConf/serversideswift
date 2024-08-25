@@ -64,7 +64,7 @@ struct Schedule: Component {
                                            }     
                                            TableRow {
                                                TableCell("16:00 - 16:40").class("text-center font-weight-bold")
-                                               createTalkRow(speakerName: "Sebastien Stormacq")
+                                               createTalkRow(speakerName: "Nick Lockwood")
                                            }
                                            TableRow {
                                                TableCell("16:40 - 17:15").class("text-center font-weight-bold")
@@ -137,7 +137,7 @@ struct Schedule: Component {
                                            }     
                                            TableRow {
                                                TableCell("15:50 - 16:30").class("text-center font-weight-bold")
-                                               createTalkRow(speakerName: "Nick Lockwood")
+                                               createTalkRow(speakerName: "Sebastien Stormacq")
                                            }
                                            TableRow {
                                                TableCell("16:30 - 17:10").class("text-center font-weight-bold")
