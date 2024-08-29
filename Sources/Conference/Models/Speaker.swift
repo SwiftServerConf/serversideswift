@@ -146,6 +146,11 @@ struct AllSpeakers {
             bio: "Tibor Bödecs is a seasoned software developer specializing in Swift on the server and backend technologies. He is the author of the popular book “Practical Server Side Swift,” which provides a comprehensive guide to the Vapor framework. Currently, Tibor is the CEO of Binary Birds, a company dedicated to server-side Swift development and consulting. As a member of the Swift Server Workgroup (SSWG), he regularly publishes insightful articles on swiftonserver.com, collaborating with fellow SSWG member Joannis Orlandos. Outside of work, Tibor loves metal music, plays the guitar, and has a passion for traveling, especially exploring Southeast Asia.",
             talkIDs: [4]), 
         Speaker(
+            name: "Babeth Velghe",
+            role: "Student",
+            bio: "A student with a passion for coding, who recently delved into Swift programming. For her bachelor thesis, she explored the Swift OpenAPI Generator.",
+            talkIDs: [16]), 
+        Speaker(
             name: "Franz Busch",
             role: "Software Engineer",
             company: "Apple",
