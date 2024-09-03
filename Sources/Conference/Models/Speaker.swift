@@ -164,11 +164,6 @@ struct AllSpeakers {
             website: "https://thomasdurand.fr/",
             bio: "I like to go by the name of Dean, because it’s way easier to pronounce in any language, including English than “Thomas Durand” Backend architect and security engineer by day, I’m also an iOS Indie Dev by night! On my free time, I’m building in public independent iOS app like SharePal and Padlok. I also share my discoveries while building on my blog, mostly about Swift, SwiftUI and software security. After a first talk at NSSpain XI, I’d like to continue growing in the community, sharing everything I learn along my journey of building indie apps, or reliable and scalable back-ends.",
             talkIDs: [9]),
-        // Speaker(
-        //     name: "Babeth Velghe",
-        //     role: "",
-        //     bio: "",
-        //     talkIDs: [6]), 
         Speaker(
             name: "Petr Pavlik",
             role: "Staff software enginner",
@@ -234,14 +229,16 @@ struct AllSpeakers {
             website: "https://culturedcode.com/things/",
             bio: "Software engineer at Cultured Code responsible for Things Cloud and sync architecture.",
             talkIDs: [5]),
-        // Speaker(
-        //     name: "Marwane Koutar",
-        //     role: "",
-        //     company: "",
-        //     github: "https://www.github.com/sebsto",
-        //     website: "https://culturedcode.com/things/",
-        //     bio: "HOGENT, Bachelor in Applied Computer Science (2021 - Present) Internship at AWS between February and May 2024",
-        //     talkIDs: [12]), 
+        Speaker(
+            name: "Joannis Orlandos",
+            role: "Founder",
+            company: "Unbeatable Software",
+            twitter: "https://x.com/joannisorlandos",
+            github: "https://www.github.com/joannis",
+            mastodon: "https://fosstodon.org/@joannis",
+            website: "https://unbeatable.software",
+            bio: "SSWG Member, Maintainer for MongoKitten, Hummingbird, Vapor and 20 other libs.",
+            talkIDs: [17]), 
         Speaker(
             name: "Euan Harris",
             role: "Software Engineer",
