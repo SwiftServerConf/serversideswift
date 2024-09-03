@@ -174,5 +174,10 @@ struct AllTalks {
             title: "Stop worrying about routes with OpenAPI Generator", 
             description: "OpenAPI specifications can be used to generate code on both the client and the server saving you time when building front-end apps and backends. In this talk, we’ll discuss how the OpenAPI generator can be used to create Swift application code from an OpenAPI spec. You’ll learn how to write an OpenAPI spec, how to use the plugin to generator client code for iOS applications and how to generate routes for a Vapor application. You’ll see how easy it is to plug everything together and quickly build a working app with networking. Finally there will be an exploration into its potential for production readiness.",
             speakerNames: ["Babeth Velghe"]),
+        Talk(
+            id: 17, 
+            title: "Introduction to Hummingbird 2", 
+            description: "Hummingbird 2 is a major new framework for the Swift on Server ecosystem. It’s a feature rich, robust and performant solution, ready to implement your next server application! This talk will show you what’s new, and how it can help you build a robust and maintainable backend.",
+            speakerNames: ["Joannis Orlandos"]),
     ]
 }

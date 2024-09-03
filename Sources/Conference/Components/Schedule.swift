@@ -127,8 +127,7 @@ struct Schedule: Component {
                                            }
                                            TableRow {
                                                TableCell("14:45 - 15:00").class("text-center font-weight-bold")
-                                            //    createTalkRow(speaker: AllSpeakers.lightningSpeakers[3])
-                                               Text("To Be Announced")
+                                               createTalkRow(speakerName: "Joannis Orlandos")
                                            }
                                            TableRow {
                                                TableCell("15:00 - 15:50").class("text-center font-weight-bold")
