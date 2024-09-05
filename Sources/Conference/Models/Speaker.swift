@@ -120,7 +120,7 @@ struct AllSpeakers {
             github: "https://github.com/mikaelacaron",
             mastodon: "https://swiftdevs.space/@mikaelacaron",
             bio: "Mikaela Caron is an independent iOS Engineer who actively shares her expertise on social media, focusing on iOS development, building apps in public, and freelancing. She develops her own indie apps, works part-time as a freelancer, and is an organizer for iOSDevHappyHour. Mikaela loves giving back to the community.",
-            talkIDs: []),
+            talkIDs: [18]),
         Speaker(
             name: "Cory Benfield",
             role: "Senior Software Engineer",
