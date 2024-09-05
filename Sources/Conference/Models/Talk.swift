@@ -179,5 +179,10 @@ struct AllTalks {
             title: "Introduction to Hummingbird 2", 
             description: "Hummingbird 2 is a major new framework for the Swift on Server ecosystem. It’s a feature rich, robust and performant solution, ready to implement your next server application! This talk will show you what’s new, and how it can help you build a robust and maintainable backend.",
             speakerNames: ["Joannis Orlandos"]),
+        Talk(
+            id: 18, 
+            title: "Just Save a File, It's Easy, Right?!",
+            description: "Upload a photo and download a photo, it's a quick feature right? We'll go through the journey of uploading and downloading a photo to a Vapor app hosted on Heroku. Easy peasy. But is it? We'll discover the pitfalls and what we can do to improve a feature that should be simple.",
+            speakerNames: ["Mikaela Caron"]),
     ]
 }
