@@ -19,20 +19,16 @@ struct Schedule: Component {
                                        }
                                        Table(header: headerRow) {
                                            TableRow {
-                                               TableCell("08:30 - 09:15").class("text-center font-weight-bold")
+                                               TableCell("09:00 - 09:45").class("text-center font-weight-bold")
                                                TableCell("Breakfast and Registration")
                                            }
                                            TableRow {
-                                               TableCell("09:15 - 09:20").class("text-center font-weight-bold")
+                                               TableCell("09:45 - 09:50").class("text-center font-weight-bold")
                                                TableCell("Welcome")
                                            }
                                            TableRow {
-                                               TableCell("09:20 - 10:00").class("text-center font-weight-bold")
+                                               TableCell("09:50 - 10:40").class("text-center font-weight-bold")
                                                TableCell("Keynote")
-                                           }
-                                           TableRow {
-                                               TableCell("10:00 - 10:40").class("text-center font-weight-bold")
-                                               createTalkRow(speakerName: "Daniel Steinberg")
                                            }
                                            TableRow {
                                                TableCell("10:40 - 11:30").class("text-center font-weight-bold")
@@ -40,11 +36,11 @@ struct Schedule: Component {
                                            }
                                            TableRow {
                                                TableCell("11:30 - 12:10").class("text-center font-weight-bold")
-                                               createTalkRow(speakerName: "Tibor Bödecs")
+                                               createTalkRow(speakerName: "Daniel Steinberg")
                                            }
                                            TableRow {
                                                TableCell("12:10 - 12:45").class("text-center font-weight-bold")
-                                               createTalkRow(speakerName: "Mikaela Caron")
+                                               createTalkRow(speakerName: "Tibor Bödecs")
                                            }
                                            TableRow {
                                                TableCell("12:45 - 14:00").class("text-center font-weight-bold")
@@ -64,11 +60,11 @@ struct Schedule: Component {
                                            }     
                                            TableRow {
                                                TableCell("16:00 - 16:40").class("text-center font-weight-bold")
-                                               createTalkRow(speakerName: "Franz Busch")
+                                               createTalkRow(speakerName: "Mikaela Caron")
                                            }
                                            TableRow {
                                                TableCell("16:40 - 17:15").class("text-center font-weight-bold")
-                                               Text("To Be Announced")
+                                               createTalkRow(speakerName: "Franz Busch")
                                            }
                                            TableRow {
                                                TableCell("18:00 - 21:00").class("text-center font-weight-bold")
@@ -86,51 +82,51 @@ struct Schedule: Component {
                                        }
                                        Table(header: headerRow) {
                                            TableRow {
-                                               TableCell("08:30 - 09:30").class("text-center font-weight-bold")
+                                               TableCell("08:45 - 09:45").class("text-center font-weight-bold")
                                                TableCell("Breakfast")
                                            }
                                            TableRow {
-                                               TableCell("09:30 - 10:10").class("text-center font-weight-bold")
+                                               TableCell("09:45 - 10:25").class("text-center font-weight-bold")
                                                createTalkRow(speakerName: "Sebastien Stormacq")
                                            }
                                            TableRow {
-                                               TableCell("10:10 - 10:50").class("text-center font-weight-bold")
+                                               TableCell("10:25 - 11:00").class("text-center font-weight-bold")
                                                createTalkRow(speakerName: "Thomas Durand")
                                            }
                                            TableRow {
-                                               TableCell("10:50 - 11:30").class("text-center font-weight-bold")
+                                               TableCell("11:00 - 11:45").class("text-center font-weight-bold")
                                                Text("Coffee Break")
                                            }
                                            TableRow {
-                                               TableCell("11:30 - 12:10").class("text-center font-weight-bold")
+                                               TableCell("11:45 - 12:25").class("text-center font-weight-bold")
                                                createTalkRow(speakerName: "Steven Van Impe")
                                            }
                                            TableRow {
-                                               TableCell("12:10 - 12:45").class("text-center font-weight-bold")
+                                               TableCell("12:25 - 13:00").class("text-center font-weight-bold")
                                                createTalkRow(speakerName: "Adegboyega Olusunmade")
                                            }
                                            TableRow {
-                                               TableCell("12:45 - 14:00").class("text-center font-weight-bold")
+                                               TableCell("13:00 - 14:15").class("text-center font-weight-bold")
                                                TableCell("Lunch")
                                            }
                                            TableRow {
-                                               TableCell("14:00 - 14:15").class("text-center font-weight-bold")
+                                               TableCell("14:15 - 14:30").class("text-center font-weight-bold")
                                                 createTalkRow(speakerName: "Euan Harris")
                                            }
                                            TableRow {
-                                               TableCell("14:15 - 14:30").class("text-center font-weight-bold")
+                                               TableCell("14:30 - 14:45").class("text-center font-weight-bold")
                                                createTalkRow(speakerName: "Vojtech Rylko")
                                            }
                                            TableRow {
-                                               TableCell("14:30 - 14:45").class("text-center font-weight-bold")
+                                               TableCell("14:45 - 15:00").class("text-center font-weight-bold")
                                                createTalkRow(speakerName: "Babeth Velghe")
                                            }
                                            TableRow {
-                                               TableCell("14:45 - 15:00").class("text-center font-weight-bold")
+                                               TableCell("15:00 - 15:15").class("text-center font-weight-bold")
                                                createTalkRow(speakerName: "Joannis Orlandos")
                                            }
                                            TableRow {
-                                               TableCell("15:00 - 15:50").class("text-center font-weight-bold")
+                                               TableCell("15:15 - 15:50").class("text-center font-weight-bold")
                                                TableCell("Coffee Break")
                                            }     
                                            TableRow {
