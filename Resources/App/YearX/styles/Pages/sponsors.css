@@ -170,3 +170,8 @@
     height: 110px !important;
     margin-top: 10px
 }
+
+#bluem-sponsor-logo-img {
+    height: auto !important;
+    width: 100% !important;
+}

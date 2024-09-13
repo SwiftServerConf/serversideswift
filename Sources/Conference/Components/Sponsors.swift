@@ -145,27 +145,27 @@ struct Sponsors: Component {
             Div {
                 Div {
                     Div {
-                        Link("", url: "mailto:sponsors@serversideswift.info")
+                        Link("", url: "https://bluem.nl/en/").linkTarget(.blank)
                         Div {
-                            Image(url: "/App/YearX/images/sponsor-levels/sponsor_bronze.png", description: "Bronze")
+                            Image(url: "/App/YearX/images/sponsors/bluem.png", description: "Bluem").id("bluem-sponsor-logo")
                         }.class("image")
                         Div {
-                            H4("FREE SPOT").class("f-bronze")
+                            H4("Bluem")
                         }.class("description p-2")
-                    }.class("sponsor opacity-15")
+                    }.class("sponsor")
                 }.class("bronze")
             }.class("col-12 col-sm-6 col-md-4 col-lg-3")
             Div {
                 Div {
                     Div {
-                        Link("", url: "mailto:sponsors@serversideswift.info")
+                        Link("", url: "https://tuparev.com/").linkTarget(.blank)
                         Div {
-                            Image(url: "/App/YearX/images/sponsor-levels/sponsor_bronze.png", description: "Bronze")
+                            Image(url: "/App/YearX/images/sponsors/tuparev2024.png", description: "Tuparev Technologies")
                         }.class("image")
                         Div {
-                            H4("FREE SPOT").class("f-bronze")
+                            H4("Tuparev Technologies")
                         }.class("description p-2")
-                    }.class("sponsor opacity-15")
+                    }.class("sponsor")
                 }.class("bronze")
             }.class("col-12 col-sm-6 col-md-4 col-lg-3")
             Div {

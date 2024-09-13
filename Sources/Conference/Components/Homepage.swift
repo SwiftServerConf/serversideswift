@@ -147,12 +147,15 @@ struct Homepage: Component {
 //                                }.linkTarget(.blank)
 //                            }.class("logos")
 //                            Node.hr()
-//                            H3("Bronze Sponsors").class("h3 text-center")
-//                            Div {
-//                                Link(url: "http://www.tuparev.com/") {
-//                                    Image(url: "/App/YearX/images/sponsors/tuparev.png", description: "Tuparev Technologies").class("h-40")
-//                                }.linkTarget(.blank)
-//                            }.class("logos")
+                           H3("Bronze Sponsors").class("h3 text-center")
+                           Div {
+                               Link(url: "https://tuparev.com/") {
+                                   Image(url: "/App/YearX/images/sponsors/tuparev2024.png", description: "Tuparev Technologies").class("h-40")
+                               }.linkTarget(.blank)
+                               Link(url: "https://bluem.nl/en/") {
+                                   Image(url: "/App/YearX/images/sponsors/bluem.png", description: "Bluem").class("h-40")
+                               }.linkTarget(.blank)
+                           }.class("logos")
                         }.class("col")
                     }.class("row")
                 }.class("container")
