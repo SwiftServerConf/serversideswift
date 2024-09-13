@@ -147,8 +147,8 @@ struct Sponsors: Component {
                     Div {
                         Link("", url: "https://bluem.nl/en/").linkTarget(.blank)
                         Div {
-                            Image(url: "/App/YearX/images/sponsors/bluem.png", description: "Bluem").id("bluem-sponsor-logo")
-                        }.class("image")
+                            Image(url: "/App/YearX/images/sponsors/bluem.png", description: "Bluem").id("bluem-sponsor-logo-img")
+                        }.class("image").id("bluem-sponsor-logo")
                         Div {
                             H4("Bluem")
                         }.class("description p-2")

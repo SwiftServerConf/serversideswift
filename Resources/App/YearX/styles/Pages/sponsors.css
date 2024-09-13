@@ -174,4 +174,9 @@
 #bluem-sponsor-logo-img {
     height: auto !important;
     width: 100% !important;
+    margin-top: 15px;
+}
+
+#bluem-sponsor-logo {
+    width: 100% !important;
 }
