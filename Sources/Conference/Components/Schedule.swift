@@ -67,8 +67,11 @@ struct Schedule: Component {
                                                createTalkRow(speakerName: "Franz Busch")
                                            }
                                            TableRow {
-                                               TableCell("18:00 - 21:00").class("text-center font-weight-bold")
-                                               TableCell("Social Event TBD")
+                                               TableCell("19:00 - 21:00").class("text-center font-weight-bold")
+                                               TableCell {
+                                                    H6("NSLondon x ServerSide.swift Social").class("speakers-list-speaker-name")
+                                                    Link("Meetup Details", url: "https://www.meetup.com/nslondon/events/303450399/")
+                                               }
                                            }
                                        }.class("table table-striped table-bordered")
                                    }.class("panel")
@@ -82,7 +85,7 @@ struct Schedule: Component {
                                        }
                                        Table(header: headerRow) {
                                            TableRow {
-                                               TableCell("08:45 - 09:45").class("text-center font-weight-bold")
+                                               TableCell("09:00 - 09:45").class("text-center font-weight-bold")
                                                TableCell("Breakfast")
                                            }
                                            TableRow {
