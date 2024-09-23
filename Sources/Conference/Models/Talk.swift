@@ -184,5 +184,10 @@ struct AllTalks {
             title: "Just Save a File, It's Easy, Right?!",
             description: "Upload a photo and download a photo, it's a quick feature right? We'll go through the journey of uploading and downloading a photo to a Vapor app hosted on Heroku. Easy peasy. But is it? We'll discover the pitfalls and what we can do to improve a feature that should be simple.",
             speakerNames: ["Mikaela Caron"]),
+        Talk(
+            id: 19, 
+            title: "Keynote",
+            description: "A special keynote",
+            speakerNames: ["Tony Parker"]),
     ]
 }

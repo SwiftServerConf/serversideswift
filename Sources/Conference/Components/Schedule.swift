@@ -28,7 +28,7 @@ struct Schedule: Component {
                                            }
                                            TableRow {
                                                TableCell("09:50 - 10:40").class("text-center font-weight-bold")
-                                               TableCell("Keynote")
+                                               createTalkRow(speakerName: "Tony Parker")
                                            }
                                            TableRow {
                                                TableCell("10:40 - 11:30").class("text-center font-weight-bold")
@@ -189,25 +189,29 @@ struct Schedule: Component {
         let speaker = AllSpeakers.speakers.first { $0.name == speakerName }!
         return createTalkRow(speaker: speaker)
     }
-    
-    func createTalkRow(speaker: Speaker) -> TableCell {
+
+    func createTalkRow(speakers: [Speaker]) -> TableCell {
         TableCell {
             Div {
                 Div {
-                    Span {
-                        Link(url: "/speakers/\(speaker.url)") {
-                            Image(url: speaker.image, description: speaker.name)
-                        }
-                    }.class("avatar")
+                    for speaker in speakers {
+                        Span {
+                            Link(url: "/speakers/\(speaker.url)") {
+                                Image(url: speaker.image, description: speaker.name)
+                            }
+                        }.class("avatar")
+                    }
                 }.class("avatars")
                 Div {
                     List {
-                        ListItem {
-                            Link(speaker.name, url: "/speakers/\(speaker.url)").class("speakers-list-speaker-name")
+                        for speaker in speakers {
+                            ListItem {
+                                Link(speaker.name, url: "/speakers/\(speaker.url)").class("speakers-list-speaker-name")
+                            }
                         }
                     }.class("speaker-list")
                     Node.br()
-                    if let talk = speaker.talks.first {
+                    if let talk = speakers.first?.talks.first {
                         Node.a(
                             .attribute(named: "href"),
                             .attribute(named: "data-toggle", value: "modal"),
@@ -219,5 +223,9 @@ struct Schedule: Component {
                 }.class("talk-info")
             }.class("talk")
         }
+    }
+    
+    func createTalkRow(speaker: Speaker) -> TableCell {
+        createTalkRow(speakers: [speaker])
     }
 }
