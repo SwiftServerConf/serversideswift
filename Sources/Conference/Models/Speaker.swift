@@ -245,6 +245,12 @@ struct AllSpeakers {
             company: "Apple",
             bio: "Euan builds cloud services and infrastructure using Swift at Apple. He enjoys working with containers, virtual machines, networks and interesting programming languages. Previously, Euan helped maintain Docker Swarm’s overlay networking and HTTP ingress and contributed to XenServer’s open-source XenAPI control plane, the Xen hypervisor and OpenStack.",
             talkIDs: [15]), 
+        Speaker(
+            name: "Tony Parker",
+            role: "Manager",
+            company: "Apple",
+            bio: "Tony Parker is a manager on the Swift team at Apple, where his responsibilities include the Swift Standard Library, Foundation, and other low level Swift packages. He started working on Foundation 17 years ago, and has seen it through countless releases, ports, and transitions. He is passionate about great API design and helping other developers to create their best apps.",
+            talkIDs: [19]), 
     ]
 }
 

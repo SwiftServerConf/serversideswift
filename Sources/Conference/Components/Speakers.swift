@@ -11,8 +11,8 @@ struct Speakers: Component {
                     H4("We host a diverse selection of inspiring speakers.")
                         .class("text-center mb-5")
                     SpeakerList<Conference>(speakers: AllSpeakers.speakers)
-                    H4("More speakers to be announced soon!")
-                            .class("text-center mb-5")
+                    // H4("More speakers to be announced soon!")
+                    //         .class("text-center mb-5")
                 }.class("container")
         }.class("bg-blue text-white mt-5")
             // Div {
