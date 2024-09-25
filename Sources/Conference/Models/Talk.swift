@@ -141,7 +141,7 @@ struct AllTalks {
         Talk(
             id: 13, 
             title: "Swift for WebAssembly", 
-            description: "WebAssembly is a rapidly growing technology that provides great opportunities for Swift developers. This talk will introduce Swift developers to WebAssembly, and demonstrate how they can run Swift in the browser, call JavaScript from Swift to access the DOM, add Swift modules to web apps, and so much more. The talk is full of live coding and concludes with a demo that shows multiple WebAssembly clients communicating with a Vapor back-end through websockets.", 
+            description: "WebAssembly is a rapidly growing technology that provides great opportunities for Swift developers. This talk will introduce Swift developers to WebAssembly, and demonstrate how they can run Swift in the browser, call JavaScript from Swift to access the DOM, add Swift modules to web apps, and so much more. The talk concludes with a demo that shows multiple WebAssembly clients communicating with a Vapor back-end through websockets.", 
             speakerNames: ["Steven Van Impe"]), 
         Talk(
             id: 14, 
