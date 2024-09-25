@@ -251,6 +251,12 @@ struct AllSpeakers {
             company: "Apple",
             bio: "Tony Parker is a manager on the Swift team at Apple, where his responsibilities include the Swift Standard Library, Foundation, and other low level Swift packages. He started working on Foundation 17 years ago, and has seen it through countless releases, ports, and transitions. He is passionate about great API design and helping other developers to create their best apps.",
             talkIDs: [19]), 
+        Speaker(
+            name: "Ben Cohen",
+            role: "Manager",
+            company: "Apple",
+            bio: "Ben is a manager on the Swift team at Apple.",
+            talkIDs: [19]), 
     ]
 }
 

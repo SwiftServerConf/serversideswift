@@ -188,6 +188,6 @@ struct AllTalks {
             id: 19, 
             title: "Keynote",
             description: "A special keynote",
-            speakerNames: ["Tony Parker"]),
+            speakerNames: ["Tony Parker", "Ben Cohen"]),
     ]
 }
