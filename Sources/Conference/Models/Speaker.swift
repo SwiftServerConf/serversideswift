@@ -30,7 +30,7 @@ struct Speaker {
         self.name = name
         self.role = role
         self.company = company
-        self.url = name.lowercased().replacingOccurrences(of: " ", with: "-")
+        self.url = name.lowercased().replacingOccurrences(of: " ", with: "-").replacingOccurrences(of: "ö", with: "o")
         if let image {
             self.image = image
         } else {
