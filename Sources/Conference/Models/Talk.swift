@@ -77,7 +77,7 @@ struct AllTalks {
         ),
         Talk(
             id: 5,
-            title: "The success story of server-side Swift at Cultured Code",
+            title: "The Success Story of Server-Side Swift at Cultured Code",
             description: ComponentGroup {
                 Paragraph("At Cultured Code we make Things - the award-winning personal task manager.")
                 Paragraph("We’ve been using Swift on server for past two years. In this talk we’ll describe our modest architecture, based on AWS.")
