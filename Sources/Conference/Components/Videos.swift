@@ -26,7 +26,7 @@ struct Videos: Component {
                                         for speaker in talk.speakers {
                                             ListItem {
                                                 H4 {
-                                                    Link(speaker.name, url: "/speakers/\(speaker.name)/")
+                                                    Link(speaker.name, url: "/speakers/\(speaker.url)/")
                                                 }.class("f-weight-300")
                                             }
                                         }

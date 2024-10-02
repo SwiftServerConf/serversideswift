@@ -149,7 +149,7 @@ struct AllSpeakers {
             name: "Babeth Velghe",
             role: "Student",
             bio: "A student with a passion for coding, who recently delved into Swift programming. For her bachelor thesis, she explored the Swift OpenAPI Generator.",
-            talkIDs: [16]), 
+            talkIDs: [6]), 
         Speaker(
             name: "Franz Busch",
             role: "Software Engineer",
