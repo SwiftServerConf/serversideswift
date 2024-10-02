@@ -10,7 +10,7 @@ struct Videos: Component {
                     H4("Watch all the amazing content from the conference.").class(
                         "text-center mb-5")
                     Div {
-                        for talk in AllTalks.talks where talk.youtubeVideoID != nil {
+                        for talk in AllTalks.talks.sorted(by: { $0.order < $1.order }) where talk.youtubeVideoID != nil {
                             Div {
                                 Div {
                                     Div {
