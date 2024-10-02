@@ -35,7 +35,7 @@ struct Videos: Component {
                             }.class("card")
                         }
                     }.class("list")
-                    H4("More videos coming soon...").class("text-center mb-5")
+                    // H4("More videos coming soon...").class("text-center mb-5")
 
                     H4 {
                         Text("To see videos from previous editions ")
