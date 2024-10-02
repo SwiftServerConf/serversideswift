@@ -30,7 +30,7 @@ struct Speaker {
         self.name = name
         self.role = role
         self.company = company
-        self.url = name.lowercased().replacingOccurrences(of: " ", with: "-")
+        self.url = name.lowercased().replacingOccurrences(of: " ", with: "-").replacingOccurrences(of: "ö", with: "o")
         if let image {
             self.image = image
         } else {
@@ -149,7 +149,7 @@ struct AllSpeakers {
             name: "Babeth Velghe",
             role: "Student",
             bio: "A student with a passion for coding, who recently delved into Swift programming. For her bachelor thesis, she explored the Swift OpenAPI Generator.",
-            talkIDs: [16]), 
+            talkIDs: [6]), 
         Speaker(
             name: "Franz Busch",
             role: "Software Engineer",

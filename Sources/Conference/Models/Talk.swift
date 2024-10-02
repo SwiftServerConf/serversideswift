@@ -6,20 +6,26 @@ struct Talk: Eventable {
     let title: String
     let description: Component
     let speakerNames: [String]
+    let order: Int
     let eventSpecifics: EventSpecifics?
+    let youtubeVideoID: String?
     
     internal init(
         id: Int,
         title: String,
         description: String,
         speakerNames: [String],
-        eventSpecifics: EventSpecifics? = nil
+        order: Int,
+        eventSpecifics: EventSpecifics? = nil,
+        youtubeVideoID: String? = nil
     ) {
         self.id = id
         self.title = title
         self.description = Text(description)
         self.speakerNames = speakerNames
+        self.order = order
         self.eventSpecifics = eventSpecifics
+        self.youtubeVideoID = youtubeVideoID
     }
     
     internal init(
@@ -27,13 +33,17 @@ struct Talk: Eventable {
         title: String,
         description: Component,
         speakerNames: [String],
-        eventSpecifics: EventSpecifics? = nil
+        order: Int,
+        eventSpecifics: EventSpecifics? = nil,
+        youtubeVideoID: String? = nil
     ) {
         self.id = id
         self.title = title
         self.description = description
         self.speakerNames = speakerNames
+        self.order = order
         self.eventSpecifics = eventSpecifics
+        self.youtubeVideoID = youtubeVideoID
     }
     
     var speakers: [Speaker] {
@@ -49,19 +59,24 @@ struct AllTalks {
             id: 1,
             title: "When to Make a Macro",
             description: "Over the years you have developed a collection of techniques for reducing repetitive and boilerplate code for server side Swift. If you are using Swift 5.9 or above you should consider adding Swift Macros to your tool belt. This fast moving session introduces you to freestanding and attached macros with some examples from each type that shows you when you should use them and how.",
-            speakerNames: ["Daniel Steinberg"]
+            speakerNames: ["Daniel Steinberg"],
+            order: 2,
+            youtubeVideoID: "MroBR2ProT0"
         ),
         Talk(
             id: 2,
             title: "Swift on Server: How it powers Private Cloud Compute",
             description: "Swift on Server brings the privacy, security and ease of use of Swift to servers. In this talk we explore the way Apple is using Swift on Server to help run Private Cloud Compute which enables Apple Intelligence to leverage larger AI models while maintaining strict privacy promises for users. This talk will explore the construction on the on-node pieces of Private Cloud Compute. We’ll discuss how the service fits together from the perspective of the node, go through which technologies we deployed for this service, and showcase how Swift on Server was uniquely positioned for Apple to be able to build this service.",
-            speakerNames: ["Cory Benfield"]
+            speakerNames: ["Cory Benfield"],
+            order: 17
         ),
         Talk(
             id: 3,
             title: "The Adventures and Misadventures of Building a Trivia app with Vapor",
             description: "This talk goes through my process of building Lyriq’s (A Trivia Game) backend and the challenges, issues and assumptions I had to overcome to think properly about building on the web. Initially relying on my experience of iOS Development and then finding new ways of thinking about development on the web. The talk also goes through some of the initial gotchas i had with providers like Heroku and Fly and how I solved them. I think this talk would be quite actionable for people thinking about Backend Development using Vapor while coming from iOS Development and mistakes to avoid.",
-            speakerNames: ["Adegboyega Olusunmade"]
+            speakerNames: ["Adegboyega Olusunmade"],
+            order: 11,
+            youtubeVideoID: "QGO5ZuWM5pY"
         ),
         Talk(
             id: 4,
@@ -73,22 +88,27 @@ struct AllTalks {
                 Paragraph("Tibor will share the challenges he faced while building Toucan and show how easy it is to set up an HTTP server and host static files using the Hummingbird framework. He will also provide tips on optimizing your site for better performance and SEO.")
                 Paragraph("If you’re planning to create a blog or want to build beautiful user guides for your upcoming library, this talk is perfect for you. You’ll walk away with practical knowledge and inspiration to get started building a website for your future project.")
             },
-            speakerNames: ["Tibor Bödecs"]
+            speakerNames: ["Tibor Bödecs"],
+            order: 3,
+            youtubeVideoID: "FuTpnddLhpU"
         ),
         Talk(
             id: 5,
-            title: "The success story of server-side Swift at Cultured Code",
+            title: "The Success Story of Server-Side Swift at Cultured Code",
             description: ComponentGroup {
                 Paragraph("At Cultured Code we make Things - the award-winning personal task manager.")
                 Paragraph("We’ve been using Swift on server for past two years. In this talk we’ll describe our modest architecture, based on AWS.")
             },
-            speakerNames: ["Vojtech Rylko"]
+            speakerNames: ["Vojtech Rylko"],
+            order: 13
         ),    
         Talk(
             id: 6,
             title: "Stop worrying about routes with OpenAPI Generator",
             description: "OpenAPI specifications can be used to generate code on both the client and the server saving you time when building front-end apps and backends. In this talk, we’ll discuss how the OpenAPI generator can be used to create Swift application code from an OpenAPI spec. You’ll learn how to write an OpenAPI spec, how to use the plugin to generator client code for iOS applications and how to generate routes for a Vapor application. You’ll see how easy it is to plug everything together and quickly build a working app with networking. Finally there will be an exploration into its potential for production readiness.",
-            speakerNames: ["Babeth Velghe"]
+            speakerNames: ["Babeth Velghe"],
+            order: 14,
+            youtubeVideoID: "n1PRYVveLd0"
         ),
         Talk(
             id: 7,
@@ -104,13 +124,17 @@ struct AllTalks {
                 }
                 Paragraph("If you are curious about what it takes and how to build your own project in Swift, you’ll definitely want to listen to this talk and see what live-streaming health app can do.")
             },
-            speakerNames: ["Leo Dion"]
+            speakerNames: ["Leo Dion"],
+            order: 5,
+            youtubeVideoID: "4iB8s2fEmYc"
         ),   
         Talk(
             id: 8,
             title: "Leveraging structured concurrency in your applications",
             description: "This talk will examine the benefits of Swift’s structured concurrency and how it helps to write highly performant and maintainable code. We’ll explore the asynchronous APIs of swift-nio and swift-service-lifecycle which form the building blocks for the ecosystem. Lastly, we’ll look at common patterns and best practices for building composable libraries and applications using structured concurrency.",
-            speakerNames: ["Franz Busch"]
+            speakerNames: ["Franz Busch"],
+            order: 7,
+            youtubeVideoID: "JmrnE7HUaDE"
         ),  
         Talk(
             id: 9, 
@@ -119,30 +143,37 @@ struct AllTalks {
                 Paragraph("Diving into a new world can be challenging and overwhelming. For those reasons, iOS developers often choose Vapor to build their backend, staying in the Swift realm. However, there are still many things to catch up on, as building a backend is as different from building an app as it is exciting!")
                 Paragraph("We’ll explore those differences with leverage and solutions, and we’ll dive into subjects like authentication, evolution, security, and tests! Get a kickstart into the backend world!")
             }, 
-            speakerNames: ["Thomas Durand"]),
+            speakerNames: ["Thomas Durand"],
+            order: 9,
+            youtubeVideoID: "IAN0dmIAoeU"
+        ),
         Talk(
             id: 10, 
-            title: "Shipping a SaaS backend using Vapor", 
+            title: "Shipping a SaaS Backend Using Vapor", 
             description: ComponentGroup {
                 Paragraph("I'll share my journey of building and deploying a backend for a startup that focuses on sending emails using Swift and Vapor framework. We'll go through topics you'll likely need to address to build a backend REST API, such as user authentication, analytics, error reporting, as well as using AWS products such as S3 storage, and even collecting payments using Stripe.")
                 Paragraph("I hope to share a bit something interesting for everyone, especially iOS developers who are interesting in gaining more experience with server-related technologies.")
             }, 
-            speakerNames: ["Petr Pavlik"]),
+            speakerNames: ["Petr Pavlik"],
+            order: 4,
+            youtubeVideoID: "QFuZq9PHkTo"
+        ),
         Talk(
             id: 11, 
             title: "So You Think You Know Swift?", 
             description: "The talk takes a deeper look at some of the common APIs in Swift to reveal lesser known features, as well as exposing underlying mechanisms such as copy-on-write or existential containers, and how they can affect both the behavior and the performance of your code.", 
-            speakerNames: ["Nick Lockwood"]), 
-        Talk(
-            id: 12, 
-            title: "Easily create, test, and deploy Swift code on AWS Lambda", 
-            description: "By attending this talk you will see a demo of a VS Code extension that allows to easily create a new Swift Lambda project based on a selected template and one click build, test, and deploy to the cloud.", 
-            speakerNames: ["Marwane Koutar"]), 
+            speakerNames: ["Nick Lockwood"],
+            order: 16,
+            youtubeVideoID: "smkRzwANNQ8"
+        ), 
         Talk(
             id: 13, 
             title: "Swift for WebAssembly", 
             description: "WebAssembly is a rapidly growing technology that provides great opportunities for Swift developers. This talk will introduce Swift developers to WebAssembly, and demonstrate how they can run Swift in the browser, call JavaScript from Swift to access the DOM, add Swift modules to web apps, and so much more. The talk concludes with a demo that shows multiple WebAssembly clients communicating with a Vapor back-end through websockets.", 
-            speakerNames: ["Steven Van Impe"]), 
+            speakerNames: ["Steven Van Impe"],
+            order: 10,
+            youtubeVideoID: "cJyNok8OAuE"    
+        ), 
         Talk(
             id: 14, 
             title: "Swift, Server-Side, Serverless", 
@@ -155,7 +186,10 @@ struct AllTalks {
                     Text("without having specific knowledge of AWS, just by using the open-source Swift packager and a deployer Swift PM plugins.")
                 }
             },
-            speakerNames: ["Sebastien Stormacq"]),
+            speakerNames: ["Sebastien Stormacq"],
+            order: 8,
+            youtubeVideoID: "M1POAEPATFo"
+        ),
         Talk(
             id: 15, 
             title: "Swift to the cloud in a single step", 
@@ -168,26 +202,33 @@ struct AllTalks {
                 }
                 Paragraph("We’ll see how Swift SDKs can help us to build binaries for several popular Linux distributions, and even build statically-linked binaries with no runtime dependencies. We’ll take a quick look at the contents of the generated container image.Finally, we’ll show how a command plugin ties the whole process together into a single command.")
             },
-            speakerNames: ["Euan Harris"]),
-        Talk(
-            id: 16, 
-            title: "Stop worrying about routes with OpenAPI Generator", 
-            description: "OpenAPI specifications can be used to generate code on both the client and the server saving you time when building front-end apps and backends. In this talk, we’ll discuss how the OpenAPI generator can be used to create Swift application code from an OpenAPI spec. You’ll learn how to write an OpenAPI spec, how to use the plugin to generator client code for iOS applications and how to generate routes for a Vapor application. You’ll see how easy it is to plug everything together and quickly build a working app with networking. Finally there will be an exploration into its potential for production readiness.",
-            speakerNames: ["Babeth Velghe"]),
+            speakerNames: ["Euan Harris"],
+            order: 12,
+            youtubeVideoID: "9AaINsCfZzw"
+        ),
         Talk(
             id: 17, 
             title: "Introduction to Hummingbird 2", 
             description: "Hummingbird 2 is a major new framework for the Swift on Server ecosystem. It’s a feature rich, robust and performant solution, ready to implement your next server application! This talk will show you what’s new, and how it can help you build a robust and maintainable backend.",
-            speakerNames: ["Joannis Orlandos"]),
+            speakerNames: ["Joannis Orlandos"],
+            order: 15,
+            youtubeVideoID: "FHO_BfidQlQ"
+        ),
         Talk(
             id: 18, 
             title: "Just Save a File, It's Easy, Right?!",
             description: "Upload a photo and download a photo, it's a quick feature right? We'll go through the journey of uploading and downloading a photo to a Vapor app hosted on Heroku. Easy peasy. But is it? We'll discover the pitfalls and what we can do to improve a feature that should be simple.",
-            speakerNames: ["Mikaela Caron"]),
+            speakerNames: ["Mikaela Caron"],
+            order: 6,
+            youtubeVideoID: "lHXjs3L2ads"
+        ),
         Talk(
             id: 19, 
-            title: "Keynote",
-            description: "A special keynote",
-            speakerNames: ["Tony Parker", "Ben Cohen"]),
+            title: "Swift and Interopability",
+            description: "A special conference keynote discussing the latest developments with Swift and Interoperability",
+            speakerNames: ["Tony Parker", "Ben Cohen"],
+            order: 1,
+            youtubeVideoID: "wn6C_XEv1Mo"
+        ),
     ]
 }

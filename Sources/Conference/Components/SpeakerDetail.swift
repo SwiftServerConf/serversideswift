@@ -65,6 +65,16 @@ struct SpeakerDetail: Component {
                             if let talk = speaker.talks.first {
                                 Node.hr()
                                 H3("Talk Details")
+                                if let youtubeVideoID = talk.youtubeVideoID {
+                                    Div {
+                                        Div {
+                                            IFrame(
+                                                url: "https://www.youtube.com/embed/\(youtubeVideoID)",
+                                                addBorder: false, allowFullScreen: true,
+                                                enabledFeatureNames: ["autoplay", "encrypted-media"])
+                                        }.class("embed-container")
+                                    }.class("video")
+                                }
                                 Div {
                                     H4("Title").class("f-gradient")
                                     H6(talk.title)
