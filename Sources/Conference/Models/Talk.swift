@@ -100,7 +100,8 @@ struct AllTalks {
                 Paragraph("We’ve been using Swift on server for past two years. In this talk we’ll describe our modest architecture, based on AWS.")
             },
             speakerNames: ["Vojtech Rylko"],
-            order: 13
+            order: 13,
+            youtubeVideoID: "oJArLZIQF8w"
         ),    
         Talk(
             id: 6,
@@ -201,6 +202,10 @@ struct AllTalks {
                     ListItem("A Swift Package Manager command plugin can build any target in Package.swift, wrap it in a container and upload it to the cloud. A Dockerfile isn’t needed because the plugin already knows what to do.")
                 }
                 Paragraph("We’ll see how Swift SDKs can help us to build binaries for several popular Linux distributions, and even build statically-linked binaries with no runtime dependencies. We’ll take a quick look at the contents of the generated container image.Finally, we’ll show how a command plugin ties the whole process together into a single command.")
+                Paragraph {
+                    Text("🧑‍💻 Check out Swift Container Plugin on GitHub.   Contributions welcome! - ")  
+                    Link("https://github.com/apple/swift-container-plugin", url: "https://github.com/apple/swift-container-plugin")
+                }
             },
             speakerNames: ["Euan Harris"],
             order: 12,
