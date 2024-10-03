@@ -100,7 +100,8 @@ struct AllTalks {
                 Paragraph("We’ve been using Swift on server for past two years. In this talk we’ll describe our modest architecture, based on AWS.")
             },
             speakerNames: ["Vojtech Rylko"],
-            order: 13
+            order: 13,
+            youtubeVideoID: "oJArLZIQF8w"
         ),    
         Talk(
             id: 6,
