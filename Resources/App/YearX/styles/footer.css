@@ -32,4 +32,11 @@ footer.navbar.footer .year-switcher.active .underline {
 
 footer.navbar.footer .social-media a {
   padding: 0 10px;
+  margin-top: 10px;
+}
+
+@media (min-width: 768px) { 
+  footer.navbar.footer .social-media a {
+    margin-top: 0;
+  }
 }

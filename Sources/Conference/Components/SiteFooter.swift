@@ -58,7 +58,7 @@ struct SiteFooter: Component {
                             SVG(url: "/App/YearX/images/icons/feather-sprite.svg#facebook").class("feather text-white")
                         }.class("icon")
                     }.attribute(named: "rel", value: "me").linkTarget(.blank)
-                }.class("social-media flex-wrap")
+                }.class("social-media d-flex flex-wrap justify-content-center")
             }.class("container d-flex justify-content-spacearound")
         }.class("navbar footer")
     }
