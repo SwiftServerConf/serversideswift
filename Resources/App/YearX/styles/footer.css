@@ -1,10 +1,16 @@
 footer.navbar.footer {
   background-color: #0C1D28;
-  height: 50px;
+  height: 150px;
   position: absolute;
   bottom: 0;
   width: 100%;
   z-index: 10;
+}
+
+@media (min-width: 768px) { 
+  footer.navbar.footer {
+    height: 50px;
+  }
 }
 
 footer.navbar.footer .year-switcher {
@@ -26,4 +32,11 @@ footer.navbar.footer .year-switcher.active .underline {
 
 footer.navbar.footer .social-media a {
   padding: 0 10px;
+  margin-top: 10px;
+}
+
+@media (min-width: 768px) { 
+  footer.navbar.footer .social-media a {
+    margin-top: 0;
+  }
 }
