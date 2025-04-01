@@ -17,7 +17,7 @@ struct Homepage: Component {
                     Text("Server-Side Swift Conference")
                 }.class("text-center text-white")
                 H2 {
-                    Text("26th-27th September 2024. London, UK")
+                    Text("2nd-3rd October 2025. London, UK")
                 }.class("text-center text-white")
                 Div {
                     Link("Become a Sponsor", url: "mailto:sponsors@serversideswift.info").class("btn btn-default btn-gradient")
@@ -40,7 +40,7 @@ struct Homepage: Component {
                             }.class("h3")
                             Paragraph {
                                 Text("The conference will take place on the ")
-                                Text("26th and 27th of September").bold()
+                                Text("2nd and 3rd of October").bold()
                                 Text(" in the awesome ")
                                 Text("Science Museum in London, UK").bold()
                                 Text(", and it will be packed with inspiring talks.")
@@ -53,8 +53,9 @@ struct Homepage: Component {
                             }.class("h3")
                             Paragraph {
                                 Text("We'll have a packed schedule full of amazing talks from some amazing speakers. ")
-                                Link("Take a look!", url: "/schedule")
-                                Text(" at the current schedule.")
+                                // Link("Take a look!", url: "/schedule")
+                                // Text(" at the current schedule.")
+                                Text("The schedule will be released soon!")
                             }
                             // Paragraph {
                             //     Text("If you'd like to speak, you can ")
@@ -132,9 +133,9 @@ struct Homepage: Component {
                                 Link(url: "https://www.brokenhands.io") {
                                     Image(url: "/App/YearX/images/sponsors/brokenhands.svg", description: "Broken Hands").class("h-90 pr-3 pt-2")
                                 }.linkTarget(.blank)
-                                Link(url: "https://www.apple.com") {
-                                    Image(url: "/App/YearX/images/sponsors/apple.svg", description: "Apple Inc.").class("h-90 pl-3")
-                                }.linkTarget(.blank)
+                                // Link(url: "https://www.apple.com") {
+                                //     Image(url: "/App/YearX/images/sponsors/apple.svg", description: "Apple Inc.").class("h-90 pl-3")
+                                // }.linkTarget(.blank)
                             }.class("logos")
                             Node.hr()
 //                            H3("Gold Sponsors").class("h3 text-center")
@@ -147,15 +148,15 @@ struct Homepage: Component {
 //                                }.linkTarget(.blank)
 //                            }.class("logos")
 //                            Node.hr()
-                           H3("Bronze Sponsors").class("h3 text-center")
-                           Div {
-                               Link(url: "https://tuparev.com/") {
-                                   Image(url: "/App/YearX/images/sponsors/tuparev2024.png", description: "Tuparev Technologies").class("h-40")
-                               }.linkTarget(.blank)
-                               Link(url: "https://bluem.nl/en/") {
-                                   Image(url: "/App/YearX/images/sponsors/bluem.png", description: "Bluem").class("h-40")
-                               }.linkTarget(.blank)
-                           }.class("logos")
+                        //    H3("Bronze Sponsors").class("h3 text-center")
+                        //    Div {
+                        //        Link(url: "https://tuparev.com/") {
+                        //            Image(url: "/App/YearX/images/sponsors/tuparev2024.png", description: "Tuparev Technologies").class("h-40")
+                        //        }.linkTarget(.blank)
+                        //        Link(url: "https://bluem.nl/en/") {
+                        //            Image(url: "/App/YearX/images/sponsors/bluem.png", description: "Bluem").class("h-40")
+                        //        }.linkTarget(.blank)
+                        //    }.class("logos")
                         }.class("col")
                     }.class("row")
                 }.class("container")
