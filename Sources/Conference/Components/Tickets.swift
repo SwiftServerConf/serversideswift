@@ -12,7 +12,8 @@ struct Tickets: Component {
                 //     ])
                 // }
                 Div {
-                   H4("Thanks to every single one of you who has bought a ticket!")
+                //    H4("Thanks to every single one of you who has bought a ticket!")
+                    H4("Tickets will be released soon!")
                     H6 {
                         Text("If you have any questions please don't hesitate to reach out to us ")
                         Link("here", url: "mailto:info@serversideswift.info")
