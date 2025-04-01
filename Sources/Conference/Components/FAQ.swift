@@ -72,7 +72,7 @@ struct FAQ: Component {
                         H3("My question didn't get answered, what do I do?").class("h3")
                         Paragraph {
                             Text("Feel free to ")
-                            Link("tweet us", url: "https://twitter.com/SwiftServerConf")
+                            Link("message us", url: "https://bsky.app/profile/serversideswift.info")
                             Text(" or send us an ")
                             Link("email", url: "mailto:info@serversideswift.info")
                             Text(".")

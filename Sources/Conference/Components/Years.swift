@@ -9,7 +9,14 @@ struct Years: Component {
                     H4("Click on a year and time travel to past conferences!").class("text-center mb-5")
                     Div {
                         Div {
-                            Link("2024", url: "/").class("btn year current")
+                            Link("2025", url: "/").class("btn year current")
+                            Span {
+                                Span().class("anchor")
+                            }.class("line")
+                        }.class("year")
+
+                        Div {
+                            Link("2024", url: "/2024").class("btn year")
                             Span {
                                 Span().class("anchor")
                             }.class("line")

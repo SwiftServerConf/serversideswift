@@ -48,17 +48,30 @@ struct Sponsors: Component {
                     }.class("sponsor")
                 }.class("platinum")
             }.class("col-12 col-sm-6 col-md-4")
+            // Div {
+            //     Div {
+            //         Div {
+            //             Link("", url: "https://www.apple.com").linkTarget(.blank)
+            //             Div {
+            //                 Image(url: "/App/YearX/images/sponsors/apple.svg", description: "Apple, Inc.").class("apple-logo d-block mx-auto")
+            //             }.class("image text-center")
+            //             Div {
+            //                 H4("Apple")
+            //             }.class("description p-2")
+            //         }.class("sponsor")
+            //     }.class("platinum")
+            // }.class("col-12 col-sm-6 col-md-4")
             Div {
                 Div {
                     Div {
-                        Link("", url: "https://www.apple.com").linkTarget(.blank)
+                        Link("", url: "mailto:sponsors@serversideswift.info")
                         Div {
-                            Image(url: "/App/YearX/images/sponsors/apple.svg", description: "Apple, Inc.").class("apple-logo d-block mx-auto")
-                        }.class("image text-center")
+                            Image(url: "/App/YearX/images/sponsor-levels/sponsor_platinum.png", description: "Platinum")
+                        }.class("image")
                         Div {
-                            H4("Apple")
+                            H4("FREE SPOT").class("f-platinum")
                         }.class("description p-2")
-                    }.class("sponsor")
+                    }.class("sponsor opacity-15")
                 }.class("platinum")
             }.class("col-12 col-sm-6 col-md-4")
             Div {
@@ -142,30 +155,43 @@ struct Sponsors: Component {
             Div {
                 H3("BRONZE").class("f-bronze text-center pt-2 pb-3")
             }.class("col-12")
+            // Div {
+            //     Div {
+            //         Div {
+            //             Link("", url: "https://tuparev.com/").linkTarget(.blank)
+            //             Div {
+            //                 Image(url: "/App/YearX/images/sponsors/tuparev2024.png", description: "Tuparev Technologies")
+            //             }.class("image")
+            //             Div {
+            //                 H4("Tuparev Technologies")
+            //             }.class("description p-2")
+            //         }.class("sponsor")
+            //     }.class("bronze")
+            // }.class("col-12 col-sm-6 col-md-4 col-lg-3")
             Div {
                 Div {
                     Div {
-                        Link("", url: "https://bluem.nl/en/").linkTarget(.blank)
+                        Link("", url: "mailto:sponsors@serversideswift.info")
                         Div {
-                            Image(url: "/App/YearX/images/sponsors/bluem.png", description: "Bluem").id("bluem-sponsor-logo-img")
-                        }.class("image").id("bluem-sponsor-logo")
+                            Image(url: "/App/YearX/images/sponsor-levels/sponsor_bronze.png", description: "Bronze")
+                        }.class("image")
                         Div {
-                            H4("Bluem")
+                            H4("FREE SPOT").class("f-bronze")
                         }.class("description p-2")
-                    }.class("sponsor")
+                    }.class("sponsor opacity-15")
                 }.class("bronze")
             }.class("col-12 col-sm-6 col-md-4 col-lg-3")
             Div {
                 Div {
                     Div {
-                        Link("", url: "https://tuparev.com/").linkTarget(.blank)
+                        Link("", url: "mailto:sponsors@serversideswift.info")
                         Div {
-                            Image(url: "/App/YearX/images/sponsors/tuparev2024.png", description: "Tuparev Technologies")
+                            Image(url: "/App/YearX/images/sponsor-levels/sponsor_bronze.png", description: "Bronze")
                         }.class("image")
                         Div {
-                            H4("Tuparev Technologies")
+                            H4("FREE SPOT").class("f-bronze")
                         }.class("description p-2")
-                    }.class("sponsor")
+                    }.class("sponsor opacity-15")
                 }.class("bronze")
             }.class("col-12 col-sm-6 col-md-4 col-lg-3")
             Div {

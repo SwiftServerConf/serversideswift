@@ -19,3 +19,4 @@ DerivedData/
 .vscode/
 .publish
 Output/
+.cache
