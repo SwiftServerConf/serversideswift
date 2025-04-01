@@ -16,7 +16,7 @@ struct Years: Component {
                         }.class("year")
 
                         Div {
-                            Link("2024", url: "/024").class("btn year")
+                            Link("2024", url: "/2024").class("btn year")
                             Span {
                                 Span().class("anchor")
                             }.class("line")
