@@ -52,7 +52,7 @@ struct Homepage: Component {
                                 Text("Speakers")
                             }.class("h3")
                             Paragraph {
-                                Text("We'll have a packed schedule full of amazing talks from some amazing speakers. ")
+                                Text("We'll have a packed schedule full of amazing talks, workshops and labs from some amazing speakers and trainers. ")
                                 // Link("Take a look!", url: "/schedule")
                                 // Text(" at the current schedule.")
                                 Text("The schedule will be released soon!")

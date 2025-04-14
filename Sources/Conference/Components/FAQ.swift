@@ -24,6 +24,23 @@ struct FAQ: Component {
                     Div {
                         H3("What is included in the price?").class("h3")
                         Paragraph("A conference ticket includes: talks from experts in the field, daily lunch, snacks, coffee breaks and goodie bags with some conference/tech swag. Please note that accommodation is not included in the price.")
+                        Paragraph {
+                            Text("Workshop tickets include a full day of hands-on workshops and labs with experts in the field, food and coffee breaks. A workshop ticket does ")
+                            Text("not").bold()
+                            Text(" include access to the conference talks. You must also purchase a conference ticket to attend the conference.")
+                        }
+                        Paragraph {
+                            Text("Likewise, a conference ticket does ")
+                            Text("not").bold()
+                            Text(" include access to the workshops. You must purchase a workshop ticket to attend the workshops.")
+                        }
+                    }.class("col-xs-12 mb-4")
+                }.class("row")
+
+                Div {
+                    Div {
+                        H3("What are the workshop tickets?").class("h3")
+                        Paragraph("A conference ticket includes: talks from experts in the field, daily lunch, snacks, coffee breaks and goodie bags with some conference/tech swag. Please note that accommodation is not included in the price.")
                     }.class("col-xs-12 mb-4")
                 }.class("row")
                 
