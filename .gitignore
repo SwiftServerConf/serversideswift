@@ -20,3 +20,4 @@ DerivedData/
 .publish
 Output/
 .cache
+.bash_history
