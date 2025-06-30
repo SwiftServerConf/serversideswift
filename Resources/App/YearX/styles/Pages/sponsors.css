@@ -40,12 +40,20 @@
 
 .sponsors .sponsor-list .sponsor .no-padding-image {
   margin: auto;
-  padding: 5px;
+  padding: 20px;
+}
+
+.sponsors .sponsor-list .sponsor a {
+  color: inherit;
+}
+
+.sponsors .sponsor-list .sponsor a:hover {
+  text-decoration: none;
 }
 
 .sponsors .sponsor-list .sponsor .no-padding-image img {
-  height: 100%;
-  width: auto;
+  width: 100%;
+  height: auto;
 }
 
 .sponsors .sponsor-list .sponsor .description {
