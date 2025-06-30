@@ -142,19 +142,20 @@ struct Sponsors: Component {
             Div {
                 H3("BRONZE").class("f-bronze text-center pt-2 pb-3")
             }.class("col-12")
-            // Div {
-            //     Div {
-            //         Div {
-            //             Link("", url: "https://tuparev.com/").linkTarget(.blank)
-            //             Div {
-            //                 Image(url: "/App/YearX/images/sponsors/tuparev2024.png", description: "Tuparev Technologies")
-            //             }.class("image")
-            //             Div {
-            //                 H4("Tuparev Technologies")
-            //             }.class("description p-2")
-            //         }.class("sponsor")
-            //     }.class("bronze")
-            // }.class("col-12 col-sm-6 col-md-4 col-lg-3")
+            Div {
+                Div {
+                    Div {
+                        Link(url: "https://aws.amazon.com") {
+                            Div {
+                                Image(url: "/App/YearX/images/sponsors/aws-logo.png", description: "Amazon Web Services")
+                            }.class("no-padding-image")
+                            Div {
+                                H4("AWS")
+                            }.class("description p-2")
+                        }.linkTarget(.blank)
+                    }.class("sponsor")
+                }.class("bronze")
+            }.class("col-12 col-sm-6 col-md-4 col-lg-3")
             Div {
                 Div {
                     Div {

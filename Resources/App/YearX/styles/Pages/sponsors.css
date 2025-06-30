@@ -38,6 +38,16 @@
   width: auto;
 }
 
+.sponsors .sponsor-list .sponsor .no-padding-image {
+  margin: auto;
+  padding: 5px;
+}
+
+.sponsors .sponsor-list .sponsor .no-padding-image img {
+  height: 100%;
+  width: auto;
+}
+
 .sponsors .sponsor-list .sponsor .description {
   text-align: center;
   display: flex;
