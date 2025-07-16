@@ -158,9 +158,9 @@ struct Homepage: Component {
                                Link(url: "https://aws.amazon.com/") {
                                    Image(url: "/App/YearX/images/sponsors/aws-logo.png", description: "AWS Logo").class("h-40")
                                }.linkTarget(.blank)
-                            //    Link(url: "https://bluem.nl/en/") {
-                            //        Image(url: "/App/YearX/images/sponsors/bluem.png", description: "Bluem").class("h-40")
-                            //    }.linkTarget(.blank)
+                               Link(url: "https://binarybirds.com") {
+                                   Image(url: "/App/YearX/images/sponsors/binary-birds.png", description: "Binary Birds").class("h-50")
+                               }.linkTarget(.blank)
                            }.class("logos")
                         }.class("col")
                     }.class("row")
