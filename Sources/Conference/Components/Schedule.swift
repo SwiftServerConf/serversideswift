@@ -7,7 +7,7 @@ struct Schedule: Component {
                 Div {
                     Div {
                         H1("Schedule").class("text-center text-white")
-                        H4("Two days packed with inspiring content.").class("text-center mb-5")
+                        H4("One amazing workshop day and two days packed with inspiring content.").class("text-center mb-5")
                         H3("Schedule will be revealed once the CFP is closed.").class("text-center mb-5")
                     //    Div {
                     //        Div {
