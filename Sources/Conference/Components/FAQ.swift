@@ -40,7 +40,7 @@ struct FAQ: Component {
                 Div {
                     Div {
                         H3("What are the workshop tickets?").class("h3")
-                        Paragraph("A conference ticket includes: talks from experts in the field, daily lunch, snacks, coffee breaks and goodie bags with some conference/tech swag. Please note that accommodation is not included in the price.")
+                        Paragraph("Workshop tickets give you access to the workshop day, the day before the conference. This is a separate purchase from the conference ticket.")
                     }.class("col-xs-12 mb-4")
                 }.class("row")
                 

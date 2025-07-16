@@ -17,7 +17,7 @@ struct Homepage: Component {
                     Text("Server-Side Swift Conference")
                 }.class("text-center text-white")
                 H2 {
-                    Text("2nd-3rd October 2025. London, UK")
+                    Text("1st-3rd October 2025. London, UK")
                 }.class("text-center text-white")
                 Div {
                     Link("Become a Sponsor", url: "mailto:sponsors@serversideswift.info").class("btn btn-default btn-gradient")
@@ -44,6 +44,11 @@ struct Homepage: Component {
                                 Text(" in the awesome ")
                                 Text("Science Museum in London, UK").bold()
                                 Text(", and it will be packed with inspiring talks.")
+                            }
+                            Paragraph {
+                                Text("There will be a workshop day on the ")
+                                Text("1st of October").bold()
+                                Text(" with an exciting lineup of workshops and labs. Please note that you need to purchase a separate ticket for the workshop day.")
                             }
                         }.class("col-12 col-sm-6 mt-2 mb-2")
                         
@@ -153,9 +158,9 @@ struct Homepage: Component {
                                Link(url: "https://aws.amazon.com/") {
                                    Image(url: "/App/YearX/images/sponsors/aws-logo.png", description: "AWS Logo").class("h-40")
                                }.linkTarget(.blank)
-                            //    Link(url: "https://bluem.nl/en/") {
-                            //        Image(url: "/App/YearX/images/sponsors/bluem.png", description: "Bluem").class("h-40")
-                            //    }.linkTarget(.blank)
+                               Link(url: "https://binarybirds.com") {
+                                   Image(url: "/App/YearX/images/sponsors/binary-birds.png", description: "Binary Birds").class("h-50")
+                               }.linkTarget(.blank)
                            }.class("logos")
                         }.class("col")
                     }.class("row")

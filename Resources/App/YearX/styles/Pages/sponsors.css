@@ -43,6 +43,10 @@
   padding: 20px;
 }
 
+.image-low-padding {
+  padding: 10px !important;
+}
+
 .sponsors .sponsor-list .sponsor a {
   color: inherit;
 }

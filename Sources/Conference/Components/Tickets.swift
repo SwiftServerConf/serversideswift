@@ -14,7 +14,7 @@ struct Tickets: Component {
                 Div {
                     H2("Workshop Tickets").class("text-center h3")
                     Paragraph {
-                        Text("We are still finalising the details of a potential workshop/labs day, the day before the conference. This will be a separate ticket and you will still need to purchase a conference ticket to attend the conference. If you wish to attend the workshop we suggest you buy a conference ticket now (to make the most of the early bird pricing) but hold off on booking travel and accommodation until we confirm the workshop details.")
+                        Text("There is a workshop day the day before the conference. This will be a separate ticket and you will still need to purchase a conference ticket to attend the conference. The tickets will be on sale soon!")
                     }
                 }
                 // Div {
