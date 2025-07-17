@@ -159,7 +159,7 @@ struct Sponsors: Component {
             Div {
                 Div {
                     Div {
-                        Link(url: "https://www.binarybirds.com") {
+                        Link(url: "https://binarybirds.com") {
                             Div {
                                 Image(url: "/App/YearX/images/sponsors/binary-birds.png", description: "Binary Birds")
                             }.class("image image-low-padding")
