@@ -8,7 +8,7 @@ struct Speakers: Component {
                 Div {
                     H1("Speakers")
                         .class("text-center")
-                    H2("Emcee").class("text-center h2")
+                    H2("MC").class("text-center h2")
                     Div {
                         SpeakerOverview(speaker: AllSpeakers.emcee)
                     }.class("d-flex justify-content-center")
