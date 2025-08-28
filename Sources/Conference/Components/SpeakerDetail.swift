@@ -98,18 +98,19 @@ struct SpeakerDetail: Component {
                             }
                             Node.hr()
                             H3("About the Speaker")
-                            Div {
-                                H4("Position").class("f-gradient")
-                                if let company = speaker.company {
-                                    H6("\(speaker.role) at \(company)")
-                                        .class("f-weight-300")
-                                } else {
-                                    H6("\(speaker.role)")
-                                        .class("f-weight-300")
-
+                            if speaker.role != nil {
+                                Div {
+                                    H4("Position").class("f-gradient")
+                                    if let company = speaker.company, let role = speaker.role {
+                                        H6("\(role) at \(company)")
+                                            .class("f-weight-300")
+                                    } else if let role = speaker.role {
+                                        H6("\(role)")
+                                            .class("f-weight-300")
+                                    }
                                 }
+                                .class("section")
                             }
-                            .class("section")
                             Div {
                                 H4("Bio").class("f-gradient")
                                 H6(speaker.bio)

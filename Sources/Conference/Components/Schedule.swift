@@ -29,7 +29,8 @@ struct Schedule: Component {
                                            }
                                            TableRow {
                                                TableCell("09:50 - 10:40").class("text-center font-weight-bold")
-                                               createTalkRow(speakers: [AllSpeakers.speakers[16], AllSpeakers.speakers[17]])
+                                            //    createTalkRow(speakers: [AllSpeakers.speakers[16], AllSpeakers.speakers[17]])
+                                                TableCell("Keynote")
                                            }
                                            TableRow {
                                                TableCell("10:40 - 11:30").class("text-center font-weight-bold")

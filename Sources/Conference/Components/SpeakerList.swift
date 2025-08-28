@@ -26,8 +26,10 @@ struct SpeakerOverview: Component {
                 Div {
                     H3(speaker.name)
                         .class("h3")
-                    H4(speaker.role)
-                        .class("f-weight-300 mb-0")
+                    if let role = speaker.role {
+                        H4(role)
+                            .class("f-weight-300 mb-0")
+                    }
                     if let company = speaker.company {
                         H4(company)
                             .class("f-weight-300")
