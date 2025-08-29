@@ -194,7 +194,7 @@ struct AllSpeakers {
             company: "SongShift",
             twitter: "http://twitter.com/benmrosen",
             website: "https://benrosen.me/", 
-            bio: "I am 22 years old, from Chicago, IL. and have been programming since I was 11 years old. My app, SongShift, has been on the App Store since 2016 and I have watched and contributed to growing it from a small app to one that is widely used and loved. During college I did 2 internships at Apple but decided to work on SongShift full time. After that, we partnered with Apple Music to integrate our transfer tool DIRECTLY into Apple Music (https://www.theverge.com/news/668369/apple-music-transfer-tool-library-playlists). This is entirely built with server-side Swift. I want people to know about me because I want to continue to spread the word that what I do is powered by these cool server-side Swift technologies. I want to know that I am someone people can contact and I want to be a friendly face for them.",
+            bio: "I am 22 years old, from Chicago, IL. and have been programming since I was 11 years old. My app, SongShift, has been on the App Store since 2016 and I have watched and contributed to growing it from a small app to one that is widely used and loved. During college I did 2 internships at Apple but decided to work on SongShift full time. This is entirely built with server-side Swift. I want people to know about me because I want to continue to spread the word that what I do is powered by these cool server-side Swift technologies. I want to know that I am someone people can contact and I want to be a friendly face for them.",
             talkIDs: [9]
         ),
         // Speaker(
@@ -233,6 +233,16 @@ struct AllSpeakers {
             twitter: "http://twitter.com/FranzJBusch",
             bio: "Franz is a member of a team developing foundational Swift libraries at Apple primarily focused on networking and concurrency. Franz is also a member of the Swift Ecosystem Steering and Server working group. Before joining Apple, Franz spent a decade working in the mobile applications space.", 
             talkIDs: [12]
+        ),
+        Speaker(
+            name: "Mads Odgaard",
+            role: "Software Engineer",
+            website: "https://www.madsodgaard.com/",
+            bio: ComponentGroup {
+                Paragraph("I am a recent graduate of Computer Science at Aarhus University, Denmark. Currently, my position is Tech Lead at Frameo. I have been coding since child, especially doing iOS development. Swift is my favourite language and I have been involved in the Server-Side Swift community for quite some years now. I am very interested in programming languages, compilers and cryptography.")
+                Paragraph("Outside of coding, I love being active and playing music!")
+            },
+            talkIDs: [13]
         )
     ]
 }
