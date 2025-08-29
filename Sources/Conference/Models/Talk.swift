@@ -57,183 +57,136 @@ struct AllTalks {
     static let talks: [Talk] = [
         Talk(
             id: 1,
-            title: "When to Make a Macro",
-            description: "Over the years you have developed a collection of techniques for reducing repetitive and boilerplate code for server side Swift. If you are using Swift 5.9 or above you should consider adding Swift Macros to your tool belt. This fast moving session introduces you to freestanding and attached macros with some examples from each type that shows you when you should use them and how.",
-            speakerNames: ["Daniel Steinberg"],
-            order: 2,
-            youtubeVideoID: "MroBR2ProT0"
+            title: "Unlock Generative AI for Swift Server-Side Development",
+            description: "In the rapidly evolving landscape of artificial intelligence, Swift developers are looking to integrate powerful language models into their applications. While AWS's Amazon Bedrock provides access to leading LLMs and generative AI capabilities, working with these services in strongly-typed languages like Swift presents unique challenges. The varying payload structures across different LLMs, combined with automatically generated SDKs that don't always align with Swift's elegant syntax patterns, can make implementation complex. This created an opportunity to develop a more Swift-idiomatic approach to working with Bedrock. So, I created the Swift Bedrock Library, that forms a layer on top of the AWS SDK for Swift for interacting with Amazon Bedrock. This library provides a convenient way to access Amazon Bedrock's capabilities from Swift applications. By providing clear, concise, and Swift-specific implementations, it accelerates the learning curve and enables developers to quickly take advantage of Bedrock's advanced models. From streaming chat to image generation or variation, the library covers a wide range of use cases. I also worked on the Swift Foundation Model Playground, an example web app that demonstrates the use of the Swift Bedrock Library. It is built with a front-end in React and a backend that uses Hummingbird. To help out developers that prefer to use the AWS SDK for Swift as is, I created the very first Swift code examples for Bedrock Runtime. These are now a part of the official AWS documentation and include chatting with Amazon Nova, Meta Llama and Anthropic Claude both with and without streaming responses. During my talk I will share the process I went through to during my internship and how the work I did can improve your experience when you decide to implement AI in your next project.",
+            speakerNames: ["Mona Dierickx"],
+            order: 1
         ),
         Talk(
             id: 2,
-            title: "Swift on Server: How it powers Private Cloud Compute",
-            description: "Swift on Server brings the privacy, security and ease of use of Swift to servers. In this talk we explore the way Apple is using Swift on Server to help run Private Cloud Compute which enables Apple Intelligence to leverage larger AI models while maintaining strict privacy promises for users. This talk will explore the construction on the on-node pieces of Private Cloud Compute. We’ll discuss how the service fits together from the perspective of the node, go through which technologies we deployed for this service, and showcase how Swift on Server was uniquely positioned for Apple to be able to build this service.",
-            speakerNames: ["Cory Benfield"],
-            order: 17
+            title: "Battle of the Giants: Vapor vs Hummingbird which one should you choose?",
+            description: ComponentGroup {
+                Paragraph("There a wealth of server frameworks out there and it can be hard to make a decision on what framework to use. When opting for Swift as a server side programming languages there's a wealth of possibilities. However, two standout: Vapor and Hummingbird. Making a decision can be difficult, especially if one isn't aware of the tradeoffs picking one over the other entails. This talk aim is twofold: firstly, to compare and contrast both server-side frameworks. Secondly, to draw on their strengths and weaknesses to identify what use cases fit best with one or the other, giving attendees a way to evaluate their options, consider the different tradeoffs and ultimately make a better, more informed decision.")
+                Paragraph("I'll start by rapidly introducing the benefits of writing Swift on the Server, the different options that are available to developers, some dead projects before narrowing down to the two Giants, Vapor and Hummingbird.")
+                Paragraph("The first part of the talk will compare and contrast both frameworks. I'll run through the basic features of modern HTTP servers (routing, persistence, CORS, …) and compare how Vapor and Hummingbird have implemented them, specifically focusing on the Developer Experience.")
+                Paragraph("The second part of the talk will be more opinionated and focus heavily on the advantages of picking one over the other. What are you sacrificing when picking Hummingbird over Vapor? What about the other way around? The second part of this talk should leave you with a sense of how to make those decisions and what framework to use when making decisions.")
+                Paragraph("Ultimately my goal is for you to walk away from this talk being able to answer these two questions:")
+                List {
+                    ListItem("What are the main differences between Vapor and Hummingbird? What are their similarities?")
+                    ListItem("What are the main tradeoffs when picking one over the other?")
+                }
+            },
+            speakerNames: ["Emma GAUBERT"],
+            order: 2
         ),
         Talk(
             id: 3,
-            title: "The Adventures and Misadventures of Building a Trivia app with Vapor",
-            description: "This talk goes through my process of building Lyriq’s (A Trivia Game) backend and the challenges, issues and assumptions I had to overcome to think properly about building on the web. Initially relying on my experience of iOS Development and then finding new ways of thinking about development on the web. The talk also goes through some of the initial gotchas i had with providers like Heroku and Fly and how I solved them. I think this talk would be quite actionable for people thinking about Backend Development using Vapor while coming from iOS Development and mistakes to avoid.",
-            speakerNames: ["Adegboyega Olusunmade"],
-            order: 11,
-            youtubeVideoID: "QGO5ZuWM5pY"
-        ),
-        Talk(
-            id: 4,
-            title: "Generating static websites using Swift on the server",
+            title: "Building Networking Libraries with Span and Concurrency",
             description: ComponentGroup {
-                Paragraph("Swift on the server is a great way to create backend applications. This time, we’re diving into something special: a static site generator.")
-                Paragraph("No databases, no persistence—just the magic of turning a bunch of Markdown files into a raw HTML-based website using Swift and the new Swift-Mustache library from the Hummingbird project.")
-                Paragraph("You’ll learn how to adapt the Swift-Markdown library for your projects and how to create custom directives when rendering Markdown files. This is a great opportunity to understand the technology that powers DocC, Swift’s documentation framework.")
-                Paragraph("Tibor will share the challenges he faced while building Toucan and show how easy it is to set up an HTTP server and host static files using the Hummingbird framework. He will also provide tips on optimizing your site for better performance and SEO.")
-                Paragraph("If you’re planning to create a blog or want to build beautiful user guides for your upcoming library, this talk is perfect for you. You’ll walk away with practical knowledge and inspiration to get started building a website for your future project.")
+                Paragraph("Networking is the fundamental backbone of Swift on Server. By combining the efficiency and ergonomics of Swift, you can make an incredibly scalable yet maintainable backend. In this talk, I'll show you the how and what of networking in Swift.")
+                Paragraph("This talk dives into new and improved language features, such as Spans, Advanced Concurrency use and handling I/O.")
             },
-            speakerNames: ["Tibor Bödecs"],
-            order: 3,
-            youtubeVideoID: "FuTpnddLhpU"
+            speakerNames: ["Joannis Orlandos"],
+            order: 3
         ),
+        Talk(id: 4, title: "How to Approach Approachable Concurrency", description: ComponentGroup {
+            Paragraph("The Swift language has gone through many significant changes recently and this year is no different. We're now seeing some of the results of efforts to improve the approachability of data race safety. Many developers have found concurrency incredibly difficult to understand, making any improvements welcome. But, how can we use these new facilities to make our transition to Swift 6 easier?")
+            Paragraph("We'll go through not just what new tools we have, but why they were introduced. Whether you are just now getting started or have lots of experience with concurrency, together we can deepen our understanding of the language. You'll come away feeling confident deciding how to best approach approachable concurrency for your project.")
+        }, speakerNames: ["Matt Massicotte"], order: 4),
+        Talk(id: 5, title: "To Be Announced", description: "Details of this talk will be released soon", speakerNames: ["Honza Dvorsky"], order: 5),
+        Talk(id: 6, title: "Getting started with gRPC Swift", description: "Looking to build fast, type-safe APIs in Swift? gRPC offers a high-performance alternative to REST using Protocol Buffers and HTTP/2. This session provides a brief introduction to gRPC Swift, guiding you through the concepts of gRPC, defining services in .proto files, generating Swift code, and implementing both clients and servers for various RPC types. Learn how gRPC Swift streamlines development and boosts performance for your applications.", speakerNames: ["George Barnett"], order: 6),
         Talk(
-            id: 5,
-            title: "The Success Story of Server-Side Swift at Cultured Code",
+            id: 7, 
+            title: "Observability in Server-Side Swift", 
             description: ComponentGroup {
-                Paragraph("At Cultured Code we make Things - the award-winning personal task manager.")
-                Paragraph("We’ve been using Swift on server for past two years. In this talk we’ll describe our modest architecture, based on AWS.")
-            },
-            speakerNames: ["Vojtech Rylko"],
-            order: 13,
-            youtubeVideoID: "oJArLZIQF8w"
-        ),    
-        Talk(
-            id: 6,
-            title: "Stop worrying about routes with OpenAPI Generator",
-            description: "OpenAPI specifications can be used to generate code on both the client and the server saving you time when building front-end apps and backends. In this talk, we’ll discuss how the OpenAPI generator can be used to create Swift application code from an OpenAPI spec. You’ll learn how to write an OpenAPI spec, how to use the plugin to generator client code for iOS applications and how to generate routes for a Vapor application. You’ll see how easy it is to plug everything together and quickly build a working app with networking. Finally there will be an exploration into its potential for production readiness.",
-            speakerNames: ["Babeth Velghe"],
-            order: 14,
-            youtubeVideoID: "n1PRYVveLd0"
-        ),
-        Talk(
-            id: 7,
-            title: "How does Server Side Swift Workout in the Real World?",
-            description: ComponentGroup {
-                Paragraph("In this talk, Leo Dion goes over the development of a real world Full Stack Swift application - gBeat. Enter the world of health and fitness as we learn about the process of creating, developing, and deploying of gBeat:")
+                Paragraph("This talk provides an overview of observability in server-side Swift, comprised of Logging, Metrics, and Distributed Tracing. I'll start off by introducing and comparing the three fundamental API packages (swift-log / swift-metrics / swift-distributed-tracing), the latter of which I co-created as part of Google Summer of Code in 2020.")
+                Paragraph("Throughout the talk, I'll be using a microservice-based server-side Swift backend, gradually adding more and more observability to it. This demo is powered by OpenTelemetry via the Swift OTel package, sending the observability data to a handful of backends.")
+                Paragraph("At the end of my talk, you should understand what the three pillars of observability are and how to make use of them in your server-side Swift projects. As a bonus, you'll also learn about the OpenTelemetry project.")
+                Paragraph("Links:")
                 List {
-                    ListItem("Building an Authentication system with Sign in with Apple")
-                    ListItem("Navigating Communication with Redis and WebSockets")
-                    ListItem("Migrating to async/await")
-                    ListItem("Deploying to Heroku")
-                    ListItem("Setting up Continuous Integration with Gitlab and Github")
+                    ListItem {
+                        Link("GitHub: apple/swift-log", url: "https://github.com/apple/swift-log")
+                    }
+                    ListItem {
+                        Link("GitHub: apple/swift-metrics", url: "https://github.com/apple/swift-metrics")
+                    }
+                    ListItem {
+                        Link("GitHub: apple/swift-distributed-tracing", url: "https://github.com/apple/swift-distributed-tracing")
+                    }
+                    ListItem {
+                        Link("GitHub: swift-otel", url: "https://github.com/swift-otel")
+                    }
                 }
-                Paragraph("If you are curious about what it takes and how to build your own project in Swift, you’ll definitely want to listen to this talk and see what live-streaming health app can do.")
-            },
-            speakerNames: ["Leo Dion"],
-            order: 5,
-            youtubeVideoID: "4iB8s2fEmYc"
-        ),   
-        Talk(
-            id: 8,
-            title: "Leveraging structured concurrency in your applications",
-            description: "This talk will examine the benefits of Swift’s structured concurrency and how it helps to write highly performant and maintainable code. We’ll explore the asynchronous APIs of swift-nio and swift-service-lifecycle which form the building blocks for the ecosystem. Lastly, we’ll look at common patterns and best practices for building composable libraries and applications using structured concurrency.",
-            speakerNames: ["Franz Busch"],
-            order: 7,
-            youtubeVideoID: "JmrnE7HUaDE"
-        ),  
+            }, 
+            speakerNames: ["Moritz Lang"], 
+            order: 7
+        ),
+        Talk(id: 8, title: "Introduction to Valkey-swift", description: "Valkey-swift is a new client library for Valkey, the in memory database. This talk will provide you with an introduction to both Valkey and the valkey-swift client. You will learn how Valkey is so much more than just a key/value datastore and how the valkey-swift client gives you access to some of Valkey's more advanced features.", speakerNames: ["Adam Fowler"], order: 8),
         Talk(
             id: 9, 
-            title: "How to kickstart your journey into the backend world", 
+            title: "Swift Lambdas at Scale: How a Tiny iOS Team Built a Big Backend", 
             description: ComponentGroup {
-                Paragraph("Diving into a new world can be challenging and overwhelming. For those reasons, iOS developers often choose Vapor to build their backend, staying in the Swift realm. However, there are still many things to catch up on, as building a backend is as different from building an app as it is exciting!")
-                Paragraph("We’ll explore those differences with leverage and solutions, and we’ll dive into subjects like authentication, evolution, security, and tests! Get a kickstart into the backend world!")
+                Paragraph("SongShift started out as an iOS app where everything was done client side. As we grew, we wanted to move things to the server and needed a backend that could scale and function well without a dedicated backend team. We didn't have a backend team, we didn't want to manage servers, and we didn't want to switch to a completely different language just to make it work. This talk is meant to be a success story of how we were able to do exactly this with Swift.")
+                Paragraph("I will discuss how we built a production backend using Swift on AWS Lambda. I'll walk through how we integrated with services like API Gateway, DynamoDB, SQS, Step Functions, and KMS. I'll share how we kept it affordable, made it scale smoothly, and figured out successful CI/CD build strategies.")
+                Paragraph("We use MANY open source tools like Soto, the Swift AWS Lambda Runtime, and Terraform to keep things flexible and organized. Swift Concurrency helped us write clean, async-safe code that felt familiar coming from iOS. Since we were able to share SPM packages between the app and the backend, we could move faster and stay consistent across the stack. Serverless ended up being a fantastic fit for SongShift.")
+                Paragraph("If anyone is on edge about getting their feet wet with server-side Swift, I think I can make a great case for what server-side Swift can actually do in production and how easy it can be to adopt and get started.")
             }, 
-            speakerNames: ["Thomas Durand"],
-            order: 9,
-            youtubeVideoID: "IAN0dmIAoeU"
+            speakerNames: ["Ben Rosen"], 
+            order: 9
         ),
         Talk(
-            id: 10, 
-            title: "Shipping a SaaS Backend Using Vapor", 
+            id: 10,
+            title: "Exabyte Data Storage",
             description: ComponentGroup {
-                Paragraph("I'll share my journey of building and deploying a backend for a startup that focuses on sending emails using Swift and Vapor framework. We'll go through topics you'll likely need to address to build a backend REST API, such as user authentication, analytics, error reporting, as well as using AWS products such as S3 storage, and even collecting payments using Stripe.")
-                Paragraph("I hope to share a bit something interesting for everyone, especially iOS developers who are interesting in gaining more experience with server-related technologies.")
-            }, 
-            speakerNames: ["Petr Pavlik"],
-            order: 4,
-            youtubeVideoID: "QFuZq9PHkTo"
-        ),
-        Talk(
-            id: 11, 
-            title: "So You Think You Know Swift?", 
-            description: "The talk takes a deeper look at some of the common APIs in Swift to reveal lesser known features, as well as exposing underlying mechanisms such as copy-on-write or existential containers, and how they can affect both the behavior and the performance of your code.", 
-            speakerNames: ["Nick Lockwood"],
-            order: 16,
-            youtubeVideoID: "smkRzwANNQ8"
-        ), 
-        Talk(
-            id: 13, 
-            title: "Swift for WebAssembly", 
-            description: "WebAssembly is a rapidly growing technology that provides great opportunities for Swift developers. This talk will introduce Swift developers to WebAssembly, and demonstrate how they can run Swift in the browser, call JavaScript from Swift to access the DOM, add Swift modules to web apps, and so much more. The talk concludes with a demo that shows multiple WebAssembly clients communicating with a Vapor back-end through websockets.", 
-            speakerNames: ["Steven Van Impe"],
-            order: 10,
-            youtubeVideoID: "cJyNok8OAuE"    
-        ), 
-        Talk(
-            id: 14, 
-            title: "Swift, Server-Side, Serverless", 
-            description: ComponentGroup {
-                Paragraph("Swift developers have many options to deploy their server-side code. But did you consider serverless, with no server to manage or to scale by yourself, and only paying for actual usage?")
-                Paragraph("In this talk I will show you how to deploy your server-side Swift applications on AWS Lambda. I’ll start with a traditional Vapor or Hummingbird app running unmodified, then we will deploy native Swift Lambda function using the open source Lambda Swift runtime and a deployer Swift PM plugin.")
-                Paragraph {
-                    Text("This talk is heavily based on demo and hands-on, with minimum slides. The learning objective is to discover an alternate method to deploy server-side Swift code, with AWS Lambda. This talk is unique in two ways. First I will show how to deploy a traditional Vapor App on Lambda, without modification. Then I will show how to develop a native Swift Lambda function, ")
-                    Text("and deploy it").bold()
-                    Text("without having specific knowledge of AWS, just by using the open-source Swift packager and a deployer Swift PM plugins.")
-                }
+                Paragraph("We will demonstrate a Swift-based data storage solution, capable of storing and managing up to 100 exabytes of data. This data storage system is performant, scalable, distributed, and fully encrypted. It features: - Rapid user and key-to-file mapping with minimal and predictable disk seek time. - Robust chunk (blob) storage supporting fixed and variable chunk sizes. - Support for file checksums to ensure data integrity. - Automatic data healing to mitigate of bit rot. - Resilient architecture with no single point of failure, using automatic asynchronous replication. - Rack and data centre-aware replication with automatic performance monitoring and configuration adjustments. - Multi-layered metadata management optimised for data analysis and efficient compression of time-series data. - Automated recovery mechanisms to handle catastrophic hardware failures or complete data center outages. - Geographically-aware data storage to ensure compliance with regional data storage regulations (e.g., storing U.S. customer data exclusively in U.S.-based data centres) - Granular user- and organisation-based data access control.")
+                Paragraph("Data access is provided through REST APIs and customisable callback APIs tailored for client-specific data analysis crawlers")
             },
-            speakerNames: ["Sebastien Stormacq"],
-            order: 8,
-            youtubeVideoID: "M1POAEPATFo"
+            speakerNames: ["Georg Tuparev"],
+            order: 10
         ),
         Talk(
-            id: 15, 
-            title: "Swift to the cloud in a single step", 
+                id: 11,
+            title: "Protecting APIs with DeviceCheck, App Attest & WebAuthn",
             description: ComponentGroup {
-                Paragraph("As a server-side engineer today, it’s not enough to build a stand-alone executable for your service. You need to wrap it in a container image, ready to run on any standard public or private cloud infrastructure.")
-                Paragraph("In this talk we’ll see that building a container image for your Swift project can be as quick and easy as building a native executable. Using Swift Package Manager plugins and Swift SDKs, we can extend Swift Package Manager, adding a new command tailor-made for wrapping Swift programs in container images:")
+                Paragraph("This talk is all about Apple's underutilised DeviceCheck framework and how you can use this framework to protect your server-side APIs from fraudulent use. We'll dive into detail on App Attest and its use of Secure Enclave, CBOR encoding and the WebAuthn standard which is also used for Passkeys. I'll talk through a reference implementation of the required server-side validation built in Swift using Vapor.")
+                H3("Introduction to DeviceCheck framework")
+                Paragraph("I'll explain how DeviceCheck can be used:")
                 List {
-                    ListItem("Swift SDKs let us build Linux binaries directly on macOS. Builds are as fast as your native compiler, with no virtualisation overhead.")
-                    ListItem("A Swift Package Manager command plugin can build any target in Package.swift, wrap it in a container and upload it to the cloud. A Dockerfile isn’t needed because the plugin already knows what to do.")
+                    ListItem("prevent users reusing offers and promotions in your app if they delete and reinstall it or even completely reset the device. All of this works in a privacy-friendly way without you knowing the identity of users.")
+                    ListItem("detect and prevent access to your APIs from fraudulent copies of your app, this is the best answer to the question: “how do I secure API keys that my app needs?”")
                 }
-                Paragraph("We’ll see how Swift SDKs can help us to build binaries for several popular Linux distributions, and even build statically-linked binaries with no runtime dependencies. We’ll take a quick look at the contents of the generated container image.Finally, we’ll show how a command plugin ties the whole process together into a single command.")
+                H3("Asymmetric Cryptography")
+                Paragraph("I'll give a brief introduction to asymmetric cryptography and how we can validate that tokens our app has have come from Apple and have not been tampered with. I'll build on this by explaining how the Secure Enclave gives us assurance that device keys cannot be copied or removed from the device. This means that a device can continue to authenticate with us over time, and we can be totally sure that it is the same device as before.")
+                H3("App Attest")
                 Paragraph {
-                    Text("🧑‍💻 Check out Swift Container Plugin on GitHub.   Contributions welcome! - ")  
-                    Link("https://github.com/apple/swift-container-plugin", url: "https://github.com/apple/swift-container-plugin")
+                    Text("I'll talk through my ")
+                    Link("reference implementation", url: "https://github.com/Oliver-Binns/app-attest")
+                    Text("for App Attest which includes both the iOS client app and server-side validation using Swift and Vapor.")
+                }
+                Paragraph("We'll cover the implementation of App Attest step-by-step:")
+                List {
+                    ListItem("issuing a challenge from your backend")
+                    ListItem("using that challenge to fetch an app attestation object on iOS")
+                    ListItem("decode and validate the CBOR attestation object on your server")
+                    ListItem("communicating with Apple's service to check for additional indicators of fraud")
+                    ListItem("re-asserting as the same device for future requests")
+                }.listStyle(.ordered)
+                H3("Industry Standards")
+                Paragraph("Finally, I will touch on some emerging industry standards:")
+                List {
+                    ListItem("App Attest is built on the WebAuthn standard which is the same standard that is used for Passkeys. This standard uses CBOR key-value data encoding, which is more efficient than JSON but is not human readable.")
+                    ListItem("An alternative Client Attestation standard is also being developed as an extension of OAuth 2.0 which most apps use for login. This standard uses the JWT data format that app developers are more familiar with as access and refresh tokens.")
                 }
             },
-            speakerNames: ["Euan Harris"],
-            order: 12,
-            youtubeVideoID: "9AaINsCfZzw"
+            speakerNames: ["Oliver Binns"],
+            order: 11
         ),
         Talk(
-            id: 17, 
-            title: "Introduction to Hummingbird 2", 
-            description: "Hummingbird 2 is a major new framework for the Swift on Server ecosystem. It’s a feature rich, robust and performant solution, ready to implement your next server application! This talk will show you what’s new, and how it can help you build a robust and maintainable backend.",
-            speakerNames: ["Joannis Orlandos"],
-            order: 15,
-            youtubeVideoID: "FHO_BfidQlQ"
-        ),
-        Talk(
-            id: 18, 
-            title: "Just Save a File, It's Easy, Right?!",
-            description: "Upload a photo and download a photo, it's a quick feature right? We'll go through the journey of uploading and downloading a photo to a Vapor app hosted on Heroku. Easy peasy. But is it? We'll discover the pitfalls and what we can do to improve a feature that should be simple.",
-            speakerNames: ["Mikaela Caron"],
-            order: 6,
-            youtubeVideoID: "lHXjs3L2ads"
-        ),
-        Talk(
-            id: 19, 
-            title: "Swift and Interopability",
-            description: "A special conference keynote discussing the latest developments with Swift and Interoperability",
-            speakerNames: ["Tony Parker", "Ben Cohen"],
-            order: 1,
-            youtubeVideoID: "wn6C_XEv1Mo"
-        ),
+            id: 12,
+            title: "Write durable and resilient workflows in Swift",
+            description: "Talk details to be announced soon",
+            speakerNames: ["Franz Busch"],
+            order: 12
+        )
     ]
 }

@@ -37,7 +37,7 @@ struct Conference: Website {
 }
 
 // Creates a list with all speaker detail pages and adds them to the speakers section
-var speakers: [Item<Conference>] = AllSpeakers.speakers.map { speaker in
+var speakers: [Item<Conference>] = AllSpeakers.allSpeakers.map { speaker in
     Item<Conference>(
         path: Path(speaker.url),
         sectionID: .speakers,
