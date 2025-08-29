@@ -123,7 +123,7 @@ struct AllSpeakers {
             role: "iOS Developer", 
             company: "Decathlon", 
             bio: "My name is Emma and I'm a 27 frenchwoman currently working at Decathlon, a sporting goods company, as an iOS Developer. I started off working in marketing in small startups before growing bored of my job and quitting to learn how to build software. I built my first full-stack Swift app with Vapor and SwiftUI and haven't looked back since!", 
-            talkIDs: []
+            talkIDs: [2]
         ),
         Speaker(
             name: "Joannis Orlandos", 
@@ -131,13 +131,13 @@ struct AllSpeakers {
             twitter: "http://twitter.com/joannisorlandos",
             website: "https://swiftonserver.com/", 
             bio: "Joannis is a member of the Swift Server and Android Workgroups, and maintains for MongoKitten, Hummingbird and EdgeOS. Joannis helps clients implement Swift across their stack, from microcontrollers to iOS apps.", 
-            talkIDs: []
+            talkIDs: [3]
         ),
         Speaker(
             name: "Matt Massicotte", 
             role: "Apple Platforms Developer", 
             website: "https://www.massicotte.org/",
-            bio: "Matt keeps himself busy with training, consulting, writing, and working on open source projects. From individuals all the way up to large teams, he loves working with people to understand and solve problems. He's been developing for Apple platforms for about 30 years.", talkIDs: []
+            bio: "Matt keeps himself busy with training, consulting, writing, and working on open source projects. From individuals all the way up to large teams, he loves working with people to understand and solve problems. He's been developing for Apple platforms for about 30 years.", talkIDs: [4]
         ),
         Speaker(
             name: "Honza Dvorsky", 
@@ -145,13 +145,13 @@ struct AllSpeakers {
             company: "Apple", 
             website: "https://honzadvorsky.com/", 
             bio: "I'm Honza, a software engineer from the Czech Republic. I started as an iOS developer and over the past 9 years at Apple, I've been building developer tools and libraries - from Xcode, XCTest, and Xcode Cloud to more recently helping shape the Swift Server ecosystem through Swift OpenAPI Generator", 
-            talkIDs: []),
+            talkIDs: [5]),
         Speaker(
             name: "George Barnett",
             role: "Software Engineer",
             company: "Apple",
             bio: "George is a software engineer at Apple working predominantly on open-source Swift libraries. He's the primary maintainer of gRPC Swift and a member of the SwiftNIO core team. George is interested in building and maintaining easy-to-use libraries and has done so across a smorgasbord of domains from networking and database drivers, to observability and beyond.",
-            talkIDs: []
+            talkIDs: [6]
         ),
         Speaker(
             name: "Moritz Lang", 
@@ -172,7 +172,7 @@ struct AllSpeakers {
                     Text(".")
                 }
             }, 
-            talkIDs: []
+            talkIDs: [7]
         ),
         Speaker(
             name: "Adam Fowler", 
@@ -186,17 +186,54 @@ struct AllSpeakers {
                     Text("In his spare time he enjoys cycling, photography and eating out.")
                 }
             }, 
-            talkIDs: []
+            talkIDs: [8]
         ),
         Speaker(
             name: "Ben Rosen", 
-            role: "Open Source Developer",
+            role: "Founder",
+            company: "SongShift",
             twitter: "http://twitter.com/benmrosen",
             website: "https://benrosen.me/", 
             bio: "I am 22 years old, from Chicago, IL. and have been programming since I was 11 years old. My app, SongShift, has been on the App Store since 2016 and I have watched and contributed to growing it from a small app to one that is widely used and loved. During college I did 2 internships at Apple but decided to work on SongShift full time. After that, we partnered with Apple Music to integrate our transfer tool DIRECTLY into Apple Music (https://www.theverge.com/news/668369/apple-music-transfer-tool-library-playlists). This is entirely built with server-side Swift. I want people to know about me because I want to continue to spread the word that what I do is powered by these cool server-side Swift technologies. I want to know that I am someone people can contact and I want to be a friendly face for them.",
-            talkIDs: []
+            talkIDs: [9]
         ),
-
+        // Speaker(
+        //     name: "Mona Dierickx", 
+        //     role: "Applied Informatics graduate", 
+        //     website: "https://www.linkedin.com/in/mona-dierickx/",
+        //     bio: "Hi there! I am Mona, a recent Applied Informatics graduate who is passionate about the possible ways to apply AI to solve real-life problems.",
+        //     talkIDs: [1]
+        // ),
+        Speaker(
+            name: "Georg Tuparev", 
+            role: "Founder",
+            company: "Tuparev Software",
+            twitter: "http://twitter.com/tuparev",
+            website: "https://www.tuparev.com/",
+            bio: ComponentGroup {
+                Paragraph("My first real experience with computers was as a teenager when I created a simple application to control my homemade telescope on an Apple ][e. Soon after, I learned to program IBM 370 mainframes, writing FORTRAN programs to calculate FFTs for variable stars, as well as a PL/1-based accounting system. Before finishing high school, I programmed the weather station for Bulgaria’s first satellite and contributed to the development of the control software for the Bulgarian Academy of Sciences’ 2-meter telescope.")
+                Paragraph("During my university studies in Heidelberg, Germany, and subsequent research at the European Molecular Biology Laboratory (EMBL), my work centred around protein folding and computer graphics using Silicon Graphics, SUN, DEC Alpha, Maspar, and NeXT computers. In this period, I developed the first Braille driver for NeXTStep, co-organised two scientific computing conferences, hosted the GNUStep project for two years, and contributed significantly to the MiscKit framework for NeXTStep. Additionally, I was an early adopter and contributor to the WebObjects framework (initially Objective-C-based, later Java-based).")
+                Paragraph("I started developing for NeXTStep around 1990. Alongside engaging extensively in open source projects, I worked on a database for storing infrared astronomical images and developed image-processing software for NMR crystallographic data. Later, I was involved in the initial implementation of Apple’s VoiceOver accessibility technology and presented frequently on Apple’s behalf to the European banking and finance sectors. I also delivered a presentation at Apple’s WWDC focused on scientific applications.")
+                Paragraph("During the last 25 or so years, my team worked on several highly complex systems. Examples include: - An educational portal for the Ministry of Education in Lower Saxony, Germany. - A legal documentation system for the Baden-Württemberg Police Department, Germany. - The Mars Rover image archive for NASA. - A fully robotic astronomical observatory control system, deployed in observatories across the U.S., South Africa, and Europe. - The largest inter-bank document and transaction exchange system in the Netherlands (ongoing) - Observatory control, image processing, and large-scale data storage solutions for space debris monitoring stations (ongoing).")
+            },
+            talkIDs: [10]
+        ),
+        // Speaker(
+        //     name: "Oliver Binns", 
+        //     role: "Software Engineer", 
+        //     company: "Deloitte LLC", 
+        //     website: "https://www.oliverbinns.co.uk/",
+        //     bio: "Oliver is an experienced software engineer based in London. After attaining an IET accredited master’s degree in Computer Science from the University of York, he started his career building websites in PHP and JavaScript, before pivoting into native iOS development. He has worked on highly-rated mobile apps for airlines, healthcare organisations and even government departments. Oliver was shortlisted for British Computer Society’s Engineer of the Year 2024.", 
+        //     talkIDs: [11]
+        // ),
+        Speaker(
+            name: "Franz Busch", 
+            role: "Software Engineer", 
+            company: "Apple", 
+            twitter: "http://twitter.com/FranzJBusch",
+            bio: "Franz is a member of a team developing foundational Swift libraries at Apple primarily focused on networking and concurrency. Franz is also a member of the Swift Ecosystem Steering and Server working group. Before joining Apple, Franz spent a decade working in the mobile applications space.", 
+            talkIDs: [12]
+        )
     ]
 }
 

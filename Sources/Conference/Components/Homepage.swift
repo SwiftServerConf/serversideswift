@@ -58,15 +58,15 @@ struct Homepage: Component {
                             }.class("h3")
                             Paragraph {
                                 Text("We'll have a packed schedule full of amazing talks, workshops and labs from some amazing speakers and trainers. ")
-                                // Link("Take a look!", url: "/schedule")
-                                // Text(" at the current schedule.")
-                                Text("The schedule will be released soon!")
+                                Link("Take a look!", url: "/schedule")
+                                Text(" at the current schedule.")
+                                // Text("The schedule will be released soon!")
                             }
-                            Paragraph {
-                                Text("If you'd like to speak, you can ")
-                                Link("apply via our CFP", url: "https://www.papercall.io/serversideswift-2025").linkTarget(.blank)
-                                Text(".")
-                            }
+                            // Paragraph {
+                            //     Text("If you'd like to speak, you can ")
+                            //     Link("apply via our CFP", url: "https://www.papercall.io/serversideswift-2025").linkTarget(.blank)
+                            //     Text(".")
+                            // }
                         }.class("col-12 col-sm-6 mt-2 mb-2")
                         
                         Div {

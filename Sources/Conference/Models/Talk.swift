@@ -57,11 +57,136 @@ struct AllTalks {
     static let talks: [Talk] = [
         Talk(
             id: 1,
-            title: "When to Make a Macro",
-            description: "Over the years you have developed a collection of techniques for reducing repetitive and boilerplate code for server side Swift. If you are using Swift 5.9 or above you should consider adding Swift Macros to your tool belt. This fast moving session introduces you to freestanding and attached macros with some examples from each type that shows you when you should use them and how.",
-            speakerNames: ["Daniel Steinberg"],
-            order: 2,
-            youtubeVideoID: "MroBR2ProT0"
+            title: "Unlock Generative AI for Swift Server-Side Development",
+            description: "In the rapidly evolving landscape of artificial intelligence, Swift developers are looking to integrate powerful language models into their applications. While AWS's Amazon Bedrock provides access to leading LLMs and generative AI capabilities, working with these services in strongly-typed languages like Swift presents unique challenges. The varying payload structures across different LLMs, combined with automatically generated SDKs that don't always align with Swift's elegant syntax patterns, can make implementation complex. This created an opportunity to develop a more Swift-idiomatic approach to working with Bedrock. So, I created the Swift Bedrock Library, that forms a layer on top of the AWS SDK for Swift for interacting with Amazon Bedrock. This library provides a convenient way to access Amazon Bedrock's capabilities from Swift applications. By providing clear, concise, and Swift-specific implementations, it accelerates the learning curve and enables developers to quickly take advantage of Bedrock's advanced models. From streaming chat to image generation or variation, the library covers a wide range of use cases. I also worked on the Swift Foundation Model Playground, an example web app that demonstrates the use of the Swift Bedrock Library. It is built with a front-end in React and a backend that uses Hummingbird. To help out developers that prefer to use the AWS SDK for Swift as is, I created the very first Swift code examples for Bedrock Runtime. These are now a part of the official AWS documentation and include chatting with Amazon Nova, Meta Llama and Anthropic Claude both with and without streaming responses. During my talk I will share the process I went through to during my internship and how the work I did can improve your experience when you decide to implement AI in your next project.",
+            speakerNames: ["Mona Dierickx"],
+            order: 1
         ),
+        Talk(
+            id: 2,
+            title: "Battle of the Giants: Vapor vs Hummingbird which one should you choose?",
+            description: ComponentGroup {
+                Paragraph("There a wealth of server frameworks out there and it can be hard to make a decision on what framework to use. When opting for Swift as a server side programming languages there's a wealth of possibilities. However, two standout: Vapor and Hummingbird. Making a decision can be difficult, especially if one isn't aware of the tradeoffs picking one over the other entails. This talk aim is twofold: firstly, to compare and contrast both server-side frameworks. Secondly, to draw on their strengths and weaknesses to identify what use cases fit best with one or the other, giving attendees a way to evaluate their options, consider the different tradeoffs and ultimately make a better, more informed decision.")
+                Paragraph("I'll start by rapidly introducing the benefits of writing Swift on the Server, the different options that are available to developers, some dead projects before narrowing down to the two Giants, Vapor and Hummingbird.")
+                Paragraph("The first part of the talk will compare and contrast both frameworks. I'll run through the basic features of modern HTTP servers (routing, persistence, CORS, …) and compare how Vapor and Hummingbird have implemented them, specifically focusing on the Developer Experience.")
+                Paragraph("The second part of the talk will be more opinionated and focus heavily on the advantages of picking one over the other. What are you sacrificing when picking Hummingbird over Vapor? What about the other way around? The second part of this talk should leave you with a sense of how to make those decisions and what framework to use when making decisions.")
+                Paragraph("Ultimately my goal is for you to walk away from this talk being able to answer these two questions:")
+                List {
+                    ListItem("What are the main differences between Vapor and Hummingbird? What are their similarities?")
+                    ListItem("What are the main tradeoffs when picking one over the other?")
+                }
+            },
+            speakerNames: ["Emma GAUBERT"],
+            order: 2
+        ),
+        Talk(
+            id: 3,
+            title: "Building Networking Libraries with Span and Concurrency",
+            description: ComponentGroup {
+                Paragraph("Networking is the fundamental backbone of Swift on Server. By combining the efficiency and ergonomics of Swift, you can make an incredibly scalable yet maintainable backend. In this talk, I'll show you the how and what of networking in Swift.")
+                Paragraph("This talk dives into new and improved language features, such as Spans, Advanced Concurrency use and handling I/O.")
+            },
+            speakerNames: ["Joannis Orlandos"],
+            order: 3
+        ),
+        Talk(id: 4, title: "How to Approach Approachable Concurrency", description: ComponentGroup {
+            Paragraph("The Swift language has gone through many significant changes recently and this year is no different. We're now seeing some of the results of efforts to improve the approachability of data race safety. Many developers have found concurrency incredibly difficult to understand, making any improvements welcome. But, how can we use these new facilities to make our transition to Swift 6 easier?")
+            Paragraph("We'll go through not just what new tools we have, but why they were introduced. Whether you are just now getting started or have lots of experience with concurrency, together we can deepen our understanding of the language. You'll come away feeling confident deciding how to best approach approachable concurrency for your project.")
+        }, speakerNames: ["Matt Massicotte"], order: 4),
+        Talk(id: 5, title: "To Be Announced", description: "Details of this talk will be released soon", speakerNames: ["Honza Dvorsky"], order: 5),
+        Talk(id: 6, title: "Getting started with gRPC Swift", description: "Looking to build fast, type-safe APIs in Swift? gRPC offers a high-performance alternative to REST using Protocol Buffers and HTTP/2. This session provides a brief introduction to gRPC Swift, guiding you through the concepts of gRPC, defining services in .proto files, generating Swift code, and implementing both clients and servers for various RPC types. Learn how gRPC Swift streamlines development and boosts performance for your applications.", speakerNames: ["George Barnett"], order: 6),
+        Talk(
+            id: 7, 
+            title: "Observability in Server-Side Swift", 
+            description: ComponentGroup {
+                Paragraph("This talk provides an overview of observability in server-side Swift, comprised of Logging, Metrics, and Distributed Tracing. I'll start off by introducing and comparing the three fundamental API packages (swift-log / swift-metrics / swift-distributed-tracing), the latter of which I co-created as part of Google Summer of Code in 2020.")
+                Paragraph("Throughout the talk, I'll be using a microservice-based server-side Swift backend, gradually adding more and more observability to it. This demo is powered by OpenTelemetry via the Swift OTel package, sending the observability data to a handful of backends.")
+                Paragraph("At the end of my talk, you should understand what the three pillars of observability are and how to make use of them in your server-side Swift projects. As a bonus, you'll also learn about the OpenTelemetry project.")
+                Paragraph("Links:")
+                List {
+                    ListItem {
+                        Link("GitHub: apple/swift-log", url: "https://github.com/apple/swift-log")
+                    }
+                    ListItem {
+                        Link("GitHub: apple/swift-metrics", url: "https://github.com/apple/swift-metrics")
+                    }
+                    ListItem {
+                        Link("GitHub: apple/swift-distributed-tracing", url: "https://github.com/apple/swift-distributed-tracing")
+                    }
+                    ListItem {
+                        Link("GitHub: swift-otel", url: "https://github.com/swift-otel")
+                    }
+                }
+            }, 
+            speakerNames: ["Moritz Lang"], 
+            order: 7
+        ),
+        Talk(id: 8, title: "Introduction to Valkey-swift", description: "Valkey-swift is a new client library for Valkey, the in memory database. This talk will provide you with an introduction to both Valkey and the valkey-swift client. You will learn how Valkey is so much more than just a key/value datastore and how the valkey-swift client gives you access to some of Valkey's more advanced features.", speakerNames: ["Adam Fowler"], order: 8),
+        Talk(
+            id: 9, 
+            title: "Swift Lambdas at Scale: How a Tiny iOS Team Built a Big Backend", 
+            description: ComponentGroup {
+                Paragraph("SongShift started out as an iOS app where everything was done client side. As we grew, we wanted to move things to the server and needed a backend that could scale and function well without a dedicated backend team. We didn't have a backend team, we didn't want to manage servers, and we didn't want to switch to a completely different language just to make it work. This talk is meant to be a success story of how we were able to do exactly this with Swift.")
+                Paragraph("I will discuss how we built a production backend using Swift on AWS Lambda. I'll walk through how we integrated with services like API Gateway, DynamoDB, SQS, Step Functions, and KMS. I'll share how we kept it affordable, made it scale smoothly, and figured out successful CI/CD build strategies.")
+                Paragraph("We use MANY open source tools like Soto, the Swift AWS Lambda Runtime, and Terraform to keep things flexible and organized. Swift Concurrency helped us write clean, async-safe code that felt familiar coming from iOS. Since we were able to share SPM packages between the app and the backend, we could move faster and stay consistent across the stack. Serverless ended up being a fantastic fit for SongShift.")
+                Paragraph("If anyone is on edge about getting their feet wet with server-side Swift, I think I can make a great case for what server-side Swift can actually do in production and how easy it can be to adopt and get started.")
+            }, 
+            speakerNames: ["Ben Rosen"], 
+            order: 9
+        ),
+        Talk(
+            id: 10,
+            title: "Exabyte Data Storage",
+            description: ComponentGroup {
+                Paragraph("We will demonstrate a Swift-based data storage solution, capable of storing and managing up to 100 exabytes of data. This data storage system is performant, scalable, distributed, and fully encrypted. It features: - Rapid user and key-to-file mapping with minimal and predictable disk seek time. - Robust chunk (blob) storage supporting fixed and variable chunk sizes. - Support for file checksums to ensure data integrity. - Automatic data healing to mitigate of bit rot. - Resilient architecture with no single point of failure, using automatic asynchronous replication. - Rack and data centre-aware replication with automatic performance monitoring and configuration adjustments. - Multi-layered metadata management optimised for data analysis and efficient compression of time-series data. - Automated recovery mechanisms to handle catastrophic hardware failures or complete data center outages. - Geographically-aware data storage to ensure compliance with regional data storage regulations (e.g., storing U.S. customer data exclusively in U.S.-based data centres) - Granular user- and organisation-based data access control.")
+                Paragraph("Data access is provided through REST APIs and customisable callback APIs tailored for client-specific data analysis crawlers")
+            },
+            speakerNames: ["Georg Tuparev"],
+            order: 10
+        ),
+        Talk(
+                id: 11,
+            title: "Protecting APIs with DeviceCheck, App Attest & WebAuthn",
+            description: ComponentGroup {
+                Paragraph("This talk is all about Apple's underutilised DeviceCheck framework and how you can use this framework to protect your server-side APIs from fraudulent use. We'll dive into detail on App Attest and its use of Secure Enclave, CBOR encoding and the WebAuthn standard which is also used for Passkeys. I'll talk through a reference implementation of the required server-side validation built in Swift using Vapor.")
+                H3("Introduction to DeviceCheck framework")
+                Paragraph("I'll explain how DeviceCheck can be used:")
+                List {
+                    ListItem("prevent users reusing offers and promotions in your app if they delete and reinstall it or even completely reset the device. All of this works in a privacy-friendly way without you knowing the identity of users.")
+                    ListItem("detect and prevent access to your APIs from fraudulent copies of your app, this is the best answer to the question: “how do I secure API keys that my app needs?”")
+                }
+                H3("Asymmetric Cryptography")
+                Paragraph("I'll give a brief introduction to asymmetric cryptography and how we can validate that tokens our app has have come from Apple and have not been tampered with. I'll build on this by explaining how the Secure Enclave gives us assurance that device keys cannot be copied or removed from the device. This means that a device can continue to authenticate with us over time, and we can be totally sure that it is the same device as before.")
+                H3("App Attest")
+                Paragraph {
+                    Text("I'll talk through my ")
+                    Link("reference implementation", url: "https://github.com/Oliver-Binns/app-attest")
+                    Text("for App Attest which includes both the iOS client app and server-side validation using Swift and Vapor.")
+                }
+                Paragraph("We'll cover the implementation of App Attest step-by-step:")
+                List {
+                    ListItem("issuing a challenge from your backend")
+                    ListItem("using that challenge to fetch an app attestation object on iOS")
+                    ListItem("decode and validate the CBOR attestation object on your server")
+                    ListItem("communicating with Apple's service to check for additional indicators of fraud")
+                    ListItem("re-asserting as the same device for future requests")
+                }.listStyle(.ordered)
+                H3("Industry Standards")
+                Paragraph("Finally, I will touch on some emerging industry standards:")
+                List {
+                    ListItem("App Attest is built on the WebAuthn standard which is the same standard that is used for Passkeys. This standard uses CBOR key-value data encoding, which is more efficient than JSON but is not human readable.")
+                    ListItem("An alternative Client Attestation standard is also being developed as an extension of OAuth 2.0 which most apps use for login. This standard uses the JWT data format that app developers are more familiar with as access and refresh tokens.")
+                }
+            },
+            speakerNames: ["Oliver Binns"],
+            order: 11
+        ),
+        Talk(
+            id: 12,
+            title: "Write durable and resilient workflows in Swift",
+            description: "Talk details to be announced soon",
+            speakerNames: ["Franz Busch"],
+            order: 12
+        )
     ]
 }
