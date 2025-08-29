@@ -233,6 +233,16 @@ struct AllSpeakers {
             twitter: "http://twitter.com/FranzJBusch",
             bio: "Franz is a member of a team developing foundational Swift libraries at Apple primarily focused on networking and concurrency. Franz is also a member of the Swift Ecosystem Steering and Server working group. Before joining Apple, Franz spent a decade working in the mobile applications space.", 
             talkIDs: [12]
+        ),
+        Speaker(
+            name: "Mads Odgaard",
+            role: "Software Engineer",
+            website: "https://www.madsodgaard.com/",
+            bio: ComponentGroup {
+                Paragraph("I am a recent graduate of Computer Science at Aarhus University, Denmark. Currently, my position is Tech Lead at Frameo. I have been coding since child, especially doing iOS development. Swift is my favourite language and I have been involved in the Server-Side Swift community for quite some years now. I am very interested in programming languages, compilers and cryptography.")
+                Paragraph("Outside of coding, I love being active and playing music!")
+            },
+            talkIDs: [13]
         )
     ]
 }

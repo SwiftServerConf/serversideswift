@@ -187,6 +187,16 @@ struct AllTalks {
             description: "Talk details to be announced soon",
             speakerNames: ["Franz Busch"],
             order: 12
+        ),
+        Talk(
+            id: 13,
+            title: "Expanding Swift/Java Interoperability",
+            description: ComponentGroup {
+                Paragraph("While Swift Java interoperability always allowed implementing Java native functions, or even calling Java code using JNI. And the the “jextract” mode of the swift-java tool can be used to automatically generate bindings for existing Swift libraries. Previously, this mode required the use of modern JDK versions and the Foreign Function and Memory APIs, and was unavailable to deployments using older Java versions, or platforms like e.g. Android.")
+                Paragraph("During this year’s Google Summer of Code, we worked on extending swift-java’s jextract mode to support JNI as a fallback mechanism when the modern FFM APIs are not available. This means that we’re now able to jextract entire Swift libraries and use them in Android applications! With the new Swift Android working group and the work on a official Android SDK, we believe this extension to Java interoperability will be very beneficial to the Swift on Android efforts! In this talk we will cover how the FFM mode and JNI modes work and differ. We will demonstrate how to build a Swift library that is shared across both Swift, Java (FFM) and Android (JNI)")
+            },
+            speakerNames: ["Mads Odgaard"],
+            order: 13   
         )
     ]
 }
