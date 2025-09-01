@@ -197,13 +197,13 @@ struct AllSpeakers {
             bio: "I am 22 years old, from Chicago, IL. and have been programming since I was 11 years old. My app, SongShift, has been on the App Store since 2016 and I have watched and contributed to growing it from a small app to one that is widely used and loved. During college I did 2 internships at Apple but decided to work on SongShift full time. This is entirely built with server-side Swift. I want people to know about me because I want to continue to spread the word that what I do is powered by these cool server-side Swift technologies. I want to know that I am someone people can contact and I want to be a friendly face for them.",
             talkIDs: [9]
         ),
-        // Speaker(
-        //     name: "Mona Dierickx", 
-        //     role: "Applied Informatics graduate", 
-        //     website: "https://www.linkedin.com/in/mona-dierickx/",
-        //     bio: "Hi there! I am Mona, a recent Applied Informatics graduate who is passionate about the possible ways to apply AI to solve real-life problems.",
-        //     talkIDs: [1]
-        // ),
+        Speaker(
+            name: "Mona Dierickx", 
+            role: "Applied Informatics graduate", 
+            website: "https://www.linkedin.com/in/mona-dierickx/",
+            bio: "Hi there! I am Mona, a recent Applied Informatics graduate who is passionate about the possible ways to apply AI to solve real-life problems.",
+            talkIDs: [1]
+        ),
         Speaker(
             name: "Georg Tuparev", 
             role: "Founder",
@@ -243,7 +243,8 @@ struct AllSpeakers {
                 Paragraph("Outside of coding, I love being active and playing music!")
             },
             talkIDs: [13]
-        )
+        ),
+        Speaker(name: "Eric Ernst", role: "Software Engineering Leader", company: "Apple", image: "/App/Images/speakers/eric-ernst.png", twitter: "http://twitter.com/egernst", bio: "Eric Ernst is a software engineering leader at Apple, where he focuses on virtualization, containers, container runtimes and Kubernetes.", talkIDs: [14])
     ]
 }
 

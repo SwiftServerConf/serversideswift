@@ -197,6 +197,24 @@ struct AllTalks {
             },
             speakerNames: ["Mads Odgaard"],
             order: 13   
+        ),
+        Talk(
+            id: 14, 
+            title: "Beyond Web Services: Swift for Low-Level Container infrastructure", 
+            description: ComponentGroup {
+                Paragraph("With the Containerization and Container open source projects that Apple launched in June, we have shown that Swift is a compelling choice for systems-level infrastructure, expanding beyond its traditional application development roots. In this talk, we’ll dive into our newly released container runtime project built entirely in Swift, exploring why we chose Swift and what we learned along the way")
+                Paragraph("We’ll cover:")
+                List {
+                    ListItem("Overview of Containerization")
+                    ListItem("Core goals and design principles that drove our architectural decisions")
+                    ListItem("Key Swift packages we created to facilitate a container runtime")
+                    ListItem("Using Swift for systems development")
+                    ListItem("Our experience as a team learning Swift and using it for low-level systems programming.")
+                }
+                Paragraph("This talk will demonstrate that Swift’s reach extends far beyond iOS apps and web services—it’s a viable, powerful choice for the most demanding systems programming tasks.")
+            }, 
+            speakerNames: ["Eric Ernst"], 
+            order: 14
         )
     ]
 }
