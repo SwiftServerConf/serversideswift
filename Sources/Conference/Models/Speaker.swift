@@ -218,14 +218,14 @@ struct AllSpeakers {
             },
             talkIDs: [10]
         ),
-        // Speaker(
-        //     name: "Oliver Binns", 
-        //     role: "Software Engineer", 
-        //     company: "Deloitte LLC", 
-        //     website: "https://www.oliverbinns.co.uk/",
-        //     bio: "Oliver is an experienced software engineer based in London. After attaining an IET accredited master’s degree in Computer Science from the University of York, he started his career building websites in PHP and JavaScript, before pivoting into native iOS development. He has worked on highly-rated mobile apps for airlines, healthcare organisations and even government departments. Oliver was shortlisted for British Computer Society’s Engineer of the Year 2024.", 
-        //     talkIDs: [11]
-        // ),
+        Speaker(
+            name: "Oliver Binns", 
+            role: "Software Engineer", 
+            company: "Deloitte LLC", 
+            website: "https://www.oliverbinns.co.uk/",
+            bio: "Oliver is an experienced software engineer based in London. After attaining an IET accredited master’s degree in Computer Science from the University of York, he started his career building websites in PHP and JavaScript, before pivoting into native iOS development. He has worked on highly-rated mobile apps for airlines, healthcare organisations and even government departments. Oliver was shortlisted for British Computer Society’s Engineer of the Year 2024.", 
+            talkIDs: [11]
+        ),
         Speaker(
             name: "Franz Busch", 
             role: "Software Engineer", 

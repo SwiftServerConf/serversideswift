@@ -145,7 +145,7 @@ struct AllTalks {
             order: 10
         ),
         Talk(
-                id: 11,
+            id: 11,
             title: "Protecting APIs with DeviceCheck, App Attest & WebAuthn",
             description: ComponentGroup {
                 Paragraph("This talk is all about Apple's underutilised DeviceCheck framework and how you can use this framework to protect your server-side APIs from fraudulent use. We'll dive into detail on App Attest and its use of Secure Enclave, CBOR encoding and the WebAuthn standard which is also used for Passkeys. I'll talk through a reference implementation of the required server-side validation built in Swift using Vapor.")
