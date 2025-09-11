@@ -16,7 +16,8 @@ struct Schedule: Component {
                                     Div {
                                         let headerRow = TableRow {
                                             TableHeaderCell("When").attribute(named: "scope", value: "col").class("time-column")
-                                            TableHeaderCell("What").attribute(named: "scope", value: "col").attribute(named: "colspan", value: "2")
+                                            TableHeaderCell("Beginnner Workshop Track").attribute(named: "scope", value: "col")
+                                            TableHeaderCell("Experienced Workshop Track").attribute(named: "scope", value: "col")
                                         }
                                         Table(header: headerRow) {
                                             TableRow {
@@ -25,7 +26,7 @@ struct Schedule: Component {
                                             }
                                             TableRow {
                                                 TableCell("9:30 - 12:30").class("text-center font-weight-bold")
-                                                TableCell("Beginner Workshop Morning Session")
+                                                createWorkshopRow(speakerName: "Daniel Steinberg")
                                                 createWorkshopRow(speakerName: "Matt Massicotte")
                                             }
                                             TableRow {
@@ -34,7 +35,7 @@ struct Schedule: Component {
                                             }
                                             TableRow {
                                                 TableCell("14:00 - 17:00").class("text-center font-weight-bold")
-                                                TableCell("Beginner Workshop Afternoon Session")
+                                                createWorkshopRow(speakerName: "Daniel Steinberg")
                                                 createWorkshopRow(speakerName: "Frank Lefebvre")
                                             }
                                         }.class("table table-striped table-bordered")

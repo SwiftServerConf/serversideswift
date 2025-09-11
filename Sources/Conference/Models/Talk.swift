@@ -229,9 +229,27 @@ struct AllTalks {
             order: 15,
             isWorkshop: true
         ),
-        Talk(id: 16, title: "Understanding Isolation", description: ComponentGroup {
-            Paragraph("The foundation of Swift Concurrency’s data race safety system is isolation. It is something many people struggle to understand, but using concurrency with success requires both a solid mental model as well as a command of the language features involved.")
-            Paragraph("We’re going to cover all forms of static isolation, learn what dynamic isolation is and when to use it. And, we’ll also cover what Sendable is and how close a relationship it has with isolation. There will be an emphasis on approachable concurrency and how to understand and incorporate the newest language features.")
-        }, speakerNames: ["Matt Massicotte"], order: 16, isWorkshop: true)
+        Talk(
+            id: 16, 
+            title: "Understanding Isolation", 
+            description: ComponentGroup {
+                Paragraph("The foundation of Swift Concurrency’s data race safety system is isolation. It is something many people struggle to understand, but using concurrency with success requires both a solid mental model as well as a command of the language features involved.")
+                Paragraph("We’re going to cover all forms of static isolation, learn what dynamic isolation is and when to use it. And, we’ll also cover what Sendable is and how close a relationship it has with isolation. There will be an emphasis on approachable concurrency and how to understand and incorporate the newest language features.")
+            }, 
+            speakerNames: ["Matt Massicotte"], 
+            order: 16, 
+            isWorkshop: true
+        ),
+        Talk(
+            id: 17, 
+            title: "Swift Server Fundamentals", 
+            description: ComponentGroup {
+                Paragraph("In this hand-on workshop, learn how to build modern Swift server applications using Vapor 4, Swift OpenAPI, Swift ServiceLifecycle, Fluent with SQLite and Postgres, and serverless deployment with AWS.  Start by building `GET` endpoints to handle questions, then create a `PollsApp` where you build a database-connected application, and finally learn how to deploy applications.")
+                Paragraph("This workshop consists of four 90-minute sessions where participants build an application that builds upon previous work. You are expected to bring your own laptop as we build the `PollsApp` together.")
+            }, 
+            speakerNames: ["Daniel Steinberg", "Nick Shook", "Agam Dua"], 
+            order: 17, 
+            isWorkshop: true
+        )
     ]
 }

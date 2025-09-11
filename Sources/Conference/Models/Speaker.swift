@@ -71,6 +71,7 @@ struct Speaker {
 struct AllSpeakers {
     static let emcee: Speaker = allSpeakers[0]
     static let instructors: [Speaker] = [
+        allSpeakers[0],
         allSpeakers[3],
         allSpeakers[15],
 
@@ -119,7 +120,7 @@ struct AllSpeakers {
                     Text(".")
                 }
             },
-            talkIDs: []
+            talkIDs: [17]
         ),
         Speaker(
             name: "Emma GAUBERT", 
