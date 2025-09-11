@@ -16,12 +16,26 @@ struct Schedule: Component {
                                     Div {
                                         let headerRow = TableRow {
                                             TableHeaderCell("When").attribute(named: "scope", value: "col").class("time-column")
-                                            TableHeaderCell("What").attribute(named: "scope", value: "col")
+                                            TableHeaderCell("What").attribute(named: "scope", value: "col").attribute(named: "colspan", value: "2")
                                         }
                                         Table(header: headerRow) {
                                             TableRow {
                                                 TableCell("09:00 - 09:45").class("text-center font-weight-bold")
-                                                TableCell("Breakfast and Registration")
+                                                TableCell("Breakfast and Registration").attribute(named: "colspan", value: "2")
+                                            }
+                                            TableRow {
+                                                TableCell("9:30 - 12:30").class("text-center font-weight-bold")
+                                                TableCell("Beginner Workshop Morning Session")
+                                                createWorkshopRow(speakerName: "Matt Massicotte")
+                                            }
+                                            TableRow {
+                                                TableCell("12:30 - 14:00").class("text-center font-weight-bold")
+                                                TableCell("Lunch").attribute(named: "colspan", value: "2")
+                                            }
+                                            TableRow {
+                                                TableCell("14:00 - 17:00").class("text-center font-weight-bold")
+                                                TableCell("Beginner Workshop Afternoon Session")
+                                                createWorkshopRow(speakerName: "Frank Lefebvre")
                                             }
                                         }.class("table table-striped table-bordered")
                                     }.class("panel")
@@ -87,7 +101,7 @@ struct Schedule: Component {
                                                TableCell("19:00 - 21:00").class("text-center font-weight-bold")
                                                TableCell {
                                                     H6("NSLondon x ServerSide.swift Social").class("speakers-list-speaker-name")
-                                                    Link("Meetup Details", url: "https://www.meetup.com/nslondon/events/308499113/")
+                                                    Link("Meetup Details", url: "https://www.meetup.com/nslondon/events/308499113/").linkTarget(.blank)
                                                }
                                            }
                                        }.class("table table-striped table-bordered")
@@ -223,6 +237,47 @@ struct Schedule: Component {
         }
     }
 
+    func createWorkshopRow(speakerName: String) -> TableCell {
+        if let speaker = AllSpeakers.instructors.first(where: { $0.name == speakerName }) {
+            return createWorkshopRow(speaker: speaker)
+        } else {
+            return TableCell {
+                Div {
+                    Text("Workshop TBA")
+                }
+            }
+        }
+    }
+
+    func createWorkshopRow(speaker: Speaker) -> TableCell {
+        TableCell {
+            Div {
+                Div {
+                    Span {
+                            Link(url: "/speakers/\(speaker.url)") {
+                                Image(url: speaker.image, description: speaker.name)
+                            }
+                        }.class("avatar")
+                }.class("avatars")
+                Div {
+                    List {
+                        Link(speaker.name, url: "/speakers/\(speaker.url)").class("speakers-list-speaker-name")
+                    }.class("speaker-list")
+                    Node.br()
+                    if let talk = speaker.talks.first(where: { $0.isWorkshop }) {
+                        Node.a(
+                            .attribute(named: "href"),
+                            .attribute(named: "data-toggle", value: "modal"),
+                            .attribute(named: "data-target", value: "#global-modal"),
+                            .attribute(named: "data-title", value: talk.title),
+                            .attribute(named: "data-description", value: talk.description.render().replacingOccurrences(of: "\"", with: "&quot;")),
+                            .component(Text(talk.title)))
+                    }
+                }.class("talk-info")
+            }.class("talk")
+        }
+    }
+
     func createTalkRow(speakers: [Speaker]) -> TableCell {
         TableCell {
             Div {
@@ -244,7 +299,7 @@ struct Schedule: Component {
                         }
                     }.class("speaker-list")
                     Node.br()
-                    if let talk = speakers.first?.talks.first {
+                    if let talk = speakers.first?.talks.first(where: { !$0.isWorkshop }) {
                         Node.a(
                             .attribute(named: "href"),
                             .attribute(named: "data-toggle", value: "modal"),

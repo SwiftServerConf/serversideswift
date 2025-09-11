@@ -62,7 +62,7 @@ struct SpeakerDetail: Component {
                         }
                         .class("head")
                         Div {
-                            if let talk = speaker.talks.first {
+                            if let talk = speaker.talks.first(where: { !$0.isWorkshop }) {
                                 Node.hr()
                                 H3("Talk Details")
                                 if let youtubeVideoID = talk.youtubeVideoID {
@@ -88,6 +88,30 @@ struct SpeakerDetail: Component {
                                 }
                                 .class("section")
                                 if let eventSpecifics = talk.eventSpecifics {
+                                    Div {
+                                        H4("Time and Place").class("f-gradient")
+                                        H6("\(eventSpecifics.startTime.formatted()) in \(eventSpecifics.place)")
+                                            .class("f-weight-300")
+                                    }
+                                    .class("section")
+                                }
+                            }
+                            if let workshop = speaker.talks.first(where: { $0.isWorkshop }) {
+                                Node.hr()
+                                H3("Workshop Details")
+                                Div {
+                                    H4("Title").class("f-gradient")
+                                    H6(workshop.title)
+                                        .class("f-weight-300")
+                                }
+                                .class("section")
+                                Div {
+                                    H4("Description").class("f-gradient")
+                                    H6(workshop.description)
+                                        .class("f-weight-300")
+                                }
+                                .class("section")
+                                if let eventSpecifics = workshop.eventSpecifics {
                                     Div {
                                         H4("Time and Place").class("f-gradient")
                                         H6("\(eventSpecifics.startTime.formatted()) in \(eventSpecifics.place)")
