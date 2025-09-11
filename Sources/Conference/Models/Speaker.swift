@@ -71,8 +71,12 @@ struct Speaker {
 struct AllSpeakers {
     static let emcee: Speaker = allSpeakers[0]
     static let instructors: [Speaker] = [
+        allSpeakers[0],
+        allSpeakers[3],
+        allSpeakers[15],
+
     ]
-    static let speakers: [Speaker] =  Array(allSpeakers[1...])
+    static let speakers: [Speaker] =  Array(allSpeakers[1...14])
     static let allSpeakers: [Speaker] = [
         Speaker(
             name: "Daniel Steinberg", 
@@ -116,7 +120,7 @@ struct AllSpeakers {
                     Text(".")
                 }
             },
-            talkIDs: []
+            talkIDs: [17]
         ),
         Speaker(
             name: "Emma GAUBERT", 
@@ -137,7 +141,7 @@ struct AllSpeakers {
             name: "Matt Massicotte", 
             role: "Apple Platforms Developer", 
             website: "https://www.massicotte.org/",
-            bio: "Matt keeps himself busy with training, consulting, writing, and working on open source projects. From individuals all the way up to large teams, he loves working with people to understand and solve problems. He's been developing for Apple platforms for about 30 years.", talkIDs: [4]
+            bio: "Matt keeps himself busy with training, consulting, writing, and working on open source projects. From individuals all the way up to large teams, he loves working with people to understand and solve problems. He's been developing for Apple platforms for about 30 years.", talkIDs: [4, 16]
         ),
         Speaker(
             name: "Honza Dvorsky", 
@@ -244,7 +248,16 @@ struct AllSpeakers {
             },
             talkIDs: [13]
         ),
-        Speaker(name: "Eric Ernst", role: "Software Engineering Leader", company: "Apple", image: "/App/Images/speakers/eric-ernst.png", twitter: "http://twitter.com/egernst", bio: "Eric Ernst is a software engineering leader at Apple, where he focuses on virtualization, containers, container runtimes and Kubernetes.", talkIDs: [14])
+        Speaker(name: "Eric Ernst", role: "Software Engineering Leader", company: "Apple", image: "/App/Images/speakers/eric-ernst.png", twitter: "http://twitter.com/egernst", bio: "Eric Ernst is a software engineering leader at Apple, where he focuses on virtualization, containers, container runtimes and Kubernetes.", talkIDs: [14]),
+        Speaker(
+            name: "Frank Lefebvre",
+            role: "Trainer",
+            github: "https://github.com/franklefebvre",
+            mastodon: "https://mastodon.social/@franklefebvre",
+            linkedIn: "https://www.linkedin.com/in/franklefebvre",
+            bio: "Frank has been developing software for Apple platforms since 1985. As a freelance developer, he usually works on low-level and AV-related software for macOS, iOS and visionOS, as well as server-side Swift applications. He is also an Apple-certified trainer, and he provides mentoring on server-side Swift and iOS development with SwiftUI.",
+            talkIDs: [15]
+        )
     ]
 }
 

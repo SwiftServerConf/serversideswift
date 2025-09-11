@@ -14,7 +14,7 @@ struct Speakers: Component {
                     }.class("d-flex justify-content-center")
 
                     H2("Workshop Instructors").class("text-center h2")
-                    H5("Coming Soon").class("text-center h5")
+                    SpeakerList<Conference>(speakers: AllSpeakers.instructors)
                     H2("Conference Speakers").class("text-center h2 mt-4")
                     H5("We host a diverse selection of inspiring speakers.")
                         .class("text-center mb-5")

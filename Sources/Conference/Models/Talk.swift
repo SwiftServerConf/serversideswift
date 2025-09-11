@@ -9,6 +9,7 @@ struct Talk: Eventable {
     let order: Int
     let eventSpecifics: EventSpecifics?
     let youtubeVideoID: String?
+    let isWorkshop: Bool
     
     internal init(
         id: Int,
@@ -17,13 +18,15 @@ struct Talk: Eventable {
         speakerNames: [String],
         order: Int,
         eventSpecifics: EventSpecifics? = nil,
-        youtubeVideoID: String? = nil
+        youtubeVideoID: String? = nil,
+        isWorkshop: Bool = false
     ) {
         self.id = id
         self.title = title
         self.description = Text(description)
         self.speakerNames = speakerNames
         self.order = order
+        self.isWorkshop = isWorkshop
         self.eventSpecifics = eventSpecifics
         self.youtubeVideoID = youtubeVideoID
     }
@@ -35,7 +38,8 @@ struct Talk: Eventable {
         speakerNames: [String],
         order: Int,
         eventSpecifics: EventSpecifics? = nil,
-        youtubeVideoID: String? = nil
+        youtubeVideoID: String? = nil,
+        isWorkshop: Bool = false
     ) {
         self.id = id
         self.title = title
@@ -44,6 +48,7 @@ struct Talk: Eventable {
         self.order = order
         self.eventSpecifics = eventSpecifics
         self.youtubeVideoID = youtubeVideoID
+        self.isWorkshop = isWorkshop
     }
     
     var speakers: [Speaker] {
@@ -193,7 +198,7 @@ struct AllTalks {
             title: "Expanding Swift/Java Interoperability",
             description: ComponentGroup {
                 Paragraph("While Swift Java interoperability always allowed implementing Java native functions, or even calling Java code using JNI. And the the “jextract” mode of the swift-java tool can be used to automatically generate bindings for existing Swift libraries. Previously, this mode required the use of modern JDK versions and the Foreign Function and Memory APIs, and was unavailable to deployments using older Java versions, or platforms like e.g. Android.")
-                Paragraph("During this year’s Google Summer of Code, we worked on extending swift-java’s jextract mode to support JNI as a fallback mechanism when the modern FFM APIs are not available. This means that we’re now able to jextract entire Swift libraries and use them in Android applications! With the new Swift Android working group and the work on a official Android SDK, we believe this extension to Java interoperability will be very beneficial to the Swift on Android efforts! In this talk we will cover how the FFM mode and JNI modes work and differ. We will demonstrate how to build a Swift library that is shared across both Swift, Java (FFM) and Android (JNI)")
+                Paragraph("During this year's Google Summer of Code, we worked on extending swift-java's jextract mode to support JNI as a fallback mechanism when the modern FFM APIs are not available. This means that we're now able to jextract entire Swift libraries and use them in Android applications! With the new Swift Android working group and the work on a official Android SDK, we believe this extension to Java interoperability will be very beneficial to the Swift on Android efforts! In this talk we will cover how the FFM mode and JNI modes work and differ. We will demonstrate how to build a Swift library that is shared across both Swift, Java (FFM) and Android (JNI)")
             },
             speakerNames: ["Mads Odgaard"],
             order: 13   
@@ -202,8 +207,8 @@ struct AllTalks {
             id: 14, 
             title: "Beyond Web Services: Swift for Low-Level Container infrastructure", 
             description: ComponentGroup {
-                Paragraph("With the Containerization and Container open source projects that Apple launched in June, we have shown that Swift is a compelling choice for systems-level infrastructure, expanding beyond its traditional application development roots. In this talk, we’ll dive into our newly released container runtime project built entirely in Swift, exploring why we chose Swift and what we learned along the way")
-                Paragraph("We’ll cover:")
+                Paragraph("With the Containerization and Container open source projects that Apple launched in June, we have shown that Swift is a compelling choice for systems-level infrastructure, expanding beyond its traditional application development roots. In this talk, we'll dive into our newly released container runtime project built entirely in Swift, exploring why we chose Swift and what we learned along the way")
+                Paragraph("We'll cover:")
                 List {
                     ListItem("Overview of Containerization")
                     ListItem("Core goals and design principles that drove our architectural decisions")
@@ -211,10 +216,40 @@ struct AllTalks {
                     ListItem("Using Swift for systems development")
                     ListItem("Our experience as a team learning Swift and using it for low-level systems programming.")
                 }
-                Paragraph("This talk will demonstrate that Swift’s reach extends far beyond iOS apps and web services—it’s a viable, powerful choice for the most demanding systems programming tasks.")
+                Paragraph("This talk will demonstrate that Swift's reach extends far beyond iOS apps and web services—it's a viable, powerful choice for the most demanding systems programming tasks.")
             }, 
             speakerNames: ["Eric Ernst"], 
             order: 14
+        ),
+        Talk(
+            id: 15,
+            title: "Embedded Swift Workshop",
+            description: "In this workshop, you'll learn how to use Swift to write software for embedded systems! We'll be using an ESP32 module to learn how to compile and run progams, trigger LEDs, deal with switches and even display images on a screen! Each participant will get their own ESP32 module to take home with them, along with the breadboard and all the other components you'll need.",
+            speakerNames: ["Frank Lefebvre"],
+            order: 15,
+            isWorkshop: true
+        ),
+        Talk(
+            id: 16, 
+            title: "Understanding Isolation", 
+            description: ComponentGroup {
+                Paragraph("The foundation of Swift Concurrency’s data race safety system is isolation. It is something many people struggle to understand, but using concurrency with success requires both a solid mental model as well as a command of the language features involved.")
+                Paragraph("We’re going to cover all forms of static isolation, learn what dynamic isolation is and when to use it. And, we’ll also cover what Sendable is and how close a relationship it has with isolation. There will be an emphasis on approachable concurrency and how to understand and incorporate the newest language features.")
+            }, 
+            speakerNames: ["Matt Massicotte"], 
+            order: 16, 
+            isWorkshop: true
+        ),
+        Talk(
+            id: 17, 
+            title: "Swift Server Fundamentals", 
+            description: ComponentGroup {
+                Paragraph("In this hand-on workshop, learn how to build modern Swift server applications using Vapor 4, Swift OpenAPI, Swift ServiceLifecycle, Fluent with SQLite and Postgres, and serverless deployment with AWS.  Start by building `GET` endpoints to handle questions, then create a `PollsApp` where you build a database-connected application, and finally learn how to deploy applications.")
+                Paragraph("This workshop consists of four 90-minute sessions where participants build an application that builds upon previous work. You are expected to bring your own laptop as we build the `PollsApp` together.")
+            }, 
+            speakerNames: ["Daniel Steinberg", "Nick Shook", "Agam Dua"], 
+            order: 17, 
+            isWorkshop: true
         )
     ]
 }
