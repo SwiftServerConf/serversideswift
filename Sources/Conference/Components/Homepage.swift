@@ -161,6 +161,9 @@ struct Homepage: Component {
                                Link(url: "https://binarybirds.com") {
                                    Image(url: "/App/YearX/images/sponsors/binary-birds.png", description: "Binary Birds").class("h-50")
                                }.linkTarget(.blank)
+                               Link(url: "https://temporal.io/") {
+                                   Image(url: "/App/YearX/images/sponsors/temporal.png", description: "Temporal").class("h-50")
+                               }.linkTarget(.blank)
                            }.class("logos")
                         }.class("col")
                     }.class("row")
