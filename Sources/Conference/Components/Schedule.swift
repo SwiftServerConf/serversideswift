@@ -11,6 +11,21 @@ struct Schedule: Component {
                         // H3("Schedule will be revealed once the CFP is closed.").class("text-center mb-5")
                        Div {
                            Div {
+                                Div {
+                                    H3("Wednesday, October 1st - Workshop Day").class("h3")
+                                    Div {
+                                        let headerRow = TableRow {
+                                            TableHeaderCell("When").attribute(named: "scope", value: "col").class("time-column")
+                                            TableHeaderCell("What").attribute(named: "scope", value: "col")
+                                        }
+                                        Table(header: headerRow) {
+                                            TableRow {
+                                                TableCell("09:00 - 09:45").class("text-center font-weight-bold")
+                                                TableCell("Breakfast and Registration")
+                                            }
+                                        }.class("table table-striped table-bordered")
+                                    }.class("panel")
+                                }.class("mb-5")
                                Div {
                                    H3("Thursday, October 2nd - Conference Day 1").class("h3")
                                    Div {
@@ -71,9 +86,8 @@ struct Schedule: Component {
                                            TableRow {
                                                TableCell("19:00 - 21:00").class("text-center font-weight-bold")
                                                TableCell {
-                                                    Text("Social TBD")
-                                                    // H6("NSLondon x ServerSide.swift Social").class("speakers-list-speaker-name")
-                                                    // Link("Meetup Details", url: "https://www.meetup.com/nslondon/events/303450399/")
+                                                    H6("NSLondon x ServerSide.swift Social").class("speakers-list-speaker-name")
+                                                    Link("Meetup Details", url: "https://www.meetup.com/nslondon/events/308499113/")
                                                }
                                            }
                                        }.class("table table-striped table-bordered")
