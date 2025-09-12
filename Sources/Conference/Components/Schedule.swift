@@ -26,7 +26,7 @@ struct Schedule: Component {
                                             }
                                             TableRow {
                                                 TableCell("9:30 - 12:30").class("text-center font-weight-bold")
-                                                createWorkshopRow(speakerName: "Daniel Steinberg")
+                                                createWorkshopRow(speakers: [AllSpeakers.instructors[0], AllSpeakers.instructors[3]])
                                                 createWorkshopRow(speakerName: "Matt Massicotte")
                                             }
                                             TableRow {
@@ -35,7 +35,7 @@ struct Schedule: Component {
                                             }
                                             TableRow {
                                                 TableCell("14:00 - 17:00").class("text-center font-weight-bold")
-                                                createWorkshopRow(speakerName: "Daniel Steinberg")
+                                                createWorkshopRow(speakerName: "Agam Dua")
                                                 createWorkshopRow(speakerName: "Frank Lefebvre")
                                             }
                                         }.class("table table-striped table-bordered")
@@ -240,7 +240,7 @@ struct Schedule: Component {
 
     func createWorkshopRow(speakerName: String) -> TableCell {
         if let speaker = AllSpeakers.instructors.first(where: { $0.name == speakerName }) {
-            return createWorkshopRow(speaker: speaker)
+            return createWorkshopRow(speakers: [speaker])
         } else {
             return TableCell {
                 Div {
@@ -250,22 +250,28 @@ struct Schedule: Component {
         }
     }
 
-    func createWorkshopRow(speaker: Speaker) -> TableCell {
+    func createWorkshopRow(speakers: [Speaker]) -> TableCell {
         TableCell {
             Div {
                 Div {
-                    Span {
+                    for speaker in speakers {
+                        Span {
                             Link(url: "/speakers/\(speaker.url)") {
                                 Image(url: speaker.image, description: speaker.name)
                             }
                         }.class("avatar")
+                    }
                 }.class("avatars")
                 Div {
                     List {
-                        Link(speaker.name, url: "/speakers/\(speaker.url)").class("speakers-list-speaker-name")
+                        for speaker in speakers {
+                            ListItem {
+                                Link(speaker.name, url: "/speakers/\(speaker.url)").class("speakers-list-speaker-name")
+                            }
+                        }
                     }.class("speaker-list")
                     Node.br()
-                    if let talk = speaker.talks.first(where: { $0.isWorkshop }) {
+                    if let talk = speakers.first?.talks.first(where: { $0.isWorkshop }) {
                         Node.a(
                             .attribute(named: "href"),
                             .attribute(named: "data-toggle", value: "modal"),

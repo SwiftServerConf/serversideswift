@@ -74,7 +74,8 @@ struct AllSpeakers {
         allSpeakers[0],
         allSpeakers[3],
         allSpeakers[15],
-
+        allSpeakers[16],
+        allSpeakers[17]
     ]
     static let speakers: [Speaker] =  Array(allSpeakers[1...14])
     static let allSpeakers: [Speaker] = [
@@ -257,7 +258,23 @@ struct AllSpeakers {
             linkedIn: "https://www.linkedin.com/in/franklefebvre",
             bio: "Frank has been developing software for Apple platforms since 1985. As a freelance developer, he usually works on low-level and AV-related software for macOS, iOS and visionOS, as well as server-side Swift applications. He is also an Apple-certified trainer, and he provides mentoring on server-side Swift and iOS development with SwiftUI.",
             talkIDs: [15]
-        )
+        ),
+        Speaker(
+            name: "Nick Shook",
+            role: "Engineer on the Swift Server Ecosystem team",
+            company: "Apple",
+            image: "/App/Images/speakers/nick-shook.png",
+            bio: "I'm Nick, a Vegas native and current Seattlite. Before joining the Swift team, I spent a decade building FinTech systems including at Apple Finance and was a startup attorney advising technology and cannabis companies. I'm passionate about encouraging Swift to be the de facto choice for all teams writing software because I believe in its full-range of applications.",
+            talkIDs: [17]
+        ),
+        Speaker(
+            name: "Agam Dua",
+            role: "Technical Lead on the Swift Server Ecosystem & Education team",
+            company: "Apple",
+            image: "/App/Images/speakers/agam-dua.png",
+            bio: "Agam loves writing Swift for systems, containers & servers, especially open source projects. He recently helped ship Containerization and swift-ntp as OSS libraries from Apple and continues to building libraries to grow the Swift ecosystem. When he's not writing code, he teaches workshops to show others why he has so much fun writing Swift.",
+            talkIDs: [17]
+        ),
     ]
 }
 
