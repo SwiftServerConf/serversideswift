@@ -21,7 +21,7 @@ struct Schedule: Component {
                                         }
                                         Table(header: headerRow) {
                                             TableRow {
-                                                TableCell("09:00 - 09:45").class("text-center font-weight-bold")
+                                                TableCell("09:00 - 09:30").class("text-center font-weight-bold")
                                                 TableCell("Breakfast and Registration").attribute(named: "colspan", value: "2")
                                             }
                                             TableRow {
@@ -59,8 +59,7 @@ struct Schedule: Component {
                                            }
                                            TableRow {
                                                TableCell("09:50 - 10:40").class("text-center font-weight-bold")
-                                            //    createTalkRow(speakers: [AllSpeakers.speakers[16], AllSpeakers.speakers[17]])
-                                                TableCell("Keynote")
+                                                createTalkRow(speakerName: "Ben Cohen")
                                            }
                                            TableRow {
                                                TableCell("10:40 - 11:30").class("text-center font-weight-bold")
@@ -134,11 +133,11 @@ struct Schedule: Component {
                                            }
                                            TableRow {
                                                TableCell("11:30 - 12:10").class("text-center font-weight-bold")
-                                               createTalkRow(speakerName: "ARichard Kendall Wolf")
+                                               createTalkRow(speakerName: "Simon Pilkington")
                                            }
                                            TableRow {
                                                TableCell("12:10 - 12:45").class("text-center font-weight-bold")
-                                               createTalkRow(speakerName: "Moritz Lang")
+                                               createTalkRow(speakers: [AllSpeakers.speakers[17], AllSpeakers.speakers[5]])
                                            }
                                            TableRow {
                                                TableCell("12:45 - 14:00").class("text-center font-weight-bold")
@@ -187,7 +186,7 @@ struct Schedule: Component {
                                            TableRow {
                                                TableCell("18:30 - 21:00").class("text-center font-weight-bold")
                                                TableCell {
-                                                    Text("After Party at ")
+                                                    H6("After Party").class("speakers-list-speaker-name")
                                                     Link("Hoop and Toy", url: "https://www.greeneking.co.uk/pubs/greater-london/hoop-and-toy").linkTarget(.blank)
                                               }
                                            }
