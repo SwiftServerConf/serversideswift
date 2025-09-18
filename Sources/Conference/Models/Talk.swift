@@ -233,8 +233,8 @@ struct AllTalks {
             id: 16, 
             title: "Understanding Isolation", 
             description: ComponentGroup {
-                Paragraph("The foundation of Swift Concurrency’s data race safety system is isolation. It is something many people struggle to understand, but using concurrency with success requires both a solid mental model as well as a command of the language features involved.")
-                Paragraph("We’re going to cover all forms of static isolation, learn what dynamic isolation is and when to use it. And, we’ll also cover what Sendable is and how close a relationship it has with isolation. There will be an emphasis on approachable concurrency and how to understand and incorporate the newest language features.")
+                Paragraph("The foundation of Swift Concurrency's data race safety system is isolation. It is something many people struggle to understand, but using concurrency with success requires both a solid mental model as well as a command of the language features involved.")
+                Paragraph("We're going to cover all forms of static isolation, learn what dynamic isolation is and when to use it. And, we'll also cover what Sendable is and how close a relationship it has with isolation. There will be an emphasis on approachable concurrency and how to understand and incorporate the newest language features.")
             }, 
             speakerNames: ["Matt Massicotte"], 
             order: 16, 
@@ -250,6 +250,55 @@ struct AllTalks {
             speakerNames: ["Daniel Steinberg", "Nick Shook", "Agam Dua"], 
             order: 17, 
             isWorkshop: true
-        )
+        ),
+        Talk(
+            id: 18,
+            title: "Cryptography 101: What Every Swift Developer Should Understand",
+            description: ComponentGroup {
+                Paragraph("In a previous role as the tech lead of a team building a digital identity solution, I often saw developers using cryptography without fully grasping it. Whether during hiring, onboarding, or working with partners, I noticed a general lack of understanding about how the pieces fit together and why they work the way they do under the hood.")
+                Paragraph("This talk aims to demystify the core concepts of cryptography (hashing, encryption, and digital signatures) in a way that's both accessible and directly useful. We won't dive into algorithmic details or math-heavy theory. Instead, I'll show you that having a basic understanding of those building blocks allows you to confidently approach most of the security you'll be faced with in your everyday work.")
+                Paragraph("This talk is aimed at any developer with a basic understanding of Swift. No prior knowledge of security or cryptography is required.")
+                Paragraph("Attendees will gain a practical understanding of core cryptographic concepts and how they apply to everyday development tasks, helping them build more secure, privacy-conscious apps.")
+            },
+            speakerNames: ["Eric Bariaux"],
+            order: 18
+        ),
+        Talk(
+            id: 19,
+            title: "Server-Side Swift: Surviving or Thriving?",
+            description: ComponentGroup {
+                Paragraph("A common feature in many apps is having a profile picture. When adding this feature on the backend, we have to upload a photo, save the photo, and download the photo. This is pretty straight forward, but why did it take longer than expected?")
+                Paragraph("The resources to learn how to do this common feature are limited. Last year, I challenged everyone to make some new piece of content around Server-Side Swift, let's explore what everyone created. How can we, as a community, help Server-Side Swift thrive and not just survive.")
+            },
+            speakerNames: ["Mikaela Caron"],
+            order: 19,
+            isWorkshop: false
+        ),
+        Talk(
+            id: 20,
+            title: "Lessons learned from running a SaaS entirely on Swift Vapor",
+            description: ComponentGroup {
+                Paragraph("Because Swift on the Server is not as well-known as, say, Node or Django, sometimes it's hard to find examples of what problems developers encounter once they scale beyond a certain point. There are hidden traps of technical debt that people will fall into, and there are surprising shortcuts if you know they're there. Sometimes it's just hard to choose a solution without any real-world examples.")
+                Paragraph("I built a reasonably successful Software-as-a-Service startup entirely based on Swift, and I want to lay all my cards on the table: what services and SDKs are we using, how our project structure, architecture and testing looks like, how we solved technical and security problems, and of course what songs I sing to myself while SwiftNIO compiles for the 38th time today. There may also be sprinkles on how to use analytics properly and ethically, and I might just find one or two edge cases where Swift is not the right answer.")
+            },
+            speakerNames: ["Daniel Jilg"],
+            order: 20
+        ),
+        Talk(
+            id: 21,
+            title: "Keynote",
+            description: ComponentGroup {
+                Paragraph("A special keynote presentation from the Swift team.")
+            },
+            speakerNames: ["Ben Cohen"],
+            order: 21
+        ),
+        Talk(
+            id: 22,
+            title: "Effective Strategies for Testing and Releasing Server Side Changes",
+            description: "Whether you are a solo developer or a team coordinating tens or hundreds of changes every day, making sure you don’t break your application is critical. This talk walks through some strategies to provide confidence in your changes and ensure they provide their designed functionality.",
+            speakerNames: ["Simon Pilkington"],
+            order: 22
+        ),
     ]
 }
