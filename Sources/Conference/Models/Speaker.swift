@@ -251,6 +251,30 @@ struct AllSpeakers {
         ),
         Speaker(name: "Eric Ernst", role: "Software Engineering Leader", company: "Apple", image: "/App/Images/speakers/eric-ernst.png", twitter: "http://twitter.com/egernst", bio: "Eric Ernst is a software engineering leader at Apple, where he focuses on virtualization, containers, container runtimes and Kubernetes.", talkIDs: [14]),
         Speaker(
+            name: "Eric Bariaux",
+            role: "Software Engineer",
+            company: "Nelcea",
+            website: "https://www.ericbariaux.com/",
+            bio: "Eric, a Software Engineer by trade and a Geek at heart, has had numerous encounters with development in the Apple software ecosystem throughout his career, starting from his early professional days developing on a NeXTstation. Currently, Eric's focus lies in Personal Knowledge Management and wearable AI solutions on various Apple platforms.",
+            talkIDs: [18]
+        ),
+        // Speaker(
+        //     name: "Eric Bariaux",
+        //     role: "Software Engineer",
+        //     company: "Nelcea",
+        //     website: "https://www.ericbariaux.com/",
+        //     bio: "Eric, a Software Engineer by trade and a Geek at heart, has had numerous encounters with development in the Apple software ecosystem throughout his career, starting from his early professional days developing on a NeXTstation. Currently, Eric's focus lies in Personal Knowledge Management and wearable AI solutions on various Apple platforms.",
+        //     talkIDs: [18]
+        // ),
+        // Speaker(
+        //     name: "Eric Bariaux",
+        //     role: "Software Engineer",
+        //     company: "Nelcea",
+        //     website: "https://www.ericbariaux.com/",
+        //     bio: "Eric, a Software Engineer by trade and a Geek at heart, has had numerous encounters with development in the Apple software ecosystem throughout his career, starting from his early professional days developing on a NeXTstation. Currently, Eric's focus lies in Personal Knowledge Management and wearable AI solutions on various Apple platforms.",
+        //     talkIDs: [18]
+        // ),
+        Speaker(
             name: "Frank Lefebvre",
             role: "Trainer",
             github: "https://github.com/franklefebvre",

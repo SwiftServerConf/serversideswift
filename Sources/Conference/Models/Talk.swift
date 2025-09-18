@@ -233,8 +233,8 @@ struct AllTalks {
             id: 16, 
             title: "Understanding Isolation", 
             description: ComponentGroup {
-                Paragraph("The foundation of Swift Concurrency’s data race safety system is isolation. It is something many people struggle to understand, but using concurrency with success requires both a solid mental model as well as a command of the language features involved.")
-                Paragraph("We’re going to cover all forms of static isolation, learn what dynamic isolation is and when to use it. And, we’ll also cover what Sendable is and how close a relationship it has with isolation. There will be an emphasis on approachable concurrency and how to understand and incorporate the newest language features.")
+                Paragraph("The foundation of Swift Concurrency's data race safety system is isolation. It is something many people struggle to understand, but using concurrency with success requires both a solid mental model as well as a command of the language features involved.")
+                Paragraph("We're going to cover all forms of static isolation, learn what dynamic isolation is and when to use it. And, we'll also cover what Sendable is and how close a relationship it has with isolation. There will be an emphasis on approachable concurrency and how to understand and incorporate the newest language features.")
             }, 
             speakerNames: ["Matt Massicotte"], 
             order: 16, 
@@ -250,6 +250,19 @@ struct AllTalks {
             speakerNames: ["Daniel Steinberg", "Nick Shook", "Agam Dua"], 
             order: 17, 
             isWorkshop: true
+        ),
+        Talk(
+            id: 18,
+            title: "Cryptography 101: What Every Swift Developer Should Understand",
+            description: ComponentGroup {
+                Paragraph("In a previous role as the tech lead of a team building a digital identity solution, I often saw developers using cryptography without fully grasping it. Whether during hiring, onboarding, or working with partners, I noticed a general lack of understanding about how the pieces fit together and why they work the way they do under the hood.")
+                Paragraph("This talk aims to demystify the core concepts of cryptography (hashing, encryption, and digital signatures) in a way that's both accessible and directly useful. We won't dive into algorithmic details or math-heavy theory. Instead, I'll give you the conceptual tools to understand what's happening, why it matters, and how to use it responsibly in your apps.")
+                Paragraph("With those foundations, I'll walk through practical examples relevant to Swift and iOS development: • How to encrypt a file with a user-supplied password • What HTTPS/TLS actually do, and how to handle certificate pinning and mTLS • How to store and validate passwords securely • What bearer tokens, OAuth, and OpenID Connect actually involve • How to protect communication between your mobile app and backend.")
+                Paragraph("Along the way, we'll look at Swift-native tools and frameworks like CryptoKit as well as community packages like jwt-kit, swift-certificates, and swift-crypto that extend what's possible.")
+                Paragraph("This talk is aimed at any developer with a basic understanding of Swift. No prior knowledge of security or cryptography is required. Attendees will gain a practical understanding of core cryptographic concepts and how they apply to everyday development tasks, helping them build more secure, privacy-conscious apps.")
+            },
+            speakerNames: ["Eric Bariaux"],
+            order: 18
         )
     ]
 }

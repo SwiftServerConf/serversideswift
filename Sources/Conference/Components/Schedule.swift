@@ -96,7 +96,7 @@ struct Schedule: Component {
                                            }
                                            TableRow {
                                                TableCell("16:40 - 17:15").class("text-center font-weight-bold")
-                                               createTalkRow(speakerName: "Moritz Lang")
+                                               createTalkRow(speakerName: "Daniel Jilg")
                                            }
                                            TableRow {
                                                TableCell("19:00 - 21:00").class("text-center font-weight-bold")
@@ -138,7 +138,7 @@ struct Schedule: Component {
                                            }
                                            TableRow {
                                                TableCell("12:10 - 12:45").class("text-center font-weight-bold")
-                                               createTalkRow(speakerName: "ADaniel Jilg")
+                                               createTalkRow(speakerName: "Moritz Lang")
                                            }
                                            TableRow {
                                                TableCell("12:45 - 14:00").class("text-center font-weight-bold")
@@ -170,11 +170,11 @@ struct Schedule: Component {
                                            }
                                            TableRow {
                                                TableCell("16:00 - 16:15").class("text-center font-weight-bold")
-                                               createTalkRow(speakerName: "Lightning 2")
+                                               createTalkRow(speakerName: "Mikaela Caron")
                                            }
                                            TableRow {
                                                TableCell("16:15 - 16:30").class("text-center font-weight-bold")
-                                               createTalkRow(speakerName: "Lightning 3")
+                                               createTalkRow(speakerName: "Eric Bariaux")
                                            }
                                            TableRow {
                                                TableCell("16:30 - 17:10").class("text-center font-weight-bold")
