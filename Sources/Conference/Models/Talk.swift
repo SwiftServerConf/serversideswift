@@ -273,6 +273,32 @@ struct AllTalks {
             speakerNames: ["Mikaela Caron"],
             order: 19,
             isWorkshop: false
-        )
+        ),
+        Talk(
+            id: 20,
+            title: "Lessons learned from running a SaaS entirely on Swift Vapor",
+            description: ComponentGroup {
+                Paragraph("Because Swift on the Server is not as well-known as, say, Node or Django, sometimes it's hard to find examples of what problems developers encounter once they scale beyond a certain point. There are hidden traps of technical debt that people will fall into, and there are surprising shortcuts if you know they're there. Sometimes it's just hard to choose a solution without any real-world examples.")
+                Paragraph("I built a reasonably successful Software-as-a-Service startup entirely based on Swift, and I want to lay all my cards on the table: what services and SDKs are we using, how our project structure, architecture and testing looks like, how we solved technical and security problems, and of course what songs I sing to myself while SwiftNIO compiles for the 38th time today. There may also be sprinkles on how to use analytics properly and ethically, and I might just find one or two edge cases where Swift is not the right answer.")
+            },
+            speakerNames: ["Daniel Jilg"],
+            order: 20
+        ),
+        Talk(
+            id: 21,
+            title: "Keynote",
+            description: ComponentGroup {
+                Paragraph("A special keynote presentation from the Swift team.")
+            },
+            speakerNames: ["Ben Cohen"],
+            order: 21
+        ),
+        Talk(
+            id: 22,
+            title: "Effective Strategies for Testing and Releasing Server Side Changes",
+            description: "Whether you are a solo developer or a team coordinating tens or hundreds of changes every day, making sure you don’t break your application is critical. This talk walks through some strategies to provide confidence in your changes and ensure they provide their designed functionality.",
+            speakerNames: ["Simon Pilkington"],
+            order: 22
+        ),
     ]
 }
