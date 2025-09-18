@@ -187,9 +187,8 @@ struct Schedule: Component {
                                            TableRow {
                                                TableCell("18:30 - 21:00").class("text-center font-weight-bold")
                                                TableCell {
-                                                    Text("After Party")
-                                                    // Text("After Party at ")
-                                                    // Link("Hoop and Toy", url: "https://www.greeneking.co.uk/pubs/greater-london/hoop-and-toy").linkTarget(.blank)
+                                                    Text("After Party at ")
+                                                    Link("Hoop and Toy", url: "https://www.greeneking.co.uk/pubs/greater-london/hoop-and-toy").linkTarget(.blank)
                                               }
                                            }
                                        }.class("table table-striped table-bordered")

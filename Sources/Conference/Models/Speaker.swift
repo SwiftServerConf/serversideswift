@@ -73,11 +73,11 @@ struct AllSpeakers {
     static let instructors: [Speaker] = [
         allSpeakers[0],
         allSpeakers[3],
-        allSpeakers[15],
-        allSpeakers[16],
-        allSpeakers[17]
+        allSpeakers[17],
+        allSpeakers[18],
+        allSpeakers[19]
     ]
-    static let speakers: [Speaker] =  Array(allSpeakers[1...14])
+    static let speakers: [Speaker] =  Array(allSpeakers[1...16])
     static let allSpeakers: [Speaker] = [
         Speaker(
             name: "Daniel Steinberg", 
@@ -216,9 +216,9 @@ struct AllSpeakers {
             twitter: "http://twitter.com/tuparev",
             website: "https://www.tuparev.com/",
             bio: ComponentGroup {
-                Paragraph("My first real experience with computers was as a teenager when I created a simple application to control my homemade telescope on an Apple ][e. Soon after, I learned to program IBM 370 mainframes, writing FORTRAN programs to calculate FFTs for variable stars, as well as a PL/1-based accounting system. Before finishing high school, I programmed the weather station for Bulgaria’s first satellite and contributed to the development of the control software for the Bulgarian Academy of Sciences’ 2-meter telescope.")
+                Paragraph("My first real experience with computers was as a teenager when I created a simple application to control my homemade telescope on an Apple ][e. Soon after, I learned to program IBM 370 mainframes, writing FORTRAN programs to calculate FFTs for variable stars, as well as a PL/1-based accounting system. Before finishing high school, I programmed the weather station for Bulgaria's first satellite and contributed to the development of the control software for the Bulgarian Academy of Sciences' 2-meter telescope.")
                 Paragraph("During my university studies in Heidelberg, Germany, and subsequent research at the European Molecular Biology Laboratory (EMBL), my work centred around protein folding and computer graphics using Silicon Graphics, SUN, DEC Alpha, Maspar, and NeXT computers. In this period, I developed the first Braille driver for NeXTStep, co-organised two scientific computing conferences, hosted the GNUStep project for two years, and contributed significantly to the MiscKit framework for NeXTStep. Additionally, I was an early adopter and contributor to the WebObjects framework (initially Objective-C-based, later Java-based).")
-                Paragraph("I started developing for NeXTStep around 1990. Alongside engaging extensively in open source projects, I worked on a database for storing infrared astronomical images and developed image-processing software for NMR crystallographic data. Later, I was involved in the initial implementation of Apple’s VoiceOver accessibility technology and presented frequently on Apple’s behalf to the European banking and finance sectors. I also delivered a presentation at Apple’s WWDC focused on scientific applications.")
+                Paragraph("I started developing for NeXTStep around 1990. Alongside engaging extensively in open source projects, I worked on a database for storing infrared astronomical images and developed image-processing software for NMR crystallographic data. Later, I was involved in the initial implementation of Apple's VoiceOver accessibility technology and presented frequently on Apple's behalf to the European banking and finance sectors. I also delivered a presentation at Apple's WWDC focused on scientific applications.")
                 Paragraph("During the last 25 or so years, my team worked on several highly complex systems. Examples include: - An educational portal for the Ministry of Education in Lower Saxony, Germany. - A legal documentation system for the Baden-Württemberg Police Department, Germany. - The Mars Rover image archive for NASA. - A fully robotic astronomical observatory control system, deployed in observatories across the U.S., South Africa, and Europe. - The largest inter-bank document and transaction exchange system in the Netherlands (ongoing) - Observatory control, image processing, and large-scale data storage solutions for space debris monitoring stations (ongoing).")
             },
             talkIDs: [10]
@@ -228,7 +228,7 @@ struct AllSpeakers {
             role: "Software Engineer", 
             company: "Deloitte LLC", 
             website: "https://www.oliverbinns.co.uk/",
-            bio: "Oliver is an experienced software engineer based in London. After attaining an IET accredited master’s degree in Computer Science from the University of York, he started his career building websites in PHP and JavaScript, before pivoting into native iOS development. He has worked on highly-rated mobile apps for airlines, healthcare organisations and even government departments. Oliver was shortlisted for British Computer Society’s Engineer of the Year 2024.", 
+            bio: "Oliver is an experienced software engineer based in London. After attaining an IET accredited master's degree in Computer Science from the University of York, he started his career building websites in PHP and JavaScript, before pivoting into native iOS development. He has worked on highly-rated mobile apps for airlines, healthcare organisations and even government departments. Oliver was shortlisted for British Computer Society's Engineer of the Year 2024.", 
             talkIDs: [11]
         ),
         Speaker(
@@ -254,18 +254,20 @@ struct AllSpeakers {
             name: "Eric Bariaux",
             role: "Software Engineer",
             company: "Nelcea",
+            image: "/App/Images/speakers/eric-bariaux.png",
             website: "https://www.ericbariaux.com/",
             bio: "Eric, a Software Engineer by trade and a Geek at heart, has had numerous encounters with development in the Apple software ecosystem throughout his career, starting from his early professional days developing on a NeXTstation. Currently, Eric's focus lies in Personal Knowledge Management and wearable AI solutions on various Apple platforms.",
             talkIDs: [18]
         ),
-        // Speaker(
-        //     name: "Eric Bariaux",
-        //     role: "Software Engineer",
-        //     company: "Nelcea",
-        //     website: "https://www.ericbariaux.com/",
-        //     bio: "Eric, a Software Engineer by trade and a Geek at heart, has had numerous encounters with development in the Apple software ecosystem throughout his career, starting from his early professional days developing on a NeXTstation. Currently, Eric's focus lies in Personal Knowledge Management and wearable AI solutions on various Apple platforms.",
-        //     talkIDs: [18]
-        // ),
+        Speaker(
+            name: "Mikaela Caron",
+            role: "Independent iOS Engineer",
+            company: "Icy App Studio LLC",
+            twitter: "https://twitter.com/mikaela__caron",
+            website: "https://mikaelacaron.com/",
+            bio: "Mikaela Caron is an independent iOS Engineer, and a member of the Swift Ecosystem Workgroup, who actively shares her expertise on social media, focusing on iOS development, building apps in public, and freelancing. She's continuing to work on her indie app Fruitful, which helps people connect with others at conferences, while also traveling as much as she can. She's also an organizer for iOSDevHappyHour and loves giving back to the community.",
+            talkIDs: [19]
+        ),
         // Speaker(
         //     name: "Eric Bariaux",
         //     role: "Software Engineer",

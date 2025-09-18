@@ -256,13 +256,23 @@ struct AllTalks {
             title: "Cryptography 101: What Every Swift Developer Should Understand",
             description: ComponentGroup {
                 Paragraph("In a previous role as the tech lead of a team building a digital identity solution, I often saw developers using cryptography without fully grasping it. Whether during hiring, onboarding, or working with partners, I noticed a general lack of understanding about how the pieces fit together and why they work the way they do under the hood.")
-                Paragraph("This talk aims to demystify the core concepts of cryptography (hashing, encryption, and digital signatures) in a way that's both accessible and directly useful. We won't dive into algorithmic details or math-heavy theory. Instead, I'll give you the conceptual tools to understand what's happening, why it matters, and how to use it responsibly in your apps.")
-                Paragraph("With those foundations, I'll walk through practical examples relevant to Swift and iOS development: • How to encrypt a file with a user-supplied password • What HTTPS/TLS actually do, and how to handle certificate pinning and mTLS • How to store and validate passwords securely • What bearer tokens, OAuth, and OpenID Connect actually involve • How to protect communication between your mobile app and backend.")
-                Paragraph("Along the way, we'll look at Swift-native tools and frameworks like CryptoKit as well as community packages like jwt-kit, swift-certificates, and swift-crypto that extend what's possible.")
-                Paragraph("This talk is aimed at any developer with a basic understanding of Swift. No prior knowledge of security or cryptography is required. Attendees will gain a practical understanding of core cryptographic concepts and how they apply to everyday development tasks, helping them build more secure, privacy-conscious apps.")
+                Paragraph("This talk aims to demystify the core concepts of cryptography (hashing, encryption, and digital signatures) in a way that's both accessible and directly useful. We won't dive into algorithmic details or math-heavy theory. Instead, I'll show you that having a basic understanding of those building blocks allows you to confidently approach most of the security you'll be faced with in your everyday work.")
+                Paragraph("This talk is aimed at any developer with a basic understanding of Swift. No prior knowledge of security or cryptography is required.")
+                Paragraph("Attendees will gain a practical understanding of core cryptographic concepts and how they apply to everyday development tasks, helping them build more secure, privacy-conscious apps.")
             },
             speakerNames: ["Eric Bariaux"],
             order: 18
+        ),
+        Talk(
+            id: 19,
+            title: "Server-Side Swift: Surviving or Thriving?",
+            description: ComponentGroup {
+                Paragraph("A common feature in many apps is having a profile picture. When adding this feature on the backend, we have to upload a photo, save the photo, and download the photo. This is pretty straight forward, but why did it take longer than expected?")
+                Paragraph("The resources to learn how to do this common feature are limited. Last year, I challenged everyone to make some new piece of content around Server-Side Swift, let's explore what everyone created. How can we, as a community, help Server-Side Swift thrive and not just survive.")
+            },
+            speakerNames: ["Mikaela Caron"],
+            order: 19,
+            isWorkshop: false
         )
     ]
 }
