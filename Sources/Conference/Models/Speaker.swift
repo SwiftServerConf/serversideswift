@@ -73,11 +73,11 @@ struct AllSpeakers {
     static let instructors: [Speaker] = [
         allSpeakers[0],
         allSpeakers[3],
-        allSpeakers[17],
-        allSpeakers[18],
-        allSpeakers[19]
+        allSpeakers[21],
+        allSpeakers[22],
+        allSpeakers[23]
     ]
-    static let speakers: [Speaker] =  Array(allSpeakers[1...16])
+    static let speakers: [Speaker] =  Array(allSpeakers[1...20])
     static let allSpeakers: [Speaker] = [
         Speaker(
             name: "Daniel Steinberg", 
@@ -268,14 +268,37 @@ struct AllSpeakers {
             bio: "Mikaela Caron is an independent iOS Engineer, and a member of the Swift Ecosystem Workgroup, who actively shares her expertise on social media, focusing on iOS development, building apps in public, and freelancing. She's continuing to work on her indie app Fruitful, which helps people connect with others at conferences, while also traveling as much as she can. She's also an organizer for iOSDevHappyHour and loves giving back to the community.",
             talkIDs: [19]
         ),
-        // Speaker(
-        //     name: "Eric Bariaux",
-        //     role: "Software Engineer",
-        //     company: "Nelcea",
-        //     website: "https://www.ericbariaux.com/",
-        //     bio: "Eric, a Software Engineer by trade and a Geek at heart, has had numerous encounters with development in the Apple software ecosystem throughout his career, starting from his early professional days developing on a NeXTstation. Currently, Eric's focus lies in Personal Knowledge Management and wearable AI solutions on various Apple platforms.",
-        //     talkIDs: [18]
-        // ),
+        Speaker(
+            name: "Daniel Jilg",
+            role: "CTO",
+            company: "TelemetryDeck",
+            twitter: "https://twitter.com/breakthesystem",
+            website: "https://telemetrydeck.com/",
+            bio: "I've been an app developer, a CTO, and a Python developer, mostly at the same time. I've carried through it all a desire to learn, a love for data visualisation, and a knack to pass on what I learned. I want to learn, I want to mentor, and I want to create inclusive spaces for people to learn and mentor themselves. In my free time, I open tins for my cats (who have their own instagram account), visit various spaceports around the world, and occasionally dabble in some motor sports.",
+            talkIDs: [20]
+        ),
+        Speaker(
+            name: "Si Beaumont",
+            role: "Software Engineer",
+            company: "Apple",
+            image: "/App/Images/speakers/si-beaumont.png",
+            bio: "Si works at Apple, where he helps maintain a number of open-source Swift libraries to support server-side use cases. Before that, he's worked in a wide range of areas including virtulalization, cloud technologies, privacy-preserving machine learning, and developer tools.",
+            talkIDs: [7]
+        ),
+        Speaker(
+            name: "Simon Pilkington",
+            role: "Principle Engineer",
+            company: "Atlassian",
+            bio: "Simon has a substantial Software Engineering career with over a decade at Amazon - including working on a high scale Swift-based orchestrator ingesting content into Prime Video - and now as a principal engineer at Atlassian. At Amazon, Simon worked on a variety of components to support Swift-based development and also contributed to the business case for the Swift AWS SDK. Simon has also been a member of the Swift Server Work Group since 2020, helping with development of the AWS Lambda runtime and more recently discussions for a generic http server and middleware.",
+            talkIDs: [22]
+        ),
+        Speaker(
+            name: "Ben Cohen",
+            role: "Manager",
+            company: "Apple",
+            bio: "Ben is a manager on the Swift team at Apple.",
+            talkIDs: [21]
+        ),
         Speaker(
             name: "Frank Lefebvre",
             role: "Trainer",
