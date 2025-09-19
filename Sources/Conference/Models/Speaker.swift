@@ -2,13 +2,14 @@ import Plot
 
 struct Speaker {
     let name: String
-    let role: String?
+    let role: String
     let company: String?
     let url: String
     let image: String
     let twitter: String?
     let github: String?
     let mastodon: String?
+    let bluesky: String?
     let linkedIn: String?
     let website: String?
     let bio: Component
@@ -16,12 +17,13 @@ struct Speaker {
     
     internal init(
         name: String,
-        role: String?,
+        role: String,
         company: String? = nil,
         image: String? = nil,
         twitter: String? = nil,
         github: String? = nil,
         mastodon: String? = nil,
+        bluesky: String? = nil,
         linkedIn: String? = nil,
         website: String? = nil,
         bio: Component,
@@ -39,6 +41,7 @@ struct Speaker {
         self.twitter = twitter
         self.github = github
         self.mastodon = mastodon
+        self.bluesky = bluesky
         self.linkedIn = linkedIn
         self.website = website
         self.bio = bio
@@ -47,18 +50,19 @@ struct Speaker {
     
     internal init(
         name: String,
-        role: String?,
+        role: String,
         company: String? = nil,
         image: String? = nil,
         twitter: String? = nil,
         github: String? = nil,
         mastodon: String? = nil,
+        bluesky: String? = nil,
         linkedIn: String? = nil,
         website: String? = nil,
         bio: String,
         talkIDs: [Int]
     ) {
-        self.init(name: name, role: role, company: company, image: image, twitter: twitter, github: github, mastodon: mastodon, linkedIn: linkedIn, website: website, bio: Text(bio), talkIDs: talkIDs)
+        self.init(name: name, role: role, company: company, image: image, twitter: twitter, github: github, mastodon: mastodon, bluesky: bluesky, linkedIn: linkedIn, website: website, bio: Text(bio), talkIDs: talkIDs)
     }
     
     var talks: [Talk] {
@@ -132,8 +136,10 @@ struct AllSpeakers {
         ),
         Speaker(
             name: "Joannis Orlandos", 
-            role: nil, 
+            role: "OpenSource Developer", 
             twitter: "http://twitter.com/joannisorlandos",
+            github: "https://github.com/joannis",
+            bluesky: "https://bsky.app/profile/joanniso.bsky.social",
             website: "https://swiftonserver.com/", 
             bio: "Joannis is a member of the Swift Server and Android Workgroups, and maintains for MongoKitten, Hummingbird and EdgeOS. Joannis helps clients implement Swift across their stack, from microcontrollers to iOS apps.", 
             talkIDs: [3]
