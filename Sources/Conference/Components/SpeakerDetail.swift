@@ -41,6 +41,14 @@ struct SpeakerDetail: Component {
                                         }.linkTarget(.blank).class("icon")
                                     }
                                 }
+                                if let blueskyURL = speaker.bluesky {
+                                    Link(url: blueskyURL) {
+                                        Span {
+                                            Image(url: "/App/YearX/images/icons/bluesky.svg", description: "Bluesky")
+                                                .class("feather-replacement")
+                                        }.linkTarget(.blank).class("icon")
+                                    }
+                                }
                                 if let linkedInURL = speaker.linkedIn {
                                     Link(url: linkedInURL) {
                                         Span {
