@@ -301,7 +301,7 @@ struct AllSpeakers {
         Speaker(
             name: "Ben Cohen",
             role: "Manager",
-            company: "Apple",
+            company: "Swift Core Team",
             bio: "Ben is a manager on the Swift team at Apple.",
             talkIDs: [21]
         ),
