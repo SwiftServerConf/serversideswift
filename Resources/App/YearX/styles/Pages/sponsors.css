@@ -202,3 +202,13 @@
 #bluem-sponsor-logo {
     width: 100% !important;
 }
+
+#joannis-sponsor {
+    text-decoration: none;
+    color: black;
+    font-size: 2em;
+}
+
+#joannis-sponsor:hover {
+    text-decoration: none;
+}

@@ -1,6 +1,6 @@
-import Plot
+@preconcurrency import Plot
 
-struct Speaker {
+struct Speaker: Sendable {
     let name: String
     let role: String
     let company: String?

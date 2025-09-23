@@ -187,16 +187,27 @@ struct Sponsors: Component {
             Div {
                 Div {
                     Div {
-                        Link("", url: "mailto:sponsors@serversideswift.info")
-                        Div {
-                            Image(url: "/App/YearX/images/sponsor-levels/sponsor_bronze.png", description: "Bronze")
-                        }.class("image")
-                        Div {
-                            H4("FREE SPOT").class("f-bronze")
-                        }.class("description p-2")
-                    }.class("sponsor opacity-15")
+                        Link(url: "https://hummingbird.codes/") {
+                            Div {
+                                H4("Joannis").class("text-center")
+                            }.class("description p-2 align-self-center")
+                        }.linkTarget(.blank).class("d-flex justify-content-center")
+                    }.class("sponsor inline")
                 }.class("bronze")
             }.class("col-12 col-sm-6 col-md-4 col-lg-3")
+//            Div {
+//                Div {
+//                    Div {
+//                        Link("", url: "mailto:sponsors@serversideswift.info")
+//                        Div {
+//                            Image(url: "/App/YearX/images/sponsor-levels/sponsor_bronze.png", description: "Bronze")
+//                        }.class("image")
+//                        Div {
+//                            H4("FREE SPOT").class("f-bronze")
+//                        }.class("description p-2")
+//                    }.class("sponsor opacity-15")
+//                }.class("bronze")
+//            }.class("col-12 col-sm-6 col-md-4 col-lg-3")
         }.class("sponsor-list row")
     }
 }

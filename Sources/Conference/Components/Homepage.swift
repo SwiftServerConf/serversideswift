@@ -164,6 +164,9 @@ struct Homepage: Component {
                                Link(url: "https://temporal.io/") {
                                    Image(url: "/App/YearX/images/sponsors/temporal.png", description: "Temporal").class("h-50")
                                }.linkTarget(.blank)
+                               Link(url: "https://hummingbird.codes") {
+                                   Text("Joannis")
+                               }.linkTarget(.blank).class("h-50").id("joannis-sponsor")
                            }.class("logos")
                         }.class("col")
                     }.class("row")
