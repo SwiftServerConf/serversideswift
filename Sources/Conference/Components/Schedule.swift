@@ -16,7 +16,7 @@ struct Schedule: Component {
                                     Div {
                                         let headerRow = TableRow {
                                             TableHeaderCell("When").attribute(named: "scope", value: "col").class("time-column")
-                                            TableHeaderCell("Beginnner Workshop Track").attribute(named: "scope", value: "col")
+                                            TableHeaderCell("Fundamentals Workshop Track").attribute(named: "scope", value: "col")
                                             TableHeaderCell("Experienced Workshop Track").attribute(named: "scope", value: "col")
                                         }
                                         Table(header: headerRow) {
