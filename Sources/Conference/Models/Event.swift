@@ -1,6 +1,6 @@
 import Foundation
 
-protocol Eventable {
+protocol Eventable: Sendable {
     var eventSpecifics: EventSpecifics? { get }
 }
 

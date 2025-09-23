@@ -1,5 +1,5 @@
 import Foundation
-import Plot
+@preconcurrency import Plot
 
 struct Talk: Eventable {
     let id: Int
