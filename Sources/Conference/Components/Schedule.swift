@@ -50,15 +50,15 @@ struct Schedule: Component {
                                        }
                                        Table(header: headerRow) {
                                            TableRow {
-                                               TableCell("09:00 - 09:45").class("text-center font-weight-bold")
+                                               TableCell("09:00 - 10:00").class("text-center font-weight-bold")
                                                TableCell("Breakfast and Registration")
                                            }
                                            TableRow {
-                                               TableCell("09:45 - 09:50").class("text-center font-weight-bold")
+                                               TableCell("10:00 - 10:15").class("text-center font-weight-bold")
                                                TableCell("Welcome")
                                            }
                                            TableRow {
-                                               TableCell("09:50 - 10:40").class("text-center font-weight-bold")
+                                               TableCell("10:15 - 10:40").class("text-center font-weight-bold")
                                                 createTalkRow(speakerName: "Ben Cohen")
                                            }
                                            TableRow {
