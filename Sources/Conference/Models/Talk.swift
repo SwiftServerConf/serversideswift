@@ -295,7 +295,7 @@ struct AllTalks {
             id: 21,
             title: "Keynote",
             description: ComponentGroup {
-                Paragraph("A special keynote presentation from the Swift team.")
+                Paragraph("A special keynote presentation from the Swift Core Team.")
             },
             speakerNames: ["Ben Cohen"],
             order: 21
