@@ -98,7 +98,16 @@ struct AllTalks {
             Paragraph("The Swift language has gone through many significant changes recently and this year is no different. We're now seeing some of the results of efforts to improve the approachability of data race safety. Many developers have found concurrency incredibly difficult to understand, making any improvements welcome. But, how can we use these new facilities to make our transition to Swift 6 easier?")
             Paragraph("We'll go through not just what new tools we have, but why they were introduced. Whether you are just now getting started or have lots of experience with concurrency, together we can deepen our understanding of the language. You'll come away feeling confident deciding how to best approach approachable concurrency for your project.")
         }, speakerNames: ["Matt Massicotte"], order: 4),
-        Talk(id: 5, title: "To Be Announced", description: "Details of this talk will be released soon", speakerNames: ["Honza Dvorsky"], order: 5),
+        Talk(
+            id: 5,
+            title: "Separate code from configuration with Swift Configuration",
+            description: ComponentGroup {
+                Paragraph("Swift Configuration provides a unified API for reading configuration values and secrets in server-side Swift libraries and applications. By separating the configuration reader from the underlying providers, services can seamlessly switch between different configuration sources: from environment variables and JSON files during development to sophisticated remote configuration systems in production.")
+                Paragraph("This talk demonstrates how to gradually adopt Swift Configuration in your existing Swift libraries and services, starting with basic patterns like reading from environment variables and JSON files, then progressing to advanced scenarios including configuration hot-reloading, access logging, and building custom providers.")
+                Paragraph("You’ll leave with practical knowledge and code examples that you can immediately apply to modernize configuration management in your Swift libraries and services.")
+            },
+            speakerNames: ["Honza Dvorsky"],
+            order: 5),
         Talk(id: 6, title: "Getting started with gRPC Swift", description: "Looking to build fast, type-safe APIs in Swift? gRPC offers a high-performance alternative to REST using Protocol Buffers and HTTP/2. This session provides a brief introduction to gRPC Swift, guiding you through the concepts of gRPC, defining services in .proto files, generating Swift code, and implementing both clients and servers for various RPC types. Learn how gRPC Swift streamlines development and boosts performance for your applications.", speakerNames: ["George Barnett"], order: 6),
         Talk(
             id: 7, 
@@ -131,10 +140,8 @@ struct AllTalks {
             id: 9, 
             title: "Swift Lambdas at Scale: How a Tiny iOS Team Built a Big Backend", 
             description: ComponentGroup {
-                Paragraph("SongShift started out as an iOS app where everything was done client side. As we grew, we wanted to move things to the server and needed a backend that could scale and function well without a dedicated backend team. We didn't have a backend team, we didn't want to manage servers, and we didn't want to switch to a completely different language just to make it work. This talk is meant to be a success story of how we were able to do exactly this with Swift.")
-                Paragraph("I will discuss how we built a production backend using Swift on AWS Lambda. I'll walk through how we integrated with services like API Gateway, DynamoDB, SQS, Step Functions, and KMS. I'll share how we kept it affordable, made it scale smoothly, and figured out successful CI/CD build strategies.")
-                Paragraph("We use MANY open source tools like Soto, the Swift AWS Lambda Runtime, and Terraform to keep things flexible and organized. Swift Concurrency helped us write clean, async-safe code that felt familiar coming from iOS. Since we were able to share SPM packages between the app and the backend, we could move faster and stay consistent across the stack. Serverless ended up being a fantastic fit for SongShift.")
-                Paragraph("If anyone is on edge about getting their feet wet with server-side Swift, I think I can make a great case for what server-side Swift can actually do in production and how easy it can be to adopt and get started.")
+                Paragraph("SongShift started out as an iOS app where everything was done client side. As our demand grew, in addition to the expectations of our customers, we wanted to move things to the server and needed a backend that could scale and function. As a small company, we didn't have a backend team, we didn't want to manage servers, and we didn't want to switch to a completely different language just to make it work.")
+                Paragraph("I will share the journey of how my small team went from a simple client-side app to using cloud systems on AWS powered by Swift. I will share the things along the way that worked, didn’t work, and how we accidentally became backend engineers along the way.")
             }, 
             speakerNames: ["Ben Rosen"], 
             order: 9
