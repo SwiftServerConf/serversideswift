@@ -205,7 +205,7 @@ struct AllSpeakers {
             company: "SongShift",
             twitter: "http://twitter.com/benmrosen",
             website: "https://benrosen.me/", 
-            bio: "I am 22 years old, from Chicago, IL. and have been programming since I was 11 years old. My app, SongShift, has been on the App Store since 2016 and I have watched and contributed to growing it from a small app to one that is widely used and loved. During college I did 2 internships at Apple but decided to work on SongShift full time. This is entirely built with server-side Swift. I want people to know about me because I want to continue to spread the word that what I do is powered by these cool server-side Swift technologies. I want to know that I am someone people can contact and I want to be a friendly face for them.",
+            bio: "I am 23 years old and live in Chicago, IL, where I was born and raised. I have been developing for Apple Platforms since 2013. I have spent most of my career working on my app, SongShift, which I have watched grow from a small app to one that is widely used and loved. I am thrilled to share how Server-Side Swift contributed to this journey.",
             talkIDs: [9]
         ),
         Speaker(
