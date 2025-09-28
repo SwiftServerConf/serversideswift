@@ -79,7 +79,6 @@ struct AllSpeakers {
         allSpeakers[3],
         allSpeakers[21],
         allSpeakers[22],
-        allSpeakers[23]
     ]
     static let speakers: [Speaker] =  Array(allSpeakers[1...20])
     static let allSpeakers: [Speaker] = [
@@ -313,14 +312,6 @@ struct AllSpeakers {
             linkedIn: "https://www.linkedin.com/in/franklefebvre",
             bio: "Frank has been developing software for Apple platforms since 1985. As a freelance developer, he usually works on low-level and AV-related software for macOS, iOS and visionOS, as well as server-side Swift applications. He is also an Apple-certified trainer, and he provides mentoring on server-side Swift and iOS development with SwiftUI.",
             talkIDs: [15]
-        ),
-        Speaker(
-            name: "Nick Shook",
-            role: "Engineer on the Swift Server Ecosystem team",
-            company: "Apple",
-            image: "/App/Images/speakers/nick-shook.png",
-            bio: "I'm Nick, a Vegas native and current Seattlite. Before joining the Swift team, I spent a decade building FinTech systems including at Apple Finance and was a startup attorney advising technology and cannabis companies. I'm passionate about encouraging Swift to be the de facto choice for all teams writing software because I believe in its full-range of applications.",
-            talkIDs: [17]
         ),
         Speaker(
             name: "Agam Dua",

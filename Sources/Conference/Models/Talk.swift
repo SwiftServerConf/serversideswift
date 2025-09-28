@@ -254,7 +254,7 @@ struct AllTalks {
                 Paragraph("In this hand-on workshop, learn how to build modern Swift server applications using Vapor 4, Swift OpenAPI, Swift ServiceLifecycle, Fluent with SQLite and Postgres, and serverless deployment with AWS.  Start by building `GET` endpoints to handle questions, then create a `PollsApp` where you build a database-connected application, and finally learn how to deploy applications.")
                 Paragraph("This workshop consists of four 90-minute sessions where participants build an application that builds upon previous work. You are expected to bring your own laptop as we build the `PollsApp` together.")
             }, 
-            speakerNames: ["Daniel Steinberg", "Nick Shook", "Agam Dua"], 
+            speakerNames: ["Daniel Steinberg", "Agam Dua"], 
             order: 17, 
             isWorkshop: true
         ),
