@@ -196,7 +196,7 @@ struct AllTalks {
         Talk(
             id: 12,
             title: "Write durable and resilient workflows in Swift",
-            description: "Talk details to be announced soon",
+            description: "Distributed systems break, APIs fail, networks flake, and services crash. In this talk you will learn how to build reliable applications that can recover from failures, scale dynamically, and maintain long-running business processes with confidence.",
             speakerNames: ["Franz Busch"],
             order: 12
         ),
