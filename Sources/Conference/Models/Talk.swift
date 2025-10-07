@@ -135,7 +135,7 @@ struct AllTalks {
             speakerNames: ["Moritz Lang"], 
             order: 7
         ),
-        Talk(id: 8, title: "Introduction to Valkey-swift", description: "Valkey-swift is a new client library for Valkey, the in memory database. This talk will provide you with an introduction to both Valkey and the valkey-swift client. You will learn how Valkey is so much more than just a key/value datastore and how the valkey-swift client gives you access to some of Valkey's more advanced features.", speakerNames: ["Adam Fowler"], order: 8),
+        Talk(id: 8, title: "Introduction to Valkey-swift", description: "Valkey-swift is a new client library for Valkey, the in memory database. This talk will provide you with an introduction to both Valkey and the valkey-swift client. You will learn how Valkey is so much more than just a key/value datastore and how the valkey-swift client gives you access to some of Valkey's more advanced features.", speakerNames: ["Adam Fowler"], order: 8, youtubeVideoID: "RNVMM1p7jgU"),
         Talk(
             id: 9, 
             title: "Swift Lambdas at Scale: How a Tiny iOS Team Built a Big Backend", 
