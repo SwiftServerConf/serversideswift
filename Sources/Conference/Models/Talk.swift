@@ -65,7 +65,8 @@ struct AllTalks {
             title: "Unlock Generative AI for Swift Server-Side Development",
             description: "In the rapidly evolving landscape of artificial intelligence, Swift developers are looking to integrate powerful language models into their applications. While AWS's Amazon Bedrock provides access to leading LLMs and generative AI capabilities, working with these services in strongly-typed languages like Swift presents unique challenges. The varying payload structures across different LLMs, combined with automatically generated SDKs that don't always align with Swift's elegant syntax patterns, can make implementation complex. This created an opportunity to develop a more Swift-idiomatic approach to working with Bedrock. So, I created the Swift Bedrock Library, that forms a layer on top of the AWS SDK for Swift for interacting with Amazon Bedrock. This library provides a convenient way to access Amazon Bedrock's capabilities from Swift applications. By providing clear, concise, and Swift-specific implementations, it accelerates the learning curve and enables developers to quickly take advantage of Bedrock's advanced models. From streaming chat to image generation or variation, the library covers a wide range of use cases. I also worked on the Swift Foundation Model Playground, an example web app that demonstrates the use of the Swift Bedrock Library. It is built with a front-end in React and a backend that uses Hummingbird. To help out developers that prefer to use the AWS SDK for Swift as is, I created the very first Swift code examples for Bedrock Runtime. These are now a part of the official AWS documentation and include chatting with Amazon Nova, Meta Llama and Anthropic Claude both with and without streaming responses. During my talk I will share the process I went through to during my internship and how the work I did can improve your experience when you decide to implement AI in your next project.",
             speakerNames: ["Mona Dierickx"],
-            order: 1
+            order: 1,
+            youtubeVideoID: "eDkbXNleMnA"
         ),
         Talk(
             id: 2,
@@ -82,7 +83,8 @@ struct AllTalks {
                 }
             },
             speakerNames: ["Emma GAUBERT"],
-            order: 2
+            order: 2,
+            youtubeVideoID: "XC5CN5YPpD4"
         ),
         Talk(
             id: 3,
@@ -92,19 +94,20 @@ struct AllTalks {
                 Paragraph("This talk dives into new and improved language features, such as Spans, Advanced Concurrency use and handling I/O.")
             },
             speakerNames: ["Joannis Orlandos"],
-            order: 3
+            order: 3,
+            youtubeVideoID: "bVCY2m8ytXM"
         ),
         Talk(id: 4, title: "How to Approach Approachable Concurrency", description: ComponentGroup {
             Paragraph("The Swift language has gone through many significant changes recently and this year is no different. We're now seeing some of the results of efforts to improve the approachability of data race safety. Many developers have found concurrency incredibly difficult to understand, making any improvements welcome. But, how can we use these new facilities to make our transition to Swift 6 easier?")
             Paragraph("We'll go through not just what new tools we have, but why they were introduced. Whether you are just now getting started or have lots of experience with concurrency, together we can deepen our understanding of the language. You'll come away feeling confident deciding how to best approach approachable concurrency for your project.")
-        }, speakerNames: ["Matt Massicotte"], order: 4),
+        }, speakerNames: ["Matt Massicotte"], order: 4, youtubeVideoID: "eqeDPIK2Msc"),
         Talk(
             id: 5,
             title: "Separate code from configuration with Swift Configuration",
             description: ComponentGroup {
                 Paragraph("Swift Configuration provides a unified API for reading configuration values and secrets in server-side Swift libraries and applications. By separating the configuration reader from the underlying providers, services can seamlessly switch between different configuration sources: from environment variables and JSON files during development to sophisticated remote configuration systems in production.")
                 Paragraph("This talk demonstrates how to gradually adopt Swift Configuration in your existing Swift libraries and services, starting with basic patterns like reading from environment variables and JSON files, then progressing to advanced scenarios including configuration hot-reloading, access logging, and building custom providers.")
-                Paragraph("You’ll leave with practical knowledge and code examples that you can immediately apply to modernize configuration management in your Swift libraries and services.")
+                Paragraph("You'll leave with practical knowledge and code examples that you can immediately apply to modernize configuration management in your Swift libraries and services.")
             },
             speakerNames: ["Honza Dvorsky"],
             order: 5),
@@ -132,8 +135,9 @@ struct AllTalks {
                     }
                 }
             }, 
-            speakerNames: ["Moritz Lang"], 
-            order: 7
+            speakerNames: ["Moritz Lang", "Si Beaumont"], 
+            order: 7,
+            youtubeVideoID: "HSxIFLsoODc"
         ),
         Talk(id: 8, title: "Introduction to Valkey-swift", description: "Valkey-swift is a new client library for Valkey, the in memory database. This talk will provide you with an introduction to both Valkey and the valkey-swift client. You will learn how Valkey is so much more than just a key/value datastore and how the valkey-swift client gives you access to some of Valkey's more advanced features.", speakerNames: ["Adam Fowler"], order: 8, youtubeVideoID: "RNVMM1p7jgU"),
         Talk(
@@ -141,7 +145,7 @@ struct AllTalks {
             title: "Swift Lambdas at Scale: How a Tiny iOS Team Built a Big Backend", 
             description: ComponentGroup {
                 Paragraph("SongShift started out as an iOS app where everything was done client side. As our demand grew, in addition to the expectations of our customers, we wanted to move things to the server and needed a backend that could scale and function. As a small company, we didn't have a backend team, we didn't want to manage servers, and we didn't want to switch to a completely different language just to make it work.")
-                Paragraph("I will share the journey of how my small team went from a simple client-side app to using cloud systems on AWS powered by Swift. I will share the things along the way that worked, didn’t work, and how we accidentally became backend engineers along the way.")
+                Paragraph("I will share the journey of how my small team went from a simple client-side app to using cloud systems on AWS powered by Swift. I will share the things along the way that worked, didn't work, and how we accidentally became backend engineers along the way.")
             }, 
             speakerNames: ["Ben Rosen"], 
             order: 9
@@ -154,7 +158,8 @@ struct AllTalks {
                 Paragraph("Data access is provided through REST APIs and customisable callback APIs tailored for client-specific data analysis crawlers")
             },
             speakerNames: ["Georg Tuparev"],
-            order: 10
+            order: 10,
+            youtubeVideoID: "ShuHpt9k_wo"
         ),
         Talk(
             id: 11,
@@ -191,14 +196,16 @@ struct AllTalks {
                 }
             },
             speakerNames: ["Oliver Binns"],
-            order: 11
+            order: 11,
+            youtubeVideoID: "o8nR-35Om8g"
         ),
         Talk(
             id: 12,
             title: "Write durable and resilient workflows in Swift",
             description: "Distributed systems break, APIs fail, networks flake, and services crash. In this talk you will learn how to build reliable applications that can recover from failures, scale dynamically, and maintain long-running business processes with confidence.",
             speakerNames: ["Franz Busch"],
-            order: 12
+            order: 12,
+            youtubeVideoID: "2KW78hoPBWA"
         ),
         Talk(
             id: 13,
@@ -208,7 +215,8 @@ struct AllTalks {
                 Paragraph("During this year's Google Summer of Code, we worked on extending swift-java's jextract mode to support JNI as a fallback mechanism when the modern FFM APIs are not available. This means that we're now able to jextract entire Swift libraries and use them in Android applications! With the new Swift Android working group and the work on a official Android SDK, we believe this extension to Java interoperability will be very beneficial to the Swift on Android efforts! In this talk we will cover how the FFM mode and JNI modes work and differ. We will demonstrate how to build a Swift library that is shared across both Swift, Java (FFM) and Android (JNI)")
             },
             speakerNames: ["Mads Odgaard"],
-            order: 13   
+            order: 13,
+            youtubeVideoID: "tOH6V1IvTAc"   
         ),
         Talk(
             id: 14, 
@@ -268,7 +276,8 @@ struct AllTalks {
                 Paragraph("Attendees will gain a practical understanding of core cryptographic concepts and how they apply to everyday development tasks, helping them build more secure, privacy-conscious apps.")
             },
             speakerNames: ["Eric Bariaux"],
-            order: 18
+            order: 18,
+            youtubeVideoID: "hyCmtyLd-HQ"
         ),
         Talk(
             id: 19,
@@ -289,7 +298,8 @@ struct AllTalks {
                 Paragraph("I built a reasonably successful Software-as-a-Service startup entirely based on Swift, and I want to lay all my cards on the table: what services and SDKs are we using, how our project structure, architecture and testing looks like, how we solved technical and security problems, and of course what songs I sing to myself while SwiftNIO compiles for the 38th time today. There may also be sprinkles on how to use analytics properly and ethically, and I might just find one or two edge cases where Swift is not the right answer.")
             },
             speakerNames: ["Daniel Jilg"],
-            order: 20
+            order: 20,
+            youtubeVideoID: "Uvnp7bq6Hf0"
         ),
         Talk(
             id: 21,
@@ -298,12 +308,13 @@ struct AllTalks {
                 Paragraph("A special keynote presentation from the Swift Core Team.")
             },
             speakerNames: ["Ben Cohen"],
-            order: 21
+            order: 21,
+            youtubeVideoID: "jz3hCRSPrdo"
         ),
         Talk(
             id: 22,
             title: "Effective Strategies for Testing and Releasing Server Side Changes",
-            description: "Whether you are a solo developer or a team coordinating tens or hundreds of changes every day, making sure you don’t break your application is critical. This talk walks through some strategies to provide confidence in your changes and ensure they provide their designed functionality.",
+            description: "Whether you are a solo developer or a team coordinating tens or hundreds of changes every day, making sure you don't break your application is critical. This talk walks through some strategies to provide confidence in your changes and ensure they provide their designed functionality.",
             speakerNames: ["Simon Pilkington"],
             order: 22
         ),
