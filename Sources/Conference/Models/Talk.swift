@@ -10,7 +10,7 @@ struct Talk: Eventable {
     let eventSpecifics: EventSpecifics?
     let youtubeVideoID: String?
     let isWorkshop: Bool
-    
+
     internal init(
         id: Int,
         title: String,
@@ -30,7 +30,7 @@ struct Talk: Eventable {
         self.eventSpecifics = eventSpecifics
         self.youtubeVideoID = youtubeVideoID
     }
-    
+
     internal init(
         id: Int,
         title: String,
@@ -50,7 +50,7 @@ struct Talk: Eventable {
         self.youtubeVideoID = youtubeVideoID
         self.isWorkshop = isWorkshop
     }
-    
+
     var speakers: [Speaker] {
         AllSpeakers.speakers.filter {
             self.speakerNames.contains($0.name)
@@ -110,11 +110,18 @@ struct AllTalks {
                 Paragraph("You'll leave with practical knowledge and code examples that you can immediately apply to modernize configuration management in your Swift libraries and services.")
             },
             speakerNames: ["Honza Dvorsky"],
-            order: 5),
-        Talk(id: 6, title: "Getting started with gRPC Swift", description: "Looking to build fast, type-safe APIs in Swift? gRPC offers a high-performance alternative to REST using Protocol Buffers and HTTP/2. This session provides a brief introduction to gRPC Swift, guiding you through the concepts of gRPC, defining services in .proto files, generating Swift code, and implementing both clients and servers for various RPC types. Learn how gRPC Swift streamlines development and boosts performance for your applications.", speakerNames: ["George Barnett"], order: 6),
+            order: 5,
+            youtubeVideoID: "I3lYW6OEyIs"),
         Talk(
-            id: 7, 
-            title: "Observability in Server-Side Swift", 
+            id: 6,
+            title: "Getting started with gRPC Swift",
+            description: "Looking to build fast, type-safe APIs in Swift? gRPC offers a high-performance alternative to REST using Protocol Buffers and HTTP/2. This session provides a brief introduction to gRPC Swift, guiding you through the concepts of gRPC, defining services in .proto files, generating Swift code, and implementing both clients and servers for various RPC types. Learn how gRPC Swift streamlines development and boosts performance for your applications.",
+            speakerNames: ["George Barnett"],
+            order: 6,
+            youtubeVideoID: "yo-7ipiQwNs"),
+        Talk(
+            id: 7,
+            title: "Observability in Server-Side Swift",
             description: ComponentGroup {
                 Paragraph("This talk provides an overview of observability in server-side Swift, comprised of Logging, Metrics, and Distributed Tracing. I'll start off by introducing and comparing the three fundamental API packages (swift-log / swift-metrics / swift-distributed-tracing), the latter of which I co-created as part of Google Summer of Code in 2020.")
                 Paragraph("Throughout the talk, I'll be using a microservice-based server-side Swift backend, gradually adding more and more observability to it. This demo is powered by OpenTelemetry via the Swift OTel package, sending the observability data to a handful of backends.")
@@ -134,21 +141,22 @@ struct AllTalks {
                         Link("GitHub: swift-otel", url: "https://github.com/swift-otel")
                     }
                 }
-            }, 
-            speakerNames: ["Moritz Lang", "Si Beaumont"], 
+            },
+            speakerNames: ["Moritz Lang", "Si Beaumont"],
             order: 7,
             youtubeVideoID: "HSxIFLsoODc"
         ),
         Talk(id: 8, title: "Introduction to Valkey-swift", description: "Valkey-swift is a new client library for Valkey, the in memory database. This talk will provide you with an introduction to both Valkey and the valkey-swift client. You will learn how Valkey is so much more than just a key/value datastore and how the valkey-swift client gives you access to some of Valkey's more advanced features.", speakerNames: ["Adam Fowler"], order: 8, youtubeVideoID: "RNVMM1p7jgU"),
         Talk(
-            id: 9, 
-            title: "Swift Lambdas at Scale: How a Tiny iOS Team Built a Big Backend", 
+            id: 9,
+            title: "Swift Lambdas at Scale: How a Tiny iOS Team Built a Big Backend",
             description: ComponentGroup {
                 Paragraph("SongShift started out as an iOS app where everything was done client side. As our demand grew, in addition to the expectations of our customers, we wanted to move things to the server and needed a backend that could scale and function. As a small company, we didn't have a backend team, we didn't want to manage servers, and we didn't want to switch to a completely different language just to make it work.")
                 Paragraph("I will share the journey of how my small team went from a simple client-side app to using cloud systems on AWS powered by Swift. I will share the things along the way that worked, didn't work, and how we accidentally became backend engineers along the way.")
-            }, 
-            speakerNames: ["Ben Rosen"], 
-            order: 9
+            },
+            speakerNames: ["Ben Rosen"],
+            order: 9,
+            youtubeVideoID: "JwSwAg-ESMI"
         ),
         Talk(
             id: 10,
@@ -216,11 +224,11 @@ struct AllTalks {
             },
             speakerNames: ["Mads Odgaard"],
             order: 13,
-            youtubeVideoID: "tOH6V1IvTAc"   
+            youtubeVideoID: "tOH6V1IvTAc"
         ),
         Talk(
-            id: 14, 
-            title: "Beyond Web Services: Swift for Low-Level Container infrastructure", 
+            id: 14,
+            title: "Beyond Web Services: Swift for Low-Level Container infrastructure",
             description: ComponentGroup {
                 Paragraph("With the Containerization and Container open source projects that Apple launched in June, we have shown that Swift is a compelling choice for systems-level infrastructure, expanding beyond its traditional application development roots. In this talk, we'll dive into our newly released container runtime project built entirely in Swift, exploring why we chose Swift and what we learned along the way")
                 Paragraph("We'll cover:")
@@ -232,9 +240,10 @@ struct AllTalks {
                     ListItem("Our experience as a team learning Swift and using it for low-level systems programming.")
                 }
                 Paragraph("This talk will demonstrate that Swift's reach extends far beyond iOS apps and web services—it's a viable, powerful choice for the most demanding systems programming tasks.")
-            }, 
-            speakerNames: ["Eric Ernst"], 
-            order: 14
+            },
+            speakerNames: ["Eric Ernst"],
+            order: 14,
+            youtubeVideoID: "I72qyQbXQgM"
         ),
         Talk(
             id: 15,
@@ -245,25 +254,25 @@ struct AllTalks {
             isWorkshop: true
         ),
         Talk(
-            id: 16, 
-            title: "Understanding Isolation", 
+            id: 16,
+            title: "Understanding Isolation",
             description: ComponentGroup {
                 Paragraph("The foundation of Swift Concurrency's data race safety system is isolation. It is something many people struggle to understand, but using concurrency with success requires both a solid mental model as well as a command of the language features involved.")
                 Paragraph("We're going to cover all forms of static isolation, learn what dynamic isolation is and when to use it. And, we'll also cover what Sendable is and how close a relationship it has with isolation. There will be an emphasis on approachable concurrency and how to understand and incorporate the newest language features.")
-            }, 
-            speakerNames: ["Matt Massicotte"], 
-            order: 16, 
+            },
+            speakerNames: ["Matt Massicotte"],
+            order: 16,
             isWorkshop: true
         ),
         Talk(
-            id: 17, 
-            title: "Swift Server Fundamentals", 
+            id: 17,
+            title: "Swift Server Fundamentals",
             description: ComponentGroup {
                 Paragraph("In this hand-on workshop, learn how to build modern Swift server applications using Vapor 4, Swift OpenAPI, Swift ServiceLifecycle, Fluent with SQLite and Postgres, and serverless deployment with AWS.  Start by building `GET` endpoints to handle questions, then create a `PollsApp` where you build a database-connected application, and finally learn how to deploy applications.")
                 Paragraph("This workshop consists of four 90-minute sessions where participants build an application that builds upon previous work. You are expected to bring your own laptop as we build the `PollsApp` together.")
-            }, 
-            speakerNames: ["Daniel Steinberg", "Agam Dua"], 
-            order: 17, 
+            },
+            speakerNames: ["Daniel Steinberg", "Agam Dua"],
+            order: 17,
             isWorkshop: true
         ),
         Talk(
@@ -288,7 +297,7 @@ struct AllTalks {
             },
             speakerNames: ["Mikaela Caron"],
             order: 19,
-            isWorkshop: false
+            youtubeVideoID: "dAa9HmJEGfA"
         ),
         Talk(
             id: 20,
@@ -316,7 +325,8 @@ struct AllTalks {
             title: "Effective Strategies for Testing and Releasing Server Side Changes",
             description: "Whether you are a solo developer or a team coordinating tens or hundreds of changes every day, making sure you don't break your application is critical. This talk walks through some strategies to provide confidence in your changes and ensure they provide their designed functionality.",
             speakerNames: ["Simon Pilkington"],
-            order: 22
+            order: 22,
+            youtubeVideoID: "0X5E3zlikHI"
         ),
     ]
 }
